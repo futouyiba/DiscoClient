@@ -1,0 +1,381 @@
+fileFormatVersion: 2
+guid: dd2d5aace27f4154cb20a09ff4680780
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: CrossFader
+    100002: djm 800_001
+    100004: Fader1
+    100006: Fader2
+    100008: Fader3
+    100010: Fader4
+    100012: Group_011
+    100014: Group_013
+    100016: Group_014
+    100018: Group_015
+    100020: Group_016
+    100022: //RootNode
+    100024: Object052
+    100026: Object089
+    100028: Object094
+    100030: Object101
+    100032: Object102
+    100034: Object106
+    100036: Object107
+    100038: Object108
+    100040: Object109
+    100042: Object113
+    100044: Object114
+    100046: Object115
+    100048: Object116
+    100050: Object117
+    100052: Object118
+    100054: Object119
+    100056: Object120
+    100058: Object121
+    100060: Object123
+    100062: Object124
+    100064: Object125
+    100066: Object126
+    100068: Object127
+    100070: Object128
+    100072: Object129
+    100074: Object130
+    100076: Object131
+    100078: Object132
+    100080: Object133
+    100082: Object134
+    100084: Object135
+    100086: Object136
+    100088: Object137
+    100090: Object138
+    100092: Object139
+    100094: Object140
+    400000: CrossFader
+    400002: djm 800_001
+    400004: Fader1
+    400006: Fader2
+    400008: Fader3
+    400010: Fader4
+    400012: Group_011
+    400014: Group_013
+    400016: Group_014
+    400018: Group_015
+    400020: Group_016
+    400022: //RootNode
+    400024: Object052
+    400026: Object089
+    400028: Object094
+    400030: Object101
+    400032: Object102
+    400034: Object106
+    400036: Object107
+    400038: Object108
+    400040: Object109
+    400042: Object113
+    400044: Object114
+    400046: Object115
+    400048: Object116
+    400050: Object117
+    400052: Object118
+    400054: Object119
+    400056: Object120
+    400058: Object121
+    400060: Object123
+    400062: Object124
+    400064: Object125
+    400066: Object126
+    400068: Object127
+    400070: Object128
+    400072: Object129
+    400074: Object130
+    400076: Object131
+    400078: Object132
+    400080: Object133
+    400082: Object134
+    400084: Object135
+    400086: Object136
+    400088: Object137
+    400090: Object138
+    400092: Object139
+    400094: Object140
+    2100000: Standard_20 [Player]
+    2100002: 800 back
+    2100004: 800top
+    2100006: Metal Brushed
+    2100008: Material2
+    2100010: bel
+    2100012: button
+    2100014: Grey
+    2100016: green3
+    2300000: CrossFader
+    2300002: djm 800_001
+    2300004: Fader1
+    2300006: Fader2
+    2300008: Fader3
+    2300010: Fader4
+    2300012: Group_011
+    2300014: Group_013
+    2300016: Group_014
+    2300018: Group_015
+    2300020: Group_016
+    2300022: Object052
+    2300024: Object089
+    2300026: Object094
+    2300028: Object101
+    2300030: Object102
+    2300032: Object106
+    2300034: Object107
+    2300036: Object108
+    2300038: Object109
+    2300040: Object113
+    2300042: Object114
+    2300044: Object115
+    2300046: Object116
+    2300048: Object117
+    2300050: Object118
+    2300052: Object119
+    2300054: Object120
+    2300056: Object121
+    2300058: Object123
+    2300060: Object124
+    2300062: Object125
+    2300064: Object126
+    2300066: Object127
+    2300068: Object128
+    2300070: Object129
+    2300072: Object130
+    2300074: Object131
+    2300076: Object132
+    2300078: Object133
+    2300080: Object134
+    2300082: Object135
+    2300084: Object136
+    2300086: Object137
+    2300088: Object138
+    2300090: Object139
+    2300092: Object140
+    2300094: //RootNode
+    3300000: CrossFader
+    3300002: djm 800_001
+    3300004: Fader1
+    3300006: Fader2
+    3300008: Fader3
+    3300010: Fader4
+    3300012: Group_011
+    3300014: Group_013
+    3300016: Group_014
+    3300018: Group_015
+    3300020: Group_016
+    3300022: Object052
+    3300024: Object089
+    3300026: Object094
+    3300028: Object101
+    3300030: Object102
+    3300032: Object106
+    3300034: Object107
+    3300036: Object108
+    3300038: Object109
+    3300040: Object113
+    3300042: Object114
+    3300044: Object115
+    3300046: Object116
+    3300048: Object117
+    3300050: Object118
+    3300052: Object119
+    3300054: Object120
+    3300056: Object121
+    3300058: Object123
+    3300060: Object124
+    3300062: Object125
+    3300064: Object126
+    3300066: Object127
+    3300068: Object128
+    3300070: Object129
+    3300072: Object130
+    3300074: Object131
+    3300076: Object132
+    3300078: Object133
+    3300080: Object134
+    3300082: Object135
+    3300084: Object136
+    3300086: Object137
+    3300088: Object138
+    3300090: Object139
+    3300092: Object140
+    3300094: //RootNode
+    4300000: Object052
+    4300002: Group_011
+    4300004: djm 800_001
+    4300006: Fader1
+    4300008: Fader2
+    4300010: Fader3
+    4300012: Fader4
+    4300014: CrossFader
+    4300016: Object089
+    4300018: Object094
+    4300020: Object101
+    4300022: Object102
+    4300024: Object106
+    4300026: Object107
+    4300028: Object108
+    4300030: Object109
+    4300032: Group_013
+    4300034: Group_014
+    4300036: Group_015
+    4300038: Object113
+    4300040: Object114
+    4300042: Object115
+    4300044: Object116
+    4300046: Object117
+    4300048: Object118
+    4300050: Object119
+    4300052: Object120
+    4300054: Object121
+    4300056: Object123
+    4300058: Object124
+    4300060: Object125
+    4300062: Object126
+    4300064: Group_016
+    4300066: Object127
+    4300068: Object128
+    4300070: Object129
+    4300072: Object130
+    4300074: Object131
+    4300076: Object132
+    4300078: Object133
+    4300080: Object134
+    4300082: Object135
+    4300084: Object136
+    4300086: Object137
+    4300088: Object138
+    4300090: Object139
+    4300092: Object140
+    4300094: Mixer
+    6400000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 800 back
+    second: {fileID: 2100000, guid: fe27fcb40464588459d5f6b0a32ab5f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 800top
+    second: {fileID: 2100000, guid: fe07549099da28c4998da13e8ee6fb23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey
+    second: {fileID: 2100000, guid: 8e4f9c80206ba05428885db53e774787, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal Brushed
+    second: {fileID: 2100000, guid: 6c8ee651fe3a2334fa64046d69a7a03e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_20 [Player]
+    second: {fileID: 2100000, guid: ef0a2f365c7600245a658fca13a76455, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bel
+    second: {fileID: 2100000, guid: 53d64cbf4db52d04d921b195cf868995, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: button
+    second: {fileID: 2100000, guid: b0d7db7e5076e9346879809b0aeae291, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: green3
+    second: {fileID: 2100000, guid: 2e49c5833877cfd43b4524b02df8b646, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

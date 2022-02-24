@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Init.unity
-    guid: e0d691ac8c1d0454ba07089ea820e18a
-  - enabled: 1
-    path: Assets/Scenes/Map1.unity
-    guid: a5294483f20f40d449699101bb428cda
-  - enabled: 1
-    path: Assets/Scenes/Map2.unity
-    guid: 064123f1e5067b249a9fd8967ddbde09
+    path: Assets/Night Club System/Demo Scenes/Small Club.unity
+    guid: 74a1ee127e9ef5744a8677da7caedec3
+  - enabled: 0
+    path: Assets/Night Club System/Demo Scenes/Big Club.unity
+    guid: 28fe348dfeb687846989f8270623fa25
   m_configObjects: {}
