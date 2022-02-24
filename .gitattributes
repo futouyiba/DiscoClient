@@ -96,5 +96,5 @@
 *.rnsfilter=lfs diff=lfs merge=lfs -text
 *.reasonfilter=lfs diff=lfs merge=lfs -text
 *.lxofilter=lfs diff=lfs merge=lfs -text
-Assets/_Misc/MSJH.asset
+Unity/Assets/_Misc/MSJH.asset
 *.asset filter=lfs diff=lfs merge=lfs -text
