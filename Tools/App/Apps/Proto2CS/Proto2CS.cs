@@ -68,7 +68,7 @@ namespace ET
             bool isMsgStart = false;
             foreach (string line in s.Split('\n'))
             {
-                string newline = line.Trim();
+                string newline = line.Trim();      
 
                 if (newline == "")
                 {
