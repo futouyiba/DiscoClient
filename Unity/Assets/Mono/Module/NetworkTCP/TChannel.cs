@@ -139,7 +139,7 @@ namespace ET
 				}
 				case ServiceType.Outer:
 				{
-					var messageSize = (int) (stream.Length - stream.Position);
+					ushort messageSize = (ushort) (stream.Length - stream.Position);
 
 					this.sendCache.WriteTo(0, messageSize);
 					this.sendBuffer.Write(this.sendCache, 0, PacketParser.OuterPacketSizeLength);
