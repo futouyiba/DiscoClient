@@ -3,6 +3,294 @@ using ProtoBuf;
 using System.Collections.Generic;
 namespace ET
 {
+///
+/// 消息头结构定义
+///
+	[Message(OuterOpcode.TMsg)]
+	[ProtoContract]
+	public partial class TMsg: Object
+	{
+/// 消息类型
+		[ProtoMember(1)]
+		public int type { get; set; }
+
+/// 消息体
+		[ProtoMember(2)]
+		public byte[] body { get; set; }
+
+		[ProtoMember(3)]
+		public int rpc_id { get; set; }
+
+///
+/// 错误信息：如果消息执行错误，则回复错误编码和描述
+/// error_code = 0 表示成功，否则失败
+///
+		[ProtoMember(4)]
+		public int error_code { get; set; }
+
+		[ProtoMember(5)]
+		public string error_string { get; set; }
+
+	}
+
+///
+/// 注册消息
+///
+	[Message(OuterOpcode.register_user_c2s)]
+	[ProtoContract]
+	public partial class register_user_c2s: Object, IMessage
+	{
+		[ProtoMember(1)]
+		public int device_type { get; set; }
+
+		[ProtoMember(2)]
+		public string device_model { get; set; }
+
+		[ProtoMember(3)]
+		public string device_product_id { get; set; }
+
+		[ProtoMember(8)]
+		public string desc { get; set; }
+
+//erlangMogai
+	}
+
+/// 返回
+	[Message(OuterOpcode.register_user_s2c)]
+	[ProtoContract]
+	public partial class register_user_s2c: Object, IMessage
+	{
+		[ProtoMember(1)]
+		public int user_id { get; set; }
+
+//erlangMogai
+	}
+
+///
+/// 获取数据中转服务endpoint
+///
+	[Message(OuterOpcode.get_transfer_endpoint_c2s)]
+	[ProtoContract]
+	public partial class get_transfer_endpoint_c2s: Object, IMessage
+	{
+		[ProtoMember(1)]
+		public int user_id { get; set; }
+
+		[ProtoMember(2)]
+		public int endpoint_id { get; set; }
+
+//erlangMogai
+	}
+
+/// 返回
+	[Message(OuterOpcode.get_transfer_endpoint_s2c)]
+	[ProtoContract]
+	public partial class get_transfer_endpoint_s2c: Object, IMessage
+	{
+		[ProtoMember(1)]
+		public string ip { get; set; }
+
+		[ProtoMember(2)]
+		public int port { get; set; }
+
+		[ProtoMember(3)]
+		public int endpoint_id { get; set; }
+
+//erlangMogai
+	}
+
+///
+/// 认证请求消息 。 device类型、id相当于一个校验的作用。
+///
+	[Message(OuterOpcode.authenticate_c2s)]
+	[ProtoContract]
+	public partial class authenticate_c2s: Object, IMessage
+	{
+		[ProtoMember(1)]
+		public int user_id { get; set; }
+
+		[ProtoMember(2)]
+		public int device_type { get; set; }
+
+		[ProtoMember(3)]
+		public string device_product_id { get; set; }
+
+//erlangMogai
+	}
+
+	[Message(OuterOpcode.authenticate_s2c)]
+	[ProtoContract]
+	public partial class authenticate_s2c: Object, IMessage
+	{
+//erlangMogai
+	}
+
+///
+/// 心跳消息   定期30秒发一次。若30秒内没发
+///
+	[Message(OuterOpcode.heartbeat_c2s)]
+	[ProtoContract]
+	public partial class heartbeat_c2s: Object, IMessage
+	{
+//erlangMogai
+	}
+
+///
+/// 全状态同步消息
+///
+	[Message(OuterOpcode.all_sync_s2c)]
+	[ProtoContract]
+	public partial class all_sync_s2c: Object, IMessage
+	{
+		[ProtoMember(1)]
+		public int house_type { get; set; }
+
+		[ProtoMember(2)]
+		public int music_id { get; set; }
+
+		[ProtoMember(3)]
+		public List<int> on_lighting_ids = new List<int>();
+
+		[ProtoMember(4)]
+		public List<int> on_dj_ids = new List<int>();
+
+		[ProtoMember(5)]
+		public List<int> dj_playerids = new List<int>();
+
+		[ProtoMember(6)]
+		public List<player> players = new List<player>();
+
+//erlangMogai
+	}
+
+	[Message(OuterOpcode.player)]
+	[ProtoContract]
+	public partial class player: Object
+	{
+		[ProtoMember(1)]
+		public int player_id { get; set; }
+
+		[ProtoMember(2)]
+		public float x { get; set; }
+
+		[ProtoMember(3)]
+		public float y { get; set; }
+
+		[ProtoMember(4)]
+		public int is_dj { get; set; }
+
+		[ProtoMember(5)]
+		public float big_factor { get; set; }
+
+		[ProtoMember(6)]
+		public int figure_id { get; set; }
+
+		[ProtoMember(7)]
+		public string player_name { get; set; }
+
+//erlangMogai
+	}
+
+///
+/// 玩家进入消息
+///
+	[Message(OuterOpcode.player_enter_s2c)]
+	[ProtoContract]
+	public partial class player_enter_s2c: Object, IMessage
+	{
+		[ProtoMember(1)]
+		public player one_player { get; set; }
+
+//erlangMogai
+	}
+
+///
+/// 玩家离开消息
+///
+	[Message(OuterOpcode.player_leave_s2c)]
+	[ProtoContract]
+	public partial class player_leave_s2c: Object, IMessage
+	{
+		[ProtoMember(1)]
+		public int player_id { get; set; }
+
+//erlangMogai
+	}
+
+///
+/// 动作请求消息
+///
+	[Message(OuterOpcode.action_req_c2s)]
+	[ProtoContract]
+	public partial class action_req_c2s: Object, IMessage
+	{
+		[ProtoMember(1)]
+		public int action_id { get; set; }
+
+		[ProtoMember(2)]
+		public int int1 { get; set; }
+
+		[ProtoMember(3)]
+		public int int2 { get; set; }
+
+		[ProtoMember(4)]
+		public float float1 { get; set; }
+
+		[ProtoMember(5)]
+		public float float2 { get; set; }
+
+//erlangMogai
+	}
+
+	[Message(OuterOpcode.action_req_s2c)]
+	[ProtoContract]
+	public partial class action_req_s2c: Object, IMessage
+		[ProtoMember(1)]
+		public int action_id { get; set; }
+
+		[ProtoMember(2)]
+		public int int1 { get; set; }
+
+		[ProtoMember(3)]
+		public int int2 { get; set; }
+
+		[ProtoMember(4)]
+		public float float1 { get; set; }
+
+		[ProtoMember(5)]
+		public float float2 { get; set; }
+
+//erlangMogai
+	}
+
+///
+/// 动作同步消息
+///
+	[Message(OuterOpcode.action_syn_s2c)]
+	[ProtoContract]
+	public partial class action_syn_s2c: Object, IMessage
+	{
+		[ProtoMember(1)]
+		public int player_id { get; set; }
+
+		[ProtoMember(2)]
+		public int action_id { get; set; }
+
+		[ProtoMember(3)]
+		public int int1 { get; set; }
+
+		[ProtoMember(4)]
+		public int int2 { get; set; }
+
+		[ProtoMember(5)]
+		public float float1 { get; set; }
+
+		[ProtoMember(6)]
+		public float float2 { get; set; }
+
+//erlangMogai
+	}
+
 	[ResponseType(nameof(M2C_TestResponse))]
 	[Message(OuterOpcode.C2M_TestRequest)]
 	[ProtoContract]
