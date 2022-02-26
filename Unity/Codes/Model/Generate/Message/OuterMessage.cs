@@ -36,9 +36,10 @@ namespace ET
 ///
 /// 注册消息
 ///
+	[ResponseType(nameof(register_user_s2c))]
 	[Message(OuterOpcode.register_user_c2s)]
 	[ProtoContract]
-	public partial class register_user_c2s: Object, IMessage
+	public partial class register_user_c2s: Object, IRequest
 	{
 		[ProtoMember(1)]
 		public int device_type { get; set; }
@@ -74,7 +75,7 @@ namespace ET
 /// 返回
 	[Message(OuterOpcode.register_user_s2c)]
 	[ProtoContract]
-	public partial class register_user_s2c: Object, IMessage
+	public partial class register_user_s2c: Object, IResponse
 	{
 		[ProtoMember(1)]
 		public int user_id { get; set; }
@@ -101,9 +102,10 @@ namespace ET
 ///
 /// 获取数据中转服务endpoint
 ///
+	[ResponseType(nameof(get_transfer_endpoint_s2c))]
 	[Message(OuterOpcode.get_transfer_endpoint_c2s)]
 	[ProtoContract]
-	public partial class get_transfer_endpoint_c2s: Object, IMessage
+	public partial class get_transfer_endpoint_c2s: Object, IRequest
 	{
 		[ProtoMember(1)]
 		public int user_id { get; set; }
@@ -133,7 +135,7 @@ namespace ET
 /// 返回
 	[Message(OuterOpcode.get_transfer_endpoint_s2c)]
 	[ProtoContract]
-	public partial class get_transfer_endpoint_s2c: Object, IMessage
+	public partial class get_transfer_endpoint_s2c: Object, IResponse
 	{
 		[ProtoMember(1)]
 		public string ip { get; set; }
@@ -166,9 +168,10 @@ namespace ET
 ///
 /// 认证请求消息 。 device类型、id相当于一个校验的作用。
 ///
+	[ResponseType(nameof(authenticate_s2c))]
 	[Message(OuterOpcode.authenticate_c2s)]
 	[ProtoContract]
-	public partial class authenticate_c2s: Object, IMessage
+	public partial class authenticate_c2s: Object, IRequest
 	{
 		[ProtoMember(1)]
 		public int user_id { get; set; }
@@ -200,7 +203,7 @@ namespace ET
 
 	[Message(OuterOpcode.authenticate_s2c)]
 	[ProtoContract]
-	public partial class authenticate_s2c: Object, IMessage
+	public partial class authenticate_s2c: Object, IResponse
 	{
          public int Error
         {
@@ -396,9 +399,10 @@ namespace ET
 ///
 /// 动作请求消息
 ///
+	[ResponseType(nameof(action_req_s2c))]
 	[Message(OuterOpcode.action_req_c2s)]
 	[ProtoContract]
-	public partial class action_req_c2s: Object, IMessage
+	public partial class action_req_c2s: Object, IRequest
 	{
 		[ProtoMember(1)]
 		public int action_id { get; set; }
@@ -436,7 +440,7 @@ namespace ET
 
 	[Message(OuterOpcode.action_req_s2c)]
 	[ProtoContract]
-	public partial class action_req_s2c: Object, IMessage
+	public partial class action_req_s2c: Object, IResponse
 	{
 // 这个不是广播的。
 		[ProtoMember(1)]
