@@ -132,6 +132,7 @@ namespace ET
                     if (newline == "}")
                     {
                         isMsgStart = false;
+                        sb.Append("         public int Error\n        {\n            get;\n            set;\n        }\n\n        public string Message\n        {\n            get;\n            set;\n        }\n\n        public int RpcId\n        {\n            get;\n            set;\n        }")
                         sb.Append("\t}\n\n");
                         continue;
                     }
