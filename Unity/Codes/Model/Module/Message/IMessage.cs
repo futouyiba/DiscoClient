@@ -54,4 +54,25 @@
             set;
         }
     }
+    
+    public class ErrorActorResponse: IActorResponse
+    {
+        public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
+    }
 }
