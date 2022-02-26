@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace ET
 {
+    /// <summary>
+    /// 重要的类，erlangMogai
+    /// </summary>
     [SessionStreamDispatcher(SessionStreamDispatcherType.SessionStreamDispatcherClientOuter)]
     public class SessionStreamDispatcherClientOuter: ISessionStreamDispatcher
     {
@@ -30,7 +33,7 @@ namespace ET
             {
                 message = Activator.CreateInstance(type);
             }            
-            if (tMsg.rpc_id>0 && message is IResponse response)
+            if (message is IResponse response)
             {
                 response.Error = tMsg.error_code;
                 response.Message = tMsg.error_string;
