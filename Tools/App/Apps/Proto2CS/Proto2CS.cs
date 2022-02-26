@@ -32,17 +32,17 @@ namespace ET
         public static void Proto2CS()
         {
             msgOpcode.Clear();
-            Proto2CS("ET", "../Proto/InnerMessage.proto", serverMessagePath, "InnerOpcode", OpcodeRangeDefine.InnerMinOpcode);
-            GenerateOpcode("ET", "InnerOpcode", serverMessagePath);
+            // Proto2CS("ET", "../Proto/InnerMessage.proto", serverMessagePath, "InnerOpcode", OpcodeRangeDefine.InnerMinOpcode);
+            // GenerateOpcode("ET", "InnerOpcode", serverMessagePath);
             
-            Proto2CS("ET", "../Proto/MongoMessage.proto", serverMessagePath, "MongoOpcode", OpcodeRangeDefine.MongoMinOpcode);
-            GenerateOpcode("ET", "MongoOpcode", serverMessagePath);
+            // Proto2CS("ET", "../Proto/MongoMessage.proto", serverMessagePath, "MongoOpcode", OpcodeRangeDefine.MongoMinOpcode);
+            // GenerateOpcode("ET", "MongoOpcode", serverMessagePath);
 
-            Proto2CS("ET", "../Proto/OuterMessage.proto", serverMessagePath, "OuterOpcode", OpcodeRangeDefine.OuterMinOpcode);
-            GenerateOpcode("ET", "OuterOpcode", serverMessagePath);
+            // Proto2CS("ET", "../Proto/OuterMessage.proto", serverMessagePath, "OuterOpcode", OpcodeRangeDefine.OuterMinOpcode);
+            // GenerateOpcode("ET", "OuterOpcode", serverMessagePath);
 
             Proto2CS("ET", "../Proto/OuterMessage.proto", clientMessagePath, "OuterOpcode", OpcodeRangeDefine.OuterMinOpcode);
-            GenerateOpcode("ET", "OuterOpcode", clientMessagePath);
+            // GenerateOpcode("ET", "OuterOpcode", clientMessagePath);
         }
 
         public static void Proto2CS(string ns, string protoName, string outputPath, string opcodeClassName, int startOpcode)
@@ -72,6 +72,13 @@ namespace ET
 
                 if (newline == "")
                 {
+                    continue;
+                }
+                
+                if (newline.Trim().StartsWith("//erlangMogai"))
+                {
+                    sb.Append(
+                        "         public int Error\n        {\n            get;\n            set;\n        }\n\n        public string Message\n        {\n            get;\n            set;\n        }\n\n        public int RpcId\n        {\n            get;\n            set;\n        }\n");
                     continue;
                 }
 
@@ -128,11 +135,10 @@ namespace ET
                         sb.Append("\t{\n");
                         continue;
                     }
-
+                    
                     if (newline == "}")
                     {
                         isMsgStart = false;
-                        sb.Append("         public int Error\n        {\n            get;\n            set;\n        }\n\n        public string Message\n        {\n            get;\n            set;\n        }\n\n        public int RpcId\n        {\n            get;\n            set;\n        }")
                         sb.Append("\t}\n\n");
                         continue;
                     }
