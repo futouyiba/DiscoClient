@@ -26,7 +26,7 @@ namespace ET
 		{
 			LoginHelper.Login(
 				self.DomainScene(), 
-				ConstValue.LoginAddress, 
+				ConstValue.SelectorAddress, 
 				self.account.GetComponent<InputField>().text, 
 				self.password.GetComponent<InputField>().text).Coroutine();
 		}
