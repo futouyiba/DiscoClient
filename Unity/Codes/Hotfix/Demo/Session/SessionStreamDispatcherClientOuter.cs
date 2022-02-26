@@ -9,6 +9,7 @@ namespace ET
     {
         public void Dispatch(Session session, MemoryStream memoryStream)
         {
+            // erlangMogai
             // ushort opcode = BitConverter.ToUInt16(memoryStream.GetBuffer(), Packet.KcpOpcodeIndex);
             var tMsg = ProtobufHelper.FromStream(typeof (TMsg), memoryStream) as TMsg;
             if (tMsg == null)

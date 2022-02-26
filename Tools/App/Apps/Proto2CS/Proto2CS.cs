@@ -32,6 +32,8 @@ namespace ET
         public static void Proto2CS()
         {
             msgOpcode.Clear();
+            //erlangMogai
+
             // Proto2CS("ET", "../Proto/InnerMessage.proto", serverMessagePath, "InnerOpcode", OpcodeRangeDefine.InnerMinOpcode);
             // GenerateOpcode("ET", "InnerOpcode", serverMessagePath);
             
@@ -77,6 +79,7 @@ namespace ET
                 
                 if (newline.Trim().StartsWith("//erlangMogai"))
                 {
+                    //erlangMogai
                     sb.Append(
                         "         public int Error\n        {\n            get;\n            set;\n        }\n\n        public string Message\n        {\n            get;\n            set;\n        }\n\n        public int RpcId\n        {\n            get;\n            set;\n        }\n");
                     continue;

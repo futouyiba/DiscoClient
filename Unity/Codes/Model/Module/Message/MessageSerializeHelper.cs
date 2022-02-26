@@ -29,7 +29,18 @@ namespace ET
             {
                 if (opcode < OpcodeRangeDefine.PbMaxOpcode)
                 {
-                    ProtobufHelper.ToStream(obj, memoryStream);
+                    //erlangMogai
+                    var bodyBytes = ProtobufHelper.ToBytes(obj);
+                    var tMsg = new TMsg()
+                    {
+                        body = bodyBytes,
+                        type = opcode,
+                    };
+                    if (obj is IRequest request)
+                    {
+                        tMsg.rpc_id = request.RpcId;
+                    }
+                    ProtobufHelper.ToStream(tMsg, memoryStream);
                     return;
                 }
 
@@ -70,14 +81,16 @@ namespace ET
         
         public static (ushort, MemoryStream) MessageToStream(object message, int count = 0)
         {
-            MemoryStream stream = GetStream(Packet.OpcodeLength + count);
+            //erlangMogai
+            // MemoryStream stream = GetStream(Packet.OpcodeLength + count);
+            MemoryStream stream = GetStream(count);
 
             ushort opcode = OpcodeTypeComponent.Instance.GetOpcode(message.GetType());
             
-            stream.Seek(Packet.OpcodeLength, SeekOrigin.Begin);
-            stream.SetLength(Packet.OpcodeLength);
+            // stream.Seek(Packet.OpcodeLength, SeekOrigin.Begin);
+            // stream.SetLength(Packet.OpcodeLength);
             
-            stream.GetBuffer().WriteTo(0, opcode);
+            // stream.GetBuffer().WriteTo(0, opcode);
             
             MessageSerializeHelper.SerializeTo(opcode, message, stream);
             
