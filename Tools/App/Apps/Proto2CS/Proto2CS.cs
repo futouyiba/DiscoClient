@@ -40,7 +40,7 @@ namespace ET
             // Proto2CS("ET", "../Proto/MongoMessage.proto", serverMessagePath, "MongoOpcode", OpcodeRangeDefine.MongoMinOpcode);
             // GenerateOpcode("ET", "MongoOpcode", serverMessagePath);
 
-            // Proto2CS("ET", "../Proto/OuterMessage.proto", serverMessagePath, "OuterOpcode", OpcodeRangeDefine.OuterMinOpcode);
+            Proto2CS("ET", "../Proto/OuterMessage.proto", serverMessagePath, "OuterOpcode", OpcodeRangeDefine.OuterMinOpcode);
             // GenerateOpcode("ET", "OuterOpcode", serverMessagePath);
 
             Proto2CS("ET", "../Proto/OuterMessage.proto", clientMessagePath, "OuterOpcode", OpcodeRangeDefine.OuterMinOpcode);
