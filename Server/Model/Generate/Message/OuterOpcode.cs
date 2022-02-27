@@ -14,7 +14,7 @@ namespace ET
 		public const ushort all_sync_s2c = 20003;
 		public const ushort player_enter_s2c = 20004;
 		public const ushort player_leave_s2c = 20005;
-		public const ushort action_req_c2s = 20006;
+		public const ushort action_req_c2s = 20006;  
 		public const ushort action_req_s2c = 20007;
 		public const ushort action_syn_s2c = 20008;
 		 public const ushort C2M_TestRequest = 10017;

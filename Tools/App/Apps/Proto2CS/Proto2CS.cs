@@ -34,8 +34,8 @@ namespace ET
             msgOpcode.Clear();
             //erlangMogai
 
-            // Proto2CS("ET", "../Proto/InnerMessage.proto", serverMessagePath, "InnerOpcode", OpcodeRangeDefine.InnerMinOpcode);
-            // GenerateOpcode("ET", "InnerOpcode", serverMessagePath);
+            Proto2CS("ET", "../Proto/InnerMessage.proto", serverMessagePath, "InnerOpcode", OpcodeRangeDefine.InnerMinOpcode);
+            GenerateOpcode("ET", "InnerOpcode", serverMessagePath);
             
             // Proto2CS("ET", "../Proto/MongoMessage.proto", serverMessagePath, "MongoOpcode", OpcodeRangeDefine.MongoMinOpcode);
             // GenerateOpcode("ET", "MongoOpcode", serverMessagePath);

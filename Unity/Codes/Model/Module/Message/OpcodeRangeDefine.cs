@@ -9,14 +9,14 @@
         public const ushort OuterMaxOpcode = 20000;
 
         // 20001-30000 内网pb
-        public const ushort InnerMinOpcode = 20001;
+        public const ushort InnerMinOpcode = 2001;
         
         public const ushort PbMaxOpcode = 30000;
         
         // 30001 - 40000 是bson，bson只用于内网
         public const ushort MongoMinOpcode = 30001;
         
-        public const ushort InnerMaxOpcode = 40000;
+        public const ushort InnerMaxOpcode = 4000;
         
         public const ushort JsonMinOpcode = 50000;
         public const ushort JsonMaxOpcode = 60000;
