@@ -35,7 +35,7 @@ namespace ET
                     // Debug.Log("registerResp:"+registerResp);
                     getEndpointResp =
                             (get_transfer_endpoint_s2c)await session.Call(new get_transfer_endpoint_c2s() { endpoint_id = 1, user_id = UserId75 });
-                    Debug.Log("endpoint response:"+getEndpointResp);
+                    Log.Info("endpoint response:"+getEndpointResp);
                 }
                 finally
                 {

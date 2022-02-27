@@ -17,7 +17,7 @@ namespace ET
             var tMsg = ProtobufHelper.FromStream(typeof (TMsg), memoryStream) as TMsg;
             if (tMsg == null)
             {
-                Debug.LogError("收到一条不是我们定义tmsg的消息，跳过！");
+                Log.Error("收到一条不是我们定义tmsg的消息，跳过！");
                 return;
             }
             var opcode = (ushort)tMsg.type;

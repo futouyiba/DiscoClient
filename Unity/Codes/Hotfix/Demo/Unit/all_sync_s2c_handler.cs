@@ -8,7 +8,7 @@ namespace ET
     {
         protected override async ETTask Run(Session session, all_sync_s2c message)
         {
-            Debug.Log($"all sync message:{message}");
+            Log.Info($"all sync message:{message}");
 
             await ETTask.CompletedTask;
         }
