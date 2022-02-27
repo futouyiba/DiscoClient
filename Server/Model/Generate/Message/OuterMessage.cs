@@ -36,9 +36,10 @@ namespace ET
 ///
 /// 注册消息
 ///
+	[ResponseType(nameof(register_user_s2c))]
 	[Message(OuterOpcode.register_user_c2s)]
 	[ProtoContract]
-	public partial class register_user_c2s: Object, IMessage
+	public partial class register_user_c2s: Object, IRequest
 	{
 		[ProtoMember(1)]
 		public int device_type { get; set; }
@@ -52,26 +53,59 @@ namespace ET
 		[ProtoMember(8)]
 		public string desc { get; set; }
 
-//erlangMogai
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
 	}
 
 /// 返回
 	[Message(OuterOpcode.register_user_s2c)]
 	[ProtoContract]
-	public partial class register_user_s2c: Object, IMessage
+	public partial class register_user_s2c: Object, IResponse
 	{
 		[ProtoMember(1)]
 		public int user_id { get; set; }
 
-//erlangMogai
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
 	}
 
 ///
 /// 获取数据中转服务endpoint
 ///
+	[ResponseType(nameof(get_transfer_endpoint_s2c))]
 	[Message(OuterOpcode.get_transfer_endpoint_c2s)]
 	[ProtoContract]
-	public partial class get_transfer_endpoint_c2s: Object, IMessage
+	public partial class get_transfer_endpoint_c2s: Object, IRequest
 	{
 		[ProtoMember(1)]
 		public int user_id { get; set; }
@@ -79,13 +113,29 @@ namespace ET
 		[ProtoMember(2)]
 		public int endpoint_id { get; set; }
 
-//erlangMogai
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
 	}
 
 /// 返回
 	[Message(OuterOpcode.get_transfer_endpoint_s2c)]
 	[ProtoContract]
-	public partial class get_transfer_endpoint_s2c: Object, IMessage
+	public partial class get_transfer_endpoint_s2c: Object, IResponse
 	{
 		[ProtoMember(1)]
 		public string ip { get; set; }
@@ -96,15 +146,32 @@ namespace ET
 		[ProtoMember(3)]
 		public int endpoint_id { get; set; }
 
-//erlangMogai
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
 	}
 
 ///
 /// 认证请求消息 。 device类型、id相当于一个校验的作用。
 ///
+	[ResponseType(nameof(authenticate_s2c))]
 	[Message(OuterOpcode.authenticate_c2s)]
 	[ProtoContract]
-	public partial class authenticate_c2s: Object, IMessage
+	public partial class authenticate_c2s: Object, IRequest
 	{
 		[ProtoMember(1)]
 		public int user_id { get; set; }
@@ -115,14 +182,46 @@ namespace ET
 		[ProtoMember(3)]
 		public string device_product_id { get; set; }
 
-//erlangMogai
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
 	}
 
 	[Message(OuterOpcode.authenticate_s2c)]
 	[ProtoContract]
-	public partial class authenticate_s2c: Object, IMessage
+	public partial class authenticate_s2c: Object, IResponse
 	{
-//erlangMogai
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
 	}
 
 ///
@@ -132,7 +231,23 @@ namespace ET
 	[ProtoContract]
 	public partial class heartbeat_c2s: Object, IMessage
 	{
-//erlangMogai
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
 	}
 
 ///
@@ -160,7 +275,23 @@ namespace ET
 		[ProtoMember(6)]
 		public List<player> players = new List<player>();
 
-//erlangMogai
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
 	}
 
 	[Message(OuterOpcode.player)]
@@ -188,7 +319,23 @@ namespace ET
 		[ProtoMember(7)]
 		public string player_name { get; set; }
 
-//erlangMogai
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
 	}
 
 ///
@@ -201,7 +348,23 @@ namespace ET
 		[ProtoMember(1)]
 		public player one_player { get; set; }
 
-//erlangMogai
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
 	}
 
 ///
@@ -214,15 +377,32 @@ namespace ET
 		[ProtoMember(1)]
 		public int player_id { get; set; }
 
-//erlangMogai
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
 	}
 
 ///
 /// 动作请求消息
 ///
+	[ResponseType(nameof(action_req_s2c))]
 	[Message(OuterOpcode.action_req_c2s)]
 	[ProtoContract]
-	public partial class action_req_c2s: Object, IMessage
+	public partial class action_req_c2s: Object, IRequest
 	{
 		[ProtoMember(1)]
 		public int action_id { get; set; }
@@ -239,12 +419,30 @@ namespace ET
 		[ProtoMember(5)]
 		public float float2 { get; set; }
 
-//erlangMogai
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
 	}
 
 	[Message(OuterOpcode.action_req_s2c)]
 	[ProtoContract]
-	public partial class action_req_s2c: Object, IMessage
+	public partial class action_req_s2c: Object, IResponse
+	{
+// 这个不是广播的。
 		[ProtoMember(1)]
 		public int action_id { get; set; }
 
@@ -260,7 +458,23 @@ namespace ET
 		[ProtoMember(5)]
 		public float float2 { get; set; }
 
-//erlangMogai
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
 	}
 
 ///
@@ -288,7 +502,23 @@ namespace ET
 		[ProtoMember(6)]
 		public float float2 { get; set; }
 
-//erlangMogai
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
 	}
 
 	[ResponseType(nameof(M2C_TestResponse))]

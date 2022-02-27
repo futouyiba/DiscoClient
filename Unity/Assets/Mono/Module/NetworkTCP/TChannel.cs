@@ -139,9 +139,10 @@ namespace ET
 				}
 				case ServiceType.Outer:
 				{
-					ushort messageSize = (ushort) (stream.Length - stream.Position);
-
 					// erlangMogai
+
+					var messageSize = (int) (stream.Length - stream.Position);
+
 					this.sendCache.WriteTo(0, IPAddress.HostToNetworkOrder(messageSize));
 					this.sendBuffer.Write(this.sendCache, 0, PacketParser.OuterPacketSizeLength);
 					

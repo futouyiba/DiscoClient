@@ -21,16 +21,18 @@ namespace ET
         {
             try
             {
-                
-                
                 // 创建一个ETModel层的Session
-                // R2C_Login r2CLogin;
                 get_transfer_endpoint_s2c getEndpointResp;
                 Session session = null;
                 try
                 {
                     session = zoneScene.GetComponent<NetKcpComponent>().Create(NetworkHelper.ToIPEndPoint(address));
-                    // r2CLogin = (R2C_Login)await session.Call(new C2R_Login() { Account = account, Password = password });
+                    // var registerResp =
+                    //         (register_user_s2c)await session.Call(new register_user_c2s()
+                    //         {
+                    //             device_product_id = DeviceProductId75, device_model = DeviceModel75,device_type = 1
+                    //         });
+                    // Debug.Log("registerResp:"+registerResp);
                     getEndpointResp =
                             (get_transfer_endpoint_s2c)await session.Call(new get_transfer_endpoint_c2s() { endpoint_id = 1, user_id = UserId75 });
                     Debug.Log("endpoint response:"+getEndpointResp);
@@ -42,7 +44,7 @@ namespace ET
 
                 // 创建一个gate Session,并且保存到SessionComponent中
                 Session gateSession = zoneScene.GetComponent<NetKcpComponent>().Create(NetworkHelper.ToIPEndPoint(getEndpointResp.ip, getEndpointResp.port));
-                gateSession.AddComponent<PingComponent>();
+                // gateSession.AddComponent<PingComponent>();
                 zoneScene.AddComponent<SessionComponent>().Session = gateSession;
 				
                 // G2C_LoginGate g2CLoginGate = (G2C_LoginGate)await gateSession.Call(
@@ -52,7 +54,7 @@ namespace ET
                     device_product_id = DeviceProductId75, device_type = 1, user_id = UserId75
                 });
                 
-                Log.Debug("登陆gate成功!");
+                Log.Debug("auth response:"+authResp);
 
                 await Game.EventSystem.PublishAsync(new EventType.LoginFinish() {ZoneScene = zoneScene});
             }

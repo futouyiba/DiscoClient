@@ -3,6 +3,7 @@ namespace ET
 	public static partial class OuterOpcode
 	{
 		public const ushort TMsg = 30005;
+		public const ushort player = 30006;
 		public const ushort register_user_c2s = 10000;
 		public const ushort register_user_s2c = 10001;
 		public const ushort get_transfer_endpoint_c2s = 10002;
