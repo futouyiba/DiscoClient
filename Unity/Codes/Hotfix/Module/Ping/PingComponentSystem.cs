@@ -22,22 +22,24 @@ namespace ET
                     return;
                 }
 
-                long time1 = TimeHelper.ClientNow();
+                // long time1 = TimeHelper.ClientNow();
                 try
                 {
-                    G2C_Ping response = await session.Call(self.C2G_Ping) as G2C_Ping;
-
-                    if (self.InstanceId != instanceId)
-                    {
-                        return;
-                    }
-
-                    long time2 = TimeHelper.ClientNow();
-                    self.Ping = time2 - time1;
-                    
-                    Game.TimeInfo.ServerMinusClientTime = response.Time + (time2 - time1) / 2 - time2;
-
                     await TimerComponent.Instance.WaitAsync(10000);
+
+                    session.Send(self.heartbeatC2S);
+                    // G2C_Ping response = await session.Call(self.C2G_Ping) as G2C_Ping;
+                    //
+                    // if (self.InstanceId != instanceId)
+                    // {
+                    //     return;
+                    // }
+                    //
+                    // long time2 = TimeHelper.ClientNow();
+                    // self.Ping = time2 - time1;
+                    //
+                    // Game.TimeInfo.ServerMinusClientTime = response.Time + (time2 - time1) / 2 - time2;
+
                 }
                 catch (RpcException e)
                 {
