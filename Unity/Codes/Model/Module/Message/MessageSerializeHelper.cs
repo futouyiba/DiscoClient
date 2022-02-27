@@ -29,6 +29,36 @@ namespace ET
             {
                 if (opcode < OpcodeRangeDefine.PbMaxOpcode)
                 {
+                    ProtobufHelper.ToStream(obj, memoryStream);
+                    return;
+                }
+
+                if (opcode >= OpcodeRangeDefine.JsonMinOpcode)
+                {
+                    string s = JsonHelper.ToJson(obj);
+                    byte[] bytes = s.ToUtf8();
+                    memoryStream.Write(bytes, 0, bytes.Length);
+                    return;
+                }
+#if NOT_UNITY
+                MongoHelper.ToStream(obj, memoryStream);
+#else
+                throw new Exception($"client no message: {opcode}");
+#endif
+            }
+            catch (Exception e)
+            {
+                throw new Exception($"SerializeTo error: {opcode}", e);
+            }
+
+        }
+        
+        public static void SerializeToOuter(ushort opcode, object obj, MemoryStream memoryStream)
+        {
+            try
+            {
+                if (opcode < OpcodeRangeDefine.PbMaxOpcode)
+                {
                     //erlangMogai
                     var bodyBytes = ProtobufHelper.ToBytes(obj);
                     var tMsg = new TMsg()
@@ -79,6 +109,12 @@ namespace ET
             return stream;
         }
         
+        /// <summary>
+        /// used for outer messages, between gate, realm and client(unity)
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="count"></param>
+        /// <returns></returns>
         public static (ushort, MemoryStream) MessageToStream(object message, int count = 0)
         {
             //erlangMogai
@@ -92,12 +128,19 @@ namespace ET
             
             // stream.GetBuffer().WriteTo(0, opcode);
             
-            MessageSerializeHelper.SerializeTo(opcode, message, stream);
+            MessageSerializeHelper.SerializeToOuter(opcode, message, stream);
             
             stream.Seek(0, SeekOrigin.Begin);
             return (opcode, stream);
         }
         
+        /// <summary>
+        /// used by inner messages, mainly server.
+        /// </summary>
+        /// <param name="actorId"></param>
+        /// <param name="message"></param>
+        /// <param name="count"></param>
+        /// <returns></returns>
         public static (ushort, MemoryStream) MessageToStream(long actorId, object message, int count = 0)
         {
             int actorSize = sizeof (long);
