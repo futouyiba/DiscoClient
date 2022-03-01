@@ -40,7 +40,7 @@
                     Y = p.y,
                     Z = 0,
                 });
-                Log.Info("created unit:" + unit);
+                Log.Info("created unit:" + unit.Id);
             }
 
             zoneScene.RemoveComponent<AIComponent>();
