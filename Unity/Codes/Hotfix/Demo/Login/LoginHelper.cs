@@ -64,8 +64,19 @@ namespace ET
                 });
 
                 Log.Debug("auth response:" + authResp);
+                var errorCode = authResp.Error;
+                if (errorCode == 0)
+                {
+                    await Game.EventSystem.PublishAsync(new EventType.LoginFinish() { ZoneScene = zoneScene });
 
-                await Game.EventSystem.PublishAsync(new EventType.LoginFinish() { ZoneScene = zoneScene });
+                    // await SceneChangeHelper.SceneChangeTo(gateSession.ZoneScene(), "Map1", 65535);
+                }
+                else
+                {
+                    gateSession.Dispose();
+                }
+                
+
             }
             catch (Exception e)
             {

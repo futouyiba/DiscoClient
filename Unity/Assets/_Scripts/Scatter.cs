@@ -112,29 +112,35 @@ public class Scatter : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None; //鼠标解锁并显示
 
-        var position = small.position;
-        var gap = big.position - position;
-        var avgGapX = gap.x / scatterTimesX;
-        var avgGapZ = gap.z / scatterTimesZ;
+        // this.DoScatter();
+    }
+
+    private void DoScatter()
+    {
+        var position = this.small.position;
+        var gap = this.big.position - position;
+        var avgGapX = gap.x / this.scatterTimesX;
+        var avgGapZ = gap.z / this.scatterTimesZ;
         var smallZ = position.z;
         var smallX = position.x;
-        var spriteGOCount = spriteGOs.Length;
-        for (var i = 0; i < scatterTimesX; i++)
+        var spriteGOCount = this.spriteGOs.Length;
+        for (var i = 0; i < this.scatterTimesX; i++)
         {
-            for (var j = 0; j < scatterTimesX; j++)
+            for (var j = 0; j < this.scatterTimesX; j++)
             {
-                if (Random.Range(0f, 1f) > spawnRate)
+                if (Random.Range(0f, 1f) > this.spawnRate)
                 {
                     continue;
                 }
-                var y = big.position.y;
+
+                var y = this.big.position.y;
                 var x = smallX + (i * avgGapX);
                 var z = smallZ + (j * avgGapZ);
                 var randSpriteId = Random.Range(0, spriteGOCount);
-                var newGO = GameObject.Instantiate(spriteGOs[randSpriteId], new Vector3(x, y, z), Quaternion.identity);
+                var newGO = GameObject.Instantiate(this.spriteGOs[randSpriteId], new Vector3(x, y, z), Quaternion.identity);
                 var rand = Random.Range(0, this.names.Length);
                 var xiuGouBehavior = newGO.GetComponent<XiuGouBehavior>();
-                if (!(xiuGouBehavior is null)) xiuGouBehavior.nameText.text = names[rand];
+                if (!(xiuGouBehavior is null)) xiuGouBehavior.nameText.text = this.names[rand];
             }
         }
     }
