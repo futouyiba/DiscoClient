@@ -60,3 +60,4 @@ Server/.DS_Store
 *.csproj
 *.sln
 *.user
+.vsconfig
