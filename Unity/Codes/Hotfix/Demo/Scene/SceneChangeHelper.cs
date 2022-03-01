@@ -16,11 +16,33 @@
             Game.EventSystem.Publish(new EventType.SceneChangeStart() {ZoneScene = zoneScene});
 
             // 等待CreateMyUnit的消息
-            WaitType.Wait_CreateMyUnit waitCreateMyUnit = await zoneScene.GetComponent<ObjectWait>().Wait<WaitType.Wait_CreateMyUnit>();
-            M2C_CreateMyUnit m2CCreateMyUnit = waitCreateMyUnit.Message;
-            Unit unit = UnitFactory.Create(currentScene, m2CCreateMyUnit.Unit);
-            unitComponent.Add(unit);
-            
+            // WaitType.Wait_CreateMyUnit waitCreateMyUnit = await zoneScene.GetComponent<ObjectWait>().Wait<WaitType.Wait_CreateMyUnit>();
+            // M2C_CreateMyUnit m2CCreateMyUnit = waitCreateMyUnit.Message;
+            // Unit unit = UnitFactory.Create(currentScene, m2CCreateMyUnit.Unit);
+            // unitComponent.Add(unit);
+
+            WaitType.Wait_all_sync waitAllSync = await zoneScene.GetComponent<ObjectWait>().Wait<WaitType.Wait_all_sync>();
+            var all_sync = waitAllSync.Message;
+            foreach (player p in all_sync.players)
+            {
+                if (unitComponent.Get(p.player_id)!=null)
+                {
+                    continue;
+                }
+                var unit = UnitFactory.Create(currentScene, new UnitInfo()
+                {
+                    Type = p.figure_id,
+                    ForwardX = RandomHelper.RandomBool()?1f:-1f,
+                    ForwardY = 1,
+                    ForwardZ = 1,
+                    UnitId = p.player_id,
+                    X = p.x,
+                    Y = p.y,
+                    Z = 0,
+                });
+                Log.Info("created unit:" + unit);
+            }
+
             zoneScene.RemoveComponent<AIComponent>();
             
             Game.EventSystem.Publish(new EventType.SceneChangeFinish() {ZoneScene = zoneScene, CurrentScene = currentScene});
