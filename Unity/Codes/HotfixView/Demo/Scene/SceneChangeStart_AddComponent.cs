@@ -4,6 +4,8 @@ namespace ET
     {
         protected override async ETTask Run(EventType.SceneChangeStart args)
         {
+            Log.Info("SceneChangeStart_AddComponent event class ran...");
+            
             Scene currentScene = args.ZoneScene.CurrentScene();
             
             // 加载场景资源
@@ -22,8 +24,8 @@ namespace ET
             {
                 sceneChangeComponent?.Dispose();
             }
-			
 
+            await UIHelper.Remove(currentScene, UIType.UILogin);
             currentScene.AddComponent<OperaComponent>();
         }
     }
