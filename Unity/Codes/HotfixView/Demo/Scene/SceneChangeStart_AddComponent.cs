@@ -25,7 +25,8 @@ namespace ET
                 sceneChangeComponent?.Dispose();
             }
 
-            await UIHelper.Remove(currentScene, UIType.UILogin);
+            //await UIHelper.Remove(currentScene, UIType.UILogin);
+            currentScene.GetComponent<UIComponent>().HideWindow(WindowID.WindowID_Login);
             currentScene.AddComponent<OperaComponent>();
         }
     }
