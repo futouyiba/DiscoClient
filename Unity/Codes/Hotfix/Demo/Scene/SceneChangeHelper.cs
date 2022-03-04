@@ -37,8 +37,8 @@
                     ForwardZ = 1,
                     UnitId = p.player_id,
                     X = p.x,
-                    Y = p.y,
-                    Z = 0,
+                    Y = 0,
+                    Z = p.y,
                 });
                 Log.Info("created unit:" + unit.Id);
             }
