@@ -15,7 +15,13 @@ namespace ET
 	        
             GameObject go = UnityEngine.Object.Instantiate(prefab, GlobalComponent.Instance.Unit, true);
             go.transform.position = new Vector3(args.Unit.Position.x * 12f, args.Unit.Position.y, args.Unit.Position.z * 8f);
+            // todo random direction
+            // go.transform.
             args.Unit.AddComponent<GameObjectComponent>().GameObject = go;
+            if (args.Unit.Config.Type == (int)UnitType.Player)
+            {
+                go.GetComponent<SpriteRenderer>().color = Color.yellow;
+            }
             // args.Unit.AddComponent<AnimatorComponent>(); todo
             await ETTask.CompletedTask;
         }

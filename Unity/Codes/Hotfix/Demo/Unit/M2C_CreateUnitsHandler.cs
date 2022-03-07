@@ -12,7 +12,7 @@
 			{
 				if (unitComponent.Get(unitInfo.UnitId) != null)
 				{
-					continue;
+					continue;                
 				}
 				Unit unit = UnitFactory.Create(currentScene, unitInfo);
 			}

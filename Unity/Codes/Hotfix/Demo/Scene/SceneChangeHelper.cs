@@ -27,11 +27,12 @@
             {
                 if (unitComponent.Get(p.player_id)!=null)
                 {
+                    // 已经有这个unit了，现在不会有，后续会有一些
                     continue;
                 }
                 var unit = UnitFactory.Create(currentScene, new UnitInfo()
                 {
-                    Type = p.figure_id,
+                    Type = (int)UnitType.Player,
                     ForwardX = RandomHelper.RandomBool()?1f:-1f,
                     ForwardY = 1,
                     ForwardZ = 1,
