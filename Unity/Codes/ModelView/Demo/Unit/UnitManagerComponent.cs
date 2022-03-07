@@ -10,7 +10,7 @@ namespace ET
         private static GameObject ScatterGO;
         private static Transform ScatterTransform;
         private static Transform BigCornerTransform;
-        private static Transform SmallCornerTransform
-        
+        private static Transform SmallCornerTransform;
+
     }
 }
