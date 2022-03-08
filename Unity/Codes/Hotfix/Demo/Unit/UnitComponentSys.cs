@@ -223,7 +223,7 @@ namespace ET
 			charComp.playerData = messageOnePlayer;
 			self.AddPlayer(unit);
 			await Game.EventSystem.PublishAsync(new EventType.AfterUnitCreate(){Unit = unit});
-			
+			// todo remove some npc units by chance..
 		}
 	}
 }

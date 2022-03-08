@@ -15,7 +15,7 @@ namespace ET
             GameObject prefab = bundleGameObject.Get<GameObject>(prefabName);
 	        
             GameObject go = UnityEngine.Object.Instantiate(prefab, GlobalComponent.Instance.Unit, true);
-            go.transform.position = new Vector3(args.Unit.Position.x * 12f, args.Unit.Position.y, args.Unit.Position.z * 8f);
+            go.transform.position = new Vector3(args.Unit.Position.x * 12f - 6f, args.Unit.Position.y, args.Unit.Position.z * 8f - 4f);
             // todo random direction
             // go.transform.
             args.Unit.AddComponent<GameObjectComponent>().GameObject = go;
