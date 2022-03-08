@@ -193,11 +193,11 @@ namespace ET
 					}
 					
 					var id = IdGenerater.Instance.GenerateUnitId(self.DomainZone());
-					Unit unit = self.AddChildWithId<Unit, int>(id, 0);//todo configId
+					Unit unit = self.AddChildWithId<Unit, int>(id, 0);
 					unit.Position = new Vector3(i / 30f, 0f, j / 30f);
 					unit.AddComponent<MoveComponent>();
 					unit.AddComponent<ObjectWait>();
-					unit.AddComponent<CharComp>().CharType = CharType.Npc;
+					unit.AddComponent<CharComp>();
 					self.AddNpc(unit);
 					await Game.EventSystem.PublishAsync(new EventType.AfterUnitCreate(){Unit = unit});
 				}
@@ -218,9 +218,7 @@ namespace ET
 			unit.Position = new Vector3(messageOnePlayer.x, 0f, messageOnePlayer.y);
 			unit.AddComponent<MoveComponent>();
 			unit.AddComponent<ObjectWait>();
-			CharComp charComp = unit.AddComponent<CharComp>();
-			charComp.CharType = CharType.Player;
-			charComp.playerData = messageOnePlayer;
+			unit.AddComponent<CharComp,player>(messageOnePlayer);
 			self.AddPlayer(unit);
 			await Game.EventSystem.PublishAsync(new EventType.AfterUnitCreate(){Unit = unit});
 			// todo remove some npc units by chance..
