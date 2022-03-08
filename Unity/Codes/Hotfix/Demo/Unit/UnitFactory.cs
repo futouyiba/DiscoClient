@@ -38,7 +38,6 @@ namespace ET
 	        }
 
 	        unit.AddComponent<ObjectWait>();
-	        unit.AddComponent<CharComp>();
 
 	        // unit.AddComponent<XunLuoPathComponent>();
 	        

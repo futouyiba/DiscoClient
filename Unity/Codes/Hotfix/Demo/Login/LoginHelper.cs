@@ -19,8 +19,8 @@ namespace ET
 
         public static async ETTask Login(Scene zoneScene, string address, string account, string password)
         {
-            var myProductId = SystemInfo.deviceUniqueIdentifier;
-            Log.Info("product id:"+myProductId);
+            //var myProductId = UnityEngine.SystemInfo.deviceUniqueIdentifier;
+            //Log.Info("product id:"+myProductId);
             
             int.TryParse(account, out var accountInt);
             try
