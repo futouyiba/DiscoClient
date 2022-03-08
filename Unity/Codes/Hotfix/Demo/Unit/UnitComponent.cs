@@ -33,5 +33,49 @@
 			Unit unit = self.GetChild<Unit>(id);
 			unit?.Dispose();
 		}
+
+		public static bool AddNpc(this UnitComponent self, Unit unit)
+		{
+			if (!self.NpcUnits.ContainsKey(unit.Id))
+			{
+				self.NpcUnits.Add(unit.Id, unit);
+				return true;
+			}
+
+			return false;
+		}
+
+		public static bool RemoveNpc(this UnitComponent self, Unit unit)
+		{
+			if (self.NpcUnits.ContainsKey(unit.Id))
+			{
+				self.NpcUnits.Remove(unit.Id);
+				return true;
+			}
+
+			return false;
+		}
+
+		public static bool AddPlayer(this UnitComponent self, Unit unit)
+		{
+			if (!self.PlayerUnits.ContainsKey(unit.Config.Id))
+			{
+				self.PlayerUnits.Add(unit.Config.Id, unit);
+				return true;
+			}
+
+			return false;
+		}
+
+		public static bool RemovePlayer(this UnitComponent self, Unit unit)
+		{
+			if (self.PlayerUnits.ContainsKey(unit.Config.Id))
+			{
+				self.PlayerUnits.Remove(unit.Config.Id);
+				return true;
+			}
+
+			return false;
+		}
 	}
 }

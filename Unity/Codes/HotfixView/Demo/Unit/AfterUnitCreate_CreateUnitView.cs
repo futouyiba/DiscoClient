@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Random = System.Random;
 
 namespace ET
 {
@@ -8,7 +9,7 @@ namespace ET
         {
             // Unit View层
             // 这里可以改成异步加载，demo就不搞了
-            var figureConfigId = args.Unit.ConfigId;
+            var figureConfigId = RandomHelper.RandUInt32() % 7;
             var prefabName = "cSingle" +figureConfigId.ToString("00");
             GameObject bundleGameObject = (GameObject)ResourcesComponent.Instance.GetAsset("Unit.unity3d", "Unit");
             GameObject prefab = bundleGameObject.Get<GameObject>(prefabName);
