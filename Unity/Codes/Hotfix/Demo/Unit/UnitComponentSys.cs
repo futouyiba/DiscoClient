@@ -60,7 +60,7 @@ namespace ET
 
 		public static bool AddPlayer(this UnitComponent self, Unit unit)
 		{
-			int playerId = unit.GetComponent<CharComp>().PlayerId;
+			int playerId = unit.GetComponent<CharComp>().playerData.player_id;
 			if (!self.PlayerUnits.ContainsKey(playerId))
 			{
 				self.PlayerUnits.Add(playerId, unit);
@@ -72,7 +72,7 @@ namespace ET
 
 		public static bool RemovePlayer(this UnitComponent self, Unit unit)
 		{
-			int playerId = unit.GetComponent<CharComp>().PlayerId;
+			int playerId = unit.GetComponent<CharComp>().playerData.player_id;
 			if (self.PlayerUnits.ContainsKey(playerId))
 			{
 				self.PlayerUnits.Remove(playerId);
@@ -194,16 +194,36 @@ namespace ET
 					
 					var id = IdGenerater.Instance.GenerateUnitId(self.DomainZone());
 					Unit unit = self.AddChildWithId<Unit, int>(id, 0);//todo configId
-					self.AddNpc(unit);
 					unit.Position = new Vector3(i / 30f, 0f, j / 30f);
 					unit.AddComponent<MoveComponent>();
 					unit.AddComponent<ObjectWait>();
 					unit.AddComponent<CharComp>().CharType = CharType.Npc;
+					self.AddNpc(unit);
 					await Game.EventSystem.PublishAsync(new EventType.AfterUnitCreate(){Unit = unit});
 				}
 			}
 
 			await ETTask.CompletedTask;
+		}
+		
+		public static async ETTask CreatePlayer(this UnitComponent self, player messageOnePlayer)
+		{
+			if (self.PlayerUnits.ContainsKey(messageOnePlayer.player_id))
+			{
+				Log.Info("Player already existing in scene, skip creating player...");
+			}
+			
+			var id = IdGenerater.Instance.GenerateUnitId(self.DomainZone());
+			Unit unit = self.AddChildWithId<Unit, int>(id, 0);//todo configId
+			unit.Position = new Vector3(messageOnePlayer.x, 0f, messageOnePlayer.y);
+			unit.AddComponent<MoveComponent>();
+			unit.AddComponent<ObjectWait>();
+			CharComp charComp = unit.AddComponent<CharComp>();
+			charComp.CharType = CharType.Player;
+			charComp.playerData = messageOnePlayer;
+			self.AddPlayer(unit);
+			await Game.EventSystem.PublishAsync(new EventType.AfterUnitCreate(){Unit = unit});
+			
 		}
 	}
 }

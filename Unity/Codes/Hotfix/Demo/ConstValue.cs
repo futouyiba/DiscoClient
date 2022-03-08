@@ -10,9 +10,16 @@ namespace ET
         public const float WanderRadius = 0.1f;
 
         public const int PopulateGoalNum = 500;
+        /// <summary>
+        /// at start we don't use it, only use dynamic rubberband mechanic.
+        /// </summary>
         public const int PopulateUpValue = 550;
         public const int PopulateDownValue = 450;
 
-        public const float RubberbandStrength = 0.2f;
+        /// <summary>
+        /// 考虑每进来一个玩家，有一定的几率去除n个npc。
+        /// </summary>
+        public const float RubberbandChance = 0.2f;
+        public const int RubberbandStrength = 4;
     }
 }

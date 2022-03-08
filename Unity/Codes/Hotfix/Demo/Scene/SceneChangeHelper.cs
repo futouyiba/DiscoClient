@@ -25,32 +25,14 @@
             var all_sync = waitAllSync.Message;
             foreach (player p in all_sync.players)
             {
-                if (unitComponent.Get(p.player_id)!=null)
-                {
-                    // 已经有这个unit了，现在不会有，后续会有一些
-                    continue;
-                }
-                var unit = UnitFactory.Create(currentScene, new UnitInfo()
-                {
-                    Type = (int)UnitType.Player,
-                    ForwardX = RandomHelper.RandomBool()?1f:-1f,
-                    ForwardY = 1,
-                    ForwardZ = 1,
-                    UnitId = p.player_id,
-                    X = p.x,
-                    Y = 0,
-                    Z = p.y,
-                },CharType.Player);
-                unit.GetComponent<CharComp>().PlayerId = p.player_id; // later will replace factory method...
-                
-                Log.Info("created player unit:" + unit.Id);
+                await unitComponent.CreatePlayer(p);
             }
 
             await unitComponent.PopulateInit();
 
             zoneScene.RemoveComponent<AIComponent>();
             
-            Game.EventSystem.Publish(new EventType.SceneChangeFinish() {ZoneScene = zoneScene, CurrentScene = currentScene});
+            await Game.EventSystem.PublishAsync(new EventType.SceneChangeFinish() {ZoneScene = zoneScene, CurrentScene = currentScene});
 
             // 通知等待场景切换的协程
             zoneScene.GetComponent<ObjectWait>().Notify(new WaitType.Wait_SceneChangeFinish());

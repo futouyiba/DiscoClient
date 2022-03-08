@@ -12,7 +12,7 @@ namespace ET
     {
         public CharType CharType;
         // use the id within Unit instead...
-        public int PlayerId; 
+        public player playerData; 
 
         /// <summary>
         /// every once and a while, the char will move or stay still, or do something else.
