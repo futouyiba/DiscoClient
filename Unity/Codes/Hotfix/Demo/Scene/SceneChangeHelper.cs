@@ -40,9 +40,13 @@
                     X = p.x,
                     Y = 0,
                     Z = p.y,
-                });
-                Log.Info("created unit:" + unit.Id);
+                },CharType.Player);
+                unit.GetComponent<CharComp>().PlayerId = p.player_id; // later will replace factory method...
+                
+                Log.Info("created player unit:" + unit.Id);
             }
+
+            await unitComponent.PopulateInit();
 
             zoneScene.RemoveComponent<AIComponent>();
             

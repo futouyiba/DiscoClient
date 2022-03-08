@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace ET
+﻿namespace ET
 {
     /// <summary>
     /// todo mvc拆分放在后面
@@ -12,8 +10,7 @@ namespace ET
         {
             if (self.CharType == CharType.Player)
             {
-                Log.Info("Player Char awake! next step is to change color...");
-                self.Parent.GetComponent<GameObjectComponent>().GameObject.GetComponent<SpriteRenderer>().color = Color.yellow;;
+                Log.Info("Player Char awake!");
             }
         }
     }

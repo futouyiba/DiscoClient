@@ -26,7 +26,8 @@ namespace _Scripts
         {
             // StartCoroutine()
             // InvokeRepeating(nameof(LiuDa), 0f, fixedInterval);
-            if (bMove)
+            if (false)
+                // if (bMove)
             {
                 this.LiuDa();
             }
