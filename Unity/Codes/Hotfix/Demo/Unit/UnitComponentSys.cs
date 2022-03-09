@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace ET
 {
@@ -7,6 +8,8 @@ namespace ET
 	{
 		public override void Awake(UnitComponent self)
 		{
+			self.NpcUnits = new Dictionary<long, Unit>();
+			self.PlayerUnits = new Dictionary<int, Unit>();
 		}
 	}
 	
@@ -179,6 +182,8 @@ namespace ET
 		/// <param name="self"></param>
 		public static async ETTask PopulateInit(this UnitComponent self)
 		{
+			var namesCount = names.Length;
+			var nameRandIndex = RandomHelper.RandomNumber(0,namesCount);
 			var playerCount = self.PlayerUnits.Count;
 			var populateNum = ConstValue.PopulateGoalNum - playerCount;
 			float populateChance = populateNum / 900f;
@@ -194,10 +199,15 @@ namespace ET
 					
 					var id = IdGenerater.Instance.GenerateUnitId(self.DomainZone());
 					Unit unit = self.AddChildWithId<Unit, int>(id, 0);
-					unit.Position = new Vector3(i / 30f, 0f, j / 30f);
 					unit.AddComponent<MoveComponent>();
 					unit.AddComponent<ObjectWait>();
-					unit.AddComponent<CharComp>();
+					unit.AddComponent<CharComp>().playerData = new player()
+					{
+						x = i/30f,
+						y = j/30f,
+						player_name = names[nameRandIndex],
+					};
+					// unit.Position = new Vector3(i / 30f, 0f, j / 30f);
 					self.AddNpc(unit);
 					await Game.EventSystem.PublishAsync(new EventType.AfterUnitCreate(){Unit = unit});
 				}
@@ -222,6 +232,12 @@ namespace ET
 			self.AddPlayer(unit);
 			await Game.EventSystem.PublishAsync(new EventType.AfterUnitCreate(){Unit = unit});
 			// todo remove some npc units by chance..
+		}
+
+		public static Unit MyPlayerUnit(this UnitComponent self)
+		{
+			var myPlayerId = PlayerPrefs.GetInt(LoginHelper.USER_ID);
+			return self.PlayerUnits[myPlayerId];
 		}
 	}
 }

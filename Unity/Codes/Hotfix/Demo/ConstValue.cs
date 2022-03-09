@@ -9,6 +9,8 @@ namespace ET
         /// </summary>
         public const float WanderRadius = 0.1f;
 
+        public const float PlayerMoveSpeed = 4f;
+
         public const int PopulateGoalNum = 500;
         /// <summary>
         /// at start we don't use it, only use dynamic rubberband mechanic.

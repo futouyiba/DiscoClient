@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using Random = System.Random;
+using TMPro;
 
 namespace ET
 {
@@ -16,6 +16,10 @@ namespace ET
             if (ScatterGO == null)
             {
                 ScatterGO = GameObject.Find("Scatter");
+                if (ScatterGO == null)
+                {
+                    ScatterGO = GameObject.FindWithTag("Player");
+                }
                 Log.Info("scatter gameobject:" + ScatterGO.ToString());
                 ScatterTransform = ScatterGO.transform;
                 BigCornerTransform = ScatterTransform.Find("big");
@@ -39,9 +43,14 @@ namespace ET
             // todo random direction
             // go.transform.
             args.Unit.AddComponent<GameObjectComponent>().GameObject = go;
-            if (charComp.CharType == CharType.Player)
+            if (charComp.CharType == CharType.Npc)
             {
-                go.GetComponent<SpriteRenderer>().color = Color.yellow;
+                go.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);//todo refactor to XiuGouComponent
+                go.transform.GetChild(1).GetComponent<TextMeshPro>().text = charComp.playerData.player_name;
+            }
+            else
+            {
+                go.transform.GetChild(1).GetComponent<TextMeshPro>().color = Color.yellow;
             }
             // args.Unit.AddComponent<AnimatorComponent>(); todo
             await ETTask.CompletedTask;

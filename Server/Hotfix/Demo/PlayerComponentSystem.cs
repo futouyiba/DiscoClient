@@ -14,9 +14,10 @@ namespace ET
         [ObjectSystem]
         public class PlayerComponentDestroySystem: DestroySystem<PlayerComponent>
         {
-            public override void Destroy(PlayerComponent self)
+            public override void Destroy( PlayerComponent self)
             {
             }
+            
         }
     }
 }
