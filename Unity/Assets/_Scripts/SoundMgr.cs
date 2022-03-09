@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 // using NAudio；
 
 //让其他组件容易的找到当前的audio source
@@ -23,6 +26,13 @@ public class SoundMgr : MonoBehaviour
     private float beatThreshold = .15f;
 
     private float tenseMax;
+    //存放beat表现的dlg定义
+    public Action dlg_Beat;
+    private float lastBeat;
+
+   
+
+    // public dlg_Beat Dlg_beat;
 
     private void Awake()
     {
@@ -106,9 +116,27 @@ public class SoundMgr : MonoBehaviour
         //有一些magic numbers
         if (tensity * tensityMultiply >= this.beatThreshold)
         {//found beat
-            Debug.Log(Time.time+" BeatFound"+" tensity="+tensity+", threshold="+this.beatThreshold);
+            
+            // Debug.Log(Time.time+" BeatFound"+" tensity="+tensity+", threshold="+this.beatThreshold);
+            this.dlg_Beat.Invoke();
+            this.lastBeat = Time.time;
         }
         
+    }
+
+
+    public bool AddBeatDlg(Action func)
+    {
+        try
+        {
+            this.dlg_Beat += func;
+        }
+        catch(Exception e)
+        {
+            Debug.LogError(e);
+            return false;
+        }
+        return true;
     }
 }
 

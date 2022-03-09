@@ -821,7 +821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 39c3167d75ce9ce4d9532aeabd500c4d, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 39c3167d75ce9ce4d9532aeabd500c4d, type: 3}
       propertyPath: m_RootOrder
@@ -10401,6 +10401,23 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &590645753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 39c3167d75ce9ce4d9532aeabd500c4d, type: 3}
+  m_PrefabInstance: {fileID: 68819349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &590645754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590645753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3583cf49745b4232bdff06055350cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &591240684
 GameObject:
   m_ObjectHideFlags: 0

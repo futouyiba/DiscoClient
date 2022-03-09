@@ -61,3 +61,4 @@ Server/.DS_Store
 *.sln
 *.user
 .vsconfig
+*.DotSettings
