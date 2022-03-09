@@ -19,7 +19,7 @@ public class SourceLightManager : MonoBehaviour
     {
         state = startState;
         Change(startState);
-        button.onClick.AddListener(ChangeLightState);
+        if (!(this.button is null)) button.onClick.AddListener(ChangeLightState);
     }
 
     private void ChangeLightState()
@@ -31,10 +31,14 @@ public class SourceLightManager : MonoBehaviour
 
     private void Change(bool curState)
     {
-        ColorBlock colorBlock = button.colors;
-        colorBlock.normalColor = state ? enabledColor : disabledColor;
-        colorBlock.highlightedColor = colorBlock.normalColor;
-        button.colors = colorBlock;
+        if (!(this.button is null))
+        {
+            ColorBlock colorBlock = button.colors;
+            colorBlock.normalColor = state ? enabledColor : disabledColor;
+            colorBlock.highlightedColor = colorBlock.normalColor;
+            button.colors = colorBlock;
+        }
+      
 
         if (controllers != null)
         {
