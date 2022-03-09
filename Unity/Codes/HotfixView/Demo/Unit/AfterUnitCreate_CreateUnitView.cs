@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 
 namespace ET
 {
@@ -44,11 +45,12 @@ namespace ET
             args.Unit.AddComponent<GameObjectComponent>().GameObject = go;
             if (charComp.CharType == CharType.Npc)
             {
-                go.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);
+                go.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);//todo refactor to XiuGouComponent
+                go.transform.GetChild(1).GetComponent<TextMeshPro>().text = charComp.playerData.player_name;
             }
             else
             {
-                go.transform.GetChild(1).GetComponent<TextMesh>().color = Color.yellow;
+                go.transform.GetChild(1).GetComponent<TextMeshPro>().color = Color.yellow;
             }
             // args.Unit.AddComponent<AnimatorComponent>(); todo
             await ETTask.CompletedTask;

@@ -182,6 +182,8 @@ namespace ET
 		/// <param name="self"></param>
 		public static async ETTask PopulateInit(this UnitComponent self)
 		{
+			var namesCount = names.Length;
+			var nameRandIndex = RandomHelper.RandomNumber(0,namesCount);
 			var playerCount = self.PlayerUnits.Count;
 			var populateNum = ConstValue.PopulateGoalNum - playerCount;
 			float populateChance = populateNum / 900f;
@@ -203,6 +205,7 @@ namespace ET
 					{
 						x = i/30f,
 						y = j/30f,
+						player_name = names[nameRandIndex],
 					};
 					// unit.Position = new Vector3(i / 30f, 0f, j / 30f);
 					self.AddNpc(unit);
