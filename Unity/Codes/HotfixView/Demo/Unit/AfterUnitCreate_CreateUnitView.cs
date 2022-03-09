@@ -18,8 +18,8 @@ namespace ET
                 ScatterGO = GameObject.Find("Scatter");
                 Log.Info("scatter gameobject:" + ScatterGO.ToString());
                 ScatterTransform = ScatterGO.transform;
-                BigCornerTransform = ScatterTransform.Find("Big");
-                SmallCornerTransform = ScatterTransform.Find("Small");
+                BigCornerTransform = ScatterTransform.Find("big");
+                SmallCornerTransform = ScatterTransform.Find("small");
                 bigPos = BigCornerTransform.position;
                 smallPos = SmallCornerTransform.position;
             }
