@@ -22,7 +22,10 @@ namespace ET
 
         public static async ETTask Login(Scene zoneScene, string address, string account, string password)
         {
-#if UNITY_ENGINE
+#if NOT_UNITY
+            var myProductId = DeviceProductId75;
+            var userId = UserId75;
+#else
             var myProductId = SystemInfo.deviceUniqueIdentifier;
             Log.Info("product id:"+myProductId);
             if(!PlayerPrefs.HasKey(USER_ID))
@@ -55,9 +58,7 @@ namespace ET
             }
 
             var userId = PlayerPrefs.GetInt(USER_ID);
-#else
-            var myProductId = DeviceProductId75;
-            var userId = UserId75;
+
 #endif
 
             // int.TryParse(account, out int accountInt);

@@ -13,7 +13,7 @@
             UnitComponent unitComponent = currentScene.AddComponent<UnitComponent>();
             Log.Info("published scene change start...");
             // 可以订阅这个事件中创建Loading界面
-            Game.EventSystem.Publish(new EventType.SceneChangeStart() {ZoneScene = zoneScene});
+            await Game.EventSystem.PublishAsync(new EventType.SceneChangeStart() {ZoneScene = zoneScene});
 
             // 等待CreateMyUnit的消息
             // WaitType.Wait_CreateMyUnit waitCreateMyUnit = await zoneScene.GetComponent<ObjectWait>().Wait<WaitType.Wait_CreateMyUnit>();
