@@ -233,5 +233,11 @@ namespace ET
 			await Game.EventSystem.PublishAsync(new EventType.AfterUnitCreate(){Unit = unit});
 			// todo remove some npc units by chance..
 		}
+
+		public static Unit MyPlayerUnit(this UnitComponent self)
+		{
+			var myPlayerId = PlayerPrefs.GetInt(LoginHelper.USER_ID);
+			return self.PlayerUnits[myPlayerId];
+		}
 	}
 }
