@@ -81,6 +81,11 @@ namespace ET
         {
             public Unit Unit;
         }
+
+        public struct AfterUnitRemove
+        {
+            public Unit Unit;
+        }
         
         public struct MoveStart
         {

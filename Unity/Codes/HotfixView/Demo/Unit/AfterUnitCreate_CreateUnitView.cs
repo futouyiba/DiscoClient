@@ -5,21 +5,41 @@ namespace ET
 {
     public class AfterUnitCreate_CreateUnitView: AEvent<EventType.AfterUnitCreate>
     {
+        private static GameObject ScatterGO = null;
+        private static Transform ScatterTransform = null;
+        private static Transform BigCornerTransform = null;
+        private static Transform SmallCornerTransform = null;
+        static Vector3 bigPos = Vector3.zero;
+        static Vector3 smallPos = Vector3.zero;
         protected override async ETTask Run(EventType.AfterUnitCreate args)
         {
+            if (ScatterGO == null)
+            {
+                ScatterGO = GameObject.Find("Scatter");
+                Log.Info("scatter gameobject:" + ScatterGO.ToString());
+                ScatterTransform = ScatterGO.transform;
+                BigCornerTransform = ScatterTransform.Find("big");
+                SmallCornerTransform = ScatterTransform.Find("small");
+                bigPos = BigCornerTransform.position;
+                smallPos = SmallCornerTransform.position;
+            }
+            CharComp charComp = args.Unit.GetComponent<CharComp>();
+
             // Unit View层
             // 这里可以改成异步加载，demo就不搞了
-            var figureConfigId = RandomHelper.RandUInt32() % 7;
+            var figureConfigId = RandomHelper.RandUInt32() % 6;
             var prefabName = "cSingle" +figureConfigId.ToString("00");
             GameObject bundleGameObject = (GameObject)ResourcesComponent.Instance.GetAsset("Unit.unity3d", "Unit");
             GameObject prefab = bundleGameObject.Get<GameObject>(prefabName);
 	        
             GameObject go = UnityEngine.Object.Instantiate(prefab, GlobalComponent.Instance.Unit, true);
-            go.transform.position = new Vector3(args.Unit.Position.x * 12f - 6f, args.Unit.Position.y, args.Unit.Position.z * 8f - 4f);
+            go.transform.position = new Vector3(Mathf.Lerp(smallPos.x, bigPos.x, charComp.playerData.x),
+                Mathf.Lerp(smallPos.y, bigPos.y, 0.5f), Mathf.Lerp(smallPos.z, bigPos.z, charComp.playerData.y));
+            
             // todo random direction
             // go.transform.
             args.Unit.AddComponent<GameObjectComponent>().GameObject = go;
-            if (args.Unit.Config.Type == (int)UnitType.Player)
+            if (charComp.CharType == CharType.Player)
             {
                 go.GetComponent<SpriteRenderer>().color = Color.yellow;
             }

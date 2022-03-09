@@ -8,7 +8,7 @@ namespace ET
         Npc,
     }
     
-    public class CharComp:Entity, IAwake
+    public class CharComp:Entity, IAwake<player>, IAwake
     {
         public CharType CharType;
         // use the id within Unit instead...
