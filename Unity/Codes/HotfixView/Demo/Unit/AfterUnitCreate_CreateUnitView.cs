@@ -16,6 +16,10 @@ namespace ET
             if (ScatterGO == null)
             {
                 ScatterGO = GameObject.Find("Scatter");
+                if (ScatterGO == null)
+                {
+                    ScatterGO = GameObject.FindWithTag("Player");
+                }
                 Log.Info("scatter gameobject:" + ScatterGO.ToString());
                 ScatterTransform = ScatterGO.transform;
                 BigCornerTransform = ScatterTransform.Find("big");
@@ -39,9 +43,13 @@ namespace ET
             // todo random direction
             // go.transform.
             args.Unit.AddComponent<GameObjectComponent>().GameObject = go;
-            if (charComp.CharType == CharType.Player)
+            if (charComp.CharType == CharType.Npc)
             {
-                go.GetComponent<SpriteRenderer>().color = Color.yellow;
+                go.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);
+            }
+            else
+            {
+                go.transform.GetChild(1).GetComponent<TextMesh>().color = Color.yellow;
             }
             // args.Unit.AddComponent<AnimatorComponent>(); todo
             await ETTask.CompletedTask;

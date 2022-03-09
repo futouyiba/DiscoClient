@@ -16,7 +16,7 @@ namespace ET
             // var all_sync = waitAllSync.Message;
             foreach (player p in message.players)
             {
-                await session.DomainScene().GetComponent<UnitComponent>().CreatePlayer(p);
+                await session.DomainScene().CurrentScene(). GetComponent<UnitComponent>().CreatePlayer(p);
             }
             await ETTask.CompletedTask;
         }

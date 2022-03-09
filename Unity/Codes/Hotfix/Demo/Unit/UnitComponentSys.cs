@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace ET
 {
@@ -7,6 +8,8 @@ namespace ET
 	{
 		public override void Awake(UnitComponent self)
 		{
+			self.NpcUnits = new Dictionary<long, Unit>();
+			self.PlayerUnits = new Dictionary<int, Unit>();
 		}
 	}
 	
