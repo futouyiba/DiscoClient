@@ -50852,6 +50852,7 @@ GameObject:
   - component: {fileID: 4122489599036711254}
   - component: {fileID: 4122489599036711255}
   - component: {fileID: 4122489599036711252}
+  - component: {fileID: 4122489599036711339}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -50859,6 +50860,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4122489599036711339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4122489599036711338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad2d7cf16d6049aaaf4cec4e084711c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _controlCamera: {fileID: 4122489599036711261}
+  beatFov: 5
 --- !u!1 &4169732056867534100
 GameObject:
   m_ObjectHideFlags: 0
