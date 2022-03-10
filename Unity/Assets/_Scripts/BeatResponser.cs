@@ -6,7 +6,8 @@ using UnityEngine;
 public class BeatResponser : MonoBehaviour
 {
     
-    public static float beatCooldown = .1f;
+    public static float beatCooldown = .2f;
+    public Sequence beatAnimSeq;
 
     private Vector3 initScale;
 
@@ -14,9 +15,13 @@ public class BeatResponser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SoundMgr.instance.AddBeatDlg(this.Beat);
+        var result = SoundMgr.instance.AddBeatDlg(this.Beat);
+        if(!result) Debug.LogError("add delegate for "+this.transform.parent.name+" failed");
         this.initScale = this.transform.localScale;
         this.punchScale = this.initScale * 1.2f;
+        // this.beatAnimSeq= DOTween.Sequence()
+                // .Append(this.transform.DOScale(this.punchScale, beatCooldown * .45f))
+                // .Append(this.transform.DOScale(this.initScale, beatCooldown * .45f));
     }
 
     // Update is called once per frame
@@ -27,9 +32,12 @@ public class BeatResponser : MonoBehaviour
 
     public void Beat()
     {
+        // Debug.Log(Time.time+" beated");
 
-        this.transform.DOScale(this.punchScale, beatCooldown * .45f).onComplete(DOTween.(this.punchScale, beatCooldown * .45f));
-        
+        // this.beatAnimSeq.Play();
+        this.transform.DORewind();
+        this.transform.DOPunchScale(Vector3.one * .2f,beatCooldown*.9f);
+
     }
     
 }
