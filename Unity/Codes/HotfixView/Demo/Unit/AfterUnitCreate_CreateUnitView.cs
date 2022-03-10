@@ -11,6 +11,30 @@ namespace ET
         private static Transform SmallCornerTransform = null;
         static Vector3 bigPos = Vector3.zero;
         static Vector3 smallPos = Vector3.zero;
+
+        public static (float, float) UnityPosToServerXY(Vector3 unityPos)
+        {
+            if (ScatterGO == null)
+            {
+                return (0f, 0f);
+            }
+
+            var x = Mathf.Clamp01((unityPos.x - smallPos.x) / (bigPos.x - smallPos.x));
+            var y = Mathf.Clamp01((unityPos.z - smallPos.z) / (bigPos.z - smallPos.z));
+            return (x, y);
+        }
+
+        public static Vector3 ServerXYToUnityPos(float x, float y)
+        {
+            if (ScatterGO == null)
+            {
+                return Vector3.zero;
+            }
+
+            return new Vector3(Mathf.Lerp(smallPos.x, bigPos.x, x),
+                Mathf.Lerp(smallPos.y, bigPos.y, 0.5f), Mathf.Lerp(smallPos.z, bigPos.z, y));
+        }
+        
         protected override async ETTask Run(EventType.AfterUnitCreate args)
         {
             if (ScatterGO == null)
@@ -45,7 +69,7 @@ namespace ET
             args.Unit.AddComponent<GameObjectComponent>().GameObject = go;
             if (charComp.CharType == CharType.Npc)
             {
-                go.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);//todo refactor to XiuGouComponent
+                // go.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);//todo refactor to XiuGouComponent
                 go.transform.GetChild(1).GetComponent<TextMeshPro>().text = charComp.playerData.player_name;
             }
             else

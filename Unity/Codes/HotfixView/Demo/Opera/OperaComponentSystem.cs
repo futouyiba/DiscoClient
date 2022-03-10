@@ -27,15 +27,15 @@ namespace ET
     {
         public static async ETTask Update(this OperaComponent self)
         {
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(0))
             {
+                Log.Info("mouse button down...");
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, 1000, self.mapMask))
                 {
                     self.ClickPoint = hit.point;
-                    self.move_action_req_c2s.float1 = self.ClickPoint.x;
-                    self.move_action_req_c2s.float2 = self.ClickPoint.z;
+                    (self.move_action_req_c2s.float1, self.move_action_req_c2s.float2) = AfterUnitCreate_CreateUnitView.UnityPosToServerXY(hit.point);
                     action_req_s2c moveResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
                             .Call(self.move_action_req_c2s);
                     if (moveResp.Error != 0)

@@ -236,7 +236,11 @@ namespace ET
 
 		public static Unit MyPlayerUnit(this UnitComponent self)
 		{
-			var myPlayerId = PlayerPrefs.GetInt(LoginHelper.USER_ID);
+			#if NOT_UNITY
+			var myPlayerId = LoginHelper.UserId75;
+			#else
+			var myPlayerId = UnityEngine.PlayerPrefs.GetInt(LoginHelper.USER_ID);
+			#endif
 			return self.PlayerUnits[myPlayerId];
 		}
 	}
