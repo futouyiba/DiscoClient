@@ -19,12 +19,21 @@ public class SoundMgr : MonoBehaviour
     [SerializeField]
     private List<AudioClip> musicList;
 
+    /// <summary>
+    /// 1024 samples by def
+    /// from x to y
+    /// </summary>
+    [SerializeField]
+    private Vector2Int SpectRange;
+
     private float[] spectrumData;
     public static float tensityMultiply = 100f;
 
     [SerializeField]
     private float beatThreshold = .15f;
 
+    // [SerializeField] private float delay = 0f;
+    
     private float tenseMax;
     //存放beat表现的dlg定义
     public Action dlg_Beat;
@@ -52,6 +61,7 @@ public class SoundMgr : MonoBehaviour
     {
         spectrumData=new float[1024];
         this.tenseMax= 0f;
+        // this.SpectRange = new Vector2Int(0, 255);
     }
     
     //从配置的列表中随机播放音乐
@@ -99,13 +109,13 @@ public class SoundMgr : MonoBehaviour
         //现在只听通道0，todo：立体声多通道平均音量好一点？
         AudioListener.GetSpectrumData(spectrumData, 0, FFTWindow.BlackmanHarris);
         float tensity = 0f;
-        Vector2Int sampleRange = new Vector2Int(0, 255);
-        for (int i=sampleRange.x; i <= sampleRange.y; i++)
+        // Vector2Int sampleRange = new Vector2Int(0, 255);
+        for (int i=this.SpectRange.x; i <= this.SpectRange.y; i++)
         {
             tensity += this.spectrumData[i];
         }
 
-        tensity /= sampleRange.y - sampleRange.x + 1;
+        tensity /= (float)(SpectRange.y - SpectRange.x + 1);
         
         // if (tensity >= this.tenseMax)
         // {
