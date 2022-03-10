@@ -35,7 +35,9 @@ public class BeatResponser : MonoBehaviour
         // Debug.Log(Time.time+" beated");
 
         // this.beatAnimSeq.Play();
+        
         this.transform.DORewind();
+        DOTween.Kill(this.transform);
         this.transform.DOPunchScale(Vector3.one * .2f,beatCooldown*.9f);
 
     }

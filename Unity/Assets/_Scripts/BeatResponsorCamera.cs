@@ -34,6 +34,7 @@ public class BeatResponsorCamera : MonoBehaviour
 
     private void BeatPerform()
     {
+        DOTween.Kill(this);
         this._controlCamera.fieldOfView = this.initFov;
         DOTween.To(() => this._controlCamera.fieldOfView, x => this._controlCamera.fieldOfView = x, this.beatFov+this.initFov, .12f);
     }
