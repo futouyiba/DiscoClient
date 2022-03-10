@@ -41,7 +41,7 @@ namespace ET
                     if (moveResp.Error != 0)
                     {
                         self.DomainScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<MoveComponent>()
-                                .MoveToAsync(new List<Vector3> { self.ClickPoint }, ConstValue.PlayerMoveSpeed);
+                                .MoveToAsync(new List<Vector3> { self.ClickPoint }, ConstValue.PlayerMoveSpeed).Coroutine();
                     }
                     // self.frameClickMap.X = self.ClickPoint.x;
                     // self.frameClickMap.Y = self.ClickPoint.y;
