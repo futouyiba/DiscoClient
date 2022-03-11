@@ -10,7 +10,7 @@
             CurrentScenesComponent currentScenesComponent = zoneScene.GetComponent<CurrentScenesComponent>();
             currentScenesComponent.Scene?.Dispose(); // 删除之前的CurrentScene，创建新的
             Scene currentScene = SceneFactory.CreateCurrentScene(sceneInstanceId, zoneScene.Zone, sceneName, currentScenesComponent);
-            UnitComponent unitComponent = currentScene.AddComponent<UnitComponent>();
+            // UnitComponent unitComponent = currentScene.AddComponent<UnitComponent>();
             Log.Info("published scene change start...");
             // 可以订阅这个事件中创建Loading界面
             // await Game.EventSystem.PublishAsync(new EventType.SceneChangeStart() {ZoneScene = zoneScene});

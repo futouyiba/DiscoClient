@@ -12,11 +12,12 @@ namespace ET
         protected override async ETTask Run(Session session, all_sync_s2c message)
         {
             Log.Info($"all sync message:{message}");
-            WaitType.Wait_all_sync waitAllSync = await session.DomainScene().GetComponent<ObjectWait>().Wait<WaitType.Wait_all_sync>();
+            WaitType.Wait_all_sync waitAllSync = await session.ZoneScene().GetComponent<ObjectWait>().Wait<WaitType.Wait_all_sync>();
             // var all_sync = waitAllSync.Message;
             foreach (player p in message.players)
             {
-                await session.DomainScene().CurrentScene(). GetComponent<UnitComponent>().CreatePlayer(p);
+                // await session.DomainScene().CurrentScene(). GetComponent<UnitComponent>().CreatePlayer(p);
+                await session.ZoneScene(). GetComponent<UnitComponent>().CreatePlayer(p);
             }
             await ETTask.CompletedTask;
         }

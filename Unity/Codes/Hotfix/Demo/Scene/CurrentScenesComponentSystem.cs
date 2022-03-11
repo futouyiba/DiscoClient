@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace ET
 {
@@ -14,7 +15,9 @@ namespace ET
 
         public static Scene CurrentScene(this Scene zoneScene)
         {
-            return zoneScene.GetComponent<CurrentScenesComponent>()?.Scene;
+            Scene currentScene = zoneScene.GetComponent<CurrentScenesComponent>()?.Scene;
+            Log.Info($"scene.current scene, param zoneScene is:{zoneScene}, currentScene is:{currentScene}");
+            return currentScene;
         }
     }
 }
