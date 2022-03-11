@@ -49883,6 +49883,10 @@ PrefabInstance:
       propertyPath: beatFov
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 600976934549200474, guid: fb86034831a424e0b9c13f2245c0777d, type: 3}
+      propertyPath: beatFocalChange
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 600976934549200475, guid: fb86034831a424e0b9c13f2245c0777d, type: 3}
       propertyPath: m_Name
       value: Camera_HoneCourt

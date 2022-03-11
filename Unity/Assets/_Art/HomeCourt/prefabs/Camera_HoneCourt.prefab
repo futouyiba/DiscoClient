@@ -230,4 +230,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _controlCamera: {fileID: 600976934549200556}
-  beatFov: 5
+  beatFocalChange: 0.5

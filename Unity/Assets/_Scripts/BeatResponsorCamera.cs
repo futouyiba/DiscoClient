@@ -14,16 +14,16 @@ public class BeatResponsorCamera : MonoBehaviour
     /// fov addition added to initfov
     /// </summary>
     [SerializeField]
-    private float beatFov;
+    private float beatFocalChange;
 
-    private float initFov;
+    private float initFocalLength;
     
     
     // Start is called before the first frame update
     void Start()
     {
         SoundMgr.instance.AddBeatDlg(this.BeatPerform);
-        this.initFov = this._controlCamera.focalLength;
+        this.initFocalLength = this._controlCamera.focalLength;
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class BeatResponsorCamera : MonoBehaviour
     private void BeatPerform()
     {
         DOTween.Kill(this);
-        this._controlCamera.focalLength = this.initFov;
-        DOTween.To(() => this._controlCamera.focalLength, x => this._controlCamera.focalLength = x, this.beatFov+this.initFov, .12f);
+        this._controlCamera.focalLength = this.initFocalLength;
+        DOTween.To(() => this._controlCamera.focalLength, x => this._controlCamera.focalLength = x, this.beatFocalChange+this.initFocalLength, .12f);
     }
 }
