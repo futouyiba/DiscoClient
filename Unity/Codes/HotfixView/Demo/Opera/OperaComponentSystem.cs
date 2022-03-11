@@ -64,6 +64,15 @@ namespace ET
                 self.ZoneScene().GetComponent<SessionComponent>().Session.Call(c2MTransferMap).Coroutine();
             }
 
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                var goDjResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session.Call(new action_req_c2s() { action_id = 1, int1 = 1, });
+                if (goDjResp.Error == 0)
+                {
+                    
+                }
+            }
+
             await ETTask.CompletedTask;
         }
     }

@@ -13,4 +13,13 @@ namespace ET
             }
         }
     }
+
+    public static class GameObjectCompSys
+    {
+        public static void ChangeScale(this GameObjectComponent self, float scale)
+        {
+            self.SpriteGO.transform.localScale = self.OriScale * scale;
+            // todo modify direction.
+        }
+    }
 }

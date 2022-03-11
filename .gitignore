@@ -62,3 +62,4 @@ Server/.DS_Store
 *.user
 .vsconfig
 *.DotSettings
+Unity/UserSettings/EditorUserSettings.asset
