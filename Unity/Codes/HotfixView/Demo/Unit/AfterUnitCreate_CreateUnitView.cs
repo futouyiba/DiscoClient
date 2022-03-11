@@ -69,7 +69,12 @@ namespace ET
             
             // todo random direction
             // go.transform.
-            args.Unit.AddComponent<GameObjectComponent>().GameObject = go;
+            GameObjectComponent gameObjectComp = args.Unit.AddComponent<GameObjectComponent>();
+            gameObjectComp.GameObject = go;
+            gameObjectComp.OriScale = go.transform.localScale;
+            gameObjectComp.SpriteGO = go.transform.GetChild(0).gameObject;
+            gameObjectComp.SpriteRenderer = gameObjectComp.SpriteGO.GetComponent<SpriteRenderer>();
+            gameObjectComp.NameTMP = go.transform.GetChild(1).GetComponent<TextMeshPro>();
             if (charComp.CharType == CharType.Npc)
             {
                 // go.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);//todo refactor to XiuGouComponent
