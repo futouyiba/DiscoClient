@@ -64,9 +64,9 @@ namespace ET
             GameObject prefab = bundleGameObject.Get<GameObject>(prefabName);
 	        
             GameObject go = UnityEngine.Object.Instantiate(prefab, GlobalComponent.Instance.Unit, true);
-            go.transform.position = new Vector3(Mathf.Lerp(smallPos.x, bigPos.x, charComp.playerData.x),
-                Mathf.Lerp(smallPos.y, bigPos.y, 0.5f), Mathf.Lerp(smallPos.z, bigPos.z, charComp.playerData.y));
-            
+            // go.transform.position = new Vector3(Mathf.Lerp(smallPos.x, bigPos.x, charComp.playerData.x),
+                // Mathf.Lerp(smallPos.y, bigPos.y, 0.5f), Mathf.Lerp(smallPos.z, bigPos.z, charComp.playerData.y));
+                go.transform.position = AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(charComp.playerData.x, charComp.playerData.y);
             // todo random direction
             // go.transform.
             GameObjectComponent gameObjectComp = args.Unit.AddComponent<GameObjectComponent>();

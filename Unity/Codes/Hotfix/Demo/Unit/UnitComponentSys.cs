@@ -221,6 +221,7 @@ namespace ET
 			if (self.PlayerUnits.ContainsKey(messageOnePlayer.player_id))
 			{
 				Log.Info("Player already existing in scene, skip creating player...");
+				return;
 			}
 			
 			var id = IdGenerater.Instance.GenerateUnitId(self.DomainZone());
