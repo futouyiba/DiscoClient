@@ -97,8 +97,36 @@ namespace ET
             public Unit Unit;
         }
 
-        public struct UnitEnterSightRange
+        public struct BecomeDJ
         {
+            public Unit Unit;
+        }
+
+        public struct LeaveDJ
+        {
+            public Unit Unit;
+        }
+
+        public struct ControlLight
+        {
+            public int LightId;
+            public int SwitchType;
+        }
+
+        public struct CutToMusic
+        {
+            public int MusicId;
+        }
+
+        public struct GrowBig
+        {
+            public Unit Unit;
+        }
+
+        public struct ChangeFigure
+        {
+            public Unit Unit;
+            public int FigureId;
         }
     }
 }
