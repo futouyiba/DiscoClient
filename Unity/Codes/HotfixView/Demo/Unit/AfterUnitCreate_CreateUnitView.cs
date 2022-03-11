@@ -11,6 +11,8 @@ namespace ET
         private static Transform SmallCornerTransform = null;
         static Vector3 bigPos = Vector3.zero;
         static Vector3 smallPos = Vector3.zero;
+        static Vector3 bigPosOuter = Vector3.zero;
+        static Vector3 smallPosOuter = Vector3.zero;
 
         public static (float, float) UnityPosToServerXY(Vector3 unityPos)
         {
@@ -50,6 +52,7 @@ namespace ET
                 SmallCornerTransform = ScatterTransform.Find("small");
                 bigPos = BigCornerTransform.position;
                 smallPos = SmallCornerTransform.position;
+                
             }
             CharComp charComp = args.Unit.GetComponent<CharComp>();
 
