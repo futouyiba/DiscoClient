@@ -29,6 +29,10 @@ namespace ET
     {
         public static async ETTask Update(this OperaComponent self)
         {
+            if (self.ZoneScene().CurrentScene() != self.DomainScene())
+            {
+                return;
+            }
             if (Input.GetMouseButtonDown(0))
             {
                 Log.Info("mouse button down...");
@@ -44,13 +48,9 @@ namespace ET
                             .Call(self.move_action_req_c2s);
                     if (moveResp.Error == 0)
                     {
-                        self.ZoneScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<MoveComponent>()
+                        self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<MoveComponent>()
                                 .MoveToAsync(new List<Vector3> { self.ClickPoint }, ConstValue.PlayerMoveSpeed).Coroutine();
                     }
-                    // self.frameClickMap.X = self.ClickPoint.x;
-                    // self.frameClickMap.Y = self.ClickPoint.y;
-                    // self.frameClickMap.Z = self.ClickPoint.z;
-                    // self.ZoneScene().GetComponent<SessionComponent>().Session.Send(self.frameClickMap);
                 }
             }
 
@@ -76,7 +76,7 @@ namespace ET
                 
                 if (goDjResp.Error == 0)
                 {
-                    GameObjectComponent gameObjectComponent = self.ZoneScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<GameObjectComponent>();
+                    GameObjectComponent gameObjectComponent = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<GameObjectComponent>();
                     Transform myPlayerTransform = gameObjectComponent.GameObject.transform;
                     myPlayerTransform.position =
                             self.DjGO.transform.position;
@@ -90,7 +90,7 @@ namespace ET
                         .Call(new action_req_c2s() { action_id = ConstValue.ACTION_ID_SWITCH_MUSIC, int1 = self.CurrentSongIndex + 1 });
                 if (cutSongResp.Error == 0)
                 {
-                    self.ZoneScene().GetComponent<MusicComponent>().CutSong(cutSongResp.int1);
+                    self.ZoneScene().CurrentScene().GetComponent<MusicComponent>().CutSong(cutSongResp.int1);
                 }
             }
 

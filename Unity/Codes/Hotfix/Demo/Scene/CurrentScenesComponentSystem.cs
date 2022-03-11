@@ -16,7 +16,6 @@ namespace ET
         public static Scene CurrentScene(this Scene zoneScene)
         {
             Scene currentScene = zoneScene.GetComponent<CurrentScenesComponent>()?.Scene;
-            Log.Info($"scene.current scene, param zoneScene is:{zoneScene}, currentScene is:{currentScene}");
             return currentScene;
         }
     }

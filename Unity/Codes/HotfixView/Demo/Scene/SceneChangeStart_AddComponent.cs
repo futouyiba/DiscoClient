@@ -26,8 +26,7 @@ namespace ET
             }
 
             //await UIHelper.Remove(currentScene, UIType.UILogin);
-            currentScene.GetComponent<UIComponent>().HideWindow(WindowID.WindowID_Login);
-            currentScene.AddComponent<OperaComponent>();
+
         }
     }
 }

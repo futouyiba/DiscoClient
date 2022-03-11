@@ -23,8 +23,6 @@
             // unitComponent.Add(unit);
             zoneScene.GetComponent<ObjectWait>().Notify(new WaitType.Wait_all_sync());
             
-            zoneScene.RemoveComponent<AIComponent>();
-            
             await Game.EventSystem.PublishAsync(new EventType.SceneChangeFinish() {ZoneScene = zoneScene, CurrentScene = currentScene});
             // await unitComponent.PopulateInit();
 

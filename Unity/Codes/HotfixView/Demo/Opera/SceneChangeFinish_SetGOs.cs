@@ -7,7 +7,7 @@ namespace ET
     {
         protected override async ETTask Run(SceneChangeFinish ev)
         {
-            var operaComp = ev.ZoneScene.GetComponent<OperaComponent>();
+            var operaComp = ev.ZoneScene.CurrentScene().GetComponent<OperaComponent>();
             if (operaComp == null)
             {
                 Log.Info("Didn't find operaComponent");
