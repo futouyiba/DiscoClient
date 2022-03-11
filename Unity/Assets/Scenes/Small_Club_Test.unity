@@ -32214,8 +32214,10 @@ MonoBehaviour:
   musicSource: {fileID: 647967166}
   musicList:
   - {fileID: 8300000, guid: c3dcc612e47a5404abfe3eb8593e687e, type: 3}
-  - {fileID: 8300000, guid: 7cbd026e975f74c5f8415eb2d57523e3, type: 3}
-  - {fileID: 8300000, guid: 131fc0bbdc92e18418db30f11742ce25, type: 3}
+  - {fileID: 8300000, guid: f52fd72f887b24f78838982117c21cd1, type: 3}
+  - {fileID: 8300000, guid: af0bcd23962144517b3fa7749fd6a1db, type: 3}
+  - {fileID: 8300000, guid: e735928766ec646a49e49c7840f5eed4, type: 3}
+  - {fileID: 8300000, guid: bc847b4cc9da54fc9964537c679ecd77, type: 3}
   SpectRange: {x: 0, y: 255}
   beatThreshold: 0.11
 --- !u!1 &1732847759
