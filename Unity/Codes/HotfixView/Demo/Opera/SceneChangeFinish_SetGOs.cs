@@ -13,7 +13,7 @@ namespace ET
                 Log.Info("Didn't find operaComponent");
                 return;
             }
-            operaComp.DiscoCamera = GameObject.Find("MainCamera");
+            operaComp.DiscoCamera = GameObject.FindWithTag("MainCamera");
             operaComp.DjGO = GameObject.FindWithTag("DJ");
             await ETTask.CompletedTask;
         }

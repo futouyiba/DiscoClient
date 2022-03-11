@@ -7,6 +7,7 @@ namespace ET
 	public class OperaComponent: Entity, IAwake, IUpdate
     {
         public Vector3 ClickPoint;
+        public int CurrentSongIndex;
 
 	    public int mapMask;
 	    public GameObject DjGO;

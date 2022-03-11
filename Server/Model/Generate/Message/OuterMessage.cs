@@ -261,18 +261,30 @@ namespace ET
 		public int house_type { get; set; }
 
 		[ProtoMember(2)]
-		public int music_id { get; set; }
+		public List<int> cfg_music_ids = new List<int>();
 
 		[ProtoMember(3)]
-		public List<int> on_lighting_ids = new List<int>();
+		public int cfg_lighting_num { get; set; }
 
 		[ProtoMember(4)]
-		public List<int> on_dj_ids = new List<int>();
+		public int cfg_dj_num { get; set; }
 
 		[ProtoMember(5)]
-		public List<int> dj_playerids = new List<int>();
+		public int cfg_figure_num { get; set; }
 
 		[ProtoMember(6)]
+		public int music_id { get; set; }
+
+		[ProtoMember(7)]
+		public List<int> on_lighting_ids = new List<int>();
+
+		[ProtoMember(8)]
+		public List<int> on_dj_ids = new List<int>();
+
+		[ProtoMember(9)]
+		public List<int> dj_playerids = new List<int>();
+
+		[ProtoMember(10)]
 		public List<player> players = new List<player>();
 
          public int Error

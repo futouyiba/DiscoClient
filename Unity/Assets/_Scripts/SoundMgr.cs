@@ -13,12 +13,14 @@ public class SoundMgr : MonoBehaviour
 {
     public static SoundMgr instance { get; private set; }
 
+    [Header("Music")]
     [SerializeField]
     private AudioSource musicSource;
 
     [SerializeField]
     private List<AudioClip> musicList;
 
+    [Header("Spectrum")]
     /// <summary>
     /// 1024 samples by def
     /// from x to y
