@@ -227,6 +227,7 @@ namespace ET
 			var id = IdGenerater.Instance.GenerateUnitId(self.DomainZone());
 			Unit unit = self.AddChildWithId<Unit, int>(id, 0);//todo configId
 			unit.Position = new Vector3(messageOnePlayer.x, 0f, messageOnePlayer.y);
+			// unit.Forward = RandomHelper.RandFloat01() < 0.5f? 1f : -1f;
 			unit.AddComponent<MoveComponent>();
 			unit.AddComponent<ObjectWait>();
 			unit.AddComponent<CharComp,player>(messageOnePlayer);

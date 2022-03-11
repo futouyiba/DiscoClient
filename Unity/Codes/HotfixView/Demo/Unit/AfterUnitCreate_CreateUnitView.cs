@@ -71,9 +71,10 @@ namespace ET
             // go.transform.
             GameObjectComponent gameObjectComp = args.Unit.AddComponent<GameObjectComponent>();
             gameObjectComp.GameObject = go;
-            gameObjectComp.OriScale = go.transform.localScale;
+            gameObjectComp.FowardDirection = RandomHelper.RandFloat01() < 0.5f? 1f : -1f;
             gameObjectComp.SpriteGO = go.transform.GetChild(0).gameObject;
             gameObjectComp.SpriteRenderer = gameObjectComp.SpriteGO.GetComponent<SpriteRenderer>();
+            gameObjectComp.OriScale = gameObjectComp.SpriteGO.transform.localScale;
             gameObjectComp.NameTMP = go.transform.GetChild(1).GetComponent<TextMeshPro>();
             if (charComp.CharType == CharType.Npc)
             {

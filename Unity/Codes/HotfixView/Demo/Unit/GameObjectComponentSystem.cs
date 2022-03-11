@@ -19,8 +19,9 @@ namespace ET
     {
         public static void ChangeScale(this GameObjectComponent self, float scale)
         {
-            self.SpriteGO.transform.localScale =
-                    new Vector3(self.OriScale.x * scale * self.FowardDirection, self.OriScale.y * scale, self.OriScale.z * scale);
+            // self.SpriteGO.transform.localScale =
+                    // new Vector3(self.OriScale.x * scale * self.FowardDirection, self.OriScale.y * scale, self.OriScale.z * scale);
+                    self.GameObject.transform.localScale = Vector3.one * 2;
         }
     }
 }
