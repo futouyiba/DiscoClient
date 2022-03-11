@@ -23,5 +23,21 @@ namespace ET
         /// </summary>
         public const float RubberbandChance = 0.2f;
         public const int RubberbandStrength = 4;
+
+        /**        %% 动作id定义
+        -define(ACTION_ID_BECOME_DJ, 1). %上dj
+        -define(ACTION_ID_MOVE_TO, 2). % 移动
+        -define(ACTION_ID_CONTROL_LIGHTING, 3). % 控制一个test灯
+        -define(ACTION_ID_SWITCH_MUSIC, 4). % 切歌
+        -define(ACTION_ID_BECOME_BIGGER, 5). % 变大
+        -define(ACTION_ID_CHANGE_FIGURE, 6). % 改变形象 
+        */
+        public const int ACTION_ID_BECOME_DJ = 1;
+        public const int ACTION_ID_MOVE_TO = 2;
+        public const int ACTION_ID_CONTROL_LIGHTING = 3;
+        public const int ACTION_ID_SWITCH_MUSIC = 4;
+        public const int ACTION_ID_BECOME_BIGGER = 5;
+        public const int ACTION_ID_CHANGE_FIGURE = 6;
+        
     }
 }

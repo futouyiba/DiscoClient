@@ -11,6 +11,8 @@ namespace ET
         private static Transform SmallCornerTransform = null;
         static Vector3 bigPos = Vector3.zero;
         static Vector3 smallPos = Vector3.zero;
+        static Vector3 bigPosOuter = Vector3.zero;
+        static Vector3 smallPosOuter = Vector3.zero;
 
         public static (float, float) UnityPosToServerXY(Vector3 unityPos)
         {
@@ -50,6 +52,7 @@ namespace ET
                 SmallCornerTransform = ScatterTransform.Find("small");
                 bigPos = BigCornerTransform.position;
                 smallPos = SmallCornerTransform.position;
+                
             }
             CharComp charComp = args.Unit.GetComponent<CharComp>();
 
@@ -66,7 +69,12 @@ namespace ET
             
             // todo random direction
             // go.transform.
-            args.Unit.AddComponent<GameObjectComponent>().GameObject = go;
+            GameObjectComponent gameObjectComp = args.Unit.AddComponent<GameObjectComponent>();
+            gameObjectComp.GameObject = go;
+            gameObjectComp.OriScale = go.transform.localScale;
+            gameObjectComp.SpriteGO = go.transform.GetChild(0).gameObject;
+            gameObjectComp.SpriteRenderer = gameObjectComp.SpriteGO.GetComponent<SpriteRenderer>();
+            gameObjectComp.NameTMP = go.transform.GetChild(1).GetComponent<TextMeshPro>();
             if (charComp.CharType == CharType.Npc)
             {
                 // go.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);//todo refactor to XiuGouComponent

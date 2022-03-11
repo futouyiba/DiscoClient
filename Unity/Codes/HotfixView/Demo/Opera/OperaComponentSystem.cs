@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using ET.Demo.Music;
+using ET.Music;
 using UnityEngine;
 
 namespace ET
@@ -30,10 +32,12 @@ namespace ET
             if (Input.GetMouseButtonDown(0))
             {
                 Log.Info("mouse button down...");
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Ray ray = self.DiscoCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, 1000, self.mapMask))
                 {
+                    Debug.DrawRay(ray.origin,ray.direction,Color.green, 5f);
+                    Log.Info("draw debug line...");
                     self.ClickPoint = hit.point;
                     (self.move_action_req_c2s.float1, self.move_action_req_c2s.float2) = AfterUnitCreate_CreateUnitView.UnityPosToServerXY(hit.point);
                     action_req_s2c moveResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
@@ -64,12 +68,29 @@ namespace ET
                 self.ZoneScene().GetComponent<SessionComponent>().Session.Call(c2MTransferMap).Coroutine();
             }
 
+            // 上DJ
             if (Input.GetKeyDown(KeyCode.J))
             {
-                var goDjResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session.Call(new action_req_c2s() { action_id = 1, int1 = 1, });
+                var goDjResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
+                        .Call(new action_req_c2s() { action_id = ConstValue.ACTION_ID_BECOME_DJ, int1 = 1, });
+                
                 if (goDjResp.Error == 0)
                 {
-                    
+                    GameObjectComponent gameObjectComponent = self.ZoneScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<GameObjectComponent>();
+                    Transform myPlayerTransform = gameObjectComponent.GameObject.transform;
+                    myPlayerTransform.position =
+                            self.DjGO.transform.position;
+                    gameObjectComponent.ChangeScale(2f);
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                var cutSongResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
+                        .Call(new action_req_c2s() { action_id = ConstValue.ACTION_ID_SWITCH_MUSIC, int1 = self.CurrentSongIndex + 1 });
+                if (cutSongResp.Error == 0)
+                {
+                    self.ZoneScene().GetComponent<MusicComponent>().CutSong(cutSongResp.int1);
                 }
             }
 

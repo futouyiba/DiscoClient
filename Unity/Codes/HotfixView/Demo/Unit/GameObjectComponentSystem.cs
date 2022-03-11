@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace ET
 {
@@ -18,8 +19,8 @@ namespace ET
     {
         public static void ChangeScale(this GameObjectComponent self, float scale)
         {
-            self.SpriteGO.transform.localScale = self.OriScale * scale;
-            // todo modify direction.
+            self.SpriteGO.transform.localScale =
+                    new Vector3(self.OriScale.x * scale * self.FowardDirection, self.OriScale.y * scale, self.OriScale.z * scale);
         }
     }
 }
