@@ -36,9 +36,17 @@ namespace ET
                     await Game.EventSystem.PublishAsync(new GrowBig() { Unit = playerUnit });
                     break;
                 case ConstValue.ACTION_ID_MOVE_TO:
-                    await Game.EventSystem.PublishAsync(new EventType.MoveStart());
+                    await Game.EventSystem.PublishAsync(new EventType.MoveStart(){Unit = playerUnit});
                     break;
-                
+                case ConstValue.ACTION_ID_CONTROL_LIGHTING:
+                    await Game.EventSystem.PublishAsync(new EventType.ControlLight() { LightId = message.int1 });
+                    break;
+                case ConstValue.ACTION_ID_CHANGE_FIGURE:
+                    await Game.EventSystem.PublishAsync(new EventType.ChangeFigure() { FigureId = message.int1 });
+                    break;
+                default:
+                    Log.Warning("action sync message not handled, message:"+message);
+                    break;
             }
             await ETTask.CompletedTask;
         }
