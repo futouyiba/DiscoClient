@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2208740411560856560}
   - component: {fileID: 2208740411560086482}
   - component: {fileID: 2208740411559086354}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 2208740411560856562}
   - component: {fileID: 2208740411560086484}
   - component: {fileID: 2208740411559086356}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 2208740411560856564}
   - component: {fileID: 2208740411560086486}
   - component: {fileID: 2208740411559086358}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2208740411560856566}
-  m_Layer: 0
+  - component: {fileID: 2794448361597033386}
+  m_Layer: 3
   m_Name: ballroom_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,6 +278,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2794448361597033386
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2208740411561023446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 1, z: 20}
+  m_Center: {x: 0, y: -0.5, z: 0}
 --- !u!1 &2208740411561023454
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +302,7 @@ GameObject:
   - component: {fileID: 2208740411560856574}
   - component: {fileID: 2208740411560086480}
   - component: {fileID: 2208740411559086352}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}

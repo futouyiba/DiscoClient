@@ -89,11 +89,15 @@ message heartbeat_c2s // IMessage
 message all_sync_s2c // IMessage 
 {
     int32 house_type = 1;  // 房间类型
-    int32 music_id = 2;     // 正在放的音乐
-    repeated int32 on_lighting_ids = 3; // 亮着的灯ID数组
-    repeated int32 on_dj_ids = 4; // 有人的DJ位置ID数组
-    repeated int32 dj_playerids = 5; // DJ玩家ID数组，顺序与on_dj_ids对应   playerid和userid是同一个id，一一对应。以后可能会分开。
-    repeated player players = 6;    // 玩家状态数组 这是id
+    repeated int32 cfg_music_ids = 2;
+    int32 cfg_lighting_num = 3;
+    int32 cfg_dj_num = 4;
+    int32 cfg_figure_num = 5;
+    int32 music_id = 6;     // 正在放的音乐
+    repeated int32 on_lighting_ids = 7; // 亮着的灯ID数组
+    repeated int32 on_dj_ids = 8; // 有人的DJ位置ID数组
+    repeated int32 dj_playerids = 9; // DJ玩家ID数组，顺序与on_dj_ids对应   playerid和userid是同一个id，一一对应。以后可能会分开。
+    repeated player players = 10;    // 玩家状态数组 这是id
 	//erlangMogai
 }
 message player 
