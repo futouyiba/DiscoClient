@@ -59,7 +59,7 @@ public partial class UICodeSpawner
         Path2WidgetCachedDict = new Dictionary<string, List<Component>>();
         
 		FindAllWidgets(gameObject.transform, "");
-		
+		SpawnCodeForDlgWindowID(gameObject);
         SpawnCodeForDlg(gameObject);
         SpawnCodeForDlgEventHandle(gameObject);
         SpawnCodeForDlgModel(gameObject);
@@ -69,7 +69,17 @@ public partial class UICodeSpawner
         
         AssetDatabase.Refresh();
     }
-    
+    static public void SpawnCodeForDlgWindowID(GameObject gameObject){
+		var strDlgName = gameObject.name;
+		var strFilePath = Application.dataPath + "/../Codes/ModelView/Module/EUI/WindowID.cs";
+		var file = File.ReadAllText(strFilePath);
+		var regex = new Regex(@"[\s]*}[\s]*}[\s]*$");
+		var match = regex.Match(file);
+		var last = match.Value;
+		var before = file.Replace(last,"");
+		file = before + "\n        WindowID_"+strDlgName.Substring(3)+","+last;
+		File.WriteAllText(strFilePath,file);
+    }
     static void SpawnCodeForDlg(GameObject gameObject)
     {
         string strDlgName  = gameObject.name;

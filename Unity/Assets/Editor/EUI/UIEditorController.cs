@@ -6,7 +6,7 @@ using UnityEditor;
 using System.IO;
 using ET;
 using UnityEngine;
-
+using System.Text.RegularExpressions;
 namespace ClientEditor
 {
     class UIEditorController
@@ -16,8 +16,7 @@ namespace ClientEditor
         {
             GameObject go = Selection.activeObject as GameObject;
             UICodeSpawner.SpawnEUICode(go);
-        }
-
+        }        
         [MenuItem("Assets/AssetBundle/NameUIPrefab")]
         public static void NameAllUIPrefab()
         {
