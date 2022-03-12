@@ -90,6 +90,8 @@ namespace ET
         public struct MoveStart
         {
             public Unit Unit;
+            public float x;
+            public float y;
         }
 
         public struct MoveStop

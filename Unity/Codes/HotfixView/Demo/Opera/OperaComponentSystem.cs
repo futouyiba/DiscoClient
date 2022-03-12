@@ -48,8 +48,15 @@ namespace ET
                             .Call(self.move_action_req_c2s);
                     if (moveResp.Error == 0)
                     {
-                        self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<MoveComponent>()
-                                .MoveToAsync(new List<Vector3> { self.ClickPoint }, ConstValue.PlayerMoveSpeed).Coroutine();
+                        Game.EventSystem.Publish(new EventType.MoveStart()
+                        {
+                            Unit = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit(),
+                            x = moveResp.float1,
+                            y = moveResp.float2,
+                        });
+                        
+                        // self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<MoveComponent>()
+                        //         .MoveToAsync(new List<Vector3> { self.ClickPoint }, ConstValue.PlayerMoveSpeed).Coroutine();
                     }
                 }
             }

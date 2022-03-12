@@ -36,7 +36,7 @@ namespace ET
                     await Game.EventSystem.PublishAsync(new GrowBig() { Unit = playerUnit });
                     break;
                 case ConstValue.ACTION_ID_MOVE_TO:
-                    await Game.EventSystem.PublishAsync(new EventType.MoveStart(){Unit = playerUnit});
+                    await Game.EventSystem.PublishAsync(new EventType.MoveStart(){Unit = playerUnit, x = message.float1, y = message.float2});
                     break;
                 case ConstValue.ACTION_ID_CONTROL_LIGHTING:
                     await Game.EventSystem.PublishAsync(new EventType.ControlLight() { LightId = message.int1 });
