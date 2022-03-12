@@ -1,4 +1,6 @@
-﻿using ET.EventType;
+﻿using DG.Tweening;
+using ET.EventType;
+using UnityEngine;
 
 namespace ET
 {
@@ -16,4 +18,19 @@ namespace ET
             await ETTask.CompletedTask;
         }
     }
+    
+    public class StartMove_ViewHandle:AEvent<EventType.MoveStart>
+    {
+        protected override async ETTask Run(MoveStart a)
+        {
+            var randSpeed = ConstValue.PlayerMoveSpeed * ((RandomHelper.RandFloat01() - 0.5f) * 0.2f + 1f); // up or down by 10 percent.
+            Transform gameObjectTransform = a.Unit.GetComponent<GameObjectComponent>().GameObject.transform;
+            Vector3 targetPos = AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(a.x,a.y);
+            var duration = (targetPos - gameObjectTransform.position).magnitude/randSpeed;
+            gameObjectTransform.DOMove(targetPos, duration);
+            await ETTask.CompletedTask;
+        }
+    }
+    
+    
 }
