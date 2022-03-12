@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 7067787703811608719}
   - component: {fileID: 3198861126633456131}
   m_Layer: 5
-  m_Name: E_ Skill02
+  m_Name: E_Skill02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 940160943869203341}
   - component: {fileID: 9005468292064924382}
   m_Layer: 5
-  m_Name: E_ InputBox
+  m_Name: E_InputBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 4000324758053701658}
   - component: {fileID: 1233207738208543016}
   m_Layer: 5
-  m_Name: E_ Search
+  m_Name: E_Search
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1841,7 +1841,7 @@ GameObject:
   - component: {fileID: 2228354384764756718}
   - component: {fileID: 7462833175449893880}
   m_Layer: 5
-  m_Name: E_ Note02
+  m_Name: E_Note02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2518,7 +2518,7 @@ GameObject:
   - component: {fileID: 5417629550612500714}
   - component: {fileID: 6739113787322933530}
   m_Layer: 5
-  m_Name: E_ Muisc
+  m_Name: E_Muisc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2639,7 +2639,7 @@ GameObject:
   - component: {fileID: 855115129476848802}
   - component: {fileID: 7380003153889355240}
   m_Layer: 5
-  m_Name: E_ Chat
+  m_Name: E_Chat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3052,7 +3052,7 @@ GameObject:
   - component: {fileID: 7724348931777478218}
   - component: {fileID: 6397510790879735729}
   m_Layer: 5
-  m_Name: E_ Skill03
+  m_Name: E_Skill03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3173,7 +3173,7 @@ GameObject:
   - component: {fileID: 6738283582226463181}
   - component: {fileID: 472054310475800497}
   m_Layer: 5
-  m_Name: E_ Skill04
+  m_Name: E_Skill04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3415,7 +3415,7 @@ GameObject:
   - component: {fileID: 4616505709312373130}
   - component: {fileID: 203789250356335880}
   m_Layer: 5
-  m_Name: E_ Skill01
+  m_Name: E_Skill01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3848,7 +3848,7 @@ GameObject:
   - component: {fileID: 7782579731808103851}
   - component: {fileID: 840037816550013570}
   m_Layer: 5
-  m_Name: E_ Note01
+  m_Name: E_Note01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
