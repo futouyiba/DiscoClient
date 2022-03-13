@@ -91,6 +91,22 @@ namespace ET
                 }
             }
 
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                var leaveDjResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
+                        .Call(new action_req_c2s() { action_id = ConstValue.ACTION_LEAVE_DJ, int1 = 1, });
+                if (leaveDjResp.Error == 0)
+                {
+                    Unit myPlayerUnit = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit();
+                    GameObjectComponent gameObjectComponent = myPlayerUnit
+                            .GetComponent<GameObjectComponent>();
+                    Transform myPlayerTransform = gameObjectComponent.GameObject.transform;
+                    myPlayerTransform.position =
+                            AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(myPlayerUnit.GetComponent<CharComp>().playerData.x, myPlayerUnit.GetComponent<CharComp>().playerData.y);
+                    gameObjectComponent.ChangeScale(1f);
+                }
+            }
+
             if (Input.GetKeyDown(KeyCode.C))
             {
                 var cutSongResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session

@@ -270,21 +270,33 @@ namespace ET
 		public int cfg_dj_num { get; set; }
 
 		[ProtoMember(5)]
-		public int cfg_figure_num { get; set; }
+		public int cfg_seat_num { get; set; }
 
 		[ProtoMember(6)]
-		public int music_id { get; set; }
+		public int cfg_figure_num { get; set; }
 
 		[ProtoMember(7)]
-		public List<int> on_lighting_ids = new List<int>();
+		public int music_id { get; set; }
 
 		[ProtoMember(8)]
-		public List<int> on_dj_ids = new List<int>();
+		public int music_start_time { get; set; }
 
 		[ProtoMember(9)]
-		public List<int> dj_playerids = new List<int>();
+		public List<int> on_lighting_ids = new List<int>();
 
 		[ProtoMember(10)]
+		public List<int> on_dj_ids = new List<int>();
+
+		[ProtoMember(11)]
+		public List<int> dj_playerids = new List<int>();
+
+		[ProtoMember(12)]
+		public List<int> on_seat_ids = new List<int>();
+
+		[ProtoMember(13)]
+		public List<int> seat_playerids = new List<int>();
+
+		[ProtoMember(14)]
 		public List<player> players = new List<player>();
 
          public int Error
@@ -431,6 +443,9 @@ namespace ET
 		[ProtoMember(5)]
 		public float float2 { get; set; }
 
+		[ProtoMember(6)]
+		public string str1 { get; set; }
+
          public int Error
         {
             get;
@@ -470,6 +485,9 @@ namespace ET
 		[ProtoMember(5)]
 		public float float2 { get; set; }
 
+		[ProtoMember(6)]
+		public string str1 { get; set; }
+
          public int Error
         {
             get;
@@ -497,22 +515,28 @@ namespace ET
 	public partial class action_syn_s2c: Object, IMessage
 	{
 		[ProtoMember(1)]
-		public int player_id { get; set; }
+		public int is_system { get; set; }
 
 		[ProtoMember(2)]
-		public int action_id { get; set; }
+		public int player_id { get; set; }
 
 		[ProtoMember(3)]
-		public int int1 { get; set; }
+		public int action_id { get; set; }
 
 		[ProtoMember(4)]
-		public int int2 { get; set; }
+		public int int1 { get; set; }
 
 		[ProtoMember(5)]
-		public float float1 { get; set; }
+		public int int2 { get; set; }
 
 		[ProtoMember(6)]
+		public float float1 { get; set; }
+
+		[ProtoMember(7)]
 		public float float2 { get; set; }
+
+		[ProtoMember(8)]
+		public string str1 { get; set; }
 
          public int Error
         {

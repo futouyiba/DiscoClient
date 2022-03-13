@@ -38,6 +38,18 @@ namespace ET
         public const int ACTION_ID_SWITCH_MUSIC = 4;
         public const int ACTION_ID_BECOME_BIGGER = 5;
         public const int ACTION_ID_CHANGE_FIGURE = 6;
+        public const int ACTION_LEAVE_DJ = 7;
+
+        /**
+         * %% 控灯选项
+-define(LIGHTING_TURN_OFF, 0).
+-define(LIGHTING_TURN_ON, 1).
+-define(LIGHTING_FLIP_FLOP, 2).
+         */
+        public const int LIGHTING_TURN_OFF = 0;
+        public const int LIGHTING_TURN_ON = 1;
+        public const int LIGHTING_FLIP_FLOP = 2;
+        
         
     }
 }
