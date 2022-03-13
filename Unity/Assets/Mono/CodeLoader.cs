@@ -4,7 +4,7 @@ using System.IO;
 using System.Reflection;
 using UnityEngine;
 using System.Linq;
-
+using UnityEngine.AddressableAssets;
 namespace ET
 {
 	public class CodeLoader: IDisposable
@@ -14,7 +14,6 @@ namespace ET
 		public Action Update;
 		public Action LateUpdate;
 		public Action OnApplicationQuit;
-
 		private Assembly assembly;
 
 		private ILRuntime.Runtime.Enviorment.AppDomain appDomain;
@@ -25,6 +24,7 @@ namespace ET
 
 		private CodeLoader()
 		{
+			
 		}
 
 		public void Dispose()
@@ -38,26 +38,34 @@ namespace ET
 			{
 				case CodeMode.Mono:
 				{
-					Dictionary<string, UnityEngine.Object> dictionary = AssetsBundleHelper.LoadBundle("code.unity3d");
-					byte[] assBytes = ((TextAsset)dictionary["Code.dll"]).bytes;
-					byte[] pdbBytes = ((TextAsset)dictionary["Code.pdb"]).bytes;
-					
-					assembly = Assembly.Load(assBytes, pdbBytes);
-					this.allTypes = assembly.GetTypes();
-					IStaticMethod start = new MonoStaticMethod(assembly, "ET.Entry", "Start");
-					start.Run();
+						/*Dictionary<string, UnityEngine.Object> dictionary = AssetsBundleHelper.LoadBundle("code.unity3d");
+						byte[] assBytes = ((TextAsset)dictionary["Code.dll"]).bytes;
+						byte[] pdbBytes = ((TextAsset)dictionary["Code.pdb"]).bytes;*/
+						var dll = Addressables.LoadAssetAsync<TextAsset>("Code.dll").WaitForCompletion();
+						var pdb = Addressables.LoadAssetAsync<TextAsset>("Code.pdb").WaitForCompletion();
+						var assBytes = dll.bytes;
+						var pdbBytes = pdb.bytes;
+
+						assembly = Assembly.Load(assBytes, pdbBytes);
+						this.allTypes = assembly.GetTypes();
+						IStaticMethod start = new MonoStaticMethod(assembly, "ET.Entry", "Start");
+						start.Run();
 					break;
 				}
 				case CodeMode.ILRuntime:
 				{
-					Dictionary<string, UnityEngine.Object> dictionary = AssetsBundleHelper.LoadBundle("code.unity3d");
-					byte[] assBytes = ((TextAsset)dictionary["Code.dll"]).bytes;
-					byte[] pdbBytes = ((TextAsset)dictionary["Code.pdb"]).bytes;
-					
-					//byte[] assBytes = File.ReadAllBytes(Path.Combine("../Unity/", Define.BuildOutputDir, "Code.dll"));
-					//byte[] pdbBytes = File.ReadAllBytes(Path.Combine("../Unity/", Define.BuildOutputDir, "Code.pdb"));
-				
-					appDomain = new ILRuntime.Runtime.Enviorment.AppDomain();
+						/*Dictionary<string, UnityEngine.Object> dictionary = AssetsBundleHelper.LoadBundle("code.unity3d");
+						byte[] assBytes = ((TextAsset)dictionary["Code.dll"]).bytes;
+						byte[] pdbBytes = ((TextAsset)dictionary["Code.pdb"]).bytes;*/
+						var dll = Addressables.LoadAssetAsync<TextAsset>("Code.dll").WaitForCompletion();
+						var pdb = Addressables.LoadAssetAsync<TextAsset>("Code.pdb").WaitForCompletion();
+						var assBytes = dll.bytes;
+						var pdbBytes = pdb.bytes;
+
+						//byte[] assBytes = File.ReadAllBytes(Path.Combine("../Unity/", Define.BuildOutputDir, "Code.dll"));
+						//byte[] pdbBytes = File.ReadAllBytes(Path.Combine("../Unity/", Define.BuildOutputDir, "Code.pdb"));
+
+						appDomain = new ILRuntime.Runtime.Enviorment.AppDomain();
 #if DEBUG && (UNITY_EDITOR || UNITY_ANDROID || UNITY_IPHONE)
 					this.appDomain.UnityMainThreadID = System.Threading.Thread.CurrentThread.ManagedThreadId;
 #endif
