@@ -89,13 +89,13 @@ namespace ET
         public static string StringToAB(this string value)
         {
             string result;
-            if (ResourcesComponent.Instance.StringToABDict.TryGetValue(value, out result))
+            if (AddressableComponent.Instance.StringToABDict.TryGetValue(value, out result))
             {
                 return result;
             }
 
             result = value + ".unity3d";
-            ResourcesComponent.Instance.StringToABDict[value] = result;
+            AddressableComponent.Instance.StringToABDict[value] = result;
             return result;
         }
 

@@ -15,9 +15,7 @@ namespace ET
 		public Action LateUpdate;
 		public Action OnApplicationQuit;
 		private Assembly assembly;
-
 		private ILRuntime.Runtime.Enviorment.AppDomain appDomain;
-		
 		private Type[] allTypes;
 		
 		public CodeMode CodeMode { get; set; }
@@ -48,7 +46,7 @@ namespace ET
 
 						assembly = Assembly.Load(assBytes, pdbBytes);
 						this.allTypes = assembly.GetTypes();
-						IStaticMethod start = new MonoStaticMethod(assembly, "ET.Entry", "Start");
+						var start = new MonoStaticMethod(assembly, "ET.Entry", "Start");
 						start.Run();
 					break;
 				}

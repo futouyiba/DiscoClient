@@ -60,7 +60,8 @@ namespace ET
             // 这里可以改成异步加载，demo就不搞了
             var figureConfigId = RandomHelper.RandUInt32() % 6;
             var prefabName = "cSingle" +figureConfigId.ToString("00");
-            GameObject bundleGameObject = (GameObject)ResourcesComponent.Instance.GetAsset("Unit.unity3d", "Unit");
+            //GameObject bundleGameObject = (GameObject)ResourcesComponent.Instance.GetAsset("Unit.unity3d", "Unit");
+            var bundleGameObject = AddressableComponent.Instance.LoadAssetByPath<GameObject>("Unit.unity3d");
             GameObject prefab = bundleGameObject.Get<GameObject>(prefabName);
 	        
             GameObject go = UnityEngine.Object.Instantiate(prefab, GlobalComponent.Instance.Unit, true);
