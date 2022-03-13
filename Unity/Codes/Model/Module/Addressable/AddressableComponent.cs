@@ -20,6 +20,7 @@ namespace ET
     public class AddressableComponent : Entity, IAwake
     {
         public static AddressableComponent Instance { get; set; }
+        public Dictionary<string, string> StringToABDict = new Dictionary<string, string>();
 
         /// <summary>
         /// Addressable����Ƿ��Ѿ���ʼ��
@@ -127,7 +128,7 @@ namespace ET
         /// <summary>
         /// ͨ����Դ·��(AddressableName)�첽����һ����Դ
         /// </summary>
-        public ETTask<T> LoadAssetByPathAsync<T>(string assetPath) where T : UnityEngine.Object
+        public  ETTask<T> LoadAssetByPathAsync<T>(string assetPath) where T : UnityEngine.Object
         {
             ETTask<T> tcs = ETTask<T>.Create(true);
             AsyncOperationHandle<T> assetHandle = Addressables.LoadAssetAsync<T>(assetPath);
@@ -296,16 +297,16 @@ namespace ET
         /// <param name="sceneInstanceHandle">�������صľ����ж�ص�ʱ����</param>
         /// <param name="activateOnLoad">���غ��Ƿ����̼��������SceneManager.SetActiveScene()������������Ӱ��������Դ�첽������ɺ�Ļص�</param>
         /// <returns>����SceneInstance���ݣ�����ͨ�����ֱ�ӻ�ȡ��</returns>
-        public ETTask<SceneInstance> LoadSceneByPathAsync(string scenePath, out AsyncOperationHandle<SceneInstance> sceneInstanceHandle, UnityEngine.SceneManagement.LoadSceneMode loadMode = UnityEngine.SceneManagement.LoadSceneMode.Single, bool activateOnLoad = true, int priority = 100)
+        public async ETTask<SceneInstance> LoadSceneByPathAsync(string scenePath, UnityEngine.SceneManagement.LoadSceneMode loadMode = UnityEngine.SceneManagement.LoadSceneMode.Single, bool activateOnLoad = true, int priority = 100)
         {
             ETTask<SceneInstance> tcs = ETTask<SceneInstance>.Create();
-            sceneInstanceHandle = Addressables.LoadSceneAsync(scenePath, loadMode, activateOnLoad, priority);
+            var sceneInstanceHandle = Addressables.LoadSceneAsync(scenePath, loadMode, activateOnLoad, priority);
             sceneInstanceHandle.Completed += (handle) =>
             {
                 SceneInstance sceneInstance = handle.Result;
                 tcs.SetResult(sceneInstance);
             };
-            return tcs.GetAwaiter();
+            return await tcs;
         }
 
         /// <summary>
