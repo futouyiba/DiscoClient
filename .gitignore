@@ -52,9 +52,9 @@ Server/.DS_Store
 /ToolsApp/
 /Unity/Unity.Editor.csproj
 /Unity/Assets/Bundles/Code/Code.dll.bytes
-/Unity/Assets/Bundles/Code/Code.dll.bytes.meta
+# /Unity/Assets/Bundles/Code/Code.dll.bytes.meta
 /Unity/Assets/Bundles/Code/Code.pdb.bytes
-/Unity/Assets/Bundles/Code/Code.pdb.bytes.meta
+# /Unity/Assets/Bundles/Code/Code.pdb.bytes.meta
 /Unity/Assembly-CSharp.csproj
 /Excel/~$*.xlsx
 *.csproj
