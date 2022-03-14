@@ -24,9 +24,7 @@ namespace ET
 		{
 			LoginHelper.Login(
 				self.DomainScene(), 
-				ConstValue.SelectorAddress, 
-				self.View.E_AccountInputField.GetComponent<InputField>().text, 
-				self.View.E_PasswordInputField.GetComponent<InputField>().text).Coroutine();
+				ConstValue.SelectorAddress).Coroutine();
 		}
 		
 		public static void HideWindow(this DlgLogin self)

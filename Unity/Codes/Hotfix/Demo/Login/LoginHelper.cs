@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace ET
@@ -20,7 +21,9 @@ namespace ET
         public static string DeviceProductId75 = "DEVICE_PRODUCT_ID75";
         public static Dictionary<int, int> USER_ID_TO_PRODUCT_ID = new Dictionary<int, int>() { { 32, 75 }, { 31, 71 }, { 30, 71 } };
 
-        public static async ETTask Login(Scene zoneScene, string address, string account, string password)
+        private static int registerTimes = 0;
+
+        public static async ETTask Login(Scene zoneScene, string address)
         {
 #if NOT_UNITY
             var myProductId = DeviceProductId75;
@@ -30,31 +33,7 @@ namespace ET
             Log.Info("product id:"+myProductId);
             if(!PlayerPrefs.HasKey(USER_ID))
             {
-                Session selectorSession = null;
-                try
-                {
-                    selectorSession = zoneScene.GetComponent<NetKcpComponent>().Create(NetworkHelper.ToIPEndPoint(address));
-                    var registerResp =
-                            (register_user_s2c)await selectorSession.Call(new register_user_c2s() { device_model = DEVICE_MODEL, device_type =
- 1, device_product_id = myProductId});
-                    // (get_transfer_endpoint_s2c)await session.Call(new get_transfer_endpoint_c2s() { endpoint_id = 1, user_id = randomUserId });
-                    // (get_transfer_endpoint_s2c)await session.Call(new get_transfer_endpoint_c2s() { endpoint_id = 1, user_id = UserId75 });
-                    
-                    Log.Info("register response:" + registerResp);
-                    if (registerResp.Error == 0)
-                    {
-                        PlayerPrefs.SetInt(USER_ID, registerResp.user_id);
-                    }
-                    else
-                    {
-                        Log.Error("I have registered using this device identifier/productId before...");
-                        await ETTask.CompletedTask;
-                    }
-                }
-                finally
-                {
-                    selectorSession?.Dispose();
-                }
+                await Register(zoneScene, address, myProductId);
             }
 
             var userId = PlayerPrefs.GetInt(USER_ID);
@@ -109,13 +88,54 @@ namespace ET
                     // await SceneChangeHelper.SceneChangeTo(gateSession.ZoneScene(), "Map1", 65535);
                 }
                 else
-                {
+                {                             
                     gateSession?.Dispose();
+                    zoneScene.RemoveComponent<SessionComponent>();
+                    if (registerTimes++ > 3)
+                    {
+                        return;
+                    }
+                    await Register(zoneScene, address, myProductId);
+                    await LoginHelper.Login(zoneScene, address);
                 }
             }
             catch (Exception e)
             {
                 Log.Error(e);
+            }
+        }
+
+        private static async Task Register(Scene zoneScene, string address, string myProductId)
+        {
+            Session selectorSession = null;
+            try
+            {
+                selectorSession = zoneScene.GetComponent<NetKcpComponent>().Create(NetworkHelper.ToIPEndPoint(address));
+                var registerResp =
+                        (register_user_s2c)await selectorSession.Call(new register_user_c2s()
+                        {
+                            device_model = DEVICE_MODEL,
+                            device_type =
+                                    1,
+                            device_product_id = myProductId
+                        });
+                // (get_transfer_endpoint_s2c)await session.Call(new get_transfer_endpoint_c2s() { endpoint_id = 1, user_id = randomUserId });
+                // (get_transfer_endpoint_s2c)await session.Call(new get_transfer_endpoint_c2s() { endpoint_id = 1, user_id = UserId75 });
+
+                Log.Info("register response:" + registerResp);
+                if (registerResp.Error == 0)
+                {
+                    PlayerPrefs.SetInt(USER_ID, registerResp.user_id);
+                }
+                else
+                {
+                    Log.Error("I have registered using this device identifier/productId before...");
+                    await ETTask.CompletedTask;
+                }
+            }
+            finally
+            {
+                selectorSession?.Dispose();
             }
         }
     }
