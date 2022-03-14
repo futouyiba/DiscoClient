@@ -463,7 +463,7 @@ namespace ET
                 return;
             }
             self.LoadingWindows.Add(baseWindow.WindowID);
-            var go = AddressableComponent.Instance.LoadAssetByPath<GameObject>(value.StringToAB());
+            var go = await AddressableComponent.Instance.LoadAssetByPathAsync<GameObject>(value.StringToAB());
             baseWindow.UIPrefabGameObject      = UnityEngine.Object.Instantiate(go);
             baseWindow.UIPrefabGameObject.name = go.name;
             

@@ -47,7 +47,7 @@ namespace ET
             {
                 //await ResourcesComponent.Instance.LoadBundleAsync(atlasName.StringToAB());
                 //SpriteAtlas spriteAtlas = ResourcesComponent.Instance.GetAsset(atlasName.StringToAB(),atlasName) as SpriteAtlas ;
-                var spriteAtlas = AddressableComponent.Instance.LoadAssetByPath<SpriteAtlas>(atlasName.StringToAB());
+                var spriteAtlas = await AddressableComponent.Instance.LoadAssetByPathAsync<SpriteAtlas>(atlasName.StringToAB());
                 Sprite sprite = spriteAtlas.GetSprite(spriteName);
                 if (null == sprite)
                 {
