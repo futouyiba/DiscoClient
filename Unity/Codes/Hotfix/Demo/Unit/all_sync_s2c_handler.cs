@@ -13,6 +13,9 @@ namespace ET
         {
             Log.Info($"all sync message:{message}");
             WaitType.Wait_all_sync waitAllSync = await session.ZoneScene().GetComponent<ObjectWait>().Wait<WaitType.Wait_all_sync>();
+            var houseComponent = session.ZoneScene().CurrentScene().AddComponent<HouseComponent>();
+            houseComponent.HouseCfgData = message.house_cfg;
+            houseComponent.HouseStatusData = message.house;
             // var all_sync = waitAllSync.Message;
             foreach (player p in message.players)
             {

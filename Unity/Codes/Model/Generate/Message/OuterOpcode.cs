@@ -47,5 +47,7 @@ namespace ET
 		 public const ushort C2M_TransferMap = 10045;
 		 public const ushort M2C_TransferMap = 10046;
 		 public const ushort player = 30006;
+		 public const ushort house = 30007;
+		 public const ushort house_cfg = 30008;
 	}
 }

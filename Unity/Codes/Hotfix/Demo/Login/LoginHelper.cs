@@ -125,7 +125,9 @@ namespace ET
                 Log.Info("register response:" + registerResp);
                 if (registerResp.Error == 0)
                 {
+                    #if !NOT_UNITY
                     PlayerPrefs.SetInt(USER_ID, registerResp.user_id);
+                    #endif
                 }
                 else
                 {

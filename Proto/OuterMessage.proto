@@ -88,20 +88,30 @@ message heartbeat_c2s // IMessage
 ///
 message all_sync_s2c // IMessage 
 {
+    house_cfg house_cfg = 1;
+    house house = 2;
+    repeated player players = 3; 
+	//erlangMogai
+}
+message house_cfg
+{
     int32 house_type = 1;  // 房间类型
     repeated int32 cfg_music_ids = 2;
     int32 cfg_lighting_num = 3;
     int32 cfg_dj_num = 4;
     int32 cfg_seat_num = 5;
     int32 cfg_figure_num = 6;
-    int32 music_id = 7;     // 正在放的音乐
-    int32 music_start_time = 8; // 该首音乐开始播放时间
-    repeated int32 on_lighting_ids = 9; // 亮着的灯ID数组
-    repeated int32 on_dj_ids = 10; // 有人的DJ位置ID数组
-    repeated int32 dj_playerids = 11; // DJ玩家ID数组，顺序与on_dj_ids对应   playerid和userid是同一个id，一一对应。以后可能会分开。
-    repeated int32 on_seat_ids = 12;
-    repeated int32 seat_playerids = 13;
-    repeated player players = 14;    // 玩家状态数组 这是id
+	//erlangMogai
+}
+message house
+{
+    int32 music_id = 1;     // 正在放的音乐
+    int32 music_start_time = 2; // 该首音乐开始播放时间
+    repeated int32 on_lighting_ids = 3; // 亮着的灯ID数组
+    repeated int32 on_dj_ids = 4; // 有人的DJ位置ID数组
+    repeated int32 dj_playerids = 5; // DJ玩家ID数组，顺序与on_dj_ids对应   playerid和userid是同一个id，一一对应。以后可能会分开。
+    repeated int32 on_seat_ids = 6;
+    repeated int32 seat_playerids = 7;
 	//erlangMogai
 }
 message player 

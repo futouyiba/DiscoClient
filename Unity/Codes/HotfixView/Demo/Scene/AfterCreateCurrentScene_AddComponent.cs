@@ -9,6 +9,7 @@ namespace ET
             currentScene.AddComponent<UnitComponent>();
             currentScene.AddComponent<UIComponent>().HideWindow(WindowID.WindowID_Login);
             currentScene.AddComponent<OperaComponent>();
+            // currentScene.AddComponent<HouseComponent>();
             Log.Info($"operacomponent added... currentscene:{currentScene},id:{currentScene.Id}");
             await ETTask.CompletedTask;
         }

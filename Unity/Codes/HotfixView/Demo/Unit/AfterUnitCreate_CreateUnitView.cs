@@ -87,6 +87,11 @@ namespace ET
                 go.transform.GetChild(1).GetComponent<TextMeshPro>().color = Color.yellow;
             }
             // args.Unit.AddComponent<AnimatorComponent>(); todo
+            if (charComp.playerData.is_dj != 0)
+            {
+                await Game.EventSystem.PublishAsync(new EventType.BecomeDJ() { Unit = args.Unit });
+            }
+            
             await ETTask.CompletedTask;
         }
     }

@@ -258,6 +258,38 @@ namespace ET
 	public partial class all_sync_s2c: Object, IMessage
 	{
 		[ProtoMember(1)]
+		public house_cfg house_cfg { get; set; }
+
+		[ProtoMember(2)]
+		public house house { get; set; }
+
+		[ProtoMember(3)]
+		public List<player> players = new List<player>();
+
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
+	}
+
+	[Message(OuterOpcode.house_cfg)]
+	[ProtoContract]
+	public partial class house_cfg: Object
+	{
+		[ProtoMember(1)]
 		public int house_type { get; set; }
 
 		[ProtoMember(2)]
@@ -275,29 +307,49 @@ namespace ET
 		[ProtoMember(6)]
 		public int cfg_figure_num { get; set; }
 
-		[ProtoMember(7)]
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
+	}
+
+	[Message(OuterOpcode.house)]
+	[ProtoContract]
+	public partial class house: Object
+	{
+		[ProtoMember(1)]
 		public int music_id { get; set; }
 
-		[ProtoMember(8)]
+		[ProtoMember(2)]
 		public int music_start_time { get; set; }
 
-		[ProtoMember(9)]
+		[ProtoMember(3)]
 		public List<int> on_lighting_ids = new List<int>();
 
-		[ProtoMember(10)]
+		[ProtoMember(4)]
 		public List<int> on_dj_ids = new List<int>();
 
-		[ProtoMember(11)]
+		[ProtoMember(5)]
 		public List<int> dj_playerids = new List<int>();
 
-		[ProtoMember(12)]
+		[ProtoMember(6)]
 		public List<int> on_seat_ids = new List<int>();
 
-		[ProtoMember(13)]
+		[ProtoMember(7)]
 		public List<int> seat_playerids = new List<int>();
-
-		[ProtoMember(14)]
-		public List<player> players = new List<player>();
 
          public int Error
         {
