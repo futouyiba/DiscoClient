@@ -46,6 +46,7 @@ namespace ET
                     (self.move_action_req_c2s.float1, self.move_action_req_c2s.float2) = AfterUnitCreate_CreateUnitView.UnityPosToServerXY(hit.point);
                     action_req_s2c moveResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
                             .Call(self.move_action_req_c2s);
+                    Log.Info("move request received response, await finished...");
                     if (moveResp.Error == 0)
                     {
                         Game.EventSystem.Publish(new EventType.MoveStart()

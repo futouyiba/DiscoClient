@@ -16,7 +16,7 @@ namespace ET
             UnityEngine.Object.Destroy(self.GameObject);
         }
     }
-    
+
     [ObjectSystem]
     public class GameObjectComponentAwakeSystem: AwakeSystem<GameObjectComponent>
     {
@@ -31,14 +31,14 @@ namespace ET
         StandStill = 0,
         MoveAround = 1,
     }
-    
+
     public static class GameObjectCompSys
     {
         public static void ChangeScale(this GameObjectComponent self, float scale)
         {
             // self.SpriteGO.transform.localScale =
-                    // new Vector3(self.OriScale.x * scale * self.FowardDirection, self.OriScale.y * scale, self.OriScale.z * scale);
-                    self.GameObject.transform.localScale = Vector3.one * scale;
+            // new Vector3(self.OriScale.x * scale * self.FowardDirection, self.OriScale.y * scale, self.OriScale.z * scale);
+            self.GameObject.transform.localScale = Vector3.one * scale;
         }
 
         public static void ChangeMovingDirection(this GameObjectComponent self, float direction)
@@ -51,23 +51,29 @@ namespace ET
 
         public static async ETTask StartRandomMovePeriodical(this GameObjectComponent self)
         {
-            if (RandomHelper.RandomBool())
+            var waitTime = RandomHelper.RandFloat01() * 1000f;
+            await TimerComponent.Instance.WaitAsync(waitTime.ToInt64());
+
+            if (RandomHelper.RandFloat01()<0.2f)
             {
-                var waitTime = RandomHelper.RandFloat01() * 1000f;
-                await TimerComponent.Instance.WaitAsync(waitTime.ToInt64());
+                var rand1 = RandomHelper.RandFloat01() * 2 - 1f;
+                var rand2 = RandomHelper.RandFloat01() * 2 - 1f;
+                float wanderRadius = ConstValue.WanderRadius;
+                var randX = Mathf.Clamp01(wanderRadius * rand1 + self.CharComp.playerData.x);
+                var randY = Mathf.Clamp01(self.CharComp.playerData.y + wanderRadius * rand2);
+                var targetPos = AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(randX, randY);
+                var duration = (targetPos - self.GameObject.transform.position).magnitude / ConstValue.PlayerMoveSpeed;
+                // var duration = (targetPos - self.GameObject.transform.position).magnitude / ConstValue.PlayerMoveSpeed *
+                // (RandomHelper.RandFloat01() * 0.2f + 0.9f);
+                self.GameObject.transform.DOMove(targetPos, duration).OnComplete(() =>
+                {
+                    self.StartRandomMovePeriodical().Coroutine();
+                }); //todo no longer use 递归, so the exec stack would not be too thick.
             }
-            var rand1 = RandomHelper.RandFloat01() * 2 - 1f;
-            var rand2 = RandomHelper.RandFloat01() * 2 - 1f;
-            float wanderRadius = ConstValue.WanderRadius;
-            var randX = Mathf.Clamp01(wanderRadius * rand1 + self.CharComp.playerData.x);
-            var randY = Mathf.Clamp01(self.CharComp.playerData.y + wanderRadius * rand2);
-            var targetPos = AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(randX, randY);
-            var duration = (targetPos - self.GameObject.transform.position).magnitude / ConstValue.PlayerMoveSpeed *
-                    (RandomHelper.RandFloat01() * 0.2f + 0.9f);
-            self.GameObject.transform.DOMove(targetPos, duration).OnComplete(() =>
+            else
             {
                 self.StartRandomMovePeriodical().Coroutine();
-            }); //todo no longer use 递归, so the exec stack would not be too thick.
+            }
         }
     }
 }

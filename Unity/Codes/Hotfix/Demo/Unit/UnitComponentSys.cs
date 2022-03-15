@@ -183,7 +183,6 @@ namespace ET
 		public static async ETTask PopulateInit(this UnitComponent self)
 		{
 			var namesCount = names.Length;
-			var nameRandIndex = RandomHelper.RandomNumber(0,namesCount);
 			var playerCount = self.PlayerUnits.Count;
 			var populateNum = ConstValue.PopulateGoalNum - playerCount;
 			float populateChance = populateNum / 900f;
@@ -196,6 +195,7 @@ namespace ET
 					{
 						continue;
 					}
+					var nameRandIndex = RandomHelper.RandomNumber(0,namesCount);
 					
 					var id = IdGenerater.Instance.GenerateUnitId(self.DomainZone());
 					Unit unit = self.AddChildWithId<Unit, int>(id, 0);
