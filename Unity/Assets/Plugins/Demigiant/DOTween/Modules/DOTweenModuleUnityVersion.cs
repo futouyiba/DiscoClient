@@ -175,7 +175,7 @@ namespace DG.Tweening
         #endregion
 #endif
 
-#if UNITY_2018_1_OR_NEWER
+// #if UNITY_2018_1_OR_NEWER
         #region Unity 2018.1 or Newer
 
         #region Material
@@ -216,7 +216,7 @@ namespace DG.Tweening
 
         #region .NET 4.6 or Newer
 
-#if UNITY_2018_1_OR_NEWER && (NET_4_6 || NET_STANDARD_2_0)
+// #if UNITY_2018_1_OR_NEWER
 
         #region Async Instructions
 
@@ -308,12 +308,12 @@ namespace DG.Tweening
         }
 
         #endregion
-#endif
+// #endif
 
         #endregion
 
         #endregion
-#endif
+// #endif
     }
 
     // █████████████████████████████████████████████████████████████████████████████████████████████████████████████████████

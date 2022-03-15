@@ -38,6 +38,7 @@ namespace ET
                 response.Error = tMsg.error_code;
                 response.Message = tMsg.error_string;
                 response.RpcId = tMsg.rpc_id;
+                Log.Info(response.ToString());
                 session.OnRead(opcode, response);
                 return;
             }

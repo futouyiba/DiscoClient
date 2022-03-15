@@ -81,6 +81,7 @@ namespace ET
             {
                 // go.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);//todo refactor to XiuGouComponent
                 go.transform.GetChild(1).GetComponent<TextMeshPro>().text = charComp.playerData.player_name;
+                gameObjectComp.StartRandomMovePeriodical().Coroutine();
             }
             else
             {
@@ -91,7 +92,7 @@ namespace ET
             {
                 await Game.EventSystem.PublishAsync(new EventType.BecomeDJ() { Unit = args.Unit });
             }
-            
+
             await ETTask.CompletedTask;
         }
     }

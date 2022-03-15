@@ -41,7 +41,7 @@ namespace ET
                 if (Physics.Raycast(ray, out hit, 1000, self.mapMask))
                 {
                     Debug.DrawRay(ray.origin,ray.direction,Color.green, 5f);
-                    Log.Info("draw debug line..., hit point is:"+hit.point);
+                    // Log.Info("draw debug line..., hit point is:"+hit.point);
                     self.ClickPoint = hit.point;
                     (self.move_action_req_c2s.float1, self.move_action_req_c2s.float2) = AfterUnitCreate_CreateUnitView.UnityPosToServerXY(hit.point);
                     action_req_s2c moveResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session

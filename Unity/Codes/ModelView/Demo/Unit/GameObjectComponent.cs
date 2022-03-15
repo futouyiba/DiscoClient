@@ -10,6 +10,7 @@ namespace ET
         public Vector3 OriScale;
         public GameObject SpriteGO;
         public SpriteRenderer SpriteRenderer;
+        public CharComp CharComp;
         /// <summary>
         /// 1f = face right(basically what we originally design); -1f = face left(opposite to the prefab);
         /// </summary>
