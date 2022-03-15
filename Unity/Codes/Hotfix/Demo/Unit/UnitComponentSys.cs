@@ -211,6 +211,8 @@ namespace ET
 					self.AddNpc(unit);
 					await Game.EventSystem.PublishAsync(new EventType.AfterUnitCreate(){Unit = unit});
 				}
+
+				await TimerComponent.Instance.WaitFrameAsync();
 			}
 
 			await ETTask.CompletedTask;

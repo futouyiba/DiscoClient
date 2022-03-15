@@ -6,7 +6,6 @@
         protected override async ETTask Run(EventType.SceneChangeFinish args)
         {
             await args.ZoneScene.CurrentScene() .GetComponent<UnitComponent>().PopulateInit();
-            await ETTask.CompletedTask;
         }
     }
     
