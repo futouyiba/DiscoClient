@@ -5616,7 +5616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4118499454487551230, guid: 30844a3176a4e2848b198970b19e979c, type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4118499454487551230, guid: 30844a3176a4e2848b198970b19e979c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9860,7 +9860,7 @@ Transform:
   - {fileID: 31379262}
   - {fileID: 221802459}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &647967164
 GameObject:
@@ -13138,7 +13138,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778795285}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 75e321cba0593064893d30a0f15322f2, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: ce1b08e3003ba574b9eb8e33be0f8071, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -17365,7 +17365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5447033529785420585, guid: 1f4d11a5dde9f70428ffb890a72069e0, type: 3}
       propertyPath: m_RootOrder
-      value: 61
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5447033529785420585, guid: 1f4d11a5dde9f70428ffb890a72069e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18838,7 +18838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1232546366504347660, guid: dd1186760a6cee4439ee96957e4bf7cf, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1232546366504347660, guid: dd1186760a6cee4439ee96957e4bf7cf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20165,7 +20165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5447033529785420585, guid: 1f4d11a5dde9f70428ffb890a72069e0, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5447033529785420585, guid: 1f4d11a5dde9f70428ffb890a72069e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21878,7 +21878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5447033529785420585, guid: 1f4d11a5dde9f70428ffb890a72069e0, type: 3}
       propertyPath: m_RootOrder
-      value: 60
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 5447033529785420585, guid: 1f4d11a5dde9f70428ffb890a72069e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22757,7 +22757,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1399636177
 GameObject:
@@ -25373,7 +25373,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4615034223422231459, guid: edcfc2db9845d6741aa327c958e72ba5, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4615034223422231459, guid: edcfc2db9845d6741aa327c958e72ba5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30001,7 +30001,7 @@ Transform:
   - {fileID: 528000975}
   - {fileID: 420769598}
   m_Father: {fileID: 0}
-  m_RootOrder: 59
+  m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1858427905
 GameObject:
@@ -30523,7 +30523,7 @@ Transform:
   - {fileID: 5551467654102596494}
   - {fileID: 2008482672}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1889865225
 PrefabInstance:
@@ -33863,7 +33863,7 @@ Transform:
   - {fileID: 1371392219}
   - {fileID: 232029641}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2079743189
 MonoBehaviour:
@@ -35173,7 +35173,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89191052189881689}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: b8f214156c5ce0949867c3c79bb31bef, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: ce1b08e3003ba574b9eb8e33be0f8071, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -35592,7 +35592,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 844641831352912330, guid: b524c0e6fbb5a744ca03cf53507fa909, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 844641831352912330, guid: b524c0e6fbb5a744ca03cf53507fa909, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42826,6 +42826,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3039185467338792952, guid: c035d00d8404b1744b453f259322ebe5, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 1114ea694678b8c41bb78d8f3dcd97cd, type: 3}
     - target: {fileID: 3039185468978376628, guid: c035d00d8404b1744b453f259322ebe5, type: 3}
       propertyPath: m_Name
       value: Dj Table ready

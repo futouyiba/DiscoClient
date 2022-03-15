@@ -45,26 +45,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - key: Skeleton
-    gameObject: {fileID: 1248987324363926, guid: 9e27b0bdab1ad7242a009899d15c0e67,
-      type: 3}
+    gameObject: {fileID: 1248987324363926, guid: 9e27b0bdab1ad7242a009899d15c0e67, type: 3}
   - key: CharacterRect
-    gameObject: {fileID: 6229857659710172204, guid: 869ed846dd4249942b0cc4485f51aeed,
-      type: 3}
+    gameObject: {fileID: 6229857659710172204, guid: 869ed846dd4249942b0cc4485f51aeed, type: 3}
   - key: cSingle01
-    gameObject: {fileID: 9155325212016578755, guid: 6b54785679c720c49b6e06f8af1ddd1a,
-      type: 3}
+    gameObject: {fileID: 9155325212016578755, guid: 6b54785679c720c49b6e06f8af1ddd1a, type: 3}
   - key: cSingle02
-    gameObject: {fileID: 9155325212016578755, guid: 3b1727d0974a0fe4ea6f83efc4dbea00,
-      type: 3}
+    gameObject: {fileID: 9155325212016578755, guid: 3b1727d0974a0fe4ea6f83efc4dbea00, type: 3}
   - key: cSingle03
-    gameObject: {fileID: 9155325212016578755, guid: 0b5f8484210c2144c9ce6ee01b42ebef,
-      type: 3}
+    gameObject: {fileID: 9155325212016578755, guid: 0b5f8484210c2144c9ce6ee01b42ebef, type: 3}
   - key: cSingle05
-    gameObject: {fileID: 9155325212016578755, guid: c36ad76c1b7371c42bbca24af6d1395c,
-      type: 3}
+    gameObject: {fileID: 9155325212016578755, guid: c36ad76c1b7371c42bbca24af6d1395c, type: 3}
   - key: cSingle04
-    gameObject: {fileID: 2749106749095704509, guid: e0a45c013bf04824388a70bc5240ee6b,
-      type: 3}
+    gameObject: {fileID: 2749106749095704509, guid: e0a45c013bf04824388a70bc5240ee6b, type: 3}
   - key: cSingle00
-    gameObject: {fileID: 9155325212016578755, guid: 01f4c562738c2ef4b8d612e9aef198c3,
-      type: 3}
+    gameObject: {fileID: 9155325212016578755, guid: 01f4c562738c2ef4b8d612e9aef198c3, type: 3}
+  - key: cSingle06
+    gameObject: {fileID: 9039933692299232113, guid: b4171f5a5bedb407f85b7c9ebf2bdc72, type: 3}
