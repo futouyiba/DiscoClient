@@ -1,5 +1,6 @@
 ﻿namespace ET
 {
+    [ObjectSystem]
     public class UnitDestroySystem:DestroySystem<Unit>
     {
         public override void Destroy(Unit self)

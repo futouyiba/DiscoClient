@@ -92,4 +92,31 @@ namespace ET
             throw new System.NotImplementedException();
         }
     }
+    
+    public class TakeSeat_ViewHandle:AEvent<EventType.TakeSeat>
+    {
+        protected override ETTask Run(TakeSeat a)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+    
+    public class ShoutSlogan_ViewHandle:AEvent<EventType.ShoutSlogan>
+    {
+        protected override ETTask Run(ShoutSlogan a)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+    
+    public class Chat_ViewHandle:AEvent<EventType.Chat>
+    {
+        protected override ETTask Run(Chat a)
+        {
+            // add chat bubble
+            
+            // add chat history within the ui panel
+            throw new System.NotImplementedException();
+        }
+    }
 }
