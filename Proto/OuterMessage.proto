@@ -112,7 +112,6 @@ message house
     repeated int32 dj_playerids = 5; // DJ玩家ID数组，顺序与on_dj_ids对应   playerid和userid是同一个id，一一对应。以后可能会分开。
     repeated int32 on_seat_ids = 6;
     repeated int32 seat_playerids = 7;
-	//erlangMogai
 }
 message player 
 {
@@ -120,10 +119,10 @@ message player
     float x = 2;   // 位置x：0-1
     float y = 3;   // 位置y：0-1
     int32 is_dj = 4;   // 是否DJ，0-否，其他-dj编号  2就表示站在2号dj位置上。
-    float big_factor = 5;   // 放大因子   多个放大会累积相乘。
-    int32 figure_id = 6;   // 形象id   
-    string player_name = 7;
-	//erlangMogai
+    int32 seat = 5;
+    float big_factor = 6;   // 放大因子   多个放大会累积相乘。
+    int32 figure_id = 7;   // 形象id   
+    string player_name = 8;
 }
 
 ///

@@ -351,23 +351,6 @@ namespace ET
 		[ProtoMember(7)]
 		public List<int> seat_playerids = new List<int>();
 
-         public int Error
-        {
-            get;
-            set;
-        }
-
-        public string Message
-        {
-            get;
-            set;
-        }
-
-        public int RpcId
-        {
-            get;
-            set;
-        }
 	}
 
 	[Message(OuterOpcode.player)]
@@ -387,31 +370,17 @@ namespace ET
 		public int is_dj { get; set; }
 
 		[ProtoMember(5)]
-		public float big_factor { get; set; }
+		public int seat { get; set; }
 
 		[ProtoMember(6)]
-		public int figure_id { get; set; }
+		public float big_factor { get; set; }
 
 		[ProtoMember(7)]
+		public int figure_id { get; set; }
+
+		[ProtoMember(8)]
 		public string player_name { get; set; }
 
-         public int Error
-        {
-            get;
-            set;
-        }
-
-        public string Message
-        {
-            get;
-            set;
-        }
-
-        public int RpcId
-        {
-            get;
-            set;
-        }
 	}
 
 ///
