@@ -44,8 +44,17 @@ namespace ET
                 case ConstValue.ACTION_ID_CHANGE_FIGURE:
                     await Game.EventSystem.PublishAsync(new EventType.ChangeFigure() { FigureId = message.int1 });
                     break;
+                case ConstValue.ACTION_ID_TAKE_SEAT:
+                    await Game.EventSystem.PublishAsync(new EventType.TakeSeat(){Unit = playerUnit, SeatId = message.int1});
+                    break;
+                case ConstValue.ACTION_ID_SHOUT_SLOGAN:
+                    await Game.EventSystem.PublishAsync(new EventType.ShoutSlogan() { Unit = playerUnit, SloganToShout = message.str1 });
+                    break;
+                case ConstValue.ACTION_ID_CHAT:
+                    await Game.EventSystem.PublishAsync(new EventType.Chat() { Unit = playerUnit, Content = message.str1 });
+                    break;
                 default:
-                    Log.Warning("action sync message not handled, message:"+message);
+                    Log.Warning("action sync message not handled, message:" + message);
                     break;
             }
             await ETTask.CompletedTask;

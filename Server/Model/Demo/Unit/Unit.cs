@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ET
 {
-    public sealed class Unit: Entity, IAwake<int>
+    public sealed class Unit: Entity, IAwake<int>, IDestroy
     {
         public int ConfigId; //配置表id
 

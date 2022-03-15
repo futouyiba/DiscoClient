@@ -19,6 +19,25 @@ namespace ET
         }
     }
     
+    public class LeaveDJ_ViewHandle:AEvent<EventType.LeaveDJ>
+    {
+        /// <summary>
+        /// todo 搞个动画，依次await
+        /// </summary>
+        /// <param name="a"></param>
+        protected override async ETTask Run(LeaveDJ a)
+        {
+            GameObjectComponent gameObjectComponent = a.Unit
+                    .GetComponent<GameObjectComponent>();
+            Transform playerTransform = gameObjectComponent.GameObject.transform;
+            playerTransform.position =
+                    AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(a.Unit.GetComponent<CharComp>().playerData.x,
+                        a.Unit.GetComponent<CharComp>().playerData.y);
+            gameObjectComponent.ChangeScale(1f);
+            await ETTask.CompletedTask;
+        }
+    }
+    
     public class StartMove_ViewHandle:AEvent<EventType.MoveStart>
     {
         protected override async ETTask Run(MoveStart a)
@@ -32,5 +51,45 @@ namespace ET
         }
     }
     
+    public class ControlLighting_ViewHandle:AEvent<EventType.ControlLight>
+    {
+        protected override async ETTask Run(ControlLight a)
+        {
+            //todo check how lights are controlled for now, and write hotfix code for it..
+            
+            await ETTask.CompletedTask;
+        }
+    }
     
+    public class CutToMusic_ViewHandle:AEvent<EventType.CutToMusic>
+    {
+        protected override ETTask Run(CutToMusic a)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+
+    public class GrowBig_ViewHandle:AEvent<EventType.GrowBig>
+    {
+        protected override async ETTask Run(GrowBig a)
+        {
+            // start tween DOScale todo
+            GameObjectComponent gameObjectComponent = a.Unit.GetComponent<GameObjectComponent>();
+            gameObjectComponent.ChangeScale(1.5f);
+            gameObjectComponent.GameObject.transform.DOShakeScale(1.5f, 1f);
+            
+            // make camera focused on this gameObject
+            
+            // play light effects
+            await ETTask.CompletedTask;
+        }
+    }
+    
+    public class ChangeFigure_ViewHandle:AEvent<EventType.ChangeFigure>
+    {
+        protected override ETTask Run(ChangeFigure a)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 }

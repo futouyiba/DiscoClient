@@ -9,7 +9,7 @@ namespace ET
         /// </summary>
         public const float WanderRadius = 0.1f;
 
-        public const float PlayerMoveSpeed = 4f;
+        public const float PlayerMoveSpeed = 1f;
 
         public const int PopulateGoalNum = 500;
         /// <summary>
@@ -24,13 +24,18 @@ namespace ET
         public const float RubberbandChance = 0.2f;
         public const int RubberbandStrength = 4;
 
-        /**        %% 动作id定义
-        -define(ACTION_ID_BECOME_DJ, 1). %上dj
-        -define(ACTION_ID_MOVE_TO, 2). % 移动
-        -define(ACTION_ID_CONTROL_LIGHTING, 3). % 控制一个test灯
-        -define(ACTION_ID_SWITCH_MUSIC, 4). % 切歌
-        -define(ACTION_ID_BECOME_BIGGER, 5). % 变大
-        -define(ACTION_ID_CHANGE_FIGURE, 6). % 改变形象 
+        /**
+         * %% 动作id定义
+-define(ACTION_ID_BECOME_DJ, 1). %上dj
+-define(ACTION_ID_MOVE_TO, 2). % 移动
+-define(ACTION_ID_CONTROL_LIGHTING, 3). % 控制一个test灯
+-define(ACTION_ID_SWITCH_MUSIC, 4). % 切歌
+-define(ACTION_ID_BECOME_BIGGER, 5). % 变大
+-define(ACTION_ID_CHANGE_FIGURE, 6). % 改变形象
+-define(ACTION_ID_TAKE_SEAT, 7). % 上卡座
+-define(ACTION_ID_SHOUT_SLOGAN, 8). % 一起喊口号
+-define(ACTION_ID_CHAT, 9). % 聊天
+        https://i1c127izva.feishu.cn/docs/doccnJj1BcR84qI36LvLu0epYP0
         */
         public const int ACTION_ID_BECOME_DJ = 1;
         public const int ACTION_ID_MOVE_TO = 2;
@@ -38,7 +43,9 @@ namespace ET
         public const int ACTION_ID_SWITCH_MUSIC = 4;
         public const int ACTION_ID_BECOME_BIGGER = 5;
         public const int ACTION_ID_CHANGE_FIGURE = 6;
-        public const int ACTION_LEAVE_DJ = 7;
+        public const int ACTION_ID_TAKE_SEAT = 7;
+        public const int ACTION_ID_SHOUT_SLOGAN = 8;
+        public const int ACTION_ID_CHAT = 9;
 
         /**
          * %% 控灯选项

@@ -130,5 +130,23 @@ namespace ET
             public Unit Unit;
             public int FigureId;
         }
+
+        public struct TakeSeat
+        {
+            public Unit Unit;
+            public int SeatId;
+        }
+
+        public struct ShoutSlogan
+        {
+            public Unit Unit;
+            public string SloganToShout;
+        }
+
+        public struct Chat
+        {
+            public Unit Unit;
+            public string Content;
+        }
     }
 }

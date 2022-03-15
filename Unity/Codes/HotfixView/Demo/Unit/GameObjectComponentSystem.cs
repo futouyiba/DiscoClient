@@ -21,7 +21,7 @@ namespace ET
         {
             // self.SpriteGO.transform.localScale =
                     // new Vector3(self.OriScale.x * scale * self.FowardDirection, self.OriScale.y * scale, self.OriScale.z * scale);
-                    self.GameObject.transform.localScale = Vector3.one * 2;
+                    self.GameObject.transform.localScale = Vector3.one * scale;
         }
 
         public static void ChangeMovingDirection(this GameObjectComponent self, float direction)

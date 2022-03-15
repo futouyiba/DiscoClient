@@ -83,27 +83,33 @@ namespace ET
                 
                 if (goDjResp.Error == 0)
                 {
-                    GameObjectComponent gameObjectComponent = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<GameObjectComponent>();
-                    Transform myPlayerTransform = gameObjectComponent.GameObject.transform;
-                    myPlayerTransform.position =
-                            self.DjGO.transform.position;
-                    gameObjectComponent.ChangeScale(2f);
+                    await Game.EventSystem.PublishAsync(new EventType.BecomeDJ()
+                    {
+                        Unit = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit()
+                    });
+                    
+                    // GameObjectComponent gameObjectComponent = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<GameObjectComponent>();
+                    // Transform myPlayerTransform = gameObjectComponent.GameObject.transform;
+                    // myPlayerTransform.position =
+                    //         self.DjGO.transform.position;
+                    // gameObjectComponent.ChangeScale(2f);
                 }
             }
 
             if (Input.GetKeyDown(KeyCode.K))
             {
                 var leaveDjResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
-                        .Call(new action_req_c2s() { action_id = ConstValue.ACTION_LEAVE_DJ, int1 = 1, });
+                        .Call(new action_req_c2s() { action_id = ConstValue.ACTION_ID_BECOME_DJ, int1 = 0, });
                 if (leaveDjResp.Error == 0)
                 {
                     Unit myPlayerUnit = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit();
-                    GameObjectComponent gameObjectComponent = myPlayerUnit
-                            .GetComponent<GameObjectComponent>();
-                    Transform myPlayerTransform = gameObjectComponent.GameObject.transform;
-                    myPlayerTransform.position =
-                            AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(myPlayerUnit.GetComponent<CharComp>().playerData.x, myPlayerUnit.GetComponent<CharComp>().playerData.y);
-                    gameObjectComponent.ChangeScale(1f);
+                    await Game.EventSystem.PublishAsync(new EventType.LeaveDJ(){Unit = myPlayerUnit});
+                    // GameObjectComponent gameObjectComponent = myPlayerUnit
+                    //         .GetComponent<GameObjectComponent>();
+                    // Transform myPlayerTransform = gameObjectComponent.GameObject.transform;
+                    // myPlayerTransform.position =
+                    //         AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(myPlayerUnit.GetComponent<CharComp>().playerData.x, myPlayerUnit.GetComponent<CharComp>().playerData.y);
+                    // gameObjectComponent.ChangeScale(1f);
                 }
             }
 
