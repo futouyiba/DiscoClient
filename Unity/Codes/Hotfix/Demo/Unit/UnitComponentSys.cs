@@ -210,9 +210,8 @@ namespace ET
 					// unit.Position = new Vector3(i / 30f, 0f, j / 30f);
 					self.AddNpc(unit);
 					await Game.EventSystem.PublishAsync(new EventType.AfterUnitCreate(){Unit = unit});
+					await TimerComponent.Instance.WaitFrameAsync();
 				}
-
-				await TimerComponent.Instance.WaitFrameAsync();
 			}
 
 			await ETTask.CompletedTask;
