@@ -12,7 +12,7 @@ namespace ET
 
 		public static void RegisterUIEvent(this DlgLogin self)
 		{
-			self.View.E_LoginButton.AddListener(() => { self.OnLoginClickHandler();});
+			self.View.E_LoginButton.AddListener(self.OnLoginClickHandler);
 		}
 
 		public static void ShowWindow(this DlgLogin self, Entity contextData = null)

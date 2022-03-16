@@ -231,9 +231,13 @@ namespace ET
 			// unit.Forward = RandomHelper.RandFloat01() < 0.5f? 1f : -1f;
 			unit.AddComponent<MoveComponent>();
 			unit.AddComponent<ObjectWait>();
-			unit.AddComponent<CharComp,player>(messageOnePlayer);
+			var charComp = unit.AddComponent<CharComp,player>(messageOnePlayer);
 			self.AddPlayer(unit);
 			await Game.EventSystem.PublishAsync(new EventType.AfterUnitCreate(){Unit = unit});
+			if (charComp.playerData.is_dj > 0)
+			{
+				Game.EventSystem.PublishAsync(new EventType.BecomeDJ() { Unit = unit }).Coroutine();
+			}
 			// todo remove some npc units by chance..
 		}
 
