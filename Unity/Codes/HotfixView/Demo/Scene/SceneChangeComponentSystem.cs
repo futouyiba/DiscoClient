@@ -51,5 +51,7 @@ namespace ET
             }
             return (int)(self.loadMapOperation.progress * 100);
         }
+        
+        
     }
 }
