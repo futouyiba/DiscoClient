@@ -63,3 +63,4 @@ Server/.DS_Store
 .vsconfig
 *.DotSettings
 Unity/UserSettings/EditorUserSettings.asset
+Unity/Assets/Scenes/Small_Club_Test.unity
