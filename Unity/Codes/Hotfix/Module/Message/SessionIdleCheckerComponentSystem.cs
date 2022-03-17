@@ -23,7 +23,7 @@ namespace ET
     {
         public override void Awake(SessionIdleCheckerComponent self, int checkInteral)
         {
-            self.RepeatedTimer = TimerComponent.Instance.NewRepeatedTimer(checkInteral, TimerType.SessionIdleChecker, self);
+            // self.RepeatedTimer = TimerComponent.Instance.NewRepeatedTimer(checkInteral, TimerType.SessionIdleChecker, self);
         }
     }
 
@@ -32,7 +32,7 @@ namespace ET
     {
         public override void Destroy(SessionIdleCheckerComponent self)
         {
-            TimerComponent.Instance?.Remove(ref self.RepeatedTimer);
+            // TimerComponent.Instance?.Remove(ref self.RepeatedTimer);
         }
     }
 

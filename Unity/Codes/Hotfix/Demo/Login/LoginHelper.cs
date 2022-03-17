@@ -66,12 +66,12 @@ namespace ET
                 }
 
                 // 创建一个gate Session,并且保存到SessionComponent中
-                Session gateSession = zoneScene.GetComponent<NetKcpComponent>()
+                Session transferSession = zoneScene.GetComponent<NetKcpComponent>()
                         .Create(NetworkHelper.ToIPEndPoint(getEndpointResp.ip, getEndpointResp.port));
-                gateSession.AddComponent<PingComponent>();
-                zoneScene.AddComponent<SessionComponent>().Session = gateSession;
+                transferSession.AddComponent<PingComponent>();
+                zoneScene.AddComponent<SessionComponent>().Session = transferSession;
 
-                var authResp = (authenticate_s2c)await gateSession.Call(new authenticate_c2s()
+                var authResp = (authenticate_s2c)await transferSession.Call(new authenticate_c2s()
                 {
                     device_product_id = myProductId, device_type = 1, user_id = userId
                     // device_product_id = randomProductId, device_type = 1, user_id = randomUserId
@@ -89,7 +89,7 @@ namespace ET
                 }
                 else
                 {                             
-                    gateSession?.Dispose();
+                    transferSession?.Dispose();
                     zoneScene.RemoveComponent<SessionComponent>();
                     if (registerTimes++ > 3)
                     {
