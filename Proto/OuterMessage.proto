@@ -78,8 +78,16 @@ message authenticate_s2c // IResponse
 ///
 /// 心跳消息   定期30秒发一次。若30秒内没发
 ///
-message heartbeat_c2s // IMessage 
+//ResponseType heartbeat_s2c
+message heartbeat_c2s // IRequest 
 {
+    int64 client_time = 1;
+	//erlangMogai
+}
+message heartbeat_s2c // IResponse 
+{
+    int64 client_time = 1;
+    int64 server_time = 2;
 	//erlangMogai
 }
 

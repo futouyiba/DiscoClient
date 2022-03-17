@@ -227,10 +227,43 @@ namespace ET
 ///
 /// 心跳消息   定期30秒发一次。若30秒内没发
 ///
+	[ResponseType(nameof(heartbeat_s2c))]
 	[Message(OuterOpcode.heartbeat_c2s)]
 	[ProtoContract]
-	public partial class heartbeat_c2s: Object, IMessage
+	public partial class heartbeat_c2s: Object, IRequest
 	{
+		[ProtoMember(1)]
+		public long client_time { get; set; }
+
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
+	}
+
+	[Message(OuterOpcode.heartbeat_s2c)]
+	[ProtoContract]
+	public partial class heartbeat_s2c: Object, IResponse
+	{
+		[ProtoMember(1)]
+		public long client_time { get; set; }
+
+		[ProtoMember(2)]
+		public long server_time { get; set; }
+
          public int Error
         {
             get;
