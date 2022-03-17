@@ -9,39 +9,32 @@ namespace ET.Demo.Music
 {
     public static class MusicComponentSystem
     {
-
-        private static string[] songNames = new string[5] {"PartyTrain_RedFoo","LoveStoryRemix","KrDisco","DJ_Gomi_Friday_Night_Fever","DJ_Gomi_Friday_Night_Fever" };
-        /// <summary>
-        /// 从ab包把歌曲都load进来
-        /// todo:异步做
-        /// </summary>
-        /// <param name="self"></param>
-        public static bool LoadSongs(this MusicComponent self)
+        public static bool LoadSongs(this MusicComponent self,IEnumerable<AudioClip> songs)
         {
-            try
+            if (songs == null)
             {
-                var bundleGameObject = AddressableComponent.Instance.LoadAssetByPath<GameObject>("MusicList.unity3d");
-                for (int i = 0; i < songNames.Length; i++)
-                {
-                    self.AudioClips.Add(i, bundleGameObject.Get<AudioClip>(songNames[i]));
-                }
-
-                self.SongsLoaded = true;
-            }
-            catch (Exception e)
-            {
-                Debug.LogError(e);
+                Debug.LogError("loading songs is null");
                 return false;
             }
+        
+            int i = 0;
+            foreach (var song in songs)
+            {
+                self.AudioClips.Add(i,song);
+                i++;
+            }
 
+            self.SongsLoaded = true;
             return true;
+
         }
 
         public static void PlaySong(this MusicComponent self,int index)
         {
             if (!self.SongsLoaded)
             {
-                self.LoadSongs();
+                var result = LoadSongs(self, SoundHelper.LoadSongsFromAB());
+                if (!result) Debug.LogError("loadsongs failed");
             }
             var source=SoundHelper.musicSource;
             source.clip = self.AudioClips[index];
