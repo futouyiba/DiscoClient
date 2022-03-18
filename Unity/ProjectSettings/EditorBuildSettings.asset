@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map1.unity
     guid: a5294483f20f40d449699101bb428cda
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Small_Club_Test.unity
     guid: d8e4d84ad3e945545872335ce72fb9c3
   m_configObjects:

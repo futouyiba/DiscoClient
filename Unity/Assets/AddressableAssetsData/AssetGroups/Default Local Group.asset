@@ -17,10 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 1e2953aed7a9fb7469463676bc9776e5
   m_SerializeEntries:
-  - m_GUID: d8e4d84ad3e945545872335ce72fb9c3
-    m_Address: Small_Club_Test.unity3d
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 1ee90e4261d3cf047910cee02791b733
     m_Address: Login_3D.unity3d
     m_ReadOnly: 0
@@ -38,11 +34,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: c38ebb49c9cd00e4c8acc74e6b19bdd3
-    m_Address: Code.unity3d
+    m_Address: Code.dll
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 37fb31a7262c507448d56dfc362ea265
-    m_Address: Code.unity3d
+    m_Address: Code.pdb
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
