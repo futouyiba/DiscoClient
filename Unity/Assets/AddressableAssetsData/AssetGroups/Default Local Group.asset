@@ -37,6 +37,14 @@ MonoBehaviour:
     m_Address: DlgDJ.unity3d
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: c38ebb49c9cd00e4c8acc74e6b19bdd3
+    m_Address: Code.unity3d
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 37fb31a7262c507448d56dfc362ea265
+    m_Address: Code.unity3d
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 11a5ac7f26a0f4611b9eae2971b61df4, type: 2}
   m_SchemaSet:
