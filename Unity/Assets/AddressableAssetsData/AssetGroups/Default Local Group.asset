@@ -41,6 +41,18 @@ MonoBehaviour:
     m_Address: Code.pdb
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 835fb089b4f38a642b92cc2c9c81538f
+    m_Address: DlgHelper.unity3d
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f39670d6151d9494a947abf36fed35da
+    m_Address: DlgLobby.unity3d
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cfaf4529ce2243c4c85126e9d008897b
+    m_Address: Unit.unity3d
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 11a5ac7f26a0f4611b9eae2971b61df4, type: 2}
   m_SchemaSet:
