@@ -42,7 +42,6 @@ namespace ET.Demo.Sounds
         /// 0317改到Helper中做，哪个MusicComponent想要就传给它们
         /// todo:异步做,LoadAssetByPath这个事是不是比较慢的事？也许可以加cache？
         /// </summary>
-        /// <param name="self"></param>
         public static IEnumerable<AudioClip> LoadSongsFromAB()
         {
             List<AudioClip> result = new List<AudioClip>();

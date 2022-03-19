@@ -1,5 +1,7 @@
 using DG.Tweening;
 using ET.Demo.Sounds;
+using ET.Music;
+using ET.Sounds;
 using UnityEngine;
 
 namespace ET.Demo.Music
@@ -24,7 +26,8 @@ namespace ET.Demo.Music
         // Start is called before the first frame update
         void Start()
         {
-            SoundHelper.USoundMgr.AddBeatDlg(this.BeatPerform);
+            Game.Scene.CurrentScene().GetComponent<SoundComponent>().GetComponent<MusicComponent>().AddBeatDlg(this.BeatPerform);
+            // SoundHelper.USoundMgr.AddBeatDlg(this.BeatPerform);
             this.initFocalLength = this._controlCamera.focalLength;
         }
 

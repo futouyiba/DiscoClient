@@ -146,19 +146,19 @@ namespace ET.Demo.Sounds
         }
 
 
-        public bool AddBeatDlg(Action func)
-        {
-            try
-            {
-                this.dlg_Beat += func;
-            }
-            catch (Exception e)
-            {
-                Debug.LogError(e);
-                return false;
-            }
-
-            return true;
-        }
+        // public bool AddBeatDlg(Action func)
+        // {
+        //     try
+        //     {
+        //         this.dlg_Beat += func;
+        //     }
+        //     catch (Exception e)
+        //     {
+        //         Debug.LogError(e);
+        //         return false;
+        //     }
+        //
+        //     return true;
+        // }
     }
 }
