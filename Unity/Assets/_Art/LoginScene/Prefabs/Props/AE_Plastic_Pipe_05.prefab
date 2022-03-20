@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3654580414044762083}
   - component: {fileID: 5759166284817487317}
   - component: {fileID: 2076197165079210284}
-  - component: {fileID: 6424061388298959236}
   m_Layer: 0
   m_Name: AE_Plastic_Pipe_05
   m_TagString: Untagged
@@ -55,6 +54,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -66,6 +67,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -78,22 +80,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!205 &6424061388298959236
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354927159408205296}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.000000059604645, y: -0.001366064, z: 0.055536717}
-  m_Size: 0.2024984
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.045980033
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2076197165079210284}
-  m_Enabled: 1
+  m_AdditionalVertexStreams: {fileID: 0}

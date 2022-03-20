@@ -8,9 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Common_001
-  m_Shader: {fileID: 10705, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 2
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -40,11 +40,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 697467b6a2e44e58b209f14cfb7ec2e0, type: 3}
-        m_Scale: {x: 20, y: 20}
+        m_Texture: {fileID: 2800000, guid: a88183c21c643ed44ba0cede68c72c6d, type: 3}
+        m_Scale: {x: 0, y: 0}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 44c13c082656bd64aa880db0f830604d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -60,10 +60,10 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _GlossMapScale: 0.682
+    - _Glossiness: 0.626
     - _GlossyReflections: 1
-    - _Metallic: 0
+    - _Metallic: 0.494
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -73,16 +73,16 @@ Material:
     - _RGBMaskGreenMetallicSmoothness: 0
     - _RGBMaskRedMetallic: 0
     - _RGBMaskRedMetallicSmoothness: 0
-    - _Shininess: 0.553
+    - _Shininess: 0.087
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0, b: 0.82157993, a: 1}
+    - _Color: {r: 0.990566, g: 0.5186454, b: 0.5186454, a: 1}
     - _EmisColor: {r: 1, g: 0.25, b: 0.864095, a: 0}
-    - _EmissionColor: {r: 1.4371043, g: 0, b: 1.6020943, a: 1}
+    - _EmissionColor: {r: 0.0004818572, g: 0.00050041935, b: 0.0037834712, a: 1}
     - _EmissionMapScaleOffset: {r: 1, g: 1, b: 0, a: 0}
     - _RGBMaskBlue: {r: 1, g: 1, b: 1, a: 1}
     - _RGBMaskGreen: {r: 1, g: 1, b: 1, a: 1}
