@@ -80,14 +80,14 @@ namespace ET.Demo.Music
                 var result = LoadSongs(self, SoundHelper.LoadSongsFromAB());
                 if (!result) Debug.LogError("loadsongs failed");
             }
-            var source=SoundHelper.musicSource;
+            var source=self.musicSource;
             source.clip = self.AudioClips[index];
             source.Play();
         }
         
         public static void CutSong(this MusicComponent self, int newIndex)
         {
-            var source=SoundHelper.musicSource;
+            var source=self.musicSource;
             source.Stop();
             source.clip = self.AudioClips[newIndex];
             source.Play();

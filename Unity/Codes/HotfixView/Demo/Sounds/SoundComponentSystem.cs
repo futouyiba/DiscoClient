@@ -10,9 +10,6 @@ namespace ET.Demo.Sounds
     /// </summary>
     public static class SoundComponentSystem
     {
-
-        
-        
         
 
     }
