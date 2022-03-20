@@ -4,11 +4,55 @@ using System.Linq;
 using ET.Demo.Sounds;
 using ET.Music;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ET.Demo.Music
 {
     public static class MusicComponentSystem
     {
+
+        public static GameObject CreateGO(this MusicComponent self)
+        {
+            //create game objects
+            GameObject musicPrefab = null;
+            try
+            {
+                var bundleGameObject = AddressableComponent.Instance.LoadAssetByPath<GameObject>("SoundsCollector.unity3d");
+                musicPrefab = bundleGameObject.Get<GameObject>("MusicPrefab");
+
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+            }
+
+            if (!musicPrefab)
+            {
+                Debug.LogError("create music prefab failed");
+                return null;
+            }
+
+            var musicGO = UnityEngine.Object.Instantiate(musicPrefab);
+            self.MusicInst = musicGO;
+            self.musicSource = musicGO.GetComponent<AudioSource>();
+            return musicGO;
+        }
+
+        public static bool AddBeatDlg(this MusicComponent self,Action func)
+        {
+            try
+            {
+                self.Dlg_Beat += func;
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+                return false;
+            }
+
+            return true;
+        }
+        
         public static bool LoadSongs(this MusicComponent self,IEnumerable<AudioClip> songs)
         {
             if (songs == null)

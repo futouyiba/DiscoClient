@@ -1,3 +1,6 @@
+using ET.Music;
+using ET.Sounds;
+
 namespace ET
 {
     public class AfterCreateCurrentScene_AddComponent: AEvent<EventType.AfterCreateCurrentScene>
@@ -9,8 +12,11 @@ namespace ET
             currentScene.AddComponent<UnitComponent>();
             currentScene.AddComponent<UIComponent>().HideWindow(WindowID.WindowID_Login);
             currentScene.AddComponent<OperaComponent>();
-            // currentScene.AddComponent<HouseComponent>();
             Log.Info($"operacomponent added... currentscene:{currentScene},id:{currentScene.Id}");
+            var soundComp=currentScene.AddComponent<SoundComponent>();
+            soundComp.AddComponent<MusicComponent>();
+            // currentScene.AddComponent<HouseComponent>();
+            
             await ETTask.CompletedTask;
         }
     }

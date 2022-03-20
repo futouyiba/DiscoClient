@@ -1,5 +1,7 @@
 using DG.Tweening;
 using ET.Demo.Sounds;
+using ET.Music;
+using ET.Sounds;
 using UnityEngine;
 
 namespace ET.Demo.Music
@@ -15,7 +17,8 @@ namespace ET.Demo.Music
         // Start is called before the first frame update
         void Start()
         {
-            var result = SoundHelper.USoundMgr.AddBeatDlg(this.Beat);
+            // var result = SoundHelper.USoundMgr.AddBeatDlg(this.Beat);
+            var result = Game.Scene.CurrentScene().GetComponent<SoundComponent>().GetComponent<MusicComponent>().AddBeatDlg(this.Beat);
             if(!result) Debug.LogError("add delegate for "+this.transform.parent.name+" failed");
             this.initScale = this.transform.localScale;
             this.punchScale = this.initScale * 1.2f;
