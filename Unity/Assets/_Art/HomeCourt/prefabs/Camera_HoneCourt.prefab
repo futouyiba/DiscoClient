@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 600976934549200551}
   - component: {fileID: 600976934549200550}
   - component: {fileID: 600976934549200549}
-  - component: {fileID: 600976934549200474}
   m_Layer: 0
   m_Name: Camera_HoneCourt
   m_TagString: MainCamera
@@ -217,17 +216,3 @@ MonoBehaviour:
   distMaxLimit: 50
   orbitDamping: 0.5
   distDamping: 5
---- !u!114 &600976934549200474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600976934549200475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ad2d7cf16d6049aaaf4cec4e084711c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _controlCamera: {fileID: 600976934549200556}
-  beatFocalChange: 0.5

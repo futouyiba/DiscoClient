@@ -8,34 +8,34 @@ namespace ET.Demo.Sounds
 {
     public static class SoundHelper
     {
-        private static uSoundMgr _uSoundMgr = null;
-        public static uSoundMgr USoundMgr
-        {
-            get
-            {
-                if (_uSoundMgr != null)
-                {
-                    return _uSoundMgr;
-                }
-                GameObject soundsGO = GameObject.Find("Sounds");
-                _uSoundMgr = soundsGO.GetComponent<uSoundMgr>();
-                if (!_uSoundMgr)
-                {
-                    _uSoundMgr=soundsGO.AddComponent<uSoundMgr>();
-                }
-                return _uSoundMgr;
-            }
+        // private static uSoundMgr _uSoundMgr = null;xs
+        // public static uSoundMgr USoundMgr
+        // {
+        //     get
+        //     {
+        //         if (_uSoundMgr != null)
+        //         {
+        //             return _uSoundMgr;
+        //         }
+        //         GameObject soundsGO = GameObject.Find("Sounds");
+        //         _uSoundMgr = soundsGO.GetComponent<uSoundMgr>();
+        //         if (!_uSoundMgr)
+        //         {
+        //             _uSoundMgr=soundsGO.AddComponent<uSoundMgr>();
+        //         }
+        //         return _uSoundMgr;
+        //     }
+        //
+        // }
 
-        }
-
-        public static AudioSource musicSource
-        {
-            get
-            {
-                return USoundMgr.gameObject.GetComponentInChildren<AudioSource>();
-            }
-        }
-        
+        // public static AudioSource musicSource
+        // {
+        //     get
+        //     {
+        //         return USoundMgr.gameObject.GetComponentInChildren<AudioSource>();
+        //     }
+        // }
+        //
         private static string[] songNames = new string[5] {"PartyTrain_RedFoo","LoveStoryRemix","KrDisco","DJ_Gomi_Friday_Night_Fever","DJ_Gomi_Friday_Night_Fever" };
         /// <summary>
         /// 从ab包把歌曲都load进来
@@ -68,17 +68,20 @@ namespace ET.Demo.Sounds
         /// 给unity中的物件挂上Monobehaviours
         /// 基本上是与节奏有关的东西
         /// </summary>
-        public static void AttachAllUnityComponents()
+        public static int AttachAllUnityComponents()
         {
+            int result = 0;
             //Speakers
             GameObject[] speakers = GameObject.FindGameObjectsWithTag("Speaker");
             AttachUnityComponent<uBeatResponserScale>(speakers);
+            result += speakers.Length - 1;
             //Cameras
             Camera[] cameras = Camera.allCameras;
             List<GameObject> cameraGOs = new List<GameObject>();
             foreach (Camera camera in cameras)
             {
                 cameraGOs.Add(camera.gameObject);
+                result++;
             }
             //初始化一下
             List<uBeatResponsorCamera> cameraBeaters = new List<uBeatResponsorCamera>();
@@ -88,6 +91,7 @@ namespace ET.Demo.Sounds
                 cameraBeaters[i].Init(cameras[i], .5f);
             }
 
+            return result;
         }
 
         /// <summary>
