@@ -7,7 +7,7 @@ AnimationClip:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Single_05
-  serializedVersion: 6
+  serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
@@ -25,10 +25,8 @@ AnimationClip:
       value: {fileID: 21300002, guid: 664adbc6b8421b142920a2bc0ac1a612, type: 3}
     - time: 0.16666667
       value: {fileID: 21300004, guid: 664adbc6b8421b142920a2bc0ac1a612, type: 3}
-    - time: 0.25
-      value: {fileID: 21300006, guid: 664adbc6b8421b142920a2bc0ac1a612, type: 3}
     - time: 0.33333334
-      value: {fileID: 21300008, guid: 664adbc6b8421b142920a2bc0ac1a612, type: 3}
+      value: {fileID: 21300006, guid: 664adbc6b8421b142920a2bc0ac1a612, type: 3}
     - time: 0.41666666
       value: {fileID: 21300010, guid: 664adbc6b8421b142920a2bc0ac1a612, type: 3}
     - time: 0.5
@@ -56,7 +54,6 @@ AnimationClip:
     - {fileID: 21300002, guid: 664adbc6b8421b142920a2bc0ac1a612, type: 3}
     - {fileID: 21300004, guid: 664adbc6b8421b142920a2bc0ac1a612, type: 3}
     - {fileID: 21300006, guid: 664adbc6b8421b142920a2bc0ac1a612, type: 3}
-    - {fileID: 21300008, guid: 664adbc6b8421b142920a2bc0ac1a612, type: 3}
     - {fileID: 21300010, guid: 664adbc6b8421b142920a2bc0ac1a612, type: 3}
     - {fileID: 21300012, guid: 664adbc6b8421b142920a2bc0ac1a612, type: 3}
   m_AnimationClipSettings:
