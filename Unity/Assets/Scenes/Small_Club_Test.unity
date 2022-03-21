@@ -9141,6 +9141,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Air_Speakers2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 97ff1be41871f1146b2aa8abd46814af, type: 3}
+      propertyPath: m_TagString
+      value: Speaker
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 97ff1be41871f1146b2aa8abd46814af, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -10157,6 +10161,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 97ff1be41871f1146b2aa8abd46814af, type: 3}
       propertyPath: m_Name
       value: Air_Speakers2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 97ff1be41871f1146b2aa8abd46814af, type: 3}
+      propertyPath: m_TagString
+      value: Speaker
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 97ff1be41871f1146b2aa8abd46814af, type: 3}
       propertyPath: m_RootOrder
@@ -18687,6 +18695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Air_Speakers2
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 97ff1be41871f1146b2aa8abd46814af, type: 3}
+      propertyPath: m_TagString
+      value: Speaker
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 97ff1be41871f1146b2aa8abd46814af, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -22860,6 +22872,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 97ff1be41871f1146b2aa8abd46814af, type: 3}
       propertyPath: m_Name
       value: Air_Speakers2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 97ff1be41871f1146b2aa8abd46814af, type: 3}
+      propertyPath: m_TagString
+      value: Speaker
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 97ff1be41871f1146b2aa8abd46814af, type: 3}
       propertyPath: m_RootOrder

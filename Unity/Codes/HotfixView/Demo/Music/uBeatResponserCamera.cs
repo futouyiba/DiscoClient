@@ -26,7 +26,7 @@ namespace ET.Demo.Music
         // Start is called before the first frame update
         void Start()
         {
-            Game.Scene.CurrentScene().GetComponent<SoundComponent>().GetComponent<MusicComponent>().AddBeatDlg(this.BeatPerform);
+            // Game.Scene.CurrentScene().GetComponent<SoundComponent>().GetComponent<MusicComponent>().AddBeatDlg(this.BeatPerform);
             // SoundHelper.USoundMgr.AddBeatDlg(this.BeatPerform);
             this.initFocalLength = this._controlCamera.focalLength;
         }
@@ -43,7 +43,7 @@ namespace ET.Demo.Music
             this.beatFocalChange = focalChange;
         }
 
-        private void BeatPerform()
+        public void BeatPerform()
         {
             DOTween.Kill(this);
             this._controlCamera.focalLength = this.initFocalLength;

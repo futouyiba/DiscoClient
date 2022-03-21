@@ -22,7 +22,8 @@ namespace ET
     {
         protected override async ETTask Run(EventType.SceneChangeFinish args)
         {
-            var scriptsAttached=SoundHelper.AttachAllUnityComponents();
+            var musicComp=args.ZoneScene.CurrentScene().GetComponent<SoundComponent>().GetComponent<MusicComponent>();
+            var scriptsAttached=SoundHelper.AttachAllUnityComponents(musicComp);
             Log.Info($"Attached {scriptsAttached} unity BEAT components");
             await ETTask.CompletedTask;
         }

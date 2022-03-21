@@ -18,13 +18,14 @@ namespace ET.Demo.Music
         void Start()
         {
             // var result = SoundHelper.USoundMgr.AddBeatDlg(this.Beat);
-            var result = Game.Scene.CurrentScene().GetComponent<SoundComponent>().GetComponent<MusicComponent>().AddBeatDlg(this.Beat);
-            if(!result) Debug.LogError("add delegate for "+this.transform.parent.name+" failed");
+            // var result = Game.Scene.CurrentScene().GetComponent<SoundComponent>().GetComponent<MusicComponent>().AddBeatDlg(this.Beat);
+            // if(!result) Debug.LogError("add delegate for "+this.transform.parent.name+" failed");
             this.initScale = this.transform.localScale;
             this.punchScale = this.initScale * 1.2f;
             // this.beatAnimSeq= DOTween.Sequence()
             // .Append(this.transform.DOScale(this.punchScale, beatCooldown * .45f))
             // .Append(this.transform.DOScale(this.initScale, beatCooldown * .45f));
+            Debug.LogWarning("start of Beating Responser Scale");
         }
 
         // Update is called once per frame
@@ -38,7 +39,7 @@ namespace ET.Demo.Music
             // Debug.Log(Time.time+" beated");
 
             // this.beatAnimSeq.Play();
-
+            // Debug.LogWarning("Beating Speakers");
             Transform transform1;
             (transform1 = this.transform).DORewind();
             DOTween.Kill(transform1);
