@@ -209,6 +209,13 @@ namespace ET
                     continue;
                 }
                 sb.Append($"\t\t[ProtoMember({headInfo.FieldIndex - 2})]\n");
+                //加上看能不能应对truncate data loss 问题
+                //bson不支持float，不要在配置中使用float类型
+                // if (headInfo.FieldType == "float")
+                // {
+                //     sb.Append($"\t\t[BsonRepresentation(BsonType.Float, AllowTruncation=true)]\n");
+                // }
+                    
                 sb.Append($"\t\tpublic {headInfo.FieldType} {headInfo.FieldName} {{ get; set; }}\n");
             }
             string content = template.Replace("(ConfigName)", protoName).Replace(("(Fields)"), sb.ToString());

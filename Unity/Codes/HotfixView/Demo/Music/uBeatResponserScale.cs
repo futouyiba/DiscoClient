@@ -25,7 +25,7 @@ namespace ET.Demo.Music
             // this.beatAnimSeq= DOTween.Sequence()
             // .Append(this.transform.DOScale(this.punchScale, beatCooldown * .45f))
             // .Append(this.transform.DOScale(this.initScale, beatCooldown * .45f));
-            Debug.LogWarning("start of Beating Responser Scale");
+            // Debug.LogWarning("start of Beating Responser Scale");
         }
 
         // Update is called once per frame

@@ -13,9 +13,9 @@ namespace ET
         private void Start()
         {
 
-            UnitConfigCategory uConfigCat = UnitConfigCategory.Instance;
+            MusicConfigCategory uConfigCat = MusicConfigCategory.Instance;
             var configGot = uConfigCat.Get(1001);
-            Debug.Log(configGot.Name);
+            Debug.Log(configGot.SpectRangeMax);
         }
     }
 }

@@ -9,6 +9,37 @@ using UnityEngine.UI;
 namespace ET.Demo.Music
 {
     [ObjectSystem]
+    public class MusicComponentAwakeSystem: AwakeSystem<MusicComponent>
+    {
+        public override void Awake(MusicComponent self)
+        {
+            try
+            {
+                MusicConfigCategory musicConfigCategory = MusicConfigCategory.Instance;
+                var configGot = musicConfigCategory.Get(1);
+                // Log.Warning($"spect range= {configGot.SpectRangeMin},{configGot.SpectRangeMax};");
+                //初始化一下自己
+                int finalSampleSize = (int)Math.Pow(2 , configGot.SampleSize);
+                if (self.spectrumData.Length != finalSampleSize)
+                {
+                    self.spectrumData = new float[finalSampleSize];
+                }
+
+                self.SpectRange.x = configGot.SpectRangeMin;
+                self.SpectRange.y = configGot.SpectRangeMax;
+                self.tensityMultiply = (float) configGot.tensityMultiply;
+                self.beatThreshold = (float) configGot.beatThreshold;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e);
+            }
+
+
+        }
+    }
+
+    [ObjectSystem]
     public class MusicComponentUpdateSystem: UpdateSystem<MusicComponent>
     {
         public override void Update(MusicComponent self)
