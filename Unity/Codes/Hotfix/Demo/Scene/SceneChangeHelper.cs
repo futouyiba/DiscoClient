@@ -1,4 +1,6 @@
-﻿namespace ET
+﻿using ET.WaitType;
+
+namespace ET
 {
     public static class SceneChangeHelper
     {
@@ -21,7 +23,10 @@
             // M2C_CreateMyUnit m2CCreateMyUnit = waitCreateMyUnit.Message;
             // Unit unit = UnitFactory.Create(currentScene, m2CCreateMyUnit.Unit);
             // unitComponent.Add(unit);
-            zoneScene.GetComponent<ObjectWait>().Notify(new WaitType.Wait_all_sync());
+            if (sceneName == "Small_Club_Test")
+            {
+                zoneScene.GetComponent<ObjectWait>().Notify(new Wait_all_sync());
+            }
             
             await Game.EventSystem.PublishAsync(new EventType.SceneChangeFinish() {ZoneScene = zoneScene, CurrentScene = currentScene});
             // await unitComponent.PopulateInit();
