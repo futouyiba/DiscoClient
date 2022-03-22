@@ -195,6 +195,19 @@ namespace ET.Demo.Music
             source.Play();
         }
         
+        public static void PlaySong(this MusicComponent self,int index, float time)
+        {
+            if (!self.SongsLoaded)
+            {
+                var result = LoadSongs(self, SoundHelper.LoadSongsFromAB());
+                if (!result) Debug.LogError("loadsongs failed");
+            }
+            var source=self.musicSource;
+            source.clip = self.AudioClips[index];
+            PlayBackTime(self,time);
+            source.Play();
+        }
+        
         public static void CutSong(this MusicComponent self, int newIndex)
         {
             var source=self.musicSource;
@@ -202,6 +215,11 @@ namespace ET.Demo.Music
             source.clip = self.AudioClips[newIndex];
             source.Play();
             Log.Info($"music component cut song:{newIndex}");
+        }
+
+        public static void PlayBackTime(this MusicComponent self, float timeInSec)
+        {
+            self.musicSource.time = timeInSec;
         }
 
        
