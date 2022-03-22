@@ -12,7 +12,8 @@ namespace ET
     {
         public CharType CharType;
         // use the id within Unit instead...
-        public player playerData; 
+        public player playerData;
+        public bool isFreeMoving;
 
         /// <summary>
         /// every once and a while, the char will move or stay still, or do something else.

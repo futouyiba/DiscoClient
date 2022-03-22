@@ -16,6 +16,7 @@ namespace ET
             var playerUnitTransform = gameObjectComponent.GameObject.transform;
             playerUnitTransform.position = djPosGO.transform.position;
             gameObjectComponent.ChangeScale(1.5f);
+            DOTween.Kill(playerUnitTransform);
             //todo add some lighting and music aesthetic effects...
             await ETTask.CompletedTask;
         }

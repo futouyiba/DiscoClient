@@ -12,6 +12,11 @@ namespace ET
         {
             public Scene ZoneScene;
         }
+
+        public struct SceneChangeHaveArtMissingChars
+        {
+            public Scene ZoneScene;
+        }
         
         
         public struct SceneChangeFinish

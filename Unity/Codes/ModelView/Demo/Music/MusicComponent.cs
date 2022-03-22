@@ -7,6 +7,9 @@ namespace ET.Music
     public class MusicComponent:Entity,IAwake,IUpdate
     {
         public bool SongsLoaded = false;
+        /// <summary>
+        /// obsolete, use house component info instead.
+        /// </summary>
         public int currentSongIndex = 0;
         public AudioSource musicSource;
         public Action Dlg_Beat;

@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace ET
 {
-    public class SceneChangeFinish_SetGOs:AEvent<EventType.SceneChangeFinish>
+    public class SceneChangeFinish_SetGOs:AEvent<EventType.SceneChangeHaveArtMissingChars>
     {
-        protected override async ETTask Run(SceneChangeFinish ev)
+        protected override async ETTask Run(SceneChangeHaveArtMissingChars ev)
         {
             var operaComp = ev.ZoneScene.CurrentScene().GetComponent<OperaComponent>();
             if (operaComp == null)
@@ -15,7 +15,6 @@ namespace ET
             }
             operaComp.DiscoCamera = GameObject.FindWithTag("MainCamera");
             operaComp.DjGO = GameObject.FindWithTag("DJ");
-            await ETTask.CompletedTask;
-        }
+            await ETTask.CompletedTask;        }
     }
 }

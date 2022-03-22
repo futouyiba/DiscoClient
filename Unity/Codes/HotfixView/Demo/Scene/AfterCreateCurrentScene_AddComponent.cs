@@ -9,7 +9,7 @@ namespace ET
         {
             Scene currentScene = args.CurrentScene;
             currentScene.AddComponent<ResourcesLoaderComponent>();
-            currentScene.AddComponent<UnitComponent>();
+            // currentScene.AddComponent<UnitComponent>();
             currentScene.AddComponent<UIComponent>().HideWindow(WindowID.WindowID_Login);
             currentScene.AddComponent<OperaComponent>();
             Log.Info($"operacomponent added... currentscene:{currentScene},id:{currentScene.Id}");

@@ -34,8 +34,6 @@ namespace ET.Demo.Music
             {
                 Log.Error(e);
             }
-
-
         }
     }
 
@@ -201,10 +199,8 @@ namespace ET.Demo.Music
             source.Stop();
             source.clip = self.AudioClips[newIndex];
             source.Play();
+            self.currentSongIndex = newIndex;
             Log.Info($"music component cut song:{newIndex}");
         }
-
-       
-        
     }
 }
