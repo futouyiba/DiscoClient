@@ -101,7 +101,7 @@ namespace ET
 
         public void OnRead(ushort opcode, IResponse response)
         {
-            OpcodeHelper.LogMsg(this.DomainZone(), opcode, response);
+            // OpcodeHelper.LogMsg(this.DomainZone(), opcode, response);
             
             if (!this.requestCallbacks.TryGetValue(response.RpcId, out var action))
             {

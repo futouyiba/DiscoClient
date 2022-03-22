@@ -41,6 +41,13 @@ namespace ET
                     Log.Info("disco camera not set yet, opera component not responding");
                     return;
                 }
+
+                if (self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<CharComp>().playerData.is_dj != 0)
+                {
+                    Log.Info("I'm on DJ, so no moving allowed...");
+                    return;
+                }
+                //todo handle kazuos.
                 Ray ray = self.DiscoCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, 1000, self.mapMask))

@@ -18,7 +18,6 @@ namespace ET
             public Scene ZoneScene;
         }
         
-        
         public struct SceneChangeFinish
         {
             public Scene ZoneScene;

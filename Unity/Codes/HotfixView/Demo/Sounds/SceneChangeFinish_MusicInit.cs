@@ -12,7 +12,8 @@ namespace ET
         {
             var musicComp=args.ZoneScene.CurrentScene().GetComponent<MusicComponent>();
             var go=musicComp.CreateGO();
-            musicComp.PlaySong(0);
+            house houseStatusData = musicComp.Parent.GetComponent<HouseComponent>().HouseStatusData;
+            musicComp.PlaySong(houseStatusData.music_id, houseStatusData.music_start_time);
             Log.Info("Create music comp successed!");
             await ETTask.CompletedTask;
         }
