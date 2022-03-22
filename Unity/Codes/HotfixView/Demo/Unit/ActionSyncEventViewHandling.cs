@@ -45,6 +45,12 @@ namespace ET
     {
         protected override async ETTask Run(MoveStart a)
         {
+            if (a.Unit.GetComponent<CharComp>().playerData.is_dj > 0)
+            {
+                Log.Info(
+                    $"trying to move but this unit is already dj. player data is:{a.Unit.GetComponent<CharComp>().playerData.player_id}, unit id:{a.Unit.Id}");
+                return;
+            }
             var randSpeed = ConstValue.PlayerMoveSpeed * ((RandomHelper.RandFloat01() - 0.5f) * 0.2f + 1f); // up or down by 10 percent.
             Transform gameObjectTransform = a.Unit.GetComponent<GameObjectComponent>().GameObject.transform;
             Vector3 targetPos = AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(a.x,a.y);
