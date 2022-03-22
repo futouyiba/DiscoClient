@@ -1,7 +1,9 @@
+using System;
 using ET.Demo.Music;
 using ET.Demo.Sounds;
 using ET.Music;
 using ET.Sounds;
+using UnityEngine;
 
 namespace ET
 {
@@ -13,7 +15,9 @@ namespace ET
             var musicComp=args.ZoneScene.CurrentScene().GetComponent<MusicComponent>();
             var go=musicComp.CreateGO();
             house houseStatusData = musicComp.Parent.GetComponent<HouseComponent>().HouseStatusData;
-            musicComp.PlaySong(houseStatusData.music_id, houseStatusData.music_start_time);
+            Log.Info("music init... house status is:" + houseStatusData);
+            var timeSeekOffset = ((DateTimeOffset)System.DateTime.Now).ToUnixTimeSeconds() - houseStatusData.music_start_time;
+            musicComp.PlaySong(houseStatusData.music_id, timeSeekOffset);
             Log.Info("Create music comp successed!");
             await ETTask.CompletedTask;
         }
