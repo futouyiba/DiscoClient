@@ -201,6 +201,7 @@ namespace ET.Demo.Music
             source.Stop();
             source.clip = self.AudioClips[newIndex];
             source.Play();
+            Log.Info($"music component cut song:{newIndex}");
         }
 
        
