@@ -25,6 +25,7 @@ namespace ET
             // unitComponent.Add(unit);
             if (sceneName == "Small_Club_Test")
             {
+                await Game.EventSystem.PublishAsync(new EventType.SceneChangeHaveArtMissingChars() { ZoneScene = zoneScene });
                 zoneScene.GetComponent<ObjectWait>().Notify(new Wait_all_sync());
             }
             

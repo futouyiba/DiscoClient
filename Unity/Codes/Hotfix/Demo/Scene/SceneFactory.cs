@@ -18,6 +18,7 @@ namespace ET
         public static Scene CreateCurrentScene(long id, int zone, string name, CurrentScenesComponent currentScenesComponent)
         {
             Scene currentScene = EntitySceneFactory.CreateScene(id, zone, SceneType.Current, name, currentScenesComponent);
+            currentScene.AddComponent<UnitComponent>();
             currentScenesComponent.Scene = currentScene;
             
             Game.EventSystem.Publish(new EventType.AfterCreateCurrentScene() {CurrentScene = currentScene});
