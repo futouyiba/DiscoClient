@@ -205,6 +205,7 @@ namespace ET.Demo.Music
             var source=self.musicSource;
             source.clip = self.AudioClips[index];
             var length = source.clip.length;
+            Log.Info($"Music playback time {time}, modulus {time % length}");
             PlayBackTime(self,time % length);
             source.Play();
         }
