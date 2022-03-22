@@ -10,7 +10,7 @@ namespace ET
     {
         protected override async ETTask Run(EventType.SceneChangeFinish args)
         {
-            var musicComp=args.ZoneScene.CurrentScene().GetComponent<SoundComponent>().GetComponent<MusicComponent>();
+            var musicComp=args.ZoneScene.CurrentScene().GetComponent<MusicComponent>();
             var go=musicComp.CreateGO();
             musicComp.PlaySong(0);
             Log.Info("Create music comp successed!");
@@ -22,7 +22,7 @@ namespace ET
     {
         protected override async ETTask Run(EventType.SceneChangeFinish args)
         {
-            var musicComp=args.ZoneScene.CurrentScene().GetComponent<SoundComponent>().GetComponent<MusicComponent>();
+            var musicComp=args.ZoneScene.CurrentScene().GetComponent<MusicComponent>();
             var scriptsAttached=SoundHelper.AttachAllUnityComponents(musicComp);
             Log.Info($"Attached {scriptsAttached} unity BEAT components");
             await ETTask.CompletedTask;

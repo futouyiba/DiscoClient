@@ -14,7 +14,7 @@ namespace ET
             currentScene.AddComponent<OperaComponent>();
             Log.Info($"operacomponent added... currentscene:{currentScene},id:{currentScene.Id}");
             var soundComp=currentScene.AddComponent<SoundComponent>();
-            soundComp.AddComponent<MusicComponent>();
+            currentScene.AddComponent<MusicComponent>();
             // currentScene.AddComponent<HouseComponent>();
             
             await ETTask.CompletedTask;
