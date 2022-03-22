@@ -12,7 +12,7 @@ namespace ET.Demo.Music
     {
     
         [SerializeField]
-        private Camera _controlCamera;
+        private UnityEngine.Camera _controlCamera;
 
         /// <summary>
         /// fov addition added to initfov
@@ -37,7 +37,7 @@ namespace ET.Demo.Music
         
         }
 
-        public void Init(Camera camera, float focalChange)
+        public void Init(UnityEngine.Camera camera, float focalChange)
         {
             this._controlCamera = camera;
             this.beatFocalChange = focalChange;

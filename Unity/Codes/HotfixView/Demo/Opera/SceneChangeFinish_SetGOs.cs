@@ -1,4 +1,5 @@
-﻿using ET.EventType;
+﻿using ET.Demo.Camera;
+using ET.EventType;
 using UnityEngine;
 
 namespace ET
@@ -15,6 +16,11 @@ namespace ET
             }
             operaComp.DiscoCamera = GameObject.FindWithTag("MainCamera");
             operaComp.DjGO = GameObject.FindWithTag("DJ");
-            await ETTask.CompletedTask;        }
+            
+            //初始化CameraComp
+            var cameraComp = ev.ZoneScene.CurrentScene().GetComponent<CameraComponent>();
+            cameraComp.InitComp();
+            await ETTask.CompletedTask;        
+        }
     }
 }
