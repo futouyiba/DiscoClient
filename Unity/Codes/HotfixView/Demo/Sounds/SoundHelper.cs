@@ -85,9 +85,9 @@ namespace ET.Demo.Sounds
             }
             result += speakers.Length - 1;
             //Cameras
-            Camera[] cameras = Camera.allCameras;
+            UnityEngine.Camera[] cameras = UnityEngine.Camera.allCameras;
             List<GameObject> cameraGOs = new List<GameObject>();
-            foreach (Camera camera in cameras)
+            foreach (UnityEngine.Camera camera in cameras)
             {
                 cameraGOs.Add(camera.gameObject);
                 result++;

@@ -1,5 +1,6 @@
 using ET.Music;
 using ET.Sounds;
+using UnityEngine;
 
 namespace ET
 {
@@ -15,6 +16,7 @@ namespace ET
             Log.Info($"operacomponent added... currentscene:{currentScene},id:{currentScene.Id}");
             var soundComp=currentScene.AddComponent<SoundComponent>();
             currentScene.AddComponent<MusicComponent>();
+            currentScene.AddComponent<CameraComponent>();
             // currentScene.AddComponent<HouseComponent>();
             
             await ETTask.CompletedTask;
