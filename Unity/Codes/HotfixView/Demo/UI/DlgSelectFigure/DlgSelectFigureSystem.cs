@@ -37,7 +37,7 @@ namespace ET
 			});
 			self.View.E_EnterMapButton.AddListener(() =>
 			{
-				SelectFigureHelper.SelectFigure(self.ZoneScene(), SelectFigureHelper.chosenIndex);
+				SelectFigureHelper.SelectFigure(self.ZoneScene(), SelectFigureHelper.chosenIndex).Coroutine();
 			});
 			// self.View.E_NameInputFieldInputField.
 		}

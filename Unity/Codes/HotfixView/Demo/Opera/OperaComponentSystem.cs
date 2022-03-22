@@ -126,6 +126,7 @@ namespace ET
                 }
             }
 
+            // cut song
             if (Input.GetKeyDown(KeyCode.C))
             {
                 var cutSongResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
@@ -134,6 +135,12 @@ namespace ET
                 {
                     self.ZoneScene().CurrentScene().GetComponent<MusicComponent>().CutSong(cutSongResp.int1);
                 }
+            }
+
+            // select figure
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                await self.ZoneScene().GetComponent<UIComponent>().ShowWindowAsync(WindowID.WindowID_SelectFigure);
             }
 
             await ETTask.CompletedTask;

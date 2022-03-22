@@ -91,9 +91,11 @@ namespace ET
     
     public class ChangeFigure_ViewHandle:AEvent<EventType.ChangeFigure>
     {
-        protected override ETTask Run(ChangeFigure a)
+        protected override async ETTask Run(ChangeFigure a)
         {
-            throw new System.NotImplementedException();
+            a.Unit.GetComponent<CharComp>().playerData.figure_id = a.FigureId;
+            a.Unit.RemoveComponent<GameObjectComponent>();
+            await Game.EventSystem.PublishAsync(new EventType.AfterUnitCreate() { Unit = a.Unit });
         }
     }
     

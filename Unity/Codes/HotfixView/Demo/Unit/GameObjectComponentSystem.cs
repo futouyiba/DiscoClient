@@ -13,6 +13,7 @@ namespace ET
     {
         public override void Destroy(GameObjectComponent self)
         {
+            DOTween.Kill(self.GameObject.transform);
             UnityEngine.Object.Destroy(self.GameObject);
         }
     }
