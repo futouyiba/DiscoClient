@@ -1,5 +1,7 @@
 ﻿using DG.Tweening;
+using ET.Demo.Music;
 using ET.EventType;
+using ET.Music;
 using UnityEngine;
 
 namespace ET
@@ -63,9 +65,10 @@ namespace ET
     
     public class CutToMusic_ViewHandle:AEvent<EventType.CutToMusic>
     {
-        protected override ETTask Run(CutToMusic a)
+        protected override async ETTask Run(CutToMusic a)
         {
-            throw new System.NotImplementedException();
+            a.ZoneScene.CurrentScene().GetComponent<MusicComponent>().CutSong(a.MusicId);
+            await ETTask.CompletedTask;
         }
     }
 

@@ -30,7 +30,7 @@ namespace ET
                     await Game.EventSystem.PublishAsync(new BecomeDJ(){Unit = playerUnit});
                     break;
                 case ConstValue.ACTION_ID_SWITCH_MUSIC:
-                    await Game.EventSystem.PublishAsync(new CutToMusic() { MusicId = message.int1 });
+                    await Game.EventSystem.PublishAsync(new CutToMusic() { MusicId = message.int1, ZoneScene = session.ZoneScene()});
                     break;
                 case ConstValue.ACTION_ID_BECOME_BIGGER:
                     await Game.EventSystem.PublishAsync(new GrowBig() { Unit = playerUnit });

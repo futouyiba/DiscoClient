@@ -111,6 +111,7 @@ namespace ET
 
         public struct ControlLight
         {
+            public Scene ZoneScene;
             public int LightId;
             public int SwitchType;
         }
@@ -118,6 +119,7 @@ namespace ET
         public struct CutToMusic
         {
             public int MusicId;
+            public Scene ZoneScene;
         }
 
         public struct GrowBig

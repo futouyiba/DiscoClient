@@ -182,7 +182,7 @@ namespace ET
                 case ServiceType.Outer:
                 {
                     (ushort opcode, MemoryStream stream) = MessageSerializeHelper.MessageToStream(message);
-                    OpcodeHelper.LogMsg(this.DomainZone(), opcode, message);
+                    // OpcodeHelper.LogMsg(this.DomainZone(), opcode, message);
                     //erlangMogai
                     Log.Info(BitConverter.ToString(stream.ToArray()));
                     this.Send(0, stream);
