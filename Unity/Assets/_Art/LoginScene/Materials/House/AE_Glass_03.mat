@@ -8,15 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AE_Glass_03
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 33, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHABLEND_ON _COLORCOLOR_ON _EMISSION _METALLICGLOSSMAP _NORMALMAP
     _SPECGLOSSMAP
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -103,6 +102,7 @@ Material:
     - _Parallax: 0.035
     - _PrimaryFactor: 0
     - _SecondaryFactor: 0
+    - _Shininess: 0.222
     - _SmoothnessTextureChannel: 0
     - _SoftParticlesEnabled: 0
     - _SoftParticlesFarFadeDistance: 1
@@ -115,13 +115,14 @@ Material:
     - __dirty: 0
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 0.7136145, g: 0.35248306, b: 0.8396226, a: 0.6745098}
+    - _Color: {r: 0.7830189, g: 0.09972411, b: 0.5601258, a: 0.6745098}
     - _ColorAddSubDiff: {r: 1, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0.46226418, g: 0.06323426, b: 0.43948746, a: 1}
     - _NoiseMapPannerSpeed: {r: 0, g: 0, b: 0, a: 0}
     - _NoiseMapSize: {r: 512, g: 512, b: 0, a: 0}
     - _RingPannerSpeed: {r: 0, g: 0, b: 0, a: 0}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
+    - _SpecColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 0}
     - _Tint: {r: 0, g: 0, b: 0, a: 0}
     - _TreeInstanceColor: {r: 0, g: 0, b: 0, a: 0}
     - _TreeInstanceScale: {r: 0, g: 0, b: 0, a: 0}
