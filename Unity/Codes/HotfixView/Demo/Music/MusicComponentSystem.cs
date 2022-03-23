@@ -138,6 +138,8 @@ namespace ET.Demo.Music
 
         /// <summary>
         /// 这个函数把需要做scale变化的GO存起来，以便之后加动画
+        /// 这是与unity互动的另一种方法
+        /// 在这一层存好它们的ref，然后远程操作它们
         /// </summary>
         /// <param name="self"></param>
         /// <param name="obj"></param>

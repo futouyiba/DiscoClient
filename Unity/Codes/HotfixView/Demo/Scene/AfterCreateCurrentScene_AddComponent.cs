@@ -1,3 +1,4 @@
+using ET.Light;
 using ET.Music;
 using ET.Sounds;
 using UnityEngine;
@@ -17,6 +18,7 @@ namespace ET
             var soundComp=currentScene.AddComponent<SoundComponent>();
             currentScene.AddComponent<MusicComponent>();
             currentScene.AddComponent<CameraComponent>();
+            currentScene.AddComponent<LightComponent>();
             // currentScene.AddComponent<HouseComponent>();
             
             await ETTask.CompletedTask;

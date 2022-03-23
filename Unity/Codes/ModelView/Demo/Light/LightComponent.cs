@@ -13,10 +13,17 @@ namespace ET.Light
         
     }
 
+    public class LightGroupInfo
+    {
+        public LightBehaviourType behType;
+        public bool isOn;
+    }
+
     public class LightComponent : Entity, IAwake, IUpdate, IDestroy
     {
         public LightBehaviourType type;
-        public Dictionary<int,GameObject> GoDict;
-        
+        public Dictionary<int, GameObject> GoDict = new Dictionary<int, GameObject>();
+        public Dictionary<int, LightGroupInfo> GroupInfoDict = new Dictionary<int, LightGroupInfo>();
+
     }
 }
