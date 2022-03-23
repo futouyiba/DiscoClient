@@ -87,7 +87,7 @@ namespace ET.Demo.Light
                 go.SetActive(true);
                 self.GroupInfoDict.TryGetValue(id, out var Info);
                 Info.isOn = true;
-                Log.Info($"Setting lightgroup {id} on");
+                // Log.Info($"Setting lightgroup {id} on");
             }
             else
             {
@@ -104,7 +104,7 @@ namespace ET.Demo.Light
                 go.SetActive(false);
                 self.GroupInfoDict.TryGetValue(id, out var Info);
                 Info.isOn = false;
-                Log.Info($"Setting lightgroup {id} off");
+                // Log.Info($"Setting lightgroup {id} off");
             }
             else
             {
