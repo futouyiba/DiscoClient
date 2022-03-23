@@ -58,7 +58,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 63ca5cdbe6c83664cb65a699e15daa2f
-    m_Address: DlgSelectionInterface.unity3d
+    m_Address: DlgSelectFigure.unity3d
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: cfaf4529ce2243c4c85126e9d008897b

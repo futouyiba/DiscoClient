@@ -1807,6 +1807,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Comein
       objectReference: {fileID: 0}
+    - target: {fileID: 1923286055251523854, guid: dbb3b482012dae54fa0e06df94cc0c7c, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2106095861591252331, guid: dbb3b482012dae54fa0e06df94cc0c7c, type: 3}
       propertyPath: m_RootOrder
       value: 5
