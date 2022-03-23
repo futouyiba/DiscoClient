@@ -106,6 +106,7 @@ namespace ET
         public struct BecomeDJ
         {
             public Unit Unit;
+            public int SeatId;
         }
 
         public struct LeaveDJ

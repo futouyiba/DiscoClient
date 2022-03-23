@@ -10,6 +10,8 @@ namespace ET
     {
         protected override async ETTask Run(BecomeDJ a)
         {
+            
+            // 
             var operaComp = a.Unit.ZoneScene().CurrentScene().GetComponent<OperaComponent>();
             var djPosGO = operaComp.DjGO; // todo later refactor this to another component.
             GameObjectComponent gameObjectComponent = a.Unit.GetComponent<GameObjectComponent>();
