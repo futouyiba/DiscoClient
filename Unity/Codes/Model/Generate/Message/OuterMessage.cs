@@ -569,7 +569,7 @@ namespace ET
 	public partial class action_syn_s2c: Object, IMessage
 	{
 		[ProtoMember(1)]
-		public int is_system { get; set; }
+		public int action_src { get; set; }
 
 		[ProtoMember(2)]
 		public int player_id { get; set; }
