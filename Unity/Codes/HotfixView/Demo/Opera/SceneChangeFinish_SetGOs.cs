@@ -1,5 +1,7 @@
 ﻿using ET.Demo.Camera;
+using ET.Demo.Light;
 using ET.EventType;
+using ET.Light;
 using UnityEngine;
 
 namespace ET
@@ -19,7 +21,10 @@ namespace ET
             
             //初始化CameraComp
             var cameraComp = ev.ZoneScene.CurrentScene().GetComponent<CameraComponent>();
-            cameraComp.InitComp();
+            cameraComp.Init();
+            //初始化LightComp
+            var LightComp = ev.ZoneScene.CurrentScene().GetComponent<LightComponent>();
+            LightComp.Init();
             await ETTask.CompletedTask;        
         }
     }

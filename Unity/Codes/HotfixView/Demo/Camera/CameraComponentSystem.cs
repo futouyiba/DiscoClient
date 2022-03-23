@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.CompilerServices;
 using System.Text;
 using UnityEditor.UI;
@@ -35,9 +36,18 @@ namespace ET.Demo.Camera
             }
             if (Input.GetKey(KeyCode.Alpha4))
             {//look at me
-                var unitComp = Game.Scene.CurrentScene().GetComponent<UnitComponent>();
-                var myUnitGo = unitComp.MyPlayerUnit().GetComponent<GameObjectComponent>().GameObject;
-                self.LookAtClose(myUnitGo,3).OnCompleted(()=>Log.Info("look at ended"));
+                try
+                {
+
+                    var unitComp = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>();
+                    var myUnitGo = unitComp.MyPlayerUnit().GetComponent<GameObjectComponent>().GameObject;
+                    self.LookAtClose(myUnitGo, 3000).OnCompleted(() => Log.Info("look at ended"));
+
+                }
+                catch(Exception e)
+                {
+                    Log.Error(e);
+                }
             }
             
             
@@ -64,7 +74,7 @@ namespace ET.Demo.Camera
         /// 改为在SceneChangeFinish_SetGOs中触发这个初始化函数
         /// </summary>
         /// <param name="self"></param>
-        public static void InitComp(this CameraComponent self)
+        public static void Init(this CameraComponent self)
         {
             self.camera= UnityEngine.Camera.main;
             self.initPos = self.camera.transform.position;
