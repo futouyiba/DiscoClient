@@ -182,7 +182,7 @@ message action_req_s2c // IResponse
 ///
 message action_syn_s2c // IMessage 
 {
-    int32 is_system = 1;    // 1：系统模拟的动作
+    int32 action_src = 1;    // 1：系统模拟的动作
     int32 player_id = 2;    // 玩家ID
     int32 action_id = 3;    // 动作ID
     int32 int1 = 4;    // 整型内容1
