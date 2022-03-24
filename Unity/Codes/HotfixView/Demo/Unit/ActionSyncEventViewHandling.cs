@@ -13,7 +13,8 @@ namespace ET
             // data
             a.Unit.GetComponent<CharComp>().playerData.is_dj = a.SeatId;
             house houseStatusData = a.Unit.ZoneScene().CurrentScene().GetComponent<HouseComponent>().HouseStatusData;
-            houseStatusData.dj_playerids.Add((int)a.Unit.Id);
+            int playerID = a.Unit.GetComponent<CharComp>().playerData.player_id;
+            houseStatusData.dj_playerids.Add(playerID);
             houseStatusData.on_dj_ids.Add(a.SeatId);
             
             // unity view
@@ -39,7 +40,9 @@ namespace ET
         {
             a.Unit.GetComponent<CharComp>().playerData.is_dj = 0;
             var houseStatusData = a.Unit.ZoneScene().CurrentScene().GetComponent<HouseComponent>().HouseStatusData;
-            int indexOf = houseStatusData.dj_playerids.IndexOf((int)a.Unit.Id);
+            int playerID = a.Unit.GetComponent<CharComp>().playerData.player_id;
+
+            int indexOf = houseStatusData.dj_playerids.IndexOf(playerID);
             houseStatusData.dj_playerids.RemoveAt(indexOf);
             houseStatusData.on_dj_ids.RemoveAt(indexOf);
 
@@ -139,6 +142,22 @@ namespace ET
     {
         protected override ETTask Run(TakeSeat a)
         {
+            var houseStatus = a.Unit.ZoneScene().CurrentScene().GetComponent<HouseComponent>().HouseStatusData;
+            a.Unit.GetComponent<CharComp>().playerData.seat = a.SeatId;
+            int playerID = a.Unit.GetComponent<CharComp>().playerData.player_id;
+            if (a.SeatId > 0)
+            {
+                houseStatus.seat_playerids.Add(playerID);
+                houseStatus.on_seat_ids.Add(a.SeatId);                
+            }
+            else
+            {
+                int index = houseStatus.seat_playerids.IndexOf(playerID);
+                houseStatus.seat_playerids.RemoveAt(index);
+                houseStatus.on_seat_ids.RemoveAt(index);
+            }
+            
+            // todo unity view handling
             throw new System.NotImplementedException();
         }
     }
