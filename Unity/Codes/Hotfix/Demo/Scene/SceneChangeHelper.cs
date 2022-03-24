@@ -29,11 +29,12 @@ namespace ET
                 zoneScene.GetComponent<ObjectWait>().Notify(new Wait_all_sync());
             }
             
-            await Game.EventSystem.PublishAsync(new EventType.SceneChangeFinish() {ZoneScene = zoneScene, CurrentScene = currentScene});
+            Game.EventSystem.PublishAsync(new EventType.SceneChangeFinish() {ZoneScene = zoneScene, CurrentScene = currentScene}).Coroutine();
             // await unitComponent.PopulateInit();
 
             // 通知等待场景切换的协程
             zoneScene.GetComponent<ObjectWait>().Notify(new WaitType.Wait_SceneChangeFinish());
+            
         }
     }
 }

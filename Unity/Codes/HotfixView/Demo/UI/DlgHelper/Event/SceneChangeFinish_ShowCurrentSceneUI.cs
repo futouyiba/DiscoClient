@@ -12,6 +12,8 @@
                 await TimerComponent.Instance.WaitAsync(15000);
                 await args.ZoneScene.GetComponent<UIComponent>().ShowWindowAsync(WindowID.WindowID_SelectFigure);
             }
+
+            await ETTask.CompletedTask;
         }
     }
     
