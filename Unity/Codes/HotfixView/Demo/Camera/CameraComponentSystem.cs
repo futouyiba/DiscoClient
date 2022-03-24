@@ -38,11 +38,9 @@ namespace ET.Demo.Camera
             {//look at me
                 try
                 {
-
                     var unitComp = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>();
                     var myUnitGo = unitComp.MyPlayerUnit().GetComponent<GameObjectComponent>().GameObject;
                     self.LookAtClose(myUnitGo, 3000).OnCompleted(() => Log.Info("look at ended"));
-
                 }
                 catch(Exception e)
                 {
@@ -109,6 +107,18 @@ namespace ET.Demo.Camera
             self.GOFollowing = GO2Follow;
             self.IsFollowing = true;
             await TimerComponent.Instance.WaitAsync(lookTime);
+
+            self.IsFollowing = false;
+            self.GOFollowing = null;
+            //todo：之后整个动画
+            self.camera.transform.position = self.initPos;
+        }
+
+        public static async void LookAtClose(this CameraComponent self, GameObject GO2Follow, ETTask task)
+        {
+            self.GOFollowing = GO2Follow;
+            self.IsFollowing = true;
+            await task.GetAwaiter();
 
             self.IsFollowing = false;
             self.GOFollowing = null;
