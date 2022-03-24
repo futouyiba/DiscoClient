@@ -15,6 +15,7 @@ namespace ET
 		public bool IsFollowing = false;
 		public GameObject GOFollowing = null;
 
+		public ETTask followingTask=null;
 		// public Camera MainCamera
 		// {
 		// 	get
