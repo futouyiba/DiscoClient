@@ -10,8 +10,13 @@ namespace ET
     {
         protected override async ETTask Run(BecomeDJ a)
         {
+            // data
+            a.Unit.GetComponent<CharComp>().playerData.is_dj = a.SeatId;
+            house houseStatusData = a.Unit.ZoneScene().CurrentScene().GetComponent<HouseComponent>().HouseStatusData;
+            houseStatusData.dj_playerids.Add((int)a.Unit.Id);
+            houseStatusData.on_dj_ids.Add(a.SeatId);
             
-            // 
+            // unity view
             var operaComp = a.Unit.ZoneScene().CurrentScene().GetComponent<OperaComponent>();
             var djPosGO = operaComp.DjGO; // todo later refactor this to another component.
             GameObjectComponent gameObjectComponent = a.Unit.GetComponent<GameObjectComponent>();
@@ -32,6 +37,12 @@ namespace ET
         /// <param name="a"></param>
         protected override async ETTask Run(LeaveDJ a)
         {
+            a.Unit.GetComponent<CharComp>().playerData.is_dj = 0;
+            var houseStatusData = a.Unit.ZoneScene().CurrentScene().GetComponent<HouseComponent>().HouseStatusData;
+            int indexOf = houseStatusData.dj_playerids.IndexOf((int)a.Unit.Id);
+            houseStatusData.dj_playerids.RemoveAt(indexOf);
+            houseStatusData.on_dj_ids.RemoveAt(indexOf);
+
             GameObjectComponent gameObjectComponent = a.Unit
                     .GetComponent<GameObjectComponent>();
             Transform playerTransform = gameObjectComponent.GameObject.transform;
@@ -47,12 +58,18 @@ namespace ET
     {
         protected override async ETTask Run(MoveStart a)
         {
-            if (a.Unit.GetComponent<CharComp>().playerData.is_dj > 0)
+            player playerData = a.Unit.GetComponent<CharComp>().playerData;
+            
+            if (playerData.is_dj > 0)
             {
                 Log.Info(
-                    $"trying to move but this unit is already dj. player data is:{a.Unit.GetComponent<CharComp>().playerData.player_id}, unit id:{a.Unit.Id}");
+                    $"trying to move but this unit is already dj. player data is:{playerData.player_id}, unit id:{a.Unit.Id}");
                 return;
             }
+
+            playerData.x = a.x;
+            playerData.y = a.y;
+            
             var randSpeed = ConstValue.PlayerMoveSpeed * ((RandomHelper.RandFloat01() - 0.5f) * 0.2f + 1f); // up or down by 10 percent.
             Transform gameObjectTransform = a.Unit.GetComponent<GameObjectComponent>().GameObject.transform;
             Vector3 targetPos = AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(a.x,a.y);
@@ -66,6 +83,15 @@ namespace ET
     {
         protected override async ETTask Run(ControlLight a)
         {
+            var onIds = a.ZoneScene.CurrentScene().GetComponent<HouseComponent>().HouseStatusData.on_lighting_ids;
+            if (a.SwitchType == 1)
+            {
+                onIds.Add(a.LightId);
+            }
+            else
+            {
+                onIds.Remove(a.LightId);
+            }
             //todo check how lights are controlled for now, and write hotfix code for it..
             
             await ETTask.CompletedTask;
@@ -76,6 +102,8 @@ namespace ET
     {
         protected override async ETTask Run(CutToMusic a)
         {
+            a.ZoneScene.CurrentScene().GetComponent<HouseComponent>().HouseStatusData.music_id = a.MusicId;
+            
             a.ZoneScene.CurrentScene().GetComponent<MusicComponent>().CutSong(a.MusicId);
             await ETTask.CompletedTask;
         }
