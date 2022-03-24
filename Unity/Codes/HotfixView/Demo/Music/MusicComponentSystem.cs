@@ -203,9 +203,16 @@ namespace ET.Demo.Music
             {
                 var result = LoadSongs(self, SoundHelper.LoadSongsFromAB());
                 if (!result) Debug.LogError("loadsongs failed");
+                return;
+            }
+            var getSongRes=self.AudioClips.TryGetValue(index, out var clip);
+            if (!getSongRes)
+            {
+                Log.Error($"song {index} doesnt exist");
+                return;
             }
             var source=self.musicSource;
-            source.clip = self.AudioClips[index];
+            source.clip = clip;
             var length = source.clip.length;
             Log.Info($"Music playback time {time}, modulus {time % length}");
             PlayBackTime(self,time % length);

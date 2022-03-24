@@ -139,5 +139,71 @@ namespace ET.Demo.Camera
             var currentStateInfo = self.animator.GetCurrentAnimatorStateInfo(0);
             return currentStateInfo.IsName(name);
         }
+
+
+        public static void OnAnimatorEnterStill(this CameraComponent self)
+        {
+            self.IsAnimatorStill = true;
+            self.CheckStill();
+        }
+        
+        public static void OnAnimatorLeaveStill(this CameraComponent self)
+        {
+            self.IsAnimatorStill = false;
+            
+        }
+
+        /// <summary>
+        /// 每次摄像机停止跟随或者动画播完
+        /// 检查一下是不是真的停下来了
+        /// 如果真的停下来了，运行OnAnimateEnd
+        /// </summary>
+        /// <returns>是否成功安排了空闲任务</returns>
+        public static bool CheckStill(this CameraComponent self)
+        {
+            //先检查是否已经有在执行的任务了
+            if (self.enterStillTask?.IsCompleted == false)
+            {
+                return false;
+            }
+
+            if (self.IsAnimatorStill && self.IsFollowing == false)
+            {
+                self.enterStillTask = self.OnAnimateEnd();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
+        
+        /// <summary>
+        /// 当动画结束，镜头也不再跟随时发生的事
+        /// </summary>
+        public static async ETTask OnAnimateEnd(this CameraComponent self)
+        {
+            //following结束和
+            //进入静止之后要做的事
+            var stayTime = RandomHelper.RandomNumber(3000, 10000);
+            ETCancellationToken ct = new ETCancellationToken();
+            var isBreak = await TimerComponent.Instance.WaitAsync(stayTime, ct);
+            if (!isBreak)
+            {
+                //然后随机进入sway或者Far
+                var randRes = RandomHelper.RandomBool();
+                if (randRes)
+                {
+                    self.AnimGotoState(AnimState.Sway);
+                }
+                else
+                {
+                    self.AnimGotoState(AnimState.Far);
+                }
+            }
+
+
+        }
     }
 }

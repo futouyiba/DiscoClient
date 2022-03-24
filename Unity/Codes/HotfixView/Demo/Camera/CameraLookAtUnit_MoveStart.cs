@@ -36,13 +36,16 @@ namespace ET.Demo.Camera
             {
                 //让camera停止跟随
                 var camComp = arg.Unit.ZoneScene().CurrentScene().GetComponent<CameraComponent>();
-                camComp.followingTask.SetResult();
+                if(!camComp.followingTask.IsCompleted) camComp.followingTask.SetResult();
             }
 
             await ETTask.CompletedTask;
 
         }
         
+        
     }
+    
+
     
 }

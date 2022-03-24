@@ -14,8 +14,12 @@ namespace ET
 		//摄像机跟随用的参数
 		public bool IsFollowing = false;
 		public GameObject GOFollowing = null;
-
+		//不计时追踪所用的任务
 		public ETTask followingTask=null;
+
+		public bool IsAnimatorStill = true;
+		//进入静止之后，启动这个任务
+		public ETTask enterStillTask = null;
 		// public Camera MainCamera
 		// {
 		// 	get
