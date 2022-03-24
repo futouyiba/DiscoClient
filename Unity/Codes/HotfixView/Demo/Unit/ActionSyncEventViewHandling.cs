@@ -57,7 +57,7 @@ namespace ET
             Transform gameObjectTransform = a.Unit.GetComponent<GameObjectComponent>().GameObject.transform;
             Vector3 targetPos = AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(a.x,a.y);
             var duration = (targetPos - gameObjectTransform.position).magnitude/randSpeed;
-            gameObjectTransform.DOMove(targetPos, duration);
+            gameObjectTransform.DOMove(targetPos, duration).OnComplete(() => Game.EventSystem.Publish(new EventType.MoveStop() { Unit = a.Unit }));
             await ETTask.CompletedTask;
         }
     }
