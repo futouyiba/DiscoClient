@@ -6,6 +6,16 @@ namespace ET
 
 	public class CameraComponent : Entity, IAwake, ILateUpdate
 	{
+		public enum CameraAnimateState
+		{
+			None=0,
+			FollowCharWithTime=1,
+			FollowCharWithoutTime=2,
+			
+			Sway=21,
+			Far=22,
+			Down=23
+		}
 		
 		public Camera camera;
 		public Animator animator;
@@ -15,11 +25,16 @@ namespace ET
 		public bool IsFollowing = false;
 		public GameObject GOFollowing = null;
 		//不计时追踪所用的任务
-		public ETTask followingTask=null;
+		// public ETTask followingTask=null;
 
 		public bool IsAnimatorStill = true;
 		//进入静止之后，启动这个任务
-		public ETTask enterStillTask = null;
+		// public ETTask enterStillTask = null;
+
+		public CameraAnimateState curState = CameraAnimateState.None;
+
+		public ETTask<bool> OngoingTask = null;
+		public ETCancellationToken OngoingCT = null;
 		// public Camera MainCamera
 		// {
 		// 	get

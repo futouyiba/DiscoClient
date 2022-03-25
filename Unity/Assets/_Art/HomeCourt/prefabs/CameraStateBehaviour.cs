@@ -20,7 +20,7 @@ public class CameraStateBehaviour : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         
-        Debug.Log($"animator named {animator.name}, state hash {stateInfo.fullPathHash}");
+        // Debug.Log($"animator named {animator.name}, state hash {stateInfo.fullPathHash}");
         
     }
 }
