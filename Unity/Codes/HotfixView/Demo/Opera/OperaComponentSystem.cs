@@ -36,6 +36,12 @@ namespace ET
             if (Input.GetMouseButtonDown(0))
             {
                 Log.Info("mouse button down...");
+                if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+                {
+                    var overObj = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+                    Log.Info("pointer not over gameobject, return... over:" + overObj.ToString());
+                    return;
+                }
                 if (self.DiscoCamera==null)
                 {
                     Log.Info("disco camera not set yet, opera component not responding");

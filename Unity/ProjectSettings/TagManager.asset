@@ -6,6 +6,8 @@ TagManager:
   tags:
   - DJ
   - Speaker
+  - LightGroup1
+  - Particle
   layers:
   - Default
   - TransparentFX
