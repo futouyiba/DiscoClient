@@ -57,6 +57,15 @@ namespace ET
         public const int LIGHTING_TURN_ON = 1;
         public const int LIGHTING_FLIP_FLOP = 2;
         
+        //         -define(ACTION_SRC_TURN_OFF_DJ_4_OFFLINE_TIMEOUT, 1).
+        //         -define(ACTION_SRC_TURN_OFF_DJ_4_KICKED_BY_OTHER, 2).
+        //         %% 下卡座
+        // -define(ACTION_SRC_TAKE_OFF_SEAT_4_OFFLINE_TIMEOUT, 1).
+        //         -define(ACTION_SRC_TAKE_OFF_SEAT_4_KICKED_BY_OTHER, 2).
+        public const int ACTION_SRC_TURN_OFF_DJ_4_OFFLINE_TIMEOUT = 1;
+        public const int ACTION_SRC_TURN_OFF_DJ_4_KICKED_BY_OTHER = 2;
+        public const int ACTION_SRC_TAKE_OFF_SEAT_4_OFFLINE_TIMEOUT = 1;
+        public const int ACTION_SRC_TAKE_OFF_SEAT_4_KICKED_BY_OTHER = 2;
         
     }
 }
