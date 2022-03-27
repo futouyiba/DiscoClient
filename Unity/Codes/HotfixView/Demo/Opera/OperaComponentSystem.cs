@@ -38,8 +38,9 @@ namespace ET
                 Log.Info("mouse button down...");
                 if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
                 {
-                    var overObj = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
-                    Log.Info("pointer not over gameobject, return... over:" + overObj.ToString());
+                    // var overObj = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+                    // Log.Info("pointer not over gameobject, return... over:" + overObj.ToString());
+                    Log.Info("pointer not over gameobject, return... over:");
                     return;
                 }
                 if (self.DiscoCamera==null)
@@ -48,7 +49,8 @@ namespace ET
                     return;
                 }
 
-                if (self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<CharComp>().playerData.is_dj != 0)
+                player playerData = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<CharComp>().playerData;
+                if (playerData.is_dj > 0)
                 {
                     Log.Info("I'm on DJ, so no moving allowed...");
                     return;
@@ -104,7 +106,8 @@ namespace ET
                 {
                     await Game.EventSystem.PublishAsync(new EventType.BecomeDJ()
                     {
-                        Unit = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit()
+                        Unit = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit(),
+                        SeatId = 1,
                     });
                     
                     // GameObjectComponent gameObjectComponent = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<GameObjectComponent>();
