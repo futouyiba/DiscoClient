@@ -7,7 +7,7 @@ AnimationClip:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Single_04
-  serializedVersion: 6
+  serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
@@ -21,14 +21,10 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
-    - time: 0.0625
-      value: {fileID: 21300002, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
     - time: 0.125
-      value: {fileID: 21300004, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
+      value: {fileID: 21300002, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
     - time: 0.1875
       value: {fileID: 21300006, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
-    - time: 0.25
-      value: {fileID: 21300008, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
     - time: 0.3125
       value: {fileID: 21300010, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
     attribute: m_Sprite
@@ -52,9 +48,7 @@ AnimationClip:
     pptrCurveMapping:
     - {fileID: 21300000, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
     - {fileID: 21300002, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
-    - {fileID: 21300004, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
     - {fileID: 21300006, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
-    - {fileID: 21300008, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
     - {fileID: 21300010, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2

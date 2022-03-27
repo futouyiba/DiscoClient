@@ -36,6 +36,24 @@ namespace ET
             if (Input.GetMouseButtonDown(0))
             {
                 Log.Info("mouse button down...");
+                if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+                {
+                    var overObj = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+                    Log.Info("pointer not over gameobject, return... over:" + overObj.ToString());
+                    return;
+                }
+                if (self.DiscoCamera==null)
+                {
+                    Log.Info("disco camera not set yet, opera component not responding");
+                    return;
+                }
+
+                if (self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<CharComp>().playerData.is_dj != 0)
+                {
+                    Log.Info("I'm on DJ, so no moving allowed...");
+                    return;
+                }
+                //todo handle kazuos.
                 Ray ray = self.DiscoCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, 1000, self.mapMask))
@@ -114,14 +132,21 @@ namespace ET
                 }
             }
 
+            // cut song
             if (Input.GetKeyDown(KeyCode.C))
             {
                 var cutSongResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
-                        .Call(new action_req_c2s() { action_id = ConstValue.ACTION_ID_SWITCH_MUSIC, int1 = self.CurrentSongIndex + 1 });
+                        .Call(new action_req_c2s() { action_id = ConstValue.ACTION_ID_SWITCH_MUSIC, int1 = (self.Parent.GetComponent<MusicComponent>().currentSongIndex + 1)%5 });// todo manage max song uplimit.
                 if (cutSongResp.Error == 0)
                 {
                     self.ZoneScene().CurrentScene().GetComponent<MusicComponent>().CutSong(cutSongResp.int1);
                 }
+            }
+
+            // select figure
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                await self.ZoneScene().GetComponent<UIComponent>().ShowWindowAsync(WindowID.WindowID_SelectFigure);
             }
 
             await ETTask.CompletedTask;

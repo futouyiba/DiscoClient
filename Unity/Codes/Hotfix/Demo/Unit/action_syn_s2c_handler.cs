@@ -27,10 +27,14 @@ namespace ET
             switch (message.action_id)
             {
                 case ConstValue.ACTION_ID_BECOME_DJ:
-                    await Game.EventSystem.PublishAsync(new BecomeDJ(){Unit = playerUnit});
+                    player playerData;
+                    playerData = playerUnit.GetComponent<CharComp>().playerData;
+                    playerData.is_dj = message.int1;
+                    await Game.EventSystem.PublishAsync(new BecomeDJ(){Unit = playerUnit, SeatId = message.int1});
                     break;
                 case ConstValue.ACTION_ID_SWITCH_MUSIC:
-                    await Game.EventSystem.PublishAsync(new CutToMusic() { MusicId = message.int1 });
+                    session.ZoneScene().CurrentScene().GetComponent<HouseComponent>().HouseStatusData.music_id = message.int1;
+                    await Game.EventSystem.PublishAsync(new CutToMusic() { MusicId = message.int1, ZoneScene = session.ZoneScene()});
                     break;
                 case ConstValue.ACTION_ID_BECOME_BIGGER:
                     await Game.EventSystem.PublishAsync(new GrowBig() { Unit = playerUnit });

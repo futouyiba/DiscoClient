@@ -22,7 +22,9 @@ namespace ET
                 // await session.DomainScene().CurrentScene(). GetComponent<UnitComponent>().CreatePlayer(p);
                 await session.ZoneScene().CurrentScene(). GetComponent<UnitComponent>().CreatePlayer(p);
             }
-            await ETTask.CompletedTask;
+            
+            session.ZoneScene().CurrentScene().GetComponent<UnitComponent>().PopulateInit().Coroutine();
+            // await ETTask.CompletedTask;
         }
     }
 }

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4974703064526181838}
   - component: {fileID: 4974703064527148814}
   - component: {fileID: 4273905026297233303}
-  - component: {fileID: 8959941367164337655}
   m_Layer: 0
   m_Name: AE_Street_Fence_01
   m_TagString: Untagged
@@ -56,6 +55,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -67,6 +68,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -79,6 +81,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &4273905026297233303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92,22 +95,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.057698604, y: 0.91516197, z: 2.0576985}
   m_Center: {x: 0.0000000037252903, y: 0.44978625, z: 0}
---- !u!205 &8959941367164337655
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4974703064525212110}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.0000000037252903, y: 0.44978625, z: 0}
-  m_Size: 2.0576985
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.045980033
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 4974703064527148814}
-  m_Enabled: 1

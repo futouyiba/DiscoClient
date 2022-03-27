@@ -8,6 +8,74 @@ using UnityEngine.UI;
 
 namespace ET.Demo.Music
 {
+    [ObjectSystem]
+    public class MusicComponentAwakeSystem: AwakeSystem<MusicComponent>
+    {
+        public override void Awake(MusicComponent self)
+        {
+            try
+            {
+                MusicConfigCategory musicConfigCategory = MusicConfigCategory.Instance;
+                var configGot = musicConfigCategory.Get(1);
+                // Log.Warning($"spect range= {configGot.SpectRangeMin},{configGot.SpectRangeMax};");
+                //初始化一下自己
+                int finalSampleSize = (int)Math.Pow(2 , configGot.SampleSize);
+                if (self.spectrumData.Length != finalSampleSize)
+                {
+                    self.spectrumData = new float[finalSampleSize];
+                }
+
+                self.SpectRange.x = configGot.SpectRangeMin;
+                self.SpectRange.y = configGot.SpectRangeMax;
+                self.tensityMultiply = (float) configGot.tensityMultiply;
+                self.beatThreshold = (float) configGot.beatThreshold;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e);
+            }
+
+
+        }
+    }
+
+    [ObjectSystem]
+    public class MusicComponentUpdateSystem: UpdateSystem<MusicComponent>
+    {
+        public override void Update(MusicComponent self)
+        { 
+            //获取频谱
+            //现在只听通道0，todo：立体声多通道平均音量好一点？
+            AudioListener.GetSpectrumData(self.spectrumData, 0, FFTWindow.BlackmanHarris);
+            float tensity = 0f;
+            // Vector2Int sampleRange = new Vector2Int(0, 255);
+            for (int i=self.SpectRange.x; i <= self.SpectRange.y; i++)
+            {
+                tensity += self.spectrumData[i];
+            }
+
+            tensity /= (float)(self.SpectRange.y - self.SpectRange.x + 1);
+        
+            // if (tensity >= this.tenseMax)
+            // {
+            //     this.tenseMax = tensity;
+            // }
+            // Debug.Log("tensitymax="+this.tenseMax);
+        
+            //有一些magic numbers
+            if (tensity * self.tensityMultiply >= self.beatThreshold)
+            {//found beat
+                self.Dlg_Beat?.Invoke();
+                
+                // foreach (var beatObj in self.BeatScaleObjs)
+                // {
+                //     SoundHelper.BeatScale(beatObj, .2f, .2f);
+                // }
+            }
+
+        }
+    }
+    
     public static class MusicComponentSystem
     {
 
@@ -52,6 +120,50 @@ namespace ET.Demo.Music
 
             return true;
         }
+
+        public static bool AddBeatDlg(this MusicComponent self, Func<GameObject, float, float> func)
+        {
+            try
+            {
+                self.Dlg_BeatFunc += func;
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// 这个函数把需要做scale变化的GO存起来，以便之后加动画
+        /// 这是与unity互动的另一种方法
+        /// 在这一层存好它们的ref，然后远程操作它们
+        /// </summary>
+        /// <param name="self"></param>
+        /// <param name="obj"></param>
+        public static void AddBeatScaleObj(this MusicComponent self, GameObject obj)
+        {
+            if (self.BeatScaleObjs.Contains(obj)) return;
+            self.BeatScaleObjs.Add(obj);
+        }
+        
+        public static void AddBeatScaleObj(this MusicComponent self, IEnumerable<GameObject> objs)
+        {
+            List<GameObject> addObjs = new List<GameObject>();
+            foreach (var obj in objs)
+            {
+                if (self.BeatScaleObjs.Contains(obj))
+                {
+                    ET.Log.Warning($"Adding existing obj {obj.name}");
+                    continue;
+                }
+
+                addObjs.Add(obj);
+            }
+            self.BeatScaleObjs.AddRange(addObjs);
+        }
         
         public static bool LoadSongs(this MusicComponent self,IEnumerable<AudioClip> songs)
         {
@@ -85,12 +197,40 @@ namespace ET.Demo.Music
             source.Play();
         }
         
+        public static void PlaySong(this MusicComponent self,int index, float time)
+        {
+            if (!self.SongsLoaded)
+            {
+                var result = LoadSongs(self, SoundHelper.LoadSongsFromAB());
+                if (!result) Debug.LogError("loadsongs failed");
+                return;
+            }
+            var getSongRes=self.AudioClips.TryGetValue(index, out var clip);
+            if (!getSongRes)
+            {
+                Log.Error($"song {index} doesnt exist");
+                return;
+            }
+            var source=self.musicSource;
+            source.clip = clip;
+            var length = source.clip.length;
+            Log.Info($"Music playback time {time}, modulus {time % length}");
+            PlayBackTime(self,time % length);
+            source.Play();
+        }
+        
         public static void CutSong(this MusicComponent self, int newIndex)
         {
             var source=self.musicSource;
             source.Stop();
             source.clip = self.AudioClips[newIndex];
             source.Play();
+            Log.Info($"music component cut song:{newIndex}");
+        }
+
+        public static void PlayBackTime(this MusicComponent self, float timeInSec)
+        {
+            self.musicSource.time = timeInSec;
         }
 
        

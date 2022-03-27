@@ -52,13 +52,20 @@ namespace ET
                 SmallCornerTransform = ScatterTransform.Find("small");
                 bigPos = BigCornerTransform.position;
                 smallPos = SmallCornerTransform.position;
-                
             }
             CharComp charComp = args.Unit.GetComponent<CharComp>();
 
             // Unit View层
             // 这里可以改成异步加载，demo就不搞了
-            var figureConfigId = RandomHelper.RandUInt32() % 6;
+            uint figureConfigId;
+            if (charComp.CharType == CharType.Npc)
+            {
+                figureConfigId = RandomHelper.RandUInt32() % 6;
+            }
+            else
+            {
+                figureConfigId = (uint)charComp.playerData.figure_id;
+            }
             var prefabName = "cSingle" +figureConfigId.ToString("00");
             //GameObject bundleGameObject = (GameObject)ResourcesComponent.Instance.GetAsset("Unit.unity3d", "Unit");
             var bundleGameObject = AddressableComponent.Instance.LoadAssetByPath<GameObject>("Unit.unity3d");

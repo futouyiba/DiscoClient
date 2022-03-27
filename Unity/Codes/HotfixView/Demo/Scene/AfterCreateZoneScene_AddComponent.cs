@@ -10,6 +10,7 @@ namespace ET
             zoneScene.AddComponent<UIEventComponent>();
             zoneScene.AddComponent<RedDotComponent>();
             zoneScene.AddComponent<ResourcesLoaderComponent>();
+            await SceneChangeHelper.SceneChangeTo(zoneScene, "Login_3D", 65534);
         
             zoneScene.GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_Login);
             await ETTask.CompletedTask;

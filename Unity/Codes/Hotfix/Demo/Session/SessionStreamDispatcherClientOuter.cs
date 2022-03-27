@@ -27,7 +27,7 @@ namespace ET
             if (tMsg.body!=null)
             {
                 message = ProtobufHelper.FromBytes(type, tMsg.body, 0, tMsg.body.Length);
-                OpcodeHelper.LogMsg(session.DomainZone(), opcode, message);
+                // OpcodeHelper.LogMsg(session.DomainZone(), opcode, message);
             }
             else
             {

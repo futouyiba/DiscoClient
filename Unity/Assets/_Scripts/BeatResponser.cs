@@ -16,6 +16,7 @@ public class BeatResponser : MonoBehaviour
     void Start()
     {
         var result = SoundMgr.instance.AddBeatDlg(this.Beat);
+        
         if(!result) Debug.LogError("add delegate for "+this.transform.parent.name+" failed");
         this.initScale = this.transform.localScale;
         this.punchScale = this.initScale * 1.2f;

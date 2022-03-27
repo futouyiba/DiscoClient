@@ -66,3 +66,5 @@ Unity/UserSettings/EditorUserSettings.asset
 Unity/Assets/Scenes/Small_Club_Test.unity
 Unity/ServerData/Android
 Android
+Unity/Assets/Bundles/Code/Code.dll.bytes
+Unity/Assets/Bundles/Code/Code.pdb.bytes

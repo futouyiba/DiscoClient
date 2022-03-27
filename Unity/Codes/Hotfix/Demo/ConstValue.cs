@@ -57,6 +57,24 @@ namespace ET
         public const int LIGHTING_TURN_ON = 1;
         public const int LIGHTING_FLIP_FLOP = 2;
         
+        //         -define(ACTION_SRC_TURN_OFF_DJ_4_OFFLINE_TIMEOUT, 1).
+        //         -define(ACTION_SRC_TURN_OFF_DJ_4_KICKED_BY_OTHER, 2).
+        //         %% 下卡座
+        // -define(ACTION_SRC_TAKE_OFF_SEAT_4_OFFLINE_TIMEOUT, 1).
+        //         -define(ACTION_SRC_TAKE_OFF_SEAT_4_KICKED_BY_OTHER, 2).
+        public const int ACTION_SRC_TURN_OFF_DJ_4_OFFLINE_TIMEOUT = 1;
+        public const int ACTION_SRC_TURN_OFF_DJ_4_KICKED_BY_OTHER = 2;
+        public const int ACTION_SRC_TAKE_OFF_SEAT_4_OFFLINE_TIMEOUT = 1;
+        public const int ACTION_SRC_TAKE_OFF_SEAT_4_KICKED_BY_OTHER = 2;
         
+        
+        //         % 特定的几个错误码定义 todo define constants...
+        // -define(ERRNO_IP_BLOCKED, -1000). % ip受限
+        // -define(ERRNO_UNKNOWN_PROTO, -999). % 协议不支持
+        // -define(ERRNO_MISSING_PARAM, -998). % 参数不全
+        // -define(ERRNO_WRONG_PARAM, -997). % 参数错误
+        // -define(ERRNO_VERIFY_FAILED, -996). % 校验失败
+        // -define(ERRNO_EXCEPTION, -995). % 异常抛出
+        // -define(ERRNO_LOGIC_PROBLEM, -994). % 逻辑问题
     }
 }

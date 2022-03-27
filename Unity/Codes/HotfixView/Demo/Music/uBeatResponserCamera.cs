@@ -12,7 +12,7 @@ namespace ET.Demo.Music
     {
     
         [SerializeField]
-        private Camera _controlCamera;
+        private UnityEngine.Camera _controlCamera;
 
         /// <summary>
         /// fov addition added to initfov
@@ -26,7 +26,7 @@ namespace ET.Demo.Music
         // Start is called before the first frame update
         void Start()
         {
-            Game.Scene.CurrentScene().GetComponent<SoundComponent>().GetComponent<MusicComponent>().AddBeatDlg(this.BeatPerform);
+            // Game.Scene.CurrentScene().GetComponent<SoundComponent>().GetComponent<MusicComponent>().AddBeatDlg(this.BeatPerform);
             // SoundHelper.USoundMgr.AddBeatDlg(this.BeatPerform);
             this.initFocalLength = this._controlCamera.focalLength;
         }
@@ -37,13 +37,13 @@ namespace ET.Demo.Music
         
         }
 
-        public void Init(Camera camera, float focalChange)
+        public void Init(UnityEngine.Camera camera, float focalChange)
         {
             this._controlCamera = camera;
             this.beatFocalChange = focalChange;
         }
 
-        private void BeatPerform()
+        public void BeatPerform()
         {
             DOTween.Kill(this);
             this._controlCamera.focalLength = this.initFocalLength;

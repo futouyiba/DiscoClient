@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3491775905338335063}
   - component: {fileID: 3491775905338335062}
   - component: {fileID: 3491775905338335061}
-  - component: {fileID: 3491775905338335060}
   - component: {fileID: 648534725366679413}
   m_Layer: 0
   m_Name: AE_Sidewalk_01_Angle_01
@@ -56,6 +55,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -68,6 +69,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -80,25 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!205 &3491775905338335060
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3491775905338335051}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -1.0421342, y: -0.0032978058, z: -1.0403343}
-  m_Size: 2.0842683
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.045980033
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 3491775905338335061}
-  m_Enabled: 1
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &648534725366679413
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -109,7 +93,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: dca44d3cf19e8994d9c353f959015ddd, type: 3}

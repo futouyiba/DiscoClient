@@ -12,7 +12,11 @@ namespace ET
         {
             public Scene ZoneScene;
         }
-        
+
+        public struct SceneChangeHaveArtMissingChars
+        {
+            public Scene ZoneScene;
+        }
         
         public struct SceneChangeFinish
         {
@@ -102,6 +106,7 @@ namespace ET
         public struct BecomeDJ
         {
             public Unit Unit;
+            public int SeatId;
         }
 
         public struct LeaveDJ
@@ -111,6 +116,7 @@ namespace ET
 
         public struct ControlLight
         {
+            public Scene ZoneScene;
             public int LightId;
             public int SwitchType;
         }
@@ -118,6 +124,7 @@ namespace ET
         public struct CutToMusic
         {
             public int MusicId;
+            public Scene ZoneScene;
         }
 
         public struct GrowBig
@@ -148,5 +155,7 @@ namespace ET
             public Unit Unit;
             public string Content;
         }
+
+
     }
 }

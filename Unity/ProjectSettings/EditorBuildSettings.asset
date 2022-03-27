@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Small_Club_Test.unity
     guid: d8e4d84ad3e945545872335ce72fb9c3
+  - enabled: 1
+    path: Assets/Scenes/Login_3D.unity
+    guid: f884291d4eca45a45b240a8a62bdd263
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: a4d1e35d418334225ad133ceb50deb80, type: 2}

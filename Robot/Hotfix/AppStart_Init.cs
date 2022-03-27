@@ -10,6 +10,7 @@ namespace ET
             // 加载配置
             Game.Scene.AddComponent<ConfigComponent>();
             await ConfigComponent.Instance.LoadAsync();
+            // Log.Warning($"{Game.Scene.GetComponent<ConfigComponent>().AllConfig.Count} configs loaded in Hotfix");
             
             Game.Scene.AddComponent<OpcodeTypeComponent>();
             Game.Scene.AddComponent<MessageDispatcherComponent>();
