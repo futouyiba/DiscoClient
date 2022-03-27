@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace ET
 {
+    /// <summary>
+    /// ET的这里面放了取消时要运行的函数
+    /// </summary>
     public class ETCancellationToken
     {
         private HashSet<Action> actions = new HashSet<Action>();
