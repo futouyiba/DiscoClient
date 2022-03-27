@@ -11,12 +11,12 @@ namespace ET
 
             // 加载配置
             Game.Scene.AddComponent<AddressableComponent>();
-            Game.Scene.AddComponent<ResourcesComponent>();
-            await ResourcesComponent.Instance.LoadBundleAsync("config.unity3d");
-            Game.Scene.AddComponent<ConfigComponent>();
-            ConfigComponent.Instance.Load();
+            //Game.Scene.AddComponent<ResourcesComponent>();
+           // await ResourcesComponent.Instance.LoadBundleAsync("config.unity3d");
+            //Game.Scene.AddComponent<ConfigComponent>();
+            //ConfigComponent.Instance.Load();
             // Log.Warning($"{ConfigComponent.Instance.AllConfig.Count} configs loaded");
-            ResourcesComponent.Instance.UnloadBundle("config.unity3d");
+//            ResourcesComponent.Instance.UnloadBundle("config.unity3d");
             
             Game.Scene.AddComponent<OpcodeTypeComponent>();
             Game.Scene.AddComponent<MessageDispatcherComponent>();

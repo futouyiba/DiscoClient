@@ -32,12 +32,12 @@ MonoBehaviour:
   m_Timeout: 0
   m_ChunkedTransfer: 0
   m_RedirectLimit: -1
-  m_RetryCount: 0
+  m_RetryCount: 3
   m_BuildPath:
     m_Id: 498ad0ab044c14a588bfddd8012c65f7
   m_LoadPath:
     m_Id: 7f215ed715bdb486688d1767f4ac1aa3
-  m_BundleMode: 0
+  m_BundleMode: 1
   m_AssetBundleProviderType:
     m_AssemblyName: Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     m_ClassName: UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider
