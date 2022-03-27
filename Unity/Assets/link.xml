@@ -2,5 +2,7 @@
     <assembly fullname="Unity.Mono" preserve="all"/>
     <assembly fullname="Unity.ThirdParty" preserve="all"/>
     <assembly fullname="UnityEngine" preserve="all"/>
-  <assembly fullname="System" preserve="all"/>
+    <assembly fullname="System" preserve="all"/>
+    <assembly fullname="UnityEngine.AddressableAssets" preserve="all"/>
+    <assembly fullname="UnityEngine.ResourceManagement" preserve="all"/>
 </linker>
