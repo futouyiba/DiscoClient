@@ -97,7 +97,7 @@ namespace ET
             // args.Unit.AddComponent<AnimatorComponent>(); todo
             if (charComp.playerData.is_dj != 0)
             {
-                await Game.EventSystem.PublishAsync(new EventType.BecomeDJ() { Unit = args.Unit });
+                await Game.EventSystem.PublishAsync(new EventType.BecomeDJ() { Unit = args.Unit , SeatId = charComp.playerData.is_dj});
             }
 
             await ETTask.CompletedTask;
