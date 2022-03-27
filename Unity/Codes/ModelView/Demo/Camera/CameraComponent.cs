@@ -14,7 +14,9 @@ namespace ET
 			
 			Sway=21,
 			Far=22,
-			Down=23
+			Down=23,
+			
+			Idle=60000,
 		}
 		
 		public Camera camera;

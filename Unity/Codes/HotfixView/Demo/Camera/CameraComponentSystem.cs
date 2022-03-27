@@ -68,14 +68,7 @@ namespace ET.Demo.Camera
     
     public static class CameraComponentSystem
     {
-        // public enum AnimState
-        // {
-        //     Far,
-        //     Down,
-        //     Sway
-        // }
         
-
         /// <summary>
         /// 因为在awake中初始化会获得错误的摄像机
         /// 改为在SceneChangeFinish_SetGOs中触发这个初始化函数
@@ -86,7 +79,7 @@ namespace ET.Demo.Camera
             self.camera= UnityEngine.Camera.main;
             self.initPos = self.camera.transform.position;
             self.animator = self.camera.gameObject.GetComponentInParent<Animator>();
-
+            self.OnAnimateEnd().Coroutine();
             //logs for errors
             StringBuilder sb = new StringBuilder();
             int errornum = 0;
@@ -96,7 +89,7 @@ namespace ET.Demo.Camera
                 errornum++;
             }
 
-            if (self.initPos == null)
+            if (self.initPos == Vector3.zero)
             {
                 sb.Append("camera pos error!\n");
                 errornum++;
@@ -133,11 +126,16 @@ namespace ET.Demo.Camera
             self.IsFollowing = true;
             await task.GetAwaiter();
 
+            StopLookAtClose(self);
+            // self.CheckStill();
+        }
+
+        public static void StopLookAtClose(this CameraComponent self)
+        {
             self.IsFollowing = false;
             self.GOFollowing = null;
             //todo：之后整个动画
             self.camera.transform.position = self.initPos;
-            // self.CheckStill();
         }
 
         public static bool IsStateAPriorB(CameraComponent.CameraAnimateState stateA, CameraComponent.CameraAnimateState stateB)
@@ -160,7 +158,7 @@ namespace ET.Demo.Camera
         {
             
             //检查现在是不是在进行动画
-            if (self.OngoingTask != null)
+            if (self.IsTaskOngoing())
             {
                 //检查优先级，小的能打断大的
                 if (IsStateAPriorB(state, self.curState))
@@ -169,6 +167,11 @@ namespace ET.Demo.Camera
                     self.OngoingCT = null;
                     toCancel?.Cancel();
                     self.OngoingTask = null;
+                }
+                else
+                {//不能打断，跳过
+                    await ETTask.CompletedTask;
+                    return;
                 }
             }
 
@@ -181,6 +184,13 @@ namespace ET.Demo.Camera
                 self.animator.Play(sb.ToString());
             }
 
+            void AnimatorPlayStill()
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.Append("Base Layer.Still");
+                self.animator.Play(sb.ToString());
+            }
+            
             self.curState = state;
             int time = -1;
             switch (state)
@@ -207,10 +217,20 @@ namespace ET.Demo.Camera
             
 
             if (time > 0)
-            {
+            {//有时间的行为
                 self.OngoingCT = new ETCancellationToken();
+                if (state != CameraComponent.CameraAnimateState.FollowCharWithTime)
+                {
+                    self.OngoingCT.Add(AnimatorPlayStill);
+                }
+                else
+                {
+                    self.OngoingCT.Add(self.StopLookAtClose);
+                    self.OngoingCT.Add(self.TaskCompleteClear);
+                }
+
                 self.OngoingTask = TimerComponent.Instance.WaitAsync(time, self.OngoingCT);
-                self.OngoingTask.OnCompleted(()=> TaskCompleteClear(self));
+                self.OngoingTask.OnCompleted(self.TaskCompleteClear);
                 if (state == CameraComponent.CameraAnimateState.FollowCharWithTime)
                 {
                     var unitComp = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>();
@@ -225,7 +245,7 @@ namespace ET.Demo.Camera
 
             }
             else
-            {
+            {//不计时行为
                 if (state == CameraComponent.CameraAnimateState.FollowCharWithoutTime)
                 {
                     var unitComp = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>();
@@ -237,11 +257,12 @@ namespace ET.Demo.Camera
                         self.OngoingTask.SetResult(true);
                     });
 
-                    self.OngoingTask.OnCompleted(()=>TaskCompleteClear(self));
+                    self.OngoingTask.OnCompleted(self.TaskCompleteClear);
                     await self.LookAtClose(myUnitGo, self.OngoingTask);
                 }
             }
-            await ETTask.CompletedTask;
+
+            await OnAnimateEnd(self);
         }
 
         public static void TaskCompleteClear(this CameraComponent self)
@@ -249,6 +270,30 @@ namespace ET.Demo.Camera
             self.OngoingTask = null;
             self.OngoingCT = null;
             self.curState = CameraComponent.CameraAnimateState.None;
+        }
+
+        public static bool IsTaskOngoing(this CameraComponent self)
+        {
+            if (self.curState != CameraComponent.CameraAnimateState.None)
+            {
+                Log.Warning($"current state is {self.curState} but not none");
+                return true;
+            }
+
+            if (self.OngoingTask != null)
+            {
+                Log.Warning($"current state is NONE, but onging task is not");
+                return true;
+            }
+
+            if (self.OngoingCT != null)
+            {
+                Log.Warning($"current state is none, ongoing task exists, but no ct for it");
+                return true;
+            }
+
+            return false;
+
         }
 
         // public static bool AnimCurrentState(this CameraComponent self, string name)
@@ -301,22 +346,31 @@ namespace ET.Demo.Camera
         /// </summary>
         public static async ETTask OnAnimateEnd(this CameraComponent self)
         {
-            //following结束和
-            //进入静止之后要做的事
-            var stayTime = RandomHelper.RandomNumber(3000, 10000);
-            //打断了怎么办？如果需要大概用状态机重新做吧
-            //ETCancellationToken ct = new ETCancellationToken();
-            await TimerComponent.Instance.WaitAsync(stayTime);
+            //going Idle
+            if (IsTaskOngoing(self))
+            {
+                Log.Warning($"ongong task {self.curState} not ended");
+                await self.OngoingTask;
+            }
 
+            var stayTime = RandomHelper.RandomNumber(3000, 10000);
+            self.curState = CameraComponent.CameraAnimateState.Idle;
+            self.OngoingCT = new ETCancellationToken();
+            self.OngoingTask = TimerComponent.Instance.WaitAsync(stayTime, self.OngoingCT);
+            self.OngoingTask.OnCompleted(self.TaskCompleteClear);
+            
+            await self.OngoingTask;
+            
             //然后随机进入sway或者Far
             var randRes = RandomHelper.RandomBool();
             if (randRes)
             {
+                await self.AnimGotoState(CameraComponent.CameraAnimateState.Sway);
                 // self.AnimGotoState(AnimState.Sway);
             }
             else
             {
-                // self.AnimGotoState(AnimState.Far);
+                await self.AnimGotoState(CameraComponent.CameraAnimateState.Far);
             }
 
 
