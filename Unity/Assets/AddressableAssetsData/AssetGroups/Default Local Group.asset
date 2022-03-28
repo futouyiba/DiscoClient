@@ -69,6 +69,10 @@ MonoBehaviour:
     m_Address: LightGroups.unity3d
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7b84538b47a154fd887da694018c85b8
+    m_Address: config.unity3d
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 11a5ac7f26a0f4611b9eae2971b61df4, type: 2}
   m_SchemaSet:

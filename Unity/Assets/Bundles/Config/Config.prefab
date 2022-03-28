@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4614973963760450718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4232833927810757902}
+  - component: {fileID: 8756561743337175008}
+  m_Layer: 0
+  m_Name: Config
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4232833927810757902
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4614973963760450718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.355384, y: 7.986686, z: -12.850666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8756561743337175008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4614973963760450718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 502d8cafd6a5a0447ab1db9a24cdcb10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+  - key: AIConfigCategory
+    gameObject: {fileID: 4900000, guid: 277d58db3067742a7b32f9994984b3bc, type: 3}
+  - key: MusicConfigCategory
+    gameObject: {fileID: 4900000, guid: ccdeef81e62f44441ad72620204c367e, type: 3}
+  - key: StartMachineConfigCategory
+    gameObject: {fileID: 4900000, guid: 40aebe92b34144ab187964caf41b2104, type: 3}
+  - key: StartProcessConfigCategory
+    gameObject: {fileID: 4900000, guid: f62068aa635af4f189781cb7900fa538, type: 3}
+  - key: StartSceneConfigCategory
+    gameObject: {fileID: 4900000, guid: f5aaffc264fbd427f907e6180178fa65, type: 3}
+  - key: StartZoneConfigCategory
+    gameObject: {fileID: 4900000, guid: 2f76d9d7f3caf49b89a8292eb2ee302c, type: 3}
+  - key: UnitConfigCategory
+    gameObject: {fileID: 4900000, guid: 3f452063ceb5f4150bbbfe795c0aca90, type: 3}
