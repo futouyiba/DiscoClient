@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace ET
 {
@@ -78,5 +79,26 @@ namespace ET
 				self.AllConfig[configType] = category;	
 			}
 		}
+		
+		
+		// public static void GetAllConfigBytesFromAddressable(this ConfigComponent self,Dictionary<string, byte[]> output)
+		// {
+		// 	
+		// 	var bytes = AddressableComponent.Instance.LoadAssetsByLabelAsync<TextAsset>("config.unity3d", item=>
+		// 	{
+		// 		Log.Info($"{item.name} loaded");
+		// 	});
+		// 	// foreach (string file in Directory.GetFiles($"../Config", "*.bytes"))
+		// 	// {
+		// 	// 	string key = Path.GetFileNameWithoutExtension(file);
+		// 	// 	output[key] = File.ReadAllBytes(file);
+		// 	// }
+		// }
+        
+		// public byte[] GetOneConfigBytesFromAddressable(string configName)
+		// {
+		// 	byte[] configBytes = File.ReadAllBytes($"../Config/{configName}.bytes");
+		// 	return configBytes;
+		// }
 	}
 }
