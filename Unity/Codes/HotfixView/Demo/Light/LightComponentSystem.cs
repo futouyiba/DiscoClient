@@ -85,7 +85,7 @@ namespace ET.Demo.Light
                         }
 
                         if (lasers.Count > 0) info.handler.AddRange(lasers);
-                        Log.Warning($"{lasers.Count} meshrenderers added for group {id}");
+                        Log.Warning($"{lasers.Count} GOs added for group {id}");
                         break;
                     case LightBehaviourType.Cookie:
                         info.handler.Add(GoFound);
@@ -122,7 +122,7 @@ namespace ET.Demo.Light
                         foreach (var gameObject in info.handler)
                         {
                             MeshRenderer meshRenderer= gameObject.GetComponent<MeshRenderer>();
-                            meshRenderer.enabled = isOn;
+                            if(meshRenderer) meshRenderer.enabled = isOn;
                         }
                     }
                     
