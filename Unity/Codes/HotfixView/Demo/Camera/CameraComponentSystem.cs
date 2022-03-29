@@ -128,7 +128,7 @@ namespace ET.Demo.Camera
         {
             self.GOFollowing = GO2Follow;
             self.IsFollowing = true;
-            await task.GetAwaiter();
+            await task;
 
             StopLookAtClose(self);
             // self.CheckStill();

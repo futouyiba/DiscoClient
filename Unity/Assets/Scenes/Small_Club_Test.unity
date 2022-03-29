@@ -450,6 +450,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4314476343842726, guid: 181798a00482bb14c94d17af8dce84f9, type: 3}
   m_PrefabInstance: {fileID: 335346941}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &335346943 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1278727605926722, guid: 181798a00482bb14c94d17af8dce84f9, type: 3}
+  m_PrefabInstance: {fileID: 335346941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &411534209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2231,6 +2236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1394561614}
+  - component: {fileID: 1394561615}
   m_Layer: 0
   m_Name: DJPosGo
   m_TagString: DJ
@@ -2252,6 +2258,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1394561615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394561613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 502d8cafd6a5a0447ab1db9a24cdcb10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+  - key: DJParticleFloor
+    gameObject: {fileID: 1652810314}
+  - key: DJParticleUp
+    gameObject: {fileID: 335346943}
 --- !u!1001 &1488251719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2788,6 +2811,11 @@ PrefabInstance:
 --- !u!4 &1652810313 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4314476343842726, guid: 181798a00482bb14c94d17af8dce84f9, type: 3}
+  m_PrefabInstance: {fileID: 1652810312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1652810314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1278727605926722, guid: 181798a00482bb14c94d17af8dce84f9, type: 3}
   m_PrefabInstance: {fileID: 1652810312}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1677901023 stripped

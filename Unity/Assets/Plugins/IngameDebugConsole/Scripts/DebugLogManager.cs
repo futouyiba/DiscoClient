@@ -286,9 +286,9 @@ namespace IngameDebugConsole
 		private bool isQuittingApplication;
 #endif
 
-#if !UNITY_EDITOR && UNITY_ANDROID
-		private DebugLogLogcatListener logcatListener;
-#endif
+// #if !UNITY_EDITOR && UNITY_ANDROID
+// 		private DebugLogLogcatListener logcatListener;
+// #endif
 
 		#region 显示FPS
 		
@@ -394,12 +394,12 @@ namespace IngameDebugConsole
 
 			if( receiveLogcatLogsInAndroid )
 			{
-#if !UNITY_EDITOR && UNITY_ANDROID
-				if( logcatListener == null )
-					logcatListener = new DebugLogLogcatListener();
-
-				logcatListener.Start( logcatArguments );
-#endif
+// #if !UNITY_EDITOR && UNITY_ANDROID
+// 				if( logcatListener == null )
+// 					logcatListener = new DebugLogLogcatListener();
+//
+// 				logcatListener.Start( logcatArguments );
+// #endif
 			}
 
 			DebugLogConsole.AddCommand( "save_logs", "Saves logs to a file", SaveLogsToFile );
@@ -419,10 +419,10 @@ namespace IngameDebugConsole
 			// Stop receiving debug entries
 			Application.logMessageReceivedThreaded -= ReceivedLog;
 
-#if !UNITY_EDITOR && UNITY_ANDROID
-			if( logcatListener != null )
-				logcatListener.Stop();
-#endif
+// #if !UNITY_EDITOR && UNITY_ANDROID
+// 			if( logcatListener != null )
+// 				logcatListener.Stop();
+// #endif
 
 			DebugLogConsole.RemoveCommand( "save_logs" );
 		}
@@ -591,14 +591,14 @@ namespace IngameDebugConsole
 				}
 			}
 
-#if !UNITY_EDITOR && UNITY_ANDROID
-			if( logcatListener != null )
-			{
-				string log;
-				while( ( log = logcatListener.GetLog() ) != null )
-					ReceivedLog( "LOGCAT: " + log, string.Empty, LogType.Log );
-			}
-#endif
+// #if !UNITY_EDITOR && UNITY_ANDROID
+// 			if( logcatListener != null )
+// 			{
+// 				string log;
+// 				while( ( log = logcatListener.GetLog() ) != null )
+// 					ReceivedLog( "LOGCAT: " + log, string.Empty, LogType.Log );
+// 			}
+// #endif
 		}
 
 		public void ShowLogWindow()

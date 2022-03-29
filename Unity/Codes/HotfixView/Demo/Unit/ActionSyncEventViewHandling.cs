@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using ET.Demo.Music;
 using ET.EventType;
 using ET.Music;
@@ -22,7 +23,12 @@ namespace ET
             var djPosGO = operaComp.DjGO; // todo later refactor this to another component.
             GameObjectComponent gameObjectComponent = a.Unit.GetComponent<GameObjectComponent>();
             var playerUnitTransform = gameObjectComponent.GameObject.transform;
-            playerUnitTransform.position = djPosGO.transform.position;
+            operaComp.DJParticleFloorGO.transform.position = playerUnitTransform.position;
+            var position = djPosGO.transform.position;
+            operaComp.DJParticleUpGO.transform.position = position + Vector3.up;
+            operaComp.DJParticleFloorGO.GetComponent<ParticleSystem>().Play();
+            operaComp.DJParticleUpGO.GetComponent<ParticleSystem>().Play();
+            playerUnitTransform.position = position;
             gameObjectComponent.ChangeScale(1.5f);
             DOTween.Kill(playerUnitTransform);
             //todo add some lighting and music aesthetic effects...
@@ -52,6 +58,11 @@ namespace ET
             playerTransform.position =
                     AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(a.Unit.GetComponent<CharComp>().playerData.x,
                         a.Unit.GetComponent<CharComp>().playerData.y);
+            var operaComp = a.Unit.ZoneScene().CurrentScene().GetComponent<OperaComponent>();
+            operaComp.DJParticleUpGO.transform.position = operaComp.DjGO.transform.position + Vector3.up;
+            operaComp.DJParticleFloorGO.transform.position = playerTransform.position;
+            operaComp.DJParticleFloorGO.GetComponent<ParticleSystem>().Play();
+            operaComp.DJParticleUpGO.GetComponent<ParticleSystem>().Play();
             gameObjectComponent.ChangeScale(1f);
             await ETTask.CompletedTask;
         }

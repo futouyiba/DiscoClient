@@ -73,6 +73,18 @@ MonoBehaviour:
     m_Address: config.unity3d
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: d94978d79c0422549afe8e01fc2ab7d2
+    m_Address: Loading.unity3d
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 328de9ea390fb46ddbda27c37fcc8b91
+    m_Address: Small_Club_Test.unity3d
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f884291d4eca45a45b240a8a62bdd263
+    m_Address: Login_3D.unity3d
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 11a5ac7f26a0f4611b9eae2971b61df4, type: 2}
   m_SchemaSet:
