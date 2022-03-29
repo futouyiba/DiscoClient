@@ -1,3 +1,4 @@
+using System.Xml;
 using ET.EventType;
 
 namespace ET.Demo.Camera
@@ -42,12 +43,12 @@ namespace ET.Demo.Camera
                 {
                     Log.Warning("stopping camera follow char");
                     camComp.OngoingTask.SetResult(true);
+                    // settask.SetResult(true);
                     // camComp.OngoingCT?.Cancel();
                     //cancel会让task setresult
                     //setresult之后，lookClose（）会结束等待并让镜头不再跟随
                 }
             }
-            
             await ETTask.CompletedTask;
 
         }
@@ -56,5 +57,19 @@ namespace ET.Demo.Camera
     }
     
 
+    
+    // public class TestCancelAwait_MoveStart:AEvent<EventType.MoveStart>
+    // {
+    //     protected override async ETTask Run(MoveStart arg)
+    //     {
+    //         ETCancellationToken ct = new ETCancellationToken();
+    //         var task = TimerComponent.Instance.WaitAsync(3000, ct);
+    //         var taskInterrupt = TimerComponent.Instance.WaitAsync(1000);
+    //         await taskInterrupt;
+    //         ct.Cancel();
+    //         
+    //     }   
+    //     
+    // }
     
 }
