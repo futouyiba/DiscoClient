@@ -16,7 +16,9 @@ namespace ET.Demo.Camera
     [ObjectSystem]
     public class CameraComponentLateUpdateSystem : LateUpdateSystem<CameraComponent>
     {
-        private static readonly Vector3 lookAtCamOffset = new Vector3(0 - 0.07f, 4.7f - 2.629f, -6.54f - (-14.184f));
+        // private static readonly Vector3 lookAtCamOffset = new Vector3(0 - 0.07f, 4.7f - 2.629f, -6.54f - (-14.184f));
+        private static readonly Vector3 lookAtCamOffset = new Vector3(0f, 3.1f, 4.36f);
+        private static readonly float lookAtCamRotX = 16f;
         public override void LateUpdate(CameraComponent self)
         {
             //测试用输入
@@ -49,7 +51,10 @@ namespace ET.Demo.Camera
             
             if (self.IsFollowing && self.GOFollowing != null)
             {
-                self.camera.transform.position = self.GOFollowing.transform.position + lookAtCamOffset;
+                var transform = self.camera.transform;
+                transform.position = self.GOFollowing.transform.position + lookAtCamOffset;
+                var targetRot = self.initRot.eulerAngles + new Vector3(lookAtCamRotX, 0, 0);
+                transform.rotation = Quaternion.Euler(targetRot);
             }
             
 
@@ -64,7 +69,7 @@ namespace ET.Demo.Camera
         {
             try
             {
-                self.AnimGotoState(CameraComponent.CameraAnimateState.FollowCharWithTime).OnCompleted(() => { Log.Info("follow with time completed"); });
+                self.AnimGotoState(CameraComponent.CameraAnimateState.FollowCharWithTime).Coroutine();
             }
             catch (Exception e)
             {
@@ -80,6 +85,7 @@ namespace ET.Demo.Camera
         {
             self.camera= UnityEngine.Camera.main;
             self.initPos = self.camera.transform.position;
+            self.initRot = self.camera.transform.rotation;
             self.animator = self.camera.gameObject.GetComponentInParent<Animator>();
             //初始化标记状态
             self.TaskCompleteClear();
@@ -141,7 +147,9 @@ namespace ET.Demo.Camera
             self.IsFollowing = false;
             self.GOFollowing = null;
             //todo：之后整个动画
-            self.camera.transform.position = self.initPos;
+            var transform = self.camera.transform;
+            transform.position = self.initPos;
+            transform.rotation = self.initRot;
         }
 
         public static bool IsStateAPriorB(CameraComponent.CameraAnimateState stateA, CameraComponent.CameraAnimateState stateB)
@@ -373,6 +381,7 @@ namespace ET.Demo.Camera
             {
                 Log.Warning($"ongong task {self.curState} not ended");
                 // await self.OngoingTask;
+                await ETTask.CompletedTask;
                 return;
             }
 
@@ -384,9 +393,10 @@ namespace ET.Demo.Camera
             // self.OngoingTask.OnCompleted(self.TaskCompleteClear);
             Log.Warning($"{Time.time}: setting idle task for {stayTime}");
 
-            await self.OngoingTask;
+            var ret = await self.OngoingTask;
             self.TaskCompleteClear();
             Log.Warning($"{Time.time}: idle task completed!,going for after animate");
+            if (!ret) return; 
             //然后随机进入sway或者Far
             var randRes = RandomHelper.RandomBool();
             if (randRes)

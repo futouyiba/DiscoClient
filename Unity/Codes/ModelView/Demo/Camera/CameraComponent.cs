@@ -23,6 +23,7 @@ namespace ET
 		public Animator animator;
 		//摄像机的初始位置
 		public Vector3 initPos = Vector3.zero;
+		public Quaternion initRot;
 		//摄像机跟随用的参数
 		public bool IsFollowing = false;
 		public GameObject GOFollowing = null;
