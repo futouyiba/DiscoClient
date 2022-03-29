@@ -138,9 +138,9 @@ namespace ET
             // cut song
             if (Input.GetKeyDown(KeyCode.C))
             {
-                int musicID = self.Parent.GetComponent<HouseComponent>().HouseStatusData.music_id + 1;
+                int musicID = (self.Parent.GetComponent<HouseComponent>().HouseStatusData.music_id + 1) % 5;
                 var cutSongResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
-                        .Call(new action_req_c2s() { action_id = ConstValue.ACTION_ID_SWITCH_MUSIC, int1 = musicID%5 });// todo manage max song uplimit.
+                        .Call(new action_req_c2s() { action_id = ConstValue.ACTION_ID_SWITCH_MUSIC, int1 = musicID});// todo manage max song uplimit.
                 if (cutSongResp.Error == 0)
                 {
                     Game.EventSystem.Publish(new EventType.CutToMusic(){MusicId = musicID, ZoneScene = self.ZoneScene()});
