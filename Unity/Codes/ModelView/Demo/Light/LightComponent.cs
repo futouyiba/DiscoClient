@@ -10,6 +10,9 @@ namespace ET.Light
         Laser,
         SpotBall,
         Cookie,
+        SpotStop,
+        Strob
+        
         
     }
 

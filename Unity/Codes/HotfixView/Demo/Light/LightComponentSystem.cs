@@ -34,7 +34,8 @@ namespace ET.Demo.Light
         {
             self.AddLightGroup(1, new LightGroupInfo(LightBehaviourType.Cookie, true));
             self.AddLightGroup(2, new LightGroupInfo(LightBehaviourType.Laser, true));
-            
+            self.AddLightGroup(3, new LightGroupInfo(LightBehaviourType.SpotStop, true));
+            self.AddLightGroup(4, new LightGroupInfo(LightBehaviourType.Strob, false));
             var musicComp = self.ZoneScene().CurrentScene().GetComponent<MusicComponent>();
             musicComp.AddBeatDlg(self.TempBeatLightGroup);
 
@@ -71,6 +72,7 @@ namespace ET.Demo.Light
             {
                 self.GoDict.Add(id, GoFound);
                 self.GroupInfoDict.Add(id, info);
+
                 switch (info.behType)
                 {//初始化
                     case LightBehaviourType.Laser:
@@ -85,7 +87,28 @@ namespace ET.Demo.Light
                         }
 
                         if (lasers.Count > 0) info.handler.AddRange(lasers);
-                        Log.Warning($"{lasers.Count} GOs added for group {id}");
+                        Log.Info($"{lasers.Count} GOs added for group {id}");
+                        break;
+                    case LightBehaviourType.SpotStop:
+                        var childs2 = GoFound.GetComponentsInChildren<Transform>();
+                        List<GameObject> volumes = new List<GameObject>();
+                        foreach (var child in childs2)
+                        {
+                            if (child.name == "volume")
+                            {
+                                volumes.Add(child.gameObject);
+                            }
+                        }
+
+                        if (volumes.Count > 0) info.handler.AddRange(volumes);
+                        Log.Warning($"{volumes.Count} GOs added for group {id}");
+                        break;
+                    case LightBehaviourType.Strob:
+                        var childs3 = GoFound.GetComponentsInChildren<Transform>();
+                        foreach (var child in childs3)
+                        {
+                            if (child.name == "Spotik") info.handler.Add(child.gameObject);
+                        }
                         break;
                     case LightBehaviourType.Cookie:
                         info.handler.Add(GoFound);
@@ -126,6 +149,27 @@ namespace ET.Demo.Light
                         }
                     }
                     
+                    break;
+                case LightBehaviourType.SpotStop:
+                    var goRes2 = self.GoDict.TryGetValue(id, out go);
+                    if (goRes2)
+                    {
+                        foreach (var gameObject in info.handler)
+                        {
+                            MeshRenderer meshRenderer= gameObject.GetComponent<MeshRenderer>();
+                            if(meshRenderer) meshRenderer.enabled = isOn;
+                        }
+                    }
+                    break;
+                case LightBehaviourType.Strob:
+                    var goRes3 = self.GoDict.TryGetValue(id, out go);
+                    if (goRes3)
+                    {
+                        foreach (var gameObject in info.handler)
+                        {
+                            gameObject.SetActive(isOn);
+                        }
+                    }
                     break;
                 case LightBehaviourType.Cookie:
                     var resGo=self.GoDict.TryGetValue(id, out go);
