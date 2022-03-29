@@ -11,8 +11,14 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Map1.unity
     guid: a5294483f20f40d449699101bb428cda
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Login_3D.unity
     guid: f884291d4eca45a45b240a8a62bdd263
+  - enabled: 1
+    path: Assets/Scenes/Small_Club_Test.unity
+    guid: 328de9ea390fb46ddbda27c37fcc8b91
+  - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: d94978d79c0422549afe8e01fc2ab7d2
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: a4d1e35d418334225ad133ceb50deb80, type: 2}

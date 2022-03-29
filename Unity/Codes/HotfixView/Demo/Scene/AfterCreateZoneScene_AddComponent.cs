@@ -1,3 +1,5 @@
+using UnityEngine.SceneManagement;
+
 namespace ET
 {
     public class AfterCreateZoneScene_AddComponent: AEvent<EventType.AfterCreateZoneScene>
@@ -10,9 +12,10 @@ namespace ET
             zoneScene.AddComponent<UIEventComponent>();
             zoneScene.AddComponent<RedDotComponent>();
             zoneScene.AddComponent<ResourcesLoaderComponent>();
-            await SceneChangeHelper.SceneChangeTo(zoneScene, "Login_3D", 65534);
+            // await SceneChangeHelper.SceneChangeTo(zoneScene, "Login_3D", 65534);
+            SceneManager.LoadSceneAsync("Login_3D");
         
-            zoneScene.GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_Login);
+            await zoneScene.GetComponent<UIComponent>().ShowWindowAsync(WindowID.WindowID_Login);
             await ETTask.CompletedTask;
         }
     }

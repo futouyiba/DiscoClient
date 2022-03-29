@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace ET
@@ -22,6 +23,9 @@ namespace ET
 		
 		public static void OnLoginClickHandler(this DlgLogin self)
 		{
+			self.ZoneScene().GetComponent<UIComponent>().HideWindow(WindowID.WindowID_Login);
+			// self.ZoneScene().GetComponent<UIComponent>().CloseWindow(WindowID.WindowID_Login);
+			SceneManager.LoadSceneAsync("Loading");
 			LoginHelper.Login(
 				self.DomainScene(), 
 				ConstValue.SelectorAddress).Coroutine();

@@ -42,20 +42,10 @@ namespace ET.Demo.Camera
                 });
             }
             if (Input.GetKey(KeyCode.Alpha4))
-            {//look at me
-                try
-                {
-                    self.AnimGotoState(CameraComponent.CameraAnimateState.FollowCharWithTime).OnCompleted(() =>
-                    {
-                        Log.Info("follow with time completed");
-                    });
-                }
-                catch(Exception e)
-                {
-                    Log.Error(e);
-                }
+            {
+                //look at me
+                self.FollowCharWithTime();
             }
-            
             
             if (self.IsFollowing && self.GOFollowing != null)
             {
@@ -64,11 +54,23 @@ namespace ET.Demo.Camera
             
 
         }
+
+
     }
     
     public static class CameraComponentSystem
     {
-        
+        public static void FollowCharWithTime(this CameraComponent self)
+        {
+            try
+            {
+                self.AnimGotoState(CameraComponent.CameraAnimateState.FollowCharWithTime).OnCompleted(() => { Log.Info("follow with time completed"); });
+            }
+            catch (Exception e)
+            {
+                Log.Error(e);
+            }
+        }
         /// <summary>
         /// 因为在awake中初始化会获得错误的摄像机
         /// 改为在SceneChangeFinish_SetGOs中触发这个初始化函数

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
+using ET.Demo.Camera;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,6 +28,10 @@ namespace ET
 			{
 				self.ZoneScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_SelectFigure);
 				self.ZoneScene().CurrentScene().GetComponent<UIComponent>().HideWindow(WindowID.WindowID_DJ);
+			});
+			self.View.E_Skill01Button.AddListener(() =>
+			{
+				self.ZoneScene().CurrentScene().GetComponent<CameraComponent>().FollowCharWithTime();
 			});
 		}
 
