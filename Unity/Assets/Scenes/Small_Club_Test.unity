@@ -1654,6 +1654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainLights
       objectReference: {fileID: 0}
+    - target: {fileID: 5193579644598925650, guid: 20f5329f388be4d44bbce1d402b6117a, type: 3}
+      propertyPath: m_TagString
+      value: LightGroup4
+      objectReference: {fileID: 0}
     - target: {fileID: 5193579644598925661, guid: 20f5329f388be4d44bbce1d402b6117a, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -4048,6 +4052,10 @@ PrefabInstance:
     - target: {fileID: 1270864474280744535, guid: 0d95686eab46d5e4397dd51c45643ee3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3475653477246128262, guid: 0d95686eab46d5e4397dd51c45643ee3, type: 3}
+      propertyPath: m_TagString
+      value: LightGroup3
       objectReference: {fileID: 0}
     - target: {fileID: 8806296270156908991, guid: 0d95686eab46d5e4397dd51c45643ee3, type: 3}
       propertyPath: m_Name

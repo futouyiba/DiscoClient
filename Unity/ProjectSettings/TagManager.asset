@@ -9,6 +9,8 @@ TagManager:
   - LightGroup1
   - Particle
   - LightGroup2
+  - LightGroup3
+  - LightGroup4
   layers:
   - Default
   - TransparentFX
