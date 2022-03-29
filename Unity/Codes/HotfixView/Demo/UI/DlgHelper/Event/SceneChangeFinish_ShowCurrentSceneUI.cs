@@ -9,8 +9,8 @@
             if (args.CurrentScene.Name == "Small_Club_Test")
             {
                 await args.ZoneScene.CurrentScene().GetComponent<UIComponent>().ShowWindowAsync(WindowID.WindowID_DJ);
-                await TimerComponent.Instance.WaitAsync(15000);
-                await args.ZoneScene.GetComponent<UIComponent>().ShowWindowAsync(WindowID.WindowID_SelectFigure);
+                // await TimerComponent.Instance.WaitAsync(15000);
+                // await args.ZoneScene.GetComponent<UIComponent>().ShowWindowAsync(WindowID.WindowID_SelectFigure);
             }
 
             await ETTask.CompletedTask;
