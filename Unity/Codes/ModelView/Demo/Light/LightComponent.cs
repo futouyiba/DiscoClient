@@ -17,6 +17,14 @@ namespace ET.Light
     {
         public LightBehaviourType behType;
         public bool isOn;
+        public List<GameObject> handler;
+
+        public LightGroupInfo(LightBehaviourType type, bool isOn)
+        {
+            this.behType = type;
+            this.isOn = isOn;
+            this.handler = new List<GameObject>();
+        }
     }
 
     public class LightComponent : Entity, IAwake, IUpdate, IDestroy

@@ -8,6 +8,7 @@ TagManager:
   - Speaker
   - LightGroup1
   - Particle
+  - LightGroup2
   layers:
   - Default
   - TransparentFX
