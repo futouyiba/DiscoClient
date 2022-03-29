@@ -797,7 +797,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Light
+  m_Text: Down
 --- !u!1 &896936761986681204
 GameObject:
   m_ObjectHideFlags: 0
@@ -2897,7 +2897,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u79C0"
+  m_Text: DJ
 --- !u!1 &4810622423164368422
 GameObject:
   m_ObjectHideFlags: 0
@@ -3499,7 +3499,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Light
+  m_Text: 'Cut
+
+'
 --- !u!1 &5807614425614230268
 GameObject:
   m_ObjectHideFlags: 0

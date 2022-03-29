@@ -36,13 +36,13 @@ namespace ET
             if (Input.GetMouseButtonDown(0))
             {
                 Log.Info("mouse button down...");
-                if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
-                {
-                    // var overObj = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
-                    // Log.Info("pointer not over gameobject, return... over:" + overObj.ToString());
-                    Log.Info("pointer not over gameobject, return... over:");
-                    return;
-                }
+                // if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+                // {
+                //     // var overObj = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+                //     // Log.Info("pointer not over gameobject, return... over:" + overObj.ToString());
+                //     Log.Info("pointer not over gameobject, return... over:");
+                //     return;
+                // }
                 if (self.DiscoCamera==null)
                 {
                     Log.Info("disco camera not set yet, opera component not responding");
@@ -99,52 +99,18 @@ namespace ET
             // 上DJ
             if (Input.GetKeyDown(KeyCode.J))
             {
-                var goDjResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
-                        .Call(new action_req_c2s() { action_id = ConstValue.ACTION_ID_BECOME_DJ, int1 = 1, });
-                
-                if (goDjResp.Error == 0)
-                {
-                    await Game.EventSystem.PublishAsync(new EventType.BecomeDJ()
-                    {
-                        Unit = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit(),
-                        SeatId = 1,
-                    });
-                    
-                    // GameObjectComponent gameObjectComponent = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<GameObjectComponent>();
-                    // Transform myPlayerTransform = gameObjectComponent.GameObject.transform;
-                    // myPlayerTransform.position =
-                    //         self.DjGO.transform.position;
-                    // gameObjectComponent.ChangeScale(2f);
-                }
+                await GoDJ(self);
             }
 
             if (Input.GetKeyDown(KeyCode.K))
             {
-                var leaveDjResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
-                        .Call(new action_req_c2s() { action_id = ConstValue.ACTION_ID_BECOME_DJ, int1 = 0, });
-                if (leaveDjResp.Error == 0)
-                {
-                    Unit myPlayerUnit = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit();
-                    await Game.EventSystem.PublishAsync(new EventType.LeaveDJ(){Unit = myPlayerUnit});
-                    // GameObjectComponent gameObjectComponent = myPlayerUnit
-                    //         .GetComponent<GameObjectComponent>();
-                    // Transform myPlayerTransform = gameObjectComponent.GameObject.transform;
-                    // myPlayerTransform.position =
-                    //         AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(myPlayerUnit.GetComponent<CharComp>().playerData.x, myPlayerUnit.GetComponent<CharComp>().playerData.y);
-                    // gameObjectComponent.ChangeScale(1f);
-                }
+                await LeaveDJ(self);
             }
 
             // cut song
             if (Input.GetKeyDown(KeyCode.C))
             {
-                int musicID = (self.Parent.GetComponent<HouseComponent>().HouseStatusData.music_id + 1) % 5;
-                var cutSongResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
-                        .Call(new action_req_c2s() { action_id = ConstValue.ACTION_ID_SWITCH_MUSIC, int1 = musicID});// todo manage max song uplimit.
-                if (cutSongResp.Error == 0)
-                {
-                    Game.EventSystem.Publish(new EventType.CutToMusic(){MusicId = musicID, ZoneScene = self.ZoneScene()});
-                }
+                await CutMusic(self);
             }
 
             // select figure
@@ -154,6 +120,55 @@ namespace ET
             }
 
             await ETTask.CompletedTask;
+        }
+
+        public static async ETTask CutMusic(this OperaComponent self)
+        {
+            int musicID = (self.Parent.GetComponent<HouseComponent>().HouseStatusData.music_id + 1) % 5;
+            var cutSongResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
+                    .Call(new action_req_c2s() { action_id = ConstValue.ACTION_ID_SWITCH_MUSIC, int1 = musicID }); // todo manage max song uplimit.
+            if (cutSongResp.Error == 0)
+            {
+                await Game.EventSystem.PublishAsync(new EventType.CutToMusic() { MusicId = musicID, ZoneScene = self.ZoneScene() });
+            }
+        }
+
+        public static async ETTask LeaveDJ(this OperaComponent self)
+        {
+            var leaveDjResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
+                    .Call(new action_req_c2s() { action_id = ConstValue.ACTION_ID_BECOME_DJ, int1 = 0, });
+            if (leaveDjResp.Error == 0)
+            {
+                Unit myPlayerUnit = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit();
+                await Game.EventSystem.PublishAsync(new EventType.LeaveDJ() { Unit = myPlayerUnit });
+                // GameObjectComponent gameObjectComponent = myPlayerUnit
+                //         .GetComponent<GameObjectComponent>();
+                // Transform myPlayerTransform = gameObjectComponent.GameObject.transform;
+                // myPlayerTransform.position =
+                //         AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(myPlayerUnit.GetComponent<CharComp>().playerData.x, myPlayerUnit.GetComponent<CharComp>().playerData.y);
+                // gameObjectComponent.ChangeScale(1f);
+            }
+        }
+
+        public static async ETTask GoDJ(this OperaComponent self)
+        {
+            var goDjResp = (action_req_s2c)await self.ZoneScene().GetComponent<SessionComponent>().Session
+                    .Call(new action_req_c2s() { action_id = ConstValue.ACTION_ID_BECOME_DJ, int1 = 1, });
+
+            if (goDjResp.Error == 0)
+            {
+                // self.ZoneScene().CurrentScene().GetComponent<UIComponent>().window todo show light buttons.
+                await Game.EventSystem.PublishAsync(new EventType.BecomeDJ()
+                {
+                    Unit = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit(), SeatId = 1,
+                });
+
+                // GameObjectComponent gameObjectComponent = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit().GetComponent<GameObjectComponent>();
+                // Transform myPlayerTransform = gameObjectComponent.GameObject.transform;
+                // myPlayerTransform.position =
+                //         self.DjGO.transform.position;
+                // gameObjectComponent.ChangeScale(2f);
+            }
         }
     }
 }

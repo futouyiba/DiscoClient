@@ -19,6 +19,7 @@ namespace ET
             var myPlayerUnit = zoneScene.CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit();
             await Game.EventSystem.PublishAsync(new EventType.ChangeFigure() { FigureId = index, Unit = myPlayerUnit });
             zoneScene.GetComponent<UIComponent>().HideWindow(WindowID.WindowID_SelectFigure);
+            
         }
     }
 }
