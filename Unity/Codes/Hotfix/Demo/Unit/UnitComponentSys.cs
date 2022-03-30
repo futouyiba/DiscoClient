@@ -209,12 +209,12 @@ namespace ET
 					};
 					// unit.Position = new Vector3(i / 30f, 0f, j / 30f);
 					self.AddNpc(unit);
-					await Game.EventSystem.PublishAsync(new EventType.AfterUnitCreate(){Unit = unit});
-					await TimerComponent.Instance.WaitFrameAsync();
+					Game.EventSystem.Publish(new EventType.AfterUnitCreate(){Unit = unit});
 				}
+				await TimerComponent.Instance.WaitFrameAsync();
 			}
 
-			await ETTask.CompletedTask;
+			Log.Info("all units generated!");
 		}
 		
 		public static async ETTask CreatePlayer(this UnitComponent self, player messageOnePlayer)
