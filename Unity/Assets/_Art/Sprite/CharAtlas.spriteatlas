@@ -44,12 +44,7 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: 33e5c3ebe723148c0a8915b04f8402ef, type: 3}
-    - {fileID: 2800000, guid: 1c4250960f14c3645af5077d388eb831, type: 3}
-    - {fileID: 2800000, guid: da13c34e54bdc244fbe6cec51d14bc27, type: 3}
-    - {fileID: 2800000, guid: f3751eeab087f764d82fc196d15eb864, type: 3}
-    - {fileID: 2800000, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
-    - {fileID: 2800000, guid: 664adbc6b8421b142920a2bc0ac1a612, type: 3}
+    - {fileID: 102900000, guid: 8718d25100514424191a9cdc403d4a94, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -61,6 +56,8 @@ SpriteAtlas:
   - {fileID: 21300000, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
   - {fileID: 21300010, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
   - {fileID: 21300008, guid: fb05c073d5a406146a451302d5221a5f, type: 3}
+  - {fileID: 21300000, guid: dba8ea0459a66430ebe8e1b8076b8428, type: 3}
+  - {fileID: 21300000, guid: a3e93464e2df341fb8ed02a60cb6907d, type: 3}
   - {fileID: 21300024, guid: 1c4250960f14c3645af5077d388eb831, type: 3}
   - {fileID: 21300022, guid: 1c4250960f14c3645af5077d388eb831, type: 3}
   - {fileID: 21300020, guid: 1c4250960f14c3645af5077d388eb831, type: 3}
@@ -94,6 +91,12 @@ SpriteAtlas:
   - {fileID: 21300016, guid: f3751eeab087f764d82fc196d15eb864, type: 3}
   - {fileID: 21300018, guid: f3751eeab087f764d82fc196d15eb864, type: 3}
   - {fileID: 21300000, guid: 33e5c3ebe723148c0a8915b04f8402ef, type: 3}
+  - {fileID: 21300008, guid: ea003e5c499d55f4ba5d3f9c53836792, type: 3}
+  - {fileID: 21300010, guid: ea003e5c499d55f4ba5d3f9c53836792, type: 3}
+  - {fileID: 21300004, guid: ea003e5c499d55f4ba5d3f9c53836792, type: 3}
+  - {fileID: 21300006, guid: ea003e5c499d55f4ba5d3f9c53836792, type: 3}
+  - {fileID: 21300000, guid: ea003e5c499d55f4ba5d3f9c53836792, type: 3}
+  - {fileID: 21300002, guid: ea003e5c499d55f4ba5d3f9c53836792, type: 3}
   - {fileID: 21300020, guid: da13c34e54bdc244fbe6cec51d14bc27, type: 3}
   - {fileID: 21300022, guid: da13c34e54bdc244fbe6cec51d14bc27, type: 3}
   - {fileID: 21300024, guid: da13c34e54bdc244fbe6cec51d14bc27, type: 3}
@@ -117,6 +120,8 @@ SpriteAtlas:
   - Single_04_0
   - Single_04_5
   - Single_04_4
+  - TestCharacter001
+  - TestCharacter002
   - Girl_01_12
   - Girl_01_11
   - Girl_01_10
@@ -150,6 +155,12 @@ SpriteAtlas:
   - Single_03_8
   - Single_03_9
   - SingleFat
+  - Single_01_4
+  - Single_01_5
+  - Single_01_2
+  - Single_01_3
+  - Single_01_0
+  - Single_01_1
   - Single_02_10
   - Single_02_11
   - Single_02_12
