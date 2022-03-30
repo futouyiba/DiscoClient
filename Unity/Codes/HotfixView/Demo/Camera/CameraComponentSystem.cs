@@ -46,11 +46,16 @@ namespace ET.Demo.Camera
             if (Input.GetKey(KeyCode.Alpha4))
             {
                 //look at me
-                self.FollowCharWithTime();
+                self.AnimGotoState(CameraComponent.CameraAnimateState.FollowCharWithoutTime).Coroutine();
+            }
+
+            if (Input.GetKey(KeyCode.Alpha5))
+            {
+                self.StopLookAtClose();
             }
             
             if (self.IsFollowing && self.GOFollowing != null)
-            {
+            {//摄像机跟着Gameobject走的表现
                 var transform = self.camera.transform;
                 transform.position = self.GOFollowing.transform.position + lookAtCamOffset;
                 var targetRot = self.initRot.eulerAngles + new Vector3(lookAtCamRotX, 0, 0);
@@ -89,7 +94,7 @@ namespace ET.Demo.Camera
             self.animator = self.camera.gameObject.GetComponentInParent<Animator>();
             //初始化标记状态
             self.TaskCompleteClear();
-            self.OnAnimateEnd().Coroutine();
+            // self.OnAnimateEnd().Coroutine();
             
 
             //logs for errors
@@ -291,8 +296,8 @@ namespace ET.Demo.Camera
                     Log.Error($"{state.ToString()} with no time set");
                 }
             }
-
-            await OnAnimateEnd(self);
+            //todo 先纯粹手控
+            // await OnAnimateEnd(self);
         }
 
         public static void TaskCompleteClear(this CameraComponent self)
