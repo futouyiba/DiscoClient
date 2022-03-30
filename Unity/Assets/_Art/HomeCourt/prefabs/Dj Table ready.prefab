@@ -1069,7 +1069,7 @@ PrefabInstance:
     - target: {fileID: -5726477619887387194, guid: 502db192e45420c4aaec99e3bb2f94f1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2c1bccdfe8c3be4479242fe5f025fba1, type: 2}
+      objectReference: {fileID: 2100000, guid: 5bf067f7254ccaa4eae2051317dfd2a3, type: 2}
     - target: {fileID: 919132149155446097, guid: 502db192e45420c4aaec99e3bb2f94f1, type: 3}
       propertyPath: m_Name
       value: DJTable_001
