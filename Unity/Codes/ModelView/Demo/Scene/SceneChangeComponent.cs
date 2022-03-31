@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace ET
 {
@@ -6,5 +7,6 @@ namespace ET
     {
         public AsyncOperation loadMapOperation;
         public ETTask tcs;
+        public Action<int> Dlg_UpdateProcess;
     }
 }

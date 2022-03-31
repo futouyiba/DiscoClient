@@ -18,6 +18,8 @@ namespace ET
             }
             operaComp.DiscoCamera = GameObject.FindWithTag("MainCamera");
             operaComp.DjGO = GameObject.FindWithTag("DJ");
+            operaComp.DJParticleFloorGO = GameObject.Find("DJParticleFloor");
+            operaComp.DJParticleUpGO = GameObject.Find("DJParticleUp");
             
             //初始化CameraComp
             var cameraComp = ev.ZoneScene.CurrentScene().GetComponent<CameraComponent>();

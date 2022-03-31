@@ -6,7 +6,7 @@ namespace ET
     {
         public static int chosenIndex;
         
-        public static async ETTask SelectFigure(Scene zoneScene, int index)
+        public static async ETTask SelectFigure(Scene zoneScene, int index, string text)
         {
             var changeFigResp = (action_req_s2c)await zoneScene.GetComponent<SessionComponent>().Session.Call(new action_req_c2s()
             {
@@ -19,6 +19,7 @@ namespace ET
             var myPlayerUnit = zoneScene.CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit();
             await Game.EventSystem.PublishAsync(new EventType.ChangeFigure() { FigureId = index, Unit = myPlayerUnit });
             zoneScene.GetComponent<UIComponent>().HideWindow(WindowID.WindowID_SelectFigure);
+            
         }
     }
 }

@@ -69,56 +69,20 @@ MonoBehaviour:
     m_Address: LightGroups.unity3d
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: ad3e8ec25d52f4b1eb5d1fc9bde0ac76
-    m_Address: Assets/_Art/HomeCourt/UI/DJ_001.png
+  - m_GUID: 7b84538b47a154fd887da694018c85b8
+    m_Address: config.unity3d
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 3b9f3d1282d8b4d82bc1a261c4158d08
-    m_Address: Assets/_Art/HomeCourt/UI/frame_001.png
+  - m_GUID: d94978d79c0422549afe8e01fc2ab7d2
+    m_Address: loading.unity3d
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: a1a3d7ee949954f119d500a74c5bd8e3
-    m_Address: Assets/_Art/HomeCourt/UI/list_001.png
+  - m_GUID: 328de9ea390fb46ddbda27c37fcc8b91
+    m_Address: Small_Club_Test.unity3d
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: caec5731f988f476089b8e54cea18e90
-    m_Address: Assets/_Art/HomeCourt/UI/Tiktok_03.jpeg
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: d528a27300576401f959b53581ddca10
-    m_Address: Assets/_Art/HomeCourt/UI/time_001.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: f42af19d6942440b6a89526bd304e413
-    m_Address: Assets/_Art/HomeCourt/UI/time_002.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: fb05c073d5a406146a451302d5221a5f
-    m_Address: Assets/_Anims/Test/Single_04.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 1c4250960f14c3645af5077d388eb831
-    m_Address: Assets/_Anims/Test/Girl_01.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: ea003e5c499d55f4ba5d3f9c53836792
-    m_Address: Assets/_Anims/Test/Single_01.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: da13c34e54bdc244fbe6cec51d14bc27
-    m_Address: Assets/_Anims/Test/Single_02.psd
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: f3751eeab087f764d82fc196d15eb864
-    m_Address: Assets/_Anims/Test/Single_03.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 664adbc6b8421b142920a2bc0ac1a612
-    m_Address: Assets/_Anims/Test/Single_05.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 33e5c3ebe723148c0a8915b04f8402ef
-    m_Address: Assets/_Anims/Test/SingleFat.png
+  - m_GUID: f884291d4eca45a45b240a8a62bdd263
+    m_Address: Login_3D.unity3d
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

@@ -34,7 +34,7 @@ PrefabInstance:
     - target: {fileID: 5817430029553928788, guid: 869ed846dd4249942b0cc4485f51aeed, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 21862296756158408, guid: 7fda00a8f00208943a9cc1853b8ed2a4, type: 2}
+      objectReference: {fileID: 21862296756158408, guid: ebf24dc27a4734267b10d478be784e1c, type: 2}
     - target: {fileID: 6229857659710172204, guid: 869ed846dd4249942b0cc4485f51aeed, type: 3}
       propertyPath: m_Name
       value: cSingle00
@@ -142,10 +142,10 @@ PrefabInstance:
     - target: {fileID: 8619730731919076753, guid: 869ed846dd4249942b0cc4485f51aeed, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 7fda00a8f00208943a9cc1853b8ed2a4, type: 2}
+      objectReference: {fileID: 11400000, guid: ebf24dc27a4734267b10d478be784e1c, type: 2}
     - target: {fileID: 8619730731919076753, guid: 869ed846dd4249942b0cc4485f51aeed, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 21862296756158408, guid: 7fda00a8f00208943a9cc1853b8ed2a4, type: 2}
+      objectReference: {fileID: 21862296756158408, guid: ebf24dc27a4734267b10d478be784e1c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 869ed846dd4249942b0cc4485f51aeed, type: 3}

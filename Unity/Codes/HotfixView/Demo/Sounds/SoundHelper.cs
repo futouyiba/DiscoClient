@@ -38,7 +38,7 @@ namespace ET.Demo.Sounds
         //     }
         // }
         //
-        private static string[] songNames = new string[5] {"PartyTrain_RedFoo","LoveStoryRemix","KrDisco","DJ_Gomi_Friday_Night_Fever","DJ_Gomi_Friday_Night_Fever" };
+        private static string[] songNames = new string[5] {"PartyTrain_RedFoo","LoveStoryRemix","KrDisco","DJ_Gomi_Friday_Night_Fever","DJ_Alex_Ch_Disco" };
         /// <summary>
         /// 从ab包把歌曲都load进来
         /// 0317改到Helper中做，哪个MusicComponent想要就传给它们

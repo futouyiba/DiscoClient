@@ -13,8 +13,9 @@ namespace ET
             Game.Scene.AddComponent<AddressableComponent>();
             //Game.Scene.AddComponent<ResourcesComponent>();
            // await ResourcesComponent.Instance.LoadBundleAsync("config.unity3d");
-            //Game.Scene.AddComponent<ConfigComponent>();
-            //ConfigComponent.Instance.Load();
+           // AddressableComponent.Instance.LoadAssetsByLabelAsync<>("config.unity3d", x => { });
+            Game.Scene.AddComponent<ConfigComponent>();
+            ConfigComponent.Instance.Load();
             // Log.Warning($"{ConfigComponent.Instance.AllConfig.Count} configs loaded");
 //            ResourcesComponent.Instance.UnloadBundle("config.unity3d");
             
