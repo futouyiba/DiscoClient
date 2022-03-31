@@ -32,7 +32,7 @@ namespace ET
 				self.DomainScene(), 
 				ConstValue.SelectorAddress).Coroutine();
 			
-			var res=scComp.TryBindProcessView();
+			// var res=scComp.TryBindProcessView();
 			// Log.Warning($"bind process view succeeded? {res}");
 
 		}

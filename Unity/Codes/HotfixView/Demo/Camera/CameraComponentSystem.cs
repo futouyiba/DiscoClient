@@ -94,7 +94,7 @@ namespace ET.Demo.Camera
             self.animator = self.camera.gameObject.GetComponentInParent<Animator>();
             //初始化标记状态
             self.TaskCompleteClear();
-            // self.OnAnimateEnd().Coroutine();
+            self.OnAnimateEnd().Coroutine();
             
 
             //logs for errors
@@ -296,8 +296,7 @@ namespace ET.Demo.Camera
                     Log.Error($"{state.ToString()} with no time set");
                 }
             }
-            //todo 先纯粹手控
-            // await OnAnimateEnd(self);
+            await OnAnimateEnd(self);
         }
 
         public static void TaskCompleteClear(this CameraComponent self)

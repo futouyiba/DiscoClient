@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 
 namespace ET
@@ -7,6 +8,7 @@ namespace ET
     {
         public AsyncOperation loadMapOperation;
         public ETTask tcs;
-        public Action<int> Dlg_UpdateProcess;
+        // public Action<int> Dlg_UpdateProcess;
+        public TextMeshPro tmp;
     }
 }

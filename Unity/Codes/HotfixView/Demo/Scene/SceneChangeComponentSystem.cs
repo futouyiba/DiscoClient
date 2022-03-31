@@ -12,6 +12,7 @@ namespace ET
         {
             if (!self.loadMapOperation.isDone)
             {
+                self.SetIntForTMP(self.Process());
                 return;
             }
 
@@ -32,7 +33,8 @@ namespace ET
     {
         public override void Awake(SceneChangeComponent self)
         {
-            self.UpdateProcess();
+            // self.UpdateProcess();
+            // Log.Warning("setting up updateprocess on awake");
         }
     }
 
@@ -66,46 +68,58 @@ namespace ET
             return (int)(self.loadMapOperation.progress * 100);
         }
         
-        public static async void UpdateProcess(this SceneChangeComponent self, int updateFreq = 300)
-        {
-            do
-            {   
-                Log.Error($"{TimeHelper.ClientNow()} updating process");
-                self.Dlg_UpdateProcess?.Invoke(self.Process());
-                await TimerComponent.Instance.WaitAsync(updateFreq);
-            }
-            while (!self.loadMapOperation.isDone);
-        }
+        // public static async void UpdateProcess(this SceneChangeComponent self, int updateFreq = 300)
+        // {
+        //     do
+        //     {   
+        //         // Log.Error($"{TimeHelper.ClientNow()} updating process");
+        //         self.Dlg_UpdateProcess?.Invoke(self.Process());
+        //         await TimerComponent.Instance.WaitAsync(updateFreq);
+        //     }
+        //     while (!self.loadMapOperation.isDone);
+        // }
 
-        public static void AddDlgProcessView(this SceneChangeComponent self, Action<int> func)
-        {
-            if (func == null)
-            {
-                Log.Error($"func adding is null");
-                return;
-            }
-            self.Dlg_UpdateProcess += func;
-        }
+        
+        // public static void AddDlgProcessView(this SceneChangeComponent self, Action<int> func)
+        // {
+        //     if (func == null)
+        //     {
+        //         Log.Error($"func adding is null");
+        //         return;
+        //     }
+        //     self.Dlg_UpdateProcess += func;
+        // }
         
 
-        public static bool TryBindProcessView(this SceneChangeComponent self)
+        // public static bool TryBindProcessView(this SceneChangeComponent self)
+        // {
+        //     self.AddDlgProcessView(SetIntForTMP);
+        //     return true;
+        // }
+        
+        public static void SetIntForTMP(this SceneChangeComponent self,int setNumber)
         {
-            var go = GameObject.FindGameObjectWithTag("SceneProcessView");
-            var tmp = go.GetComponent<TextMeshPro>();
-            void SetIntForTMP(int setNumber)
+            if (self.tmp == null)
             {
-                Log.Warning($"setting process to {setNumber} for tmp!");
-                tmp.SetText(setNumber.ToString());
+                var go = GameObject.FindGameObjectWithTag("SceneProcessView");
+                if (go == null)
+                {
+                    Log.Warning("SceneProcessView not found");
+                    return;
+                }
+                self.tmp = go.GetComponent<TextMeshPro>();
+                if (self.tmp == null)
+                {
+                    Log.Error($"get tmp comp failed");
+                    return;
+                }
             }
+            
 
-            if (tmp == null)
-            {
-                Log.Error($"tmp comp does not exist");
-                return false;
-            }
-            self.AddDlgProcessView(SetIntForTMP);
-            return true;
+            Log.Warning($"setting process to {setNumber} for tmp!");
+            self.tmp.SetText(setNumber.ToString());
         }
+
         
     }
 }
