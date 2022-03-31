@@ -392,7 +392,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2105160402477235520}
-  - component: {fileID: 7641019208721858333}
   m_Layer: 0
   m_Name: CharacterRect
   m_TagString: Untagged
@@ -416,20 +415,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7641019208721858333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6229857659710172204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9632beae1c07a244b99693b215af8fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.3
-  fixedInterval: 3
-  bMove: 1
-  sprite: {fileID: 33564094710934385}
-  nameText: {fileID: 8619730731919076753}
