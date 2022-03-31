@@ -41,7 +41,7 @@ namespace ET.Demo.Camera
                 var camComp = arg.Unit.ZoneScene().CurrentScene().GetComponent<CameraComponent>();
                 if (camComp.OngoingTask != null && camComp.curState == CameraComponent.CameraAnimateState.FollowCharWithoutTime)
                 {
-                    Log.Warning("stopping camera follow char");
+                    // Log.Warning("stopping camera follow char");
                     camComp.OngoingTask.SetResult(true);
                     // settask.SetResult(true);
                     // camComp.OngoingCT?.Cancel();

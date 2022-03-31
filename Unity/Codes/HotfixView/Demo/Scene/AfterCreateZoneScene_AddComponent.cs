@@ -12,9 +12,11 @@ namespace ET
             zoneScene.AddComponent<UIEventComponent>();
             zoneScene.AddComponent<RedDotComponent>();
             zoneScene.AddComponent<ResourcesLoaderComponent>();
+            var scComp = zoneScene.AddComponent<SceneChangeComponent>();
             // await SceneChangeHelper.SceneChangeTo(zoneScene, "Login_3D", 65534);
-            SceneManager.LoadSceneAsync("Login_3D");
-        
+            await scComp.ChangeSceneAsync("Login_3D");
+            // var loadOp = SceneManager.LoadSceneAsync("Login_3D");
+
             await zoneScene.GetComponent<UIComponent>().ShowWindowAsync(WindowID.WindowID_Login);
             await ETTask.CompletedTask;
         }
