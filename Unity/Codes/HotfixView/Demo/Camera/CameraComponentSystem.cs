@@ -24,24 +24,15 @@ namespace ET.Demo.Camera
             //测试用输入
             if (Input.GetKey(KeyCode.Alpha1))
             {//sway
-                self.AnimGotoState(CameraComponent.CameraAnimateState.Sway).OnCompleted(() =>
-                {
-                    Log.Info("sway completed");
-                });
+                self.AnimGotoState(CameraComponent.CameraAnimateState.Sway).Coroutine();
             }
             if (Input.GetKey(KeyCode.Alpha2))
             {//down
-                self.AnimGotoState(CameraComponent.CameraAnimateState.Down).OnCompleted(() =>
-                {
-                    Log.Info("down completed");
-                });
+                self.AnimGotoState(CameraComponent.CameraAnimateState.Down).Coroutine();
             }
             if (Input.GetKey(KeyCode.Alpha3))
             {//far
-                self.AnimGotoState(CameraComponent.CameraAnimateState.Far).OnCompleted(() =>
-                {
-                    Log.Info("far completed");
-                });
+                self.AnimGotoState(CameraComponent.CameraAnimateState.Far).Coroutine();
             }
             if (Input.GetKey(KeyCode.Alpha4))
             {
@@ -137,13 +128,14 @@ namespace ET.Demo.Camera
         // }
 
         
-        public static async ETTask LookAtClose(this CameraComponent self, GameObject GO2Follow, ETTask<bool> task)
+        public static async ETTask<bool> LookAtClose(this CameraComponent self, GameObject GO2Follow, ETTask<bool> task)
         {
             self.GOFollowing = GO2Follow;
             self.IsFollowing = true;
-            await task;
+            var ret = await task;
 
             StopLookAtClose(self);
+            return ret;
             // self.CheckStill();
         }
 
@@ -244,7 +236,7 @@ namespace ET.Demo.Camera
                     break;
             }
             
-
+            bool isSucceed = false;
             if (time > 0)
             {//有时间的行为
                 self.OngoingCT = new ETCancellationToken();
@@ -260,19 +252,22 @@ namespace ET.Demo.Camera
                 }
 
                 self.OngoingTask = TimerComponent.Instance.WaitAsync(time, self.OngoingCT);
+                
                 // self.OngoingTask.OnCompleted(self.TaskCompleteClear);
                 if (state == CameraComponent.CameraAnimateState.FollowCharWithTime)
                 {
                     var unitComp = self.ZoneScene().CurrentScene().GetComponent<UnitComponent>();
                     var myUnitGo = unitComp.MyPlayerUnit().GetComponent<GameObjectComponent>().GameObject;
-                    await self.LookAtClose(myUnitGo, self.OngoingTask);
+                    isSucceed=await self.LookAtClose(myUnitGo, self.OngoingTask);
                 }
                 else
                 {
                     AnimatorPlay();
-                    await self.OngoingTask;
+                    isSucceed=await self.OngoingTask;
                 }
                 self.TaskCompleteClear();
+
+
 
             }
             else
@@ -288,14 +283,17 @@ namespace ET.Demo.Camera
                     //     self.OngoingTask.SetResult(true);
                     // });
                     // self.OngoingTask.OnCompleted(self.TaskCompleteClear);
-                    await self.LookAtClose(myUnitGo, self.OngoingTask);
+                    isSucceed = await self.LookAtClose(myUnitGo, self.OngoingTask);
                     self.TaskCompleteClear();
                 }
                 else
                 {
                     Log.Error($"{state.ToString()} with no time set");
+                    return;
                 }
             }
+            //如果任务被取消，那么会安排其他的onanimateEnd任务
+            if (!isSucceed) return;
             await OnAnimateEnd(self);
         }
 
@@ -385,7 +383,7 @@ namespace ET.Demo.Camera
             {
                 Log.Warning($"ongong task {self.curState} not ended");
                 // await self.OngoingTask;
-                await ETTask.CompletedTask;
+                // await ETTask.CompletedTask;
                 return;
             }
 
@@ -401,6 +399,7 @@ namespace ET.Demo.Camera
             self.TaskCompleteClear();
             Log.Warning($"{Time.time}: idle task completed!,going for after animate");
             if (!ret) return; 
+            
             //然后随机进入sway或者Far
             var randRes = RandomHelper.RandomBool();
             if (randRes)
