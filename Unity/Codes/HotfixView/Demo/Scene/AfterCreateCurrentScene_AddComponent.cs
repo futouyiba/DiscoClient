@@ -1,6 +1,7 @@
 using ET.Light;
 using ET.Music;
 using ET.Sounds;
+using ET.Stage;
 using UnityEngine;
 
 namespace ET
@@ -19,8 +20,8 @@ namespace ET
             currentScene.AddComponent<MusicComponent>();
             currentScene.AddComponent<CameraComponent>();
             currentScene.AddComponent<LightComponent>();
+            currentScene.AddComponent<ParticleComponent>();
             // currentScene.AddComponent<HouseComponent>();
-            
             await ETTask.CompletedTask;
         }
     }

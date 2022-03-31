@@ -13,6 +13,7 @@ TagManager:
   - LightGroup4
   - Road
   - SceneProcessView
+  - ParticleGroup1
   layers:
   - Default
   - TransparentFX

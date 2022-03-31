@@ -1,7 +1,9 @@
 ﻿using ET.Demo.Camera;
 using ET.Demo.Light;
+using ET.Demo.Stage;
 using ET.EventType;
 using ET.Light;
+using ET.Stage;
 using UnityEngine;
 
 namespace ET
@@ -20,13 +22,18 @@ namespace ET
             operaComp.DjGO = GameObject.FindWithTag("DJ");
             operaComp.DJParticleFloorGO = GameObject.Find("DJParticleFloor");
             operaComp.DJParticleUpGO = GameObject.Find("DJParticleUp");
-            
+
+            var curScene = ev.ZoneScene.CurrentScene();
             //初始化CameraComp
-            var cameraComp = ev.ZoneScene.CurrentScene().GetComponent<CameraComponent>();
+            var cameraComp = curScene.GetComponent<CameraComponent>();
             cameraComp.Init();
             //初始化LightComp
-            var LightComp = ev.ZoneScene.CurrentScene().GetComponent<LightComponent>();
+            var LightComp = curScene.GetComponent<LightComponent>();
             LightComp.Init();
+            //初始化ParicleComp
+            var ParticleComp = curScene.GetComponent<ParticleComponent>();
+            ParticleComp.Init();
+            
             await ETTask.CompletedTask;        
         }
     }
