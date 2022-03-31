@@ -199,13 +199,14 @@ namespace ET
 					
 					var id = IdGenerater.Instance.GenerateUnitId(self.DomainZone());
 					Unit unit = self.AddChildWithId<Unit, int>(id, 0);
-					unit.AddComponent<MoveComponent>();
-					unit.AddComponent<ObjectWait>();
+					// unit.AddComponent<MoveComponent>();
+					// unit.AddComponent<ObjectWait>();
 					unit.AddComponent<CharComp>().playerData = new player()
 					{
 						x = i/30f,
 						y = j/30f,
 						player_name = names[nameRandIndex],
+						figure_id = RandomHelper.RandInt32()%11,
 					};
 					// unit.Position = new Vector3(i / 30f, 0f, j / 30f);
 					self.AddNpc(unit);

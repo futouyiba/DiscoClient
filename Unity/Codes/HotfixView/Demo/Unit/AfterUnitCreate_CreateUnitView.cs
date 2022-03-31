@@ -58,14 +58,14 @@ namespace ET
             // Unit View层
             // 这里可以改成异步加载，demo就不搞了
             uint figureConfigId;
-            if (charComp.CharType == CharType.Npc)
-            {
-                figureConfigId = RandomHelper.RandUInt32() % 6;
-            }
-            else
-            {
+            // if (charComp.CharType == CharType.Npc)
+            // {
+                // figureConfigId = RandomHelper.RandUInt32() % 11;
+            // }
+            // else
+            // {
                 figureConfigId = (uint)charComp.playerData.figure_id;
-            }
+            // }
             var prefabName = "cSingle" +figureConfigId.ToString("00");
             //GameObject bundleGameObject = (GameObject)ResourcesComponent.Instance.GetAsset("Unit.unity3d", "Unit");
             var bundleGameObject = AddressableComponent.Instance.LoadAssetByPath<GameObject>("Unit.unity3d");
