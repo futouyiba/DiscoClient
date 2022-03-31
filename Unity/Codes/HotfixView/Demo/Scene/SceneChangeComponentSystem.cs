@@ -104,7 +104,7 @@ namespace ET
                 var go = GameObject.FindGameObjectWithTag("SceneProcessView");
                 if (go == null)
                 {
-                    Log.Warning("SceneProcessView not found");
+                    // Log.Warning("SceneProcessView not found");
                     return;
                 }
                 self.tmp = go.GetComponent<TextMeshPro>();
@@ -116,7 +116,7 @@ namespace ET
             }
             
 
-            Log.Warning($"setting process to {setNumber} for tmp!");
+            // Log.Warning($"setting process to {setNumber} for tmp!");
             self.tmp.SetText(setNumber.ToString());
         }
 
