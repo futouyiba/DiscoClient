@@ -102,6 +102,13 @@ namespace ET
         {
             public Unit Unit;
         }
+        
+        public struct ChangeName
+        {
+            public string Name { get; set; }
+
+            public Unit Unit { get; set; }
+        }
 
         public struct BecomeDJ
         {

@@ -149,6 +149,16 @@ namespace ET
         }
     }
     
+    public class ChangeName_ViewHandle:AEvent<EventType.ChangeName>
+    {
+        protected override async ETTask Run(ChangeName a)
+        {
+            a.Unit.GetComponent<CharComp>().playerData.player_name = a.Name;
+            a.Unit.GetComponent<GameObjectComponent>().NameTMP.text = a.Name;
+            await ETTask.CompletedTask;
+        }
+    }
+    
     public class TakeSeat_ViewHandle:AEvent<EventType.TakeSeat>
     {
         protected override ETTask Run(TakeSeat a)

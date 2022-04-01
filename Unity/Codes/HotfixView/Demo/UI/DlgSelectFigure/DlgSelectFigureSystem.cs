@@ -37,7 +37,7 @@ namespace ET
 			});
 			self.View.E_EnterMapButton.AddListener(() =>
 			{
-				SelectFigureHelper.SelectFigure(self.ZoneScene(), SelectFigureHelper.chosenIndex, self.View.E_NameInputFieldInputField.text).Coroutine();
+				ChangeNameFigureHelper.ChangeNameFigure(self.ZoneScene(), ChangeNameFigureHelper.chosenIndex, self.View.E_NameInputFieldInputField.text).Coroutine();
 			});
 			// self.View.E_NameInputFieldInputField.
 		}
@@ -48,7 +48,7 @@ namespace ET
 
 		public static void OnFigureButtonClicked(this DlgSelectFigure self, int figureIndex)
 		{
-			SelectFigureHelper.chosenIndex = figureIndex;
+			ChangeNameFigureHelper.chosenIndex = figureIndex;
 		}
 
 	}

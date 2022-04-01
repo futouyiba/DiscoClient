@@ -10,7 +10,6 @@ namespace ET
         WindowID_Helper,   //提示界面
         WindowID_Mian,
         WindowID_SelectFigure,
-        WindowID_Select,
         WindowID_DJ,
     }
 }

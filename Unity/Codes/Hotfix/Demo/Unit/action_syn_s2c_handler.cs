@@ -46,7 +46,15 @@ namespace ET
                     await Game.EventSystem.PublishAsync(new EventType.ControlLight() { LightId = message.int1 });
                     break;
                 case ConstValue.ACTION_ID_CHANGE_FIGURE:
-                    await Game.EventSystem.PublishAsync(new EventType.ChangeFigure() { FigureId = message.int1 });
+                    if (message.int1 > 0)
+                    {
+                        await Game.EventSystem.PublishAsync(new ChangeFigure() { FigureId = message.int1 });
+                    }
+
+                    if (!string.IsNullOrEmpty(message.str1))
+                    {
+                        await Game.EventSystem.PublishAsync(new ChangeFigure() { FigureId = message.int1 });
+                    }
                     break;
                 case ConstValue.ACTION_ID_TAKE_SEAT:
                     await Game.EventSystem.PublishAsync(new EventType.TakeSeat(){Unit = playerUnit, SeatId = message.int1});
