@@ -35,6 +35,7 @@ namespace ET
 -define(ACTION_ID_TAKE_SEAT, 7). % 上卡座
 -define(ACTION_ID_SHOUT_SLOGAN, 8). % 一起喊口号
 -define(ACTION_ID_CHAT, 9). % 聊天
+-define(ACTION_ID_CHANGE_NAME, 10). % 改名
         https://i1c127izva.feishu.cn/docs/doccnJj1BcR84qI36LvLu0epYP0
         */
         public const int ACTION_ID_BECOME_DJ = 1;
@@ -46,6 +47,7 @@ namespace ET
         public const int ACTION_ID_TAKE_SEAT = 7;
         public const int ACTION_ID_SHOUT_SLOGAN = 8;
         public const int ACTION_ID_CHAT = 9;
+        public const int ACTION_ID_CHANGE_NAME = 10;
 
         /**
          * %% 控灯选项
