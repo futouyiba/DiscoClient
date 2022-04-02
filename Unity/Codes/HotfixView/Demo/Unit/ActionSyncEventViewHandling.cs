@@ -32,6 +32,12 @@ namespace ET
             gameObjectComponent.ChangeScale(1.5f);
             DOTween.Kill(playerUnitTransform);
             //todo add some lighting and music aesthetic effects...
+            // ui show if this is myself
+            if (a.Unit == a.Unit.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit())
+            {
+                await a.Unit.ZoneScene().CurrentScene().GetComponent<UIComponent>().ShowWindowAsync(WindowID.WindowID_DJ);
+            }
+            
             await ETTask.CompletedTask;
         }
     }
@@ -64,6 +70,12 @@ namespace ET
             operaComp.DJParticleFloorGO.GetComponent<ParticleSystem>().Play();
             operaComp.DJParticleUpGO.GetComponent<ParticleSystem>().Play();
             gameObjectComponent.ChangeScale(1f);
+            
+            if (a.Unit == a.Unit.ZoneScene().CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit())
+            {
+                a.Unit.ZoneScene().CurrentScene().GetComponent<UIComponent>().HideWindow(WindowID.WindowID_DJ);
+            }
+            
             await ETTask.CompletedTask;
         }
     }
