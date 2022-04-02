@@ -11,5 +11,6 @@ namespace ET
         WindowID_Mian,
         WindowID_SelectFigure,
         WindowID_DJ,
+        WindowID_Mian,
     }
 }

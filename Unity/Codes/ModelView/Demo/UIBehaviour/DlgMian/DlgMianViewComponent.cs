@@ -22,6 +22,40 @@ namespace ET
      		}
      	}
 
+		public UnityEngine.UI.Button E_ InformationButton
+     	{
+     		get
+     		{
+     			if (this.uiTransform == null)
+     			{
+     				Log.Error("uiTransform is null.");
+     				return null;
+     			}
+     			if( this.m_E_ InformationButton == null )
+     			{
+		    		this.m_E_ InformationButton = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"EGBackGround/E_ Information");
+     			}
+     			return this.m_E_ InformationButton;
+     		}
+     	}
+
+		public UnityEngine.UI.Image E_ InformationImage
+     	{
+     		get
+     		{
+     			if (this.uiTransform == null)
+     			{
+     				Log.Error("uiTransform is null.");
+     				return null;
+     			}
+     			if( this.m_E_ InformationImage == null )
+     			{
+		    		this.m_E_ InformationImage = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"EGBackGround/E_ Information");
+     			}
+     			return this.m_E_ InformationImage;
+     		}
+     	}
+
 		public UnityEngine.UI.Button E_PortraitButton
      	{
      		get
@@ -33,7 +67,7 @@ namespace ET
      			}
      			if( this.m_E_PortraitButton == null )
      			{
-		    		this.m_E_PortraitButton = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"EGBackGround/E_Portrait");
+		    		this.m_E_PortraitButton = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"EGBackGround/E_ Information/E_Portrait");
      			}
      			return this.m_E_PortraitButton;
      		}
@@ -50,7 +84,7 @@ namespace ET
      			}
      			if( this.m_E_PortraitImage == null )
      			{
-		    		this.m_E_PortraitImage = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"EGBackGround/E_Portrait");
+		    		this.m_E_PortraitImage = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"EGBackGround/E_ Information/E_Portrait");
      			}
      			return this.m_E_PortraitImage;
      		}
@@ -67,7 +101,7 @@ namespace ET
      			}
      			if( this.m_E_NameButton == null )
      			{
-		    		this.m_E_NameButton = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"EGBackGround/E_Name");
+		    		this.m_E_NameButton = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"EGBackGround/E_ Information/E_Name");
      			}
      			return this.m_E_NameButton;
      		}
@@ -84,7 +118,7 @@ namespace ET
      			}
      			if( this.m_E_NameImage == null )
      			{
-		    		this.m_E_NameImage = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"EGBackGround/E_Name");
+		    		this.m_E_NameImage = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"EGBackGround/E_ Information/E_Name");
      			}
      			return this.m_E_NameImage;
      		}
@@ -101,7 +135,7 @@ namespace ET
      			}
      			if( this.m_E_OnliineTimeButton == null )
      			{
-		    		this.m_E_OnliineTimeButton = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"EGBackGround/E_OnliineTime");
+		    		this.m_E_OnliineTimeButton = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"EGBackGround/E_ Information/E_OnliineTime");
      			}
      			return this.m_E_OnliineTimeButton;
      		}
@@ -118,7 +152,7 @@ namespace ET
      			}
      			if( this.m_E_OnliineTimeImage == null )
      			{
-		    		this.m_E_OnliineTimeImage = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"EGBackGround/E_OnliineTime");
+		    		this.m_E_OnliineTimeImage = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"EGBackGround/E_ Information/E_OnliineTime");
      			}
      			return this.m_E_OnliineTimeImage;
      		}
@@ -705,6 +739,8 @@ namespace ET
 		public void DestroyWidget()
 		{
 			this.m_EGBackGroundRectTransform = null;
+			this.m_E_ InformationButton = null;
+			this.m_E_ InformationImage = null;
 			this.m_E_PortraitButton = null;
 			this.m_E_PortraitImage = null;
 			this.m_E_NameButton = null;
@@ -749,6 +785,8 @@ namespace ET
 		}
 
 		private UnityEngine.RectTransform m_EGBackGroundRectTransform = null;
+		private UnityEngine.UI.Button m_E_ InformationButton = null;
+		private UnityEngine.UI.Image m_E_ InformationImage = null;
 		private UnityEngine.UI.Button m_E_PortraitButton = null;
 		private UnityEngine.UI.Image m_E_PortraitImage = null;
 		private UnityEngine.UI.Button m_E_NameButton = null;

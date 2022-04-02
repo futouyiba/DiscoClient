@@ -31,19 +31,22 @@ namespace ET
                 return;
             }
 
+            UIComponent uiComponent = zoneScene.GetComponent<UIComponent>();
+            
             if (index > 0)
             {
                 var myPlayerUnit = zoneScene.CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit();
                 await Game.EventSystem.PublishAsync(new EventType.ChangeFigure() { FigureId = index, Unit = myPlayerUnit });
-                zoneScene.GetComponent<UIComponent>().HideWindow(WindowID.WindowID_SelectFigure);
+                uiComponent.HideWindow(WindowID.WindowID_SelectFigure);
             }
 
             if (text.Length > 0)
             {
                 var myPlayerUnit = zoneScene.CurrentScene().GetComponent<UnitComponent>().MyPlayerUnit();
                 await Game.EventSystem.PublishAsync(new EventType.ChangeName() { Name = text, Unit = myPlayerUnit });
-                zoneScene.GetComponent<UIComponent>().HideWindow(WindowID.WindowID_SelectFigure);
+                uiComponent.HideWindow(WindowID.WindowID_SelectFigure);
             }
+            await uiComponent.ShowWindowAsync(WindowID.WindowID_Mian);
         }
     }
 }
