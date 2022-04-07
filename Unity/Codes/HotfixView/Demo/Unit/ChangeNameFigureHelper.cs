@@ -31,7 +31,7 @@ namespace ET
                 return;
             }
 
-            UIComponent uiComponent = zoneScene.GetComponent<UIComponent>();
+            UIComponent uiComponent = zoneScene.CurrentScene().GetComponent<UIComponent>();
             
             if (index > 0)
             {

@@ -18,7 +18,7 @@ namespace ET
 			});
 			self.View.E_PortraitButton.AddListener(() =>
 			{
-				self.ZoneScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_SelectFigure);
+				self.ZoneScene().CurrentScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_SelectFigure);
 				self.ZoneScene().CurrentScene().GetComponent<UIComponent>().HideWindow(WindowID.WindowID_Mian);
 			});
 			self.View.E_Skill01Button.AddListener(() =>

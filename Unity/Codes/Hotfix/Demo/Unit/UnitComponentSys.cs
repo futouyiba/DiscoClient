@@ -199,7 +199,7 @@ namespace ET
 					
 					var id = IdGenerater.Instance.GenerateUnitId(self.DomainZone());
 					Unit unit = self.AddChildWithId<Unit, int>(id, 0);
-					// unit.AddComponent<MoveComponent>();
+					unit.AddComponent<MoveComponent>();
 					// unit.AddComponent<ObjectWait>();
 					unit.AddComponent<CharComp>().playerData = new player()
 					{
