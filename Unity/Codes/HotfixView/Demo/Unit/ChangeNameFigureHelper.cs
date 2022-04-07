@@ -19,7 +19,7 @@ namespace ET
                 actionReqC2S.int1 = index;
             }
 
-            if (text != null && text.Length > 0)
+            if (!string.IsNullOrEmpty(text))
             {
                 actionReqC2S.str1 = text;
             }

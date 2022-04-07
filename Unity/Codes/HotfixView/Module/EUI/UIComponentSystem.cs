@@ -212,7 +212,7 @@ namespace ET
             UIEventComponent.Instance.GetUIEventHandler(id).BeforeUnload(baseWindow);
             if(baseWindow.IsPreLoad)
             {
-                Game.Scene.GetComponent<AddressableComponent>()?.UnLoadAsset<GameObject>(baseWindow.UIPrefabGameObject);
+                AddressableComponent.Instance.UnLoadAsset<GameObject>(baseWindow.UIPrefabGameObject);
                 UnityEngine.Object.Destroy( baseWindow.UIPrefabGameObject);
                 baseWindow.UIPrefabGameObject = null;
             }

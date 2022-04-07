@@ -167,6 +167,10 @@ namespace ET
         {
             a.Unit.GetComponent<CharComp>().playerData.player_name = a.Name;
             a.Unit.GetComponent<GameObjectComponent>().NameTMP.text = a.Name;
+            if (a.Unit.GetComponent<CharComp>().playerData.player_id == PlayerPrefs.GetInt(LoginHelper.USER_ID))
+            {
+                a.Unit.ZoneScene().CurrentScene().GetComponent<UIComponent>().GetDlgLogic<DlgMian>().View.ENameTextText.SetText(a.Name);
+            }
             await ETTask.CompletedTask;
         }
     }

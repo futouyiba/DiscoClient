@@ -124,6 +124,23 @@ namespace ET
      		}
      	}
 
+		public UnityEngine.UI.Text ENameTextText
+     	{
+     		get
+     		{
+     			if (this.uiTransform == null)
+     			{
+     				Log.Error("uiTransform is null.");
+     				return null;
+     			}
+     			if( this.m_ENameTextText == null )
+     			{
+		    		this.m_ENameTextText = UIFindHelper.FindDeepChild<UnityEngine.UI.Text>(this.uiTransform.gameObject,"EGBackGround/E_Information1/E_Name/ENameText");
+     			}
+     			return this.m_ENameTextText;
+     		}
+     	}
+
 		public UnityEngine.UI.Button E_OnliineTimeButton
      	{
      		get
@@ -1391,6 +1408,7 @@ namespace ET
 			this.m_E_PortraitImage = null;
 			this.m_E_NameButton = null;
 			this.m_E_NameImage = null;
+			this.m_ENameTextText = null;
 			this.m_E_OnliineTimeButton = null;
 			this.m_E_OnliineTimeImage = null;
 			this.m_E_DJButton = null;
@@ -1475,6 +1493,7 @@ namespace ET
 		private UnityEngine.UI.Image m_E_PortraitImage = null;
 		private UnityEngine.UI.Button m_E_NameButton = null;
 		private UnityEngine.UI.Image m_E_NameImage = null;
+		private UnityEngine.UI.Text m_ENameTextText = null;
 		private UnityEngine.UI.Button m_E_OnliineTimeButton = null;
 		private UnityEngine.UI.Image m_E_OnliineTimeImage = null;
 		private UnityEngine.UI.Button m_E_DJButton = null;
