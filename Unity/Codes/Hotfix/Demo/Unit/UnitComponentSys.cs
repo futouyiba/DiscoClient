@@ -8,7 +8,7 @@ namespace ET
 	{
 		public override void Awake(UnitComponent self)
 		{
-			self.NpcUnits = new Dictionary<long, Unit>();
+			self.NpcUnits = new Dictionary<int, Unit>();
 			self.PlayerUnits = new Dictionary<int, Unit>();
 		}
 	}
@@ -41,25 +41,26 @@ namespace ET
 
 		public static bool AddNpc(this UnitComponent self, Unit unit)
 		{
-			if (!self.NpcUnits.ContainsKey(unit.Id))
+			// if (!self.NpcUnits.ContainsKey(unit.Id))
 			{
-				self.NpcUnits.Add(unit.Id, unit);
+				self.NpcUnits.Add(self.npcPopulateIndex, unit);
+				self.npcPopulateIndex++;
 				return true;
 			}
 
-			return false;
+			// return false;
 		}
 
-		public static bool RemoveNpc(this UnitComponent self, Unit unit)
-		{
-			if (self.NpcUnits.ContainsKey(unit.Id))
-			{
-				self.NpcUnits.Remove(unit.Id);
-				return true;
-			}
-
-			return false;
-		}
+		// public static bool RemoveNpc(this UnitComponent self, Unit unit)
+		// {
+		// 	if (self.NpcUnits.ContainsValue(unit))
+		// 	{
+		// 		self.NpcUnits.re;
+		// 		return true;
+		// 	}
+		//
+		// 	return false;
+		// }
 
 		public static bool AddPlayer(this UnitComponent self, Unit unit)
 		{
@@ -210,10 +211,11 @@ namespace ET
 					};
 					// unit.Position = new Vector3(i / 30f, 0f, j / 30f);
 					self.AddNpc(unit);
-					Game.EventSystem.Publish(new EventType.AfterUnitCreate(){Unit = unit});
+					// Game.EventSystem.Publish(new EventType.AfterUnitCreate(){Unit = unit});
 				}
-				await TimerComponent.Instance.WaitFrameAsync();
+				// await TimerComponent.Instance.WaitFrameAsync();
 			}
+			await Game.EventSystem.PublishAsync(new EventType.AllNpcUnitsCreated(){ZoneScene = self.ZoneScene()});//now it's never used...
 
 			Log.Info("all units generated!");
 		}

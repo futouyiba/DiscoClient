@@ -86,6 +86,11 @@ namespace ET
             public Unit Unit;
         }
 
+        public struct AllNpcUnitsCreated
+        {
+            public Scene ZoneScene;
+        }
+
         public struct AfterUnitRemove
         {
             public Unit Unit;

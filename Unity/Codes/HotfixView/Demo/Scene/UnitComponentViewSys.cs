@@ -1,9 +1,9 @@
-﻿using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 namespace ET
 {
-    public class AfterUnitCreate_CreateUnitView: AEvent<EventType.AfterUnitCreate>
+    public class UnitComponentUpdateSystem : UpdateSystem<UnitComponent>
     {
         private static GameObject ScatterGO = null;
         private static Transform ScatterTransform = null;
@@ -13,32 +13,17 @@ namespace ET
         static Vector3 smallPos = Vector3.zero;
         static Vector3 bigPosOuter = Vector3.zero;
         static Vector3 smallPosOuter = Vector3.zero;
-
-        public static (float, float) UnityPosToServerXY(Vector3 unityPos)
+        public override void Update(UnitComponent self)
         {
-            if (ScatterGO == null)
+            if (!self.bStartInstantiateNpc)
+                return;
+
+            if (self.npcInstantiateViewIndex >= self.npcPopulateIndex)
             {
-                return (0f, 0f);
+                self.bStartInstantiateNpc = false;
+                self.npcPopulateIndex = 0;
+                return;
             }
-
-            var x = Mathf.Clamp01((unityPos.x - smallPos.x) / (bigPos.x - smallPos.x));
-            var y = Mathf.Clamp01((unityPos.z - smallPos.z) / (bigPos.z - smallPos.z));
-            return (x, y);
-        }
-
-        public static Vector3 ServerXYToUnityPos(float x, float y)
-        {
-            if (ScatterGO == null)
-            {
-                return Vector3.zero;
-            }
-
-            return new Vector3(Mathf.Lerp(smallPos.x, bigPos.x, x),
-                Mathf.Lerp(smallPos.y, bigPos.y, 0.5f), Mathf.Lerp(smallPos.z, bigPos.z, y));
-        }
-        
-        protected override async ETTask Run(EventType.AfterUnitCreate args)
-        {
             if (ScatterGO == null)
             {
                 ScatterGO = GameObject.Find("Scatter");
@@ -53,8 +38,9 @@ namespace ET
                 bigPos = BigCornerTransform.position;
                 smallPos = SmallCornerTransform.position;
             }
-            CharComp charComp = args.Unit.GetComponent<CharComp>();
-
+            
+            var npcUnit = self.NpcUnits[self.npcInstantiateViewIndex];
+            CharComp charComp = npcUnit.GetComponent<CharComp>();
             uint figureConfigId = (uint)charComp.playerData.figure_id;
             var prefabName = "cSingle" +figureConfigId.ToString("00");
             //GameObject bundleGameObject = (GameObject)ResourcesComponent.Instance.GetAsset("Unit.unity3d", "Unit");
@@ -67,7 +53,7 @@ namespace ET
             go.transform.position = AfterUnitCreate_CreateUnitView.ServerXYToUnityPos(charComp.playerData.x, charComp.playerData.y);
             // todo random direction
             // go.transform.
-            GameObjectComponent gameObjectComp = args.Unit.AddComponent<GameObjectComponent>();
+            GameObjectComponent gameObjectComp = npcUnit.AddComponent<GameObjectComponent>();
             gameObjectComp.GameObject = go;
             gameObjectComp.FowardDirection = RandomHelper.RandFloat01() < 0.5f? 1f : -1f;
             gameObjectComp.SpriteGO = go.transform.GetChild(0).gameObject;
@@ -80,17 +66,8 @@ namespace ET
                 go.transform.GetChild(1).GetComponent<TextMeshPro>().text = charComp.playerData.player_name;
                 gameObjectComp.StartRandomMovePeriodical().Coroutine();
             }
-            else
-            {
-                go.transform.GetChild(1).GetComponent<TextMeshPro>().color = Color.yellow;
-            }
-            // args.Unit.AddComponent<AnimatorComponent>(); todo
-            if (charComp.playerData.is_dj != 0)
-            {
-                await Game.EventSystem.PublishAsync(new EventType.BecomeDJ() { Unit = args.Unit , SeatId = charComp.playerData.is_dj});
-            }
-
-            await ETTask.CompletedTask;
+            
+            self.npcInstantiateViewIndex++;
         }
     }
 }

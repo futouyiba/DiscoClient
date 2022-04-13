@@ -174,7 +174,7 @@ namespace ET
             await ETTask.CompletedTask;
         }
     }
-    
+
     public class TakeSeat_ViewHandle:AEvent<EventType.TakeSeat>
     {
         protected override ETTask Run(TakeSeat a)
