@@ -37,6 +37,24 @@ namespace ET
 		public const ushort action_req_c2s = 20007;  
 		public const ushort action_req_s2c = 20008;
 		public const ushort action_syn_s2c = 20009;
+		/**
+		 *     put_head_icon_c2s = 20010;
+    put_head_icon_s2c = 20011;
+    get_head_icons_c2s = 20012;
+    get_head_icons_s2c = 20013;
+    add_friend_c2s = 20014;
+    add_friend_s2c = 20015;
+    del_friend_c2s = 20016;
+    del_friend_s2c = 20017;
+		 */
+		public const ushort put_head_icon_c2s = 20010;
+		public const ushort put_head_icon_s2c = 20011;
+		public const ushort get_head_icons_c2s = 20012;
+		public const ushort get_head_icons_s2c = 20013;
+		public const ushort add_friend_c2s = 20014;
+		public const ushort add_friend_s2c = 20015;
+		public const ushort del_friend_c2s = 20016;
+		public const ushort del_friend_s2c = 20017;
 		 public const ushort C2M_TestRequest = 10017;
 		 public const ushort M2C_TestResponse = 10018;
 		 public const ushort Actor_TransferRequest = 10019;

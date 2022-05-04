@@ -193,6 +193,60 @@ message action_syn_s2c // IMessage
 	//erlangMogai
 }
 
+//ResponseType put_head_icon_s2c
+message put_head_icon_c2s // IRequest
+{
+    bytes pic = 1;
+	//erlangMogai
+}
+
+message put_head_icon_s2c // IResponse 
+{
+	//erlangMogai
+}
+
+
+//ResponseType get_head_icon_s2c
+message get_head_icons_c2s // IRequest
+{
+    repeated int32 playerids = 1;
+	//erlangMogai
+}
+
+message get_head_icons_s2c // IResponse 
+{
+    repeated int32 playerids = 1;
+    repeated bytes pics = 2;
+	//erlangMogai
+}
+
+//ResponseType add_friend_s2c
+message add_friend_c2s // IRequest
+{
+    int32 player_id = 1;
+	//erlangMogai
+}
+
+message add_friend_s2c // IResponse 
+{
+    int32 player_id = 1;
+	//erlangMogai
+}
+
+
+//ResponseType del_friend_s2c
+message del_friend_c2s // IRequest
+{
+    int32 player_id = 1;
+	//erlangMogai
+}
+
+message del_friend_s2c // IResponse 
+{
+    int32 player_id = 1;
+	//erlangMogai
+}
+
 
 
 //ResponseType M2C_TestResponse
