@@ -611,6 +611,218 @@ namespace ET
         }
 	}
 
+	[ResponseType(nameof(put_head_icon_s2c))]
+	[Message(OuterOpcode.put_head_icon_c2s)]
+	[ProtoContract]
+	public partial class put_head_icon_c2s: Object, IRequest
+	{
+		[ProtoMember(1)]
+		public byte[] pic { get; set; }
+
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
+	}
+
+	[Message(OuterOpcode.put_head_icon_s2c)]
+	[ProtoContract]
+	public partial class put_head_icon_s2c: Object, IResponse
+	{
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
+	}
+
+	[ResponseType(nameof(get_head_icon_s2c))]
+	[Message(OuterOpcode.get_head_icons_c2s)]
+	[ProtoContract]
+	public partial class get_head_icons_c2s: Object, IRequest
+	{
+		[ProtoMember(1)]
+		public List<int> playerids = new List<int>();
+
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
+	}
+
+	[Message(OuterOpcode.get_head_icons_s2c)]
+	[ProtoContract]
+	public partial class get_head_icons_s2c: Object, IResponse
+	{
+		[ProtoMember(1)]
+		public List<int> playerids = new List<int>();
+
+		[ProtoMember(2)]
+		public List<byte[]> pics = new List<byte[]>();
+
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
+	}
+
+	[ResponseType(nameof(add_friend_s2c))]
+	[Message(OuterOpcode.add_friend_c2s)]
+	[ProtoContract]
+	public partial class add_friend_c2s: Object, IRequest
+	{
+		[ProtoMember(1)]
+		public int player_id { get; set; }
+
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
+	}
+
+	[Message(OuterOpcode.add_friend_s2c)]
+	[ProtoContract]
+	public partial class add_friend_s2c: Object, IResponse
+	{
+		[ProtoMember(1)]
+		public int player_id { get; set; }
+
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
+	}
+
+	[ResponseType(nameof(del_friend_s2c))]
+	[Message(OuterOpcode.del_friend_c2s)]
+	[ProtoContract]
+	public partial class del_friend_c2s: Object, IRequest
+	{
+		[ProtoMember(1)]
+		public int player_id { get; set; }
+
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
+	}
+
+	[Message(OuterOpcode.del_friend_s2c)]
+	[ProtoContract]
+	public partial class del_friend_s2c: Object, IResponse
+	{
+		[ProtoMember(1)]
+		public int player_id { get; set; }
+
+         public int Error
+        {
+            get;
+            set;
+        }
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        public int RpcId
+        {
+            get;
+            set;
+        }
+	}
+
 	[ResponseType(nameof(M2C_TestResponse))]
 	[Message(OuterOpcode.C2M_TestRequest)]
 	[ProtoContract]
