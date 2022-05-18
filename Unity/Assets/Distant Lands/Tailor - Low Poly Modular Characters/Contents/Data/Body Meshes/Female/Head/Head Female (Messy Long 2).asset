@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5983c4324ef225d4db4d2c98e2330d66, type: 3}
+  m_Name: Head Female (Messy Long 2)
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 4300180, guid: 009663253e2fc5f4fb20b17d6a397bde, type: 3}
+  bodyPart: 0
+  materials:
+  - colorType: 0
+    material: {fileID: 2100000, guid: 0cb07277ecdcb6547ad06f13b33b4736, type: 2}
+    valueChange: 0
+    saturationChange: 0
+  - colorType: 1
+    material: {fileID: 2100000, guid: 5605e5920a541bf408757aac3099af95, type: 2}
+    valueChange: 0
+    saturationChange: 0
+  stats: []

@@ -1,0 +1,3782 @@
+fileFormatVersion: 2
+guid: 009663253e2fc5f4fb20b17d6a397bde
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Female
+  - first:
+      1: 100004
+    second: Head
+  - first:
+      1: 100006
+    second: Head 1 Female Hair 1
+  - first:
+      1: 100008
+    second: Head 1 Female Hair 10
+  - first:
+      1: 100010
+    second: Head 1 Female Hair 11
+  - first:
+      1: 100012
+    second: Head 1 Female Hair 12
+  - first:
+      1: 100014
+    second: Head 1 Female Hair 13
+  - first:
+      1: 100016
+    second: Head 1 Female Hair 13.001
+  - first:
+      1: 100018
+    second: Head 1 Female Hair 14
+  - first:
+      1: 100020
+    second: Head 1 Female Hair 15
+  - first:
+      1: 100022
+    second: Head 1 Female Hair 16
+  - first:
+      1: 100024
+    second: Head 1 Female Hair 17
+  - first:
+      1: 100026
+    second: Head 1 Female Hair 18
+  - first:
+      1: 100028
+    second: Head 1 Female Hair 19
+  - first:
+      1: 100030
+    second: Head 1 Female Hair 2
+  - first:
+      1: 100032
+    second: Head 1 Female Hair 20
+  - first:
+      1: 100034
+    second: Head 1 Female Hair 21
+  - first:
+      1: 100036
+    second: Head 1 Female Hair 22
+  - first:
+      1: 100038
+    second: Head 1 Female Hair 23
+  - first:
+      1: 100040
+    second: Head 1 Female Hair 24
+  - first:
+      1: 100042
+    second: Head 1 Female Hair 25
+  - first:
+      1: 100044
+    second: Head 1 Female Hair 26
+  - first:
+      1: 100046
+    second: Head 1 Female Hair 3
+  - first:
+      1: 100048
+    second: Head 1 Female Hair 4
+  - first:
+      1: 100050
+    second: Head 1 Female Hair 5
+  - first:
+      1: 100052
+    second: Head 1 Female Hair 6
+  - first:
+      1: 100054
+    second: Head 1 Female Hair 7
+  - first:
+      1: 100056
+    second: Head 1 Female Hair 8
+  - first:
+      1: 100058
+    second: Head 1 Female Hair 9
+  - first:
+      1: 100060
+    second: Head 1 Female.001
+  - first:
+      1: 100062
+    second: Legs Female (Bootcut Jeans)
+  - first:
+      1: 100064
+    second: Legs Female (Capris)
+  - first:
+      1: 100066
+    second: Legs Female (Shorts)
+  - first:
+      1: 100068
+    second: Legs Female (Skinny Jeans)
+  - first:
+      1: 100070
+    second: LowManHead
+  - first:
+      1: 100072
+    second: LowManHead_end
+  - first:
+      1: 100074
+    second: LowManHips
+  - first:
+      1: 100076
+    second: LowManLeftArm
+  - first:
+      1: 100078
+    second: LowManLeftFoot
+  - first:
+      1: 100080
+    second: LowManLeftForeArm
+  - first:
+      1: 100082
+    second: LowManLeftHand
+  - first:
+      1: 100084
+    second: LowManLeftHandIndex1
+  - first:
+      1: 100086
+    second: LowManLeftHandIndex2
+  - first:
+      1: 100088
+    second: LowManLeftHandIndex2_end
+  - first:
+      1: 100090
+    second: LowManLeftHandMiddle1
+  - first:
+      1: 100092
+    second: LowManLeftHandMiddle2
+  - first:
+      1: 100094
+    second: LowManLeftHandMiddle2_end
+  - first:
+      1: 100096
+    second: LowManLeftHandPinky1
+  - first:
+      1: 100098
+    second: LowManLeftHandPinky2
+  - first:
+      1: 100100
+    second: LowManLeftHandPinky2_end
+  - first:
+      1: 100102
+    second: LowManLeftHandRing1
+  - first:
+      1: 100104
+    second: LowManLeftHandRing2
+  - first:
+      1: 100106
+    second: LowManLeftHandRing2_end
+  - first:
+      1: 100108
+    second: LowManLeftHandThumb1
+  - first:
+      1: 100110
+    second: LowManLeftHandThumb1_end
+  - first:
+      1: 100112
+    second: LowManLeftLeg
+  - first:
+      1: 100114
+    second: LowManLeftShoulder
+  - first:
+      1: 100116
+    second: LowManLeftToeBase
+  - first:
+      1: 100118
+    second: LowManLeftToeBase_end
+  - first:
+      1: 100120
+    second: LowManLeftUpLeg
+  - first:
+      1: 100122
+    second: LowManNeck
+  - first:
+      1: 100124
+    second: LowManRightArm
+  - first:
+      1: 100126
+    second: LowManRightFoot
+  - first:
+      1: 100128
+    second: LowManRightForeArm
+  - first:
+      1: 100130
+    second: LowManRightHand
+  - first:
+      1: 100132
+    second: LowManRightHandIndex1
+  - first:
+      1: 100134
+    second: LowManRightHandIndex2
+  - first:
+      1: 100136
+    second: LowManRightHandIndex2_end
+  - first:
+      1: 100138
+    second: LowManRightHandMiddle1
+  - first:
+      1: 100140
+    second: LowManRightHandMiddle2
+  - first:
+      1: 100142
+    second: LowManRightHandMiddle2_end
+  - first:
+      1: 100144
+    second: LowManRightHandPinky1
+  - first:
+      1: 100146
+    second: LowManRightHandPinky2
+  - first:
+      1: 100148
+    second: LowManRightHandPinky2_end
+  - first:
+      1: 100150
+    second: LowManRightHandRing1
+  - first:
+      1: 100152
+    second: LowManRightHandRing2
+  - first:
+      1: 100154
+    second: LowManRightHandRing2_end
+  - first:
+      1: 100156
+    second: LowManRightHandThumb1
+  - first:
+      1: 100158
+    second: LowManRightHandThumb1_end
+  - first:
+      1: 100160
+    second: LowManRightLeg
+  - first:
+      1: 100162
+    second: LowManRightShoulder
+  - first:
+      1: 100164
+    second: LowManRightToeBase
+  - first:
+      1: 100166
+    second: LowManRightToeBase_end
+  - first:
+      1: 100168
+    second: LowManRightUpLeg
+  - first:
+      1: 100170
+    second: LowManSpine
+  - first:
+      1: 100172
+    second: LowManSpine1
+  - first:
+      1: 100174
+    second: LowManSpine2
+  - first:
+      1: 100176
+    second: Shoes Female (Ankle Socks)
+  - first:
+      1: 100178
+    second: Shoes Female (Boots)
+  - first:
+      1: 100180
+    second: Shoes Female (None)
+  - first:
+      1: 100182
+    second: Shoes Female (Sandals)
+  - first:
+      1: 100184
+    second: Shoes Female (Short Socks)
+  - first:
+      1: 100186
+    second: Shoes Female (Tall Socks)
+  - first:
+      1: 100188
+    second: Torso Female (Long Sleeves)
+  - first:
+      1: 100190
+    second: Head Female (Bald)
+  - first:
+      1: 100192
+    second: Humanoid
+  - first:
+      1: 100194
+    second: Head Female (Pony Tail 1)
+  - first:
+      1: 100196
+    second: Head Female (Wavy Hair)
+  - first:
+      1: 100198
+    second: Legs Female (Tracksuit)
+  - first:
+      1: 100200
+    second: Torso Female (Tanktop)
+  - first:
+      1: 100202
+    second: Head Female (Twists Many)
+  - first:
+      1: 100204
+    second: Head Female (Bun)
+  - first:
+      1: 100206
+    second: Head Female (Long Ponytail)
+  - first:
+      1: 100208
+    second: Head Female (Many Twists)
+  - first:
+      1: 100210
+    second: Head Female (Short Ponytail)
+  - first:
+      1: 100212
+    second: Shoes Female (Tennis Shoes)
+  - first:
+      1: 100214
+    second: Shoes Female (High Top)
+  - first:
+      1: 100216
+    second: Shoes Female (Low Top)
+  - first:
+      1: 100218
+    second: Shoes Female (Plain Shoes)
+  - first:
+      1: 100220
+    second: Shoes Female (Slip-on)
+  - first:
+      1: 100222
+    second: Shoes Female (Slippers)
+  - first:
+      1: 100224
+    second: Shoes Female (Combat Boots)
+  - first:
+      1: 100226
+    second: Shoes Female (Formal)
+  - first:
+      1: 100228
+    second: Shoes Female (High Heels)
+  - first:
+      1: 100230
+    second: Circle.001
+  - first:
+      1: 100232
+    second: Legs Female (Baggy Shorts)
+  - first:
+      1: 100234
+    second: Legs Female (Jeans Belt)
+  - first:
+      1: 100236
+    second: Legs Female (Skinny Jeans).002
+  - first:
+      1: 100238
+    second: Legs Female (Skirt 1)
+  - first:
+      1: 100240
+    second: Legs Female (Exercise Shorts)
+  - first:
+      1: 100242
+    second: Legs Female (Ripped Jeans)
+  - first:
+      1: 100244
+    second: Torso Female (Jacket Open)
+  - first:
+      1: 100246
+    second: Torso Female (Jacket)
+  - first:
+      1: 100248
+    second: Torso Female (Long Sleeves U Neck)
+  - first:
+      1: 100250
+    second: Torso Female (Long Sleeves V Neck)
+  - first:
+      1: 100252
+    second: Torso Female (Short Sleeves V Neck)
+  - first:
+      1: 100254
+    second: Torso Female (Short Sleeves)
+  - first:
+      1: 100256
+    second: Torso Female (Tanktop Gauntlet)
+  - first:
+      1: 100258
+    second: Torso Female (Vest Long Sleeve)
+  - first:
+      1: 100260
+    second: Torso Female (Vest Tanktop)
+  - first:
+      1: 100262
+    second: Legs Female (Parachute Pants)
+  - first:
+      1: 100264
+    second: Legs Female (Short Capris)
+  - first:
+      1: 100266
+    second: Legs Female Sweat Pants)
+  - first:
+      1: 100268
+    second: Shoes Female (Flip-flop)
+  - first:
+      1: 100270
+    second: Torso Female (Jumpsuit Top)
+  - first:
+      1: 100272
+    second: Torso Female (Trench Coat)
+  - first:
+      1: 100274
+    second: Torso Female (Long Sleeves Knot)
+  - first:
+      1: 100276
+    second: Torso Female (Shirt with Undershirt)
+  - first:
+      1: 100278
+    second: Legs Female (Skirt 2)
+  - first:
+      1: 100280
+    second: Legs Female (Trench Coat Skirt)
+  - first:
+      1: 100282
+    second: Torso Female (Button Down)
+  - first:
+      1: 100284
+    second: Torso Female (Rolled Button Down)
+  - first:
+      1: 100286
+    second: Torso Female (Rolled Sleeves Knot)
+  - first:
+      1: 100288
+    second: Shoes Female (Cozy Boots)
+  - first:
+      1: 100290
+    second: Head Female (Big)
+  - first:
+      1: 100292
+    second: Head Female (Braid)
+  - first:
+      1: 100294
+    second: Head Female (Crimped Ends)
+  - first:
+      1: 100296
+    second: Head Female (Curly 1)
+  - first:
+      1: 100298
+    second: Head Female (Curly Bun)
+  - first:
+      1: 100300
+    second: Head Female (Curly Hat)
+  - first:
+      1: 100302
+    second: Head Female (Dyed Curtains)
+  - first:
+      1: 100304
+    second: Head Female (Karen)
+  - first:
+      1: 100306
+    second: Head Female (Long)
+  - first:
+      1: 100308
+    second: Head Female (Messy Beanie)
+  - first:
+      1: 100310
+    second: Head Female (Messy Braid)
+  - first:
+      1: 100312
+    second: Head Female (Messy Long 1)
+  - first:
+      1: 100314
+    second: Head Female (Messy Long 2)
+  - first:
+      1: 100316
+    second: Head Female (Pigtails)
+  - first:
+      1: 100318
+    second: Head Female (Puffs)
+  - first:
+      1: 100320
+    second: Head Female (Short Bangs)
+  - first:
+      1: 100322
+    second: Head Female (Short Curly)
+  - first:
+      1: 100324
+    second: Head Female (Short)
+  - first:
+      1: 100326
+    second: Head Female (Straight 1)
+  - first:
+      1: 100328
+    second: Head Female (Straight Fancy)
+  - first:
+      1: 100330
+    second: Head Female (Straight Long)
+  - first:
+      1: 100332
+    second: Head Female (Two Braids)
+  - first:
+      1: 100334
+    second: Head Female (Braids)
+  - first:
+      1: 100336
+    second: Head Female (Short Dyed Bangs)
+  - first:
+      1: 100338
+    second: Head Female (Wavy Bangs)
+  - first:
+      1: 100340
+    second: Torso Female (Short Sleeves Gloves)
+  - first:
+      1: 100342
+    second: Head Female (Straight Highlights)
+  - first:
+      1: 100344
+    second: Head Female (Wavy Highlights)
+  - first:
+      1: 100346
+    second: Eyes
+  - first:
+      1: 100348
+    second: Mouth
+  - first:
+      1: 100350
+    second: Nose
+  - first:
+      1: 100352
+    second: Nose 2
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Female
+  - first:
+      4: 400004
+    second: Head
+  - first:
+      4: 400006
+    second: Head 1 Female Hair 1
+  - first:
+      4: 400008
+    second: Head 1 Female Hair 10
+  - first:
+      4: 400010
+    second: Head 1 Female Hair 11
+  - first:
+      4: 400012
+    second: Head 1 Female Hair 12
+  - first:
+      4: 400014
+    second: Head 1 Female Hair 13
+  - first:
+      4: 400016
+    second: Head 1 Female Hair 13.001
+  - first:
+      4: 400018
+    second: Head 1 Female Hair 14
+  - first:
+      4: 400020
+    second: Head 1 Female Hair 15
+  - first:
+      4: 400022
+    second: Head 1 Female Hair 16
+  - first:
+      4: 400024
+    second: Head 1 Female Hair 17
+  - first:
+      4: 400026
+    second: Head 1 Female Hair 18
+  - first:
+      4: 400028
+    second: Head 1 Female Hair 19
+  - first:
+      4: 400030
+    second: Head 1 Female Hair 2
+  - first:
+      4: 400032
+    second: Head 1 Female Hair 20
+  - first:
+      4: 400034
+    second: Head 1 Female Hair 21
+  - first:
+      4: 400036
+    second: Head 1 Female Hair 22
+  - first:
+      4: 400038
+    second: Head 1 Female Hair 23
+  - first:
+      4: 400040
+    second: Head 1 Female Hair 24
+  - first:
+      4: 400042
+    second: Head 1 Female Hair 25
+  - first:
+      4: 400044
+    second: Head 1 Female Hair 26
+  - first:
+      4: 400046
+    second: Head 1 Female Hair 3
+  - first:
+      4: 400048
+    second: Head 1 Female Hair 4
+  - first:
+      4: 400050
+    second: Head 1 Female Hair 5
+  - first:
+      4: 400052
+    second: Head 1 Female Hair 6
+  - first:
+      4: 400054
+    second: Head 1 Female Hair 7
+  - first:
+      4: 400056
+    second: Head 1 Female Hair 8
+  - first:
+      4: 400058
+    second: Head 1 Female Hair 9
+  - first:
+      4: 400060
+    second: Head 1 Female.001
+  - first:
+      4: 400062
+    second: Legs Female (Bootcut Jeans)
+  - first:
+      4: 400064
+    second: Legs Female (Capris)
+  - first:
+      4: 400066
+    second: Legs Female (Shorts)
+  - first:
+      4: 400068
+    second: Legs Female (Skinny Jeans)
+  - first:
+      4: 400070
+    second: LowManHead
+  - first:
+      4: 400072
+    second: LowManHead_end
+  - first:
+      4: 400074
+    second: LowManHips
+  - first:
+      4: 400076
+    second: LowManLeftArm
+  - first:
+      4: 400078
+    second: LowManLeftFoot
+  - first:
+      4: 400080
+    second: LowManLeftForeArm
+  - first:
+      4: 400082
+    second: LowManLeftHand
+  - first:
+      4: 400084
+    second: LowManLeftHandIndex1
+  - first:
+      4: 400086
+    second: LowManLeftHandIndex2
+  - first:
+      4: 400088
+    second: LowManLeftHandIndex2_end
+  - first:
+      4: 400090
+    second: LowManLeftHandMiddle1
+  - first:
+      4: 400092
+    second: LowManLeftHandMiddle2
+  - first:
+      4: 400094
+    second: LowManLeftHandMiddle2_end
+  - first:
+      4: 400096
+    second: LowManLeftHandPinky1
+  - first:
+      4: 400098
+    second: LowManLeftHandPinky2
+  - first:
+      4: 400100
+    second: LowManLeftHandPinky2_end
+  - first:
+      4: 400102
+    second: LowManLeftHandRing1
+  - first:
+      4: 400104
+    second: LowManLeftHandRing2
+  - first:
+      4: 400106
+    second: LowManLeftHandRing2_end
+  - first:
+      4: 400108
+    second: LowManLeftHandThumb1
+  - first:
+      4: 400110
+    second: LowManLeftHandThumb1_end
+  - first:
+      4: 400112
+    second: LowManLeftLeg
+  - first:
+      4: 400114
+    second: LowManLeftShoulder
+  - first:
+      4: 400116
+    second: LowManLeftToeBase
+  - first:
+      4: 400118
+    second: LowManLeftToeBase_end
+  - first:
+      4: 400120
+    second: LowManLeftUpLeg
+  - first:
+      4: 400122
+    second: LowManNeck
+  - first:
+      4: 400124
+    second: LowManRightArm
+  - first:
+      4: 400126
+    second: LowManRightFoot
+  - first:
+      4: 400128
+    second: LowManRightForeArm
+  - first:
+      4: 400130
+    second: LowManRightHand
+  - first:
+      4: 400132
+    second: LowManRightHandIndex1
+  - first:
+      4: 400134
+    second: LowManRightHandIndex2
+  - first:
+      4: 400136
+    second: LowManRightHandIndex2_end
+  - first:
+      4: 400138
+    second: LowManRightHandMiddle1
+  - first:
+      4: 400140
+    second: LowManRightHandMiddle2
+  - first:
+      4: 400142
+    second: LowManRightHandMiddle2_end
+  - first:
+      4: 400144
+    second: LowManRightHandPinky1
+  - first:
+      4: 400146
+    second: LowManRightHandPinky2
+  - first:
+      4: 400148
+    second: LowManRightHandPinky2_end
+  - first:
+      4: 400150
+    second: LowManRightHandRing1
+  - first:
+      4: 400152
+    second: LowManRightHandRing2
+  - first:
+      4: 400154
+    second: LowManRightHandRing2_end
+  - first:
+      4: 400156
+    second: LowManRightHandThumb1
+  - first:
+      4: 400158
+    second: LowManRightHandThumb1_end
+  - first:
+      4: 400160
+    second: LowManRightLeg
+  - first:
+      4: 400162
+    second: LowManRightShoulder
+  - first:
+      4: 400164
+    second: LowManRightToeBase
+  - first:
+      4: 400166
+    second: LowManRightToeBase_end
+  - first:
+      4: 400168
+    second: LowManRightUpLeg
+  - first:
+      4: 400170
+    second: LowManSpine
+  - first:
+      4: 400172
+    second: LowManSpine1
+  - first:
+      4: 400174
+    second: LowManSpine2
+  - first:
+      4: 400176
+    second: Shoes Female (Ankle Socks)
+  - first:
+      4: 400178
+    second: Shoes Female (Boots)
+  - first:
+      4: 400180
+    second: Shoes Female (None)
+  - first:
+      4: 400182
+    second: Shoes Female (Sandals)
+  - first:
+      4: 400184
+    second: Shoes Female (Short Socks)
+  - first:
+      4: 400186
+    second: Shoes Female (Tall Socks)
+  - first:
+      4: 400188
+    second: Torso Female (Long Sleeves)
+  - first:
+      4: 400190
+    second: Head Female (Bald)
+  - first:
+      4: 400192
+    second: Humanoid
+  - first:
+      4: 400194
+    second: Head Female (Pony Tail 1)
+  - first:
+      4: 400196
+    second: Head Female (Wavy Hair)
+  - first:
+      4: 400198
+    second: Legs Female (Tracksuit)
+  - first:
+      4: 400200
+    second: Torso Female (Tanktop)
+  - first:
+      4: 400202
+    second: Head Female (Twists Many)
+  - first:
+      4: 400204
+    second: Head Female (Bun)
+  - first:
+      4: 400206
+    second: Head Female (Long Ponytail)
+  - first:
+      4: 400208
+    second: Head Female (Many Twists)
+  - first:
+      4: 400210
+    second: Head Female (Short Ponytail)
+  - first:
+      4: 400212
+    second: Shoes Female (Tennis Shoes)
+  - first:
+      4: 400214
+    second: Shoes Female (High Top)
+  - first:
+      4: 400216
+    second: Shoes Female (Low Top)
+  - first:
+      4: 400218
+    second: Shoes Female (Plain Shoes)
+  - first:
+      4: 400220
+    second: Shoes Female (Slip-on)
+  - first:
+      4: 400222
+    second: Shoes Female (Slippers)
+  - first:
+      4: 400224
+    second: Shoes Female (Combat Boots)
+  - first:
+      4: 400226
+    second: Shoes Female (Formal)
+  - first:
+      4: 400228
+    second: Shoes Female (High Heels)
+  - first:
+      4: 400230
+    second: Circle.001
+  - first:
+      4: 400232
+    second: Legs Female (Baggy Shorts)
+  - first:
+      4: 400234
+    second: Legs Female (Jeans Belt)
+  - first:
+      4: 400236
+    second: Legs Female (Skinny Jeans).002
+  - first:
+      4: 400238
+    second: Legs Female (Skirt 1)
+  - first:
+      4: 400240
+    second: Legs Female (Exercise Shorts)
+  - first:
+      4: 400242
+    second: Legs Female (Ripped Jeans)
+  - first:
+      4: 400244
+    second: Torso Female (Jacket Open)
+  - first:
+      4: 400246
+    second: Torso Female (Jacket)
+  - first:
+      4: 400248
+    second: Torso Female (Long Sleeves U Neck)
+  - first:
+      4: 400250
+    second: Torso Female (Long Sleeves V Neck)
+  - first:
+      4: 400252
+    second: Torso Female (Short Sleeves V Neck)
+  - first:
+      4: 400254
+    second: Torso Female (Short Sleeves)
+  - first:
+      4: 400256
+    second: Torso Female (Tanktop Gauntlet)
+  - first:
+      4: 400258
+    second: Torso Female (Vest Long Sleeve)
+  - first:
+      4: 400260
+    second: Torso Female (Vest Tanktop)
+  - first:
+      4: 400262
+    second: Legs Female (Parachute Pants)
+  - first:
+      4: 400264
+    second: Legs Female (Short Capris)
+  - first:
+      4: 400266
+    second: Legs Female Sweat Pants)
+  - first:
+      4: 400268
+    second: Shoes Female (Flip-flop)
+  - first:
+      4: 400270
+    second: Torso Female (Jumpsuit Top)
+  - first:
+      4: 400272
+    second: Torso Female (Trench Coat)
+  - first:
+      4: 400274
+    second: Torso Female (Long Sleeves Knot)
+  - first:
+      4: 400276
+    second: Torso Female (Shirt with Undershirt)
+  - first:
+      4: 400278
+    second: Legs Female (Skirt 2)
+  - first:
+      4: 400280
+    second: Legs Female (Trench Coat Skirt)
+  - first:
+      4: 400282
+    second: Torso Female (Button Down)
+  - first:
+      4: 400284
+    second: Torso Female (Rolled Button Down)
+  - first:
+      4: 400286
+    second: Torso Female (Rolled Sleeves Knot)
+  - first:
+      4: 400288
+    second: Shoes Female (Cozy Boots)
+  - first:
+      4: 400290
+    second: Head Female (Big)
+  - first:
+      4: 400292
+    second: Head Female (Braid)
+  - first:
+      4: 400294
+    second: Head Female (Crimped Ends)
+  - first:
+      4: 400296
+    second: Head Female (Curly 1)
+  - first:
+      4: 400298
+    second: Head Female (Curly Bun)
+  - first:
+      4: 400300
+    second: Head Female (Curly Hat)
+  - first:
+      4: 400302
+    second: Head Female (Dyed Curtains)
+  - first:
+      4: 400304
+    second: Head Female (Karen)
+  - first:
+      4: 400306
+    second: Head Female (Long)
+  - first:
+      4: 400308
+    second: Head Female (Messy Beanie)
+  - first:
+      4: 400310
+    second: Head Female (Messy Braid)
+  - first:
+      4: 400312
+    second: Head Female (Messy Long 1)
+  - first:
+      4: 400314
+    second: Head Female (Messy Long 2)
+  - first:
+      4: 400316
+    second: Head Female (Pigtails)
+  - first:
+      4: 400318
+    second: Head Female (Puffs)
+  - first:
+      4: 400320
+    second: Head Female (Short Bangs)
+  - first:
+      4: 400322
+    second: Head Female (Short Curly)
+  - first:
+      4: 400324
+    second: Head Female (Short)
+  - first:
+      4: 400326
+    second: Head Female (Straight 1)
+  - first:
+      4: 400328
+    second: Head Female (Straight Fancy)
+  - first:
+      4: 400330
+    second: Head Female (Straight Long)
+  - first:
+      4: 400332
+    second: Head Female (Two Braids)
+  - first:
+      4: 400334
+    second: Head Female (Braids)
+  - first:
+      4: 400336
+    second: Head Female (Short Dyed Bangs)
+  - first:
+      4: 400338
+    second: Head Female (Wavy Bangs)
+  - first:
+      4: 400340
+    second: Torso Female (Short Sleeves Gloves)
+  - first:
+      4: 400342
+    second: Head Female (Straight Highlights)
+  - first:
+      4: 400344
+    second: Head Female (Wavy Highlights)
+  - first:
+      4: 400346
+    second: Eyes
+  - first:
+      4: 400348
+    second: Mouth
+  - first:
+      4: 400350
+    second: Nose
+  - first:
+      4: 400352
+    second: Nose 2
+  - first:
+      21: 2100000
+    second: Skin 1
+  - first:
+      21: 2100002
+    second: Hair
+  - first:
+      21: 2100004
+    second: Denim
+  - first:
+      21: 2100006
+    second: Skin 1.001
+  - first:
+      21: 2100008
+    second: Shirt 1
+  - first:
+      21: 2100010
+    second: Skin 1.002
+  - first:
+      21: 2100012
+    second: Hair.001
+  - first:
+      21: 2100014
+    second: Shirt 1.003
+  - first:
+      21: 2100016
+    second: Skin 1.005
+  - first:
+      21: 2100018
+    second: Hair.002
+  - first:
+      21: 2100020
+    second: Skin 1.004
+  - first:
+      21: 2100022
+    second: Shirt 1.004
+  - first:
+      21: 2100024
+    second: Skin 1.003
+  - first:
+      21: 2100026
+    second: Skin 2
+  - first:
+      21: 2100028
+    second: Fabric 1
+  - first:
+      21: 2100030
+    second: Shirt 1.005
+  - first:
+      21: 2100032
+    second: Material
+  - first:
+      21: 2100034
+    second: Hair 1
+  - first:
+      21: 2100036
+    second: Boots.001
+  - first:
+      21: 2100038
+    second: Skin 1.007
+  - first:
+      21: 2100040
+    second: Default OBJ
+  - first:
+      21: 2100042
+    second: Face 2
+  - first:
+      21: 2100044
+    second: Mouth
+  - first:
+      23: 2300000
+    second: Head
+  - first:
+      23: 2300002
+    second: Head 1 Female Hair 1
+  - first:
+      23: 2300004
+    second: Head 1 Female Hair 10
+  - first:
+      23: 2300006
+    second: Head 1 Female Hair 11
+  - first:
+      23: 2300008
+    second: Head 1 Female Hair 12
+  - first:
+      23: 2300010
+    second: Head 1 Female Hair 13
+  - first:
+      23: 2300012
+    second: Head 1 Female Hair 13.001
+  - first:
+      23: 2300014
+    second: Head 1 Female Hair 14
+  - first:
+      23: 2300016
+    second: Head 1 Female Hair 15
+  - first:
+      23: 2300018
+    second: Head 1 Female Hair 16
+  - first:
+      23: 2300020
+    second: Head 1 Female Hair 17
+  - first:
+      23: 2300022
+    second: Head 1 Female Hair 18
+  - first:
+      23: 2300024
+    second: Head 1 Female Hair 19
+  - first:
+      23: 2300026
+    second: Head 1 Female Hair 2
+  - first:
+      23: 2300028
+    second: Head 1 Female Hair 20
+  - first:
+      23: 2300030
+    second: Head 1 Female Hair 21
+  - first:
+      23: 2300032
+    second: Head 1 Female Hair 22
+  - first:
+      23: 2300034
+    second: Head 1 Female Hair 23
+  - first:
+      23: 2300036
+    second: Head 1 Female Hair 24
+  - first:
+      23: 2300038
+    second: Head 1 Female Hair 25
+  - first:
+      23: 2300040
+    second: Head 1 Female Hair 26
+  - first:
+      23: 2300042
+    second: Head 1 Female Hair 3
+  - first:
+      23: 2300044
+    second: Head 1 Female Hair 4
+  - first:
+      23: 2300046
+    second: Head 1 Female Hair 5
+  - first:
+      23: 2300048
+    second: Head 1 Female Hair 6
+  - first:
+      23: 2300050
+    second: Head 1 Female Hair 7
+  - first:
+      23: 2300052
+    second: Head 1 Female Hair 8
+  - first:
+      23: 2300054
+    second: Head 1 Female Hair 9
+  - first:
+      23: 2300056
+    second: Head 1 Female.001
+  - first:
+      23: 2300058
+    second: Legs Female (Bootcut Jeans)
+  - first:
+      23: 2300060
+    second: Legs Female (Capris)
+  - first:
+      23: 2300062
+    second: Legs Female (Shorts)
+  - first:
+      23: 2300064
+    second: Legs Female (Skinny Jeans)
+  - first:
+      23: 2300066
+    second: Shoes Female (Ankle Socks)
+  - first:
+      23: 2300068
+    second: Shoes Female (Boots)
+  - first:
+      23: 2300070
+    second: Shoes Female (None)
+  - first:
+      23: 2300072
+    second: Shoes Female (Sandals)
+  - first:
+      23: 2300074
+    second: Shoes Female (Short Socks)
+  - first:
+      23: 2300076
+    second: Shoes Female (Tall Socks)
+  - first:
+      23: 2300078
+    second: Torso Female (Long Sleeves)
+  - first:
+      23: 2300080
+    second: Head Female (Bald)
+  - first:
+      23: 2300082
+    second: Head Female (Pony Tail 1)
+  - first:
+      23: 2300084
+    second: Head Female (Wavy Hair)
+  - first:
+      23: 2300086
+    second: Legs Female (Tracksuit)
+  - first:
+      23: 2300088
+    second: Torso Female (Tanktop)
+  - first:
+      23: 2300090
+    second: Circle.001
+  - first:
+      23: 2300092
+    second: Head Female (Big)
+  - first:
+      23: 2300094
+    second: Head Female (Braid)
+  - first:
+      23: 2300096
+    second: Head Female (Braids)
+  - first:
+      23: 2300098
+    second: Head Female (Bun)
+  - first:
+      23: 2300100
+    second: Head Female (Crimped Ends)
+  - first:
+      23: 2300102
+    second: Head Female (Curly 1)
+  - first:
+      23: 2300104
+    second: Head Female (Curly Bun)
+  - first:
+      23: 2300106
+    second: Head Female (Curly Hat)
+  - first:
+      23: 2300108
+    second: Head Female (Dyed Curtains)
+  - first:
+      23: 2300110
+    second: Head Female (Karen)
+  - first:
+      23: 2300112
+    second: Head Female (Long Ponytail)
+  - first:
+      23: 2300114
+    second: Head Female (Long)
+  - first:
+      23: 2300116
+    second: Head Female (Many Twists)
+  - first:
+      23: 2300118
+    second: Head Female (Messy Beanie)
+  - first:
+      23: 2300120
+    second: Head Female (Messy Long 1)
+  - first:
+      23: 2300122
+    second: Head Female (Messy Long 2)
+  - first:
+      23: 2300124
+    second: Head Female (Pigtails)
+  - first:
+      23: 2300126
+    second: Head Female (Puffs)
+  - first:
+      23: 2300128
+    second: Head Female (Short Bangs)
+  - first:
+      23: 2300130
+    second: Head Female (Short Curly)
+  - first:
+      23: 2300132
+    second: Head Female (Short Dyed Bangs)
+  - first:
+      23: 2300134
+    second: Head Female (Short Ponytail)
+  - first:
+      23: 2300136
+    second: Head Female (Short)
+  - first:
+      23: 2300138
+    second: Head Female (Straight 1)
+  - first:
+      23: 2300140
+    second: Head Female (Straight Fancy)
+  - first:
+      23: 2300142
+    second: Head Female (Straight Highlights)
+  - first:
+      23: 2300144
+    second: Head Female (Straight Long)
+  - first:
+      23: 2300146
+    second: Head Female (Wavy Bangs)
+  - first:
+      23: 2300148
+    second: Head Female (Wavy Highlights)
+  - first:
+      23: 2300150
+    second: Legs Female (Baggy Shorts)
+  - first:
+      23: 2300152
+    second: Legs Female (Exercise Shorts)
+  - first:
+      23: 2300154
+    second: Legs Female (Jeans Belt)
+  - first:
+      23: 2300156
+    second: Legs Female (Parachute Pants)
+  - first:
+      23: 2300158
+    second: Legs Female (Ripped Jeans)
+  - first:
+      23: 2300160
+    second: Legs Female (Short Capris)
+  - first:
+      23: 2300162
+    second: Legs Female (Skirt 1)
+  - first:
+      23: 2300164
+    second: Legs Female (Skirt 2)
+  - first:
+      23: 2300166
+    second: Legs Female (Trench Coat Skirt)
+  - first:
+      23: 2300168
+    second: Legs Female Sweat Pants)
+  - first:
+      23: 2300170
+    second: Shoes Female (Cozy Boots)
+  - first:
+      23: 2300172
+    second: Shoes Female (Flip-flop)
+  - first:
+      23: 2300174
+    second: Shoes Female (Formal)
+  - first:
+      23: 2300176
+    second: Shoes Female (High Heels)
+  - first:
+      23: 2300178
+    second: Shoes Female (High Top)
+  - first:
+      23: 2300180
+    second: Shoes Female (Low Top)
+  - first:
+      23: 2300182
+    second: Shoes Female (Plain Shoes)
+  - first:
+      23: 2300184
+    second: Shoes Female (Slip-on)
+  - first:
+      23: 2300186
+    second: Shoes Female (Slippers)
+  - first:
+      23: 2300188
+    second: Torso Female (Button Down)
+  - first:
+      23: 2300190
+    second: Torso Female (Jacket Open)
+  - first:
+      23: 2300192
+    second: Torso Female (Jacket)
+  - first:
+      23: 2300194
+    second: Torso Female (Jumpsuit Top)
+  - first:
+      23: 2300196
+    second: Torso Female (Long Sleeves U Neck)
+  - first:
+      23: 2300198
+    second: Torso Female (Long Sleeves V Neck)
+  - first:
+      23: 2300200
+    second: Torso Female (Rolled Button Down)
+  - first:
+      23: 2300202
+    second: Torso Female (Rolled Sleeves Knot)
+  - first:
+      23: 2300204
+    second: Torso Female (Shirt with Undershirt)
+  - first:
+      23: 2300206
+    second: Torso Female (Short Sleeves Gloves)
+  - first:
+      23: 2300208
+    second: Torso Female (Short Sleeves V Neck)
+  - first:
+      23: 2300210
+    second: Torso Female (Short Sleeves)
+  - first:
+      23: 2300212
+    second: Torso Female (Tanktop Gauntlet)
+  - first:
+      23: 2300214
+    second: Torso Female (Trench Coat)
+  - first:
+      23: 2300216
+    second: Torso Female (Vest Long Sleeve)
+  - first:
+      23: 2300218
+    second: Torso Female (Vest Tanktop)
+  - first:
+      33: 3300000
+    second: Head
+  - first:
+      33: 3300002
+    second: Head 1 Female Hair 1
+  - first:
+      33: 3300004
+    second: Head 1 Female Hair 10
+  - first:
+      33: 3300006
+    second: Head 1 Female Hair 11
+  - first:
+      33: 3300008
+    second: Head 1 Female Hair 12
+  - first:
+      33: 3300010
+    second: Head 1 Female Hair 13
+  - first:
+      33: 3300012
+    second: Head 1 Female Hair 13.001
+  - first:
+      33: 3300014
+    second: Head 1 Female Hair 14
+  - first:
+      33: 3300016
+    second: Head 1 Female Hair 15
+  - first:
+      33: 3300018
+    second: Head 1 Female Hair 16
+  - first:
+      33: 3300020
+    second: Head 1 Female Hair 17
+  - first:
+      33: 3300022
+    second: Head 1 Female Hair 18
+  - first:
+      33: 3300024
+    second: Head 1 Female Hair 19
+  - first:
+      33: 3300026
+    second: Head 1 Female Hair 2
+  - first:
+      33: 3300028
+    second: Head 1 Female Hair 20
+  - first:
+      33: 3300030
+    second: Head 1 Female Hair 21
+  - first:
+      33: 3300032
+    second: Head 1 Female Hair 22
+  - first:
+      33: 3300034
+    second: Head 1 Female Hair 23
+  - first:
+      33: 3300036
+    second: Head 1 Female Hair 24
+  - first:
+      33: 3300038
+    second: Head 1 Female Hair 25
+  - first:
+      33: 3300040
+    second: Head 1 Female Hair 26
+  - first:
+      33: 3300042
+    second: Head 1 Female Hair 3
+  - first:
+      33: 3300044
+    second: Head 1 Female Hair 4
+  - first:
+      33: 3300046
+    second: Head 1 Female Hair 5
+  - first:
+      33: 3300048
+    second: Head 1 Female Hair 6
+  - first:
+      33: 3300050
+    second: Head 1 Female Hair 7
+  - first:
+      33: 3300052
+    second: Head 1 Female Hair 8
+  - first:
+      33: 3300054
+    second: Head 1 Female Hair 9
+  - first:
+      33: 3300056
+    second: Head 1 Female.001
+  - first:
+      33: 3300058
+    second: Legs Female (Bootcut Jeans)
+  - first:
+      33: 3300060
+    second: Legs Female (Capris)
+  - first:
+      33: 3300062
+    second: Legs Female (Shorts)
+  - first:
+      33: 3300064
+    second: Legs Female (Skinny Jeans)
+  - first:
+      33: 3300066
+    second: Shoes Female (Ankle Socks)
+  - first:
+      33: 3300068
+    second: Shoes Female (Boots)
+  - first:
+      33: 3300070
+    second: Shoes Female (None)
+  - first:
+      33: 3300072
+    second: Shoes Female (Sandals)
+  - first:
+      33: 3300074
+    second: Shoes Female (Short Socks)
+  - first:
+      33: 3300076
+    second: Shoes Female (Tall Socks)
+  - first:
+      33: 3300078
+    second: Torso Female (Long Sleeves)
+  - first:
+      33: 3300080
+    second: Head Female (Bald)
+  - first:
+      33: 3300082
+    second: Head Female (Pony Tail 1)
+  - first:
+      33: 3300084
+    second: Head Female (Wavy Hair)
+  - first:
+      33: 3300086
+    second: Legs Female (Tracksuit)
+  - first:
+      33: 3300088
+    second: Torso Female (Tanktop)
+  - first:
+      33: 3300090
+    second: Circle.001
+  - first:
+      33: 3300092
+    second: Head Female (Big)
+  - first:
+      33: 3300094
+    second: Head Female (Braid)
+  - first:
+      33: 3300096
+    second: Head Female (Braids)
+  - first:
+      33: 3300098
+    second: Head Female (Bun)
+  - first:
+      33: 3300100
+    second: Head Female (Crimped Ends)
+  - first:
+      33: 3300102
+    second: Head Female (Curly 1)
+  - first:
+      33: 3300104
+    second: Head Female (Curly Bun)
+  - first:
+      33: 3300106
+    second: Head Female (Curly Hat)
+  - first:
+      33: 3300108
+    second: Head Female (Dyed Curtains)
+  - first:
+      33: 3300110
+    second: Head Female (Karen)
+  - first:
+      33: 3300112
+    second: Head Female (Long Ponytail)
+  - first:
+      33: 3300114
+    second: Head Female (Long)
+  - first:
+      33: 3300116
+    second: Head Female (Many Twists)
+  - first:
+      33: 3300118
+    second: Head Female (Messy Beanie)
+  - first:
+      33: 3300120
+    second: Head Female (Messy Long 1)
+  - first:
+      33: 3300122
+    second: Head Female (Messy Long 2)
+  - first:
+      33: 3300124
+    second: Head Female (Pigtails)
+  - first:
+      33: 3300126
+    second: Head Female (Puffs)
+  - first:
+      33: 3300128
+    second: Head Female (Short Bangs)
+  - first:
+      33: 3300130
+    second: Head Female (Short Curly)
+  - first:
+      33: 3300132
+    second: Head Female (Short Dyed Bangs)
+  - first:
+      33: 3300134
+    second: Head Female (Short Ponytail)
+  - first:
+      33: 3300136
+    second: Head Female (Short)
+  - first:
+      33: 3300138
+    second: Head Female (Straight 1)
+  - first:
+      33: 3300140
+    second: Head Female (Straight Fancy)
+  - first:
+      33: 3300142
+    second: Head Female (Straight Highlights)
+  - first:
+      33: 3300144
+    second: Head Female (Straight Long)
+  - first:
+      33: 3300146
+    second: Head Female (Wavy Bangs)
+  - first:
+      33: 3300148
+    second: Head Female (Wavy Highlights)
+  - first:
+      33: 3300150
+    second: Legs Female (Baggy Shorts)
+  - first:
+      33: 3300152
+    second: Legs Female (Exercise Shorts)
+  - first:
+      33: 3300154
+    second: Legs Female (Jeans Belt)
+  - first:
+      33: 3300156
+    second: Legs Female (Parachute Pants)
+  - first:
+      33: 3300158
+    second: Legs Female (Ripped Jeans)
+  - first:
+      33: 3300160
+    second: Legs Female (Short Capris)
+  - first:
+      33: 3300162
+    second: Legs Female (Skirt 1)
+  - first:
+      33: 3300164
+    second: Legs Female (Skirt 2)
+  - first:
+      33: 3300166
+    second: Legs Female (Trench Coat Skirt)
+  - first:
+      33: 3300168
+    second: Legs Female Sweat Pants)
+  - first:
+      33: 3300170
+    second: Shoes Female (Cozy Boots)
+  - first:
+      33: 3300172
+    second: Shoes Female (Flip-flop)
+  - first:
+      33: 3300174
+    second: Shoes Female (Formal)
+  - first:
+      33: 3300176
+    second: Shoes Female (High Heels)
+  - first:
+      33: 3300178
+    second: Shoes Female (High Top)
+  - first:
+      33: 3300180
+    second: Shoes Female (Low Top)
+  - first:
+      33: 3300182
+    second: Shoes Female (Plain Shoes)
+  - first:
+      33: 3300184
+    second: Shoes Female (Slip-on)
+  - first:
+      33: 3300186
+    second: Shoes Female (Slippers)
+  - first:
+      33: 3300188
+    second: Torso Female (Button Down)
+  - first:
+      33: 3300190
+    second: Torso Female (Jacket Open)
+  - first:
+      33: 3300192
+    second: Torso Female (Jacket)
+  - first:
+      33: 3300194
+    second: Torso Female (Jumpsuit Top)
+  - first:
+      33: 3300196
+    second: Torso Female (Long Sleeves U Neck)
+  - first:
+      33: 3300198
+    second: Torso Female (Long Sleeves V Neck)
+  - first:
+      33: 3300200
+    second: Torso Female (Rolled Button Down)
+  - first:
+      33: 3300202
+    second: Torso Female (Rolled Sleeves Knot)
+  - first:
+      33: 3300204
+    second: Torso Female (Shirt with Undershirt)
+  - first:
+      33: 3300206
+    second: Torso Female (Short Sleeves Gloves)
+  - first:
+      33: 3300208
+    second: Torso Female (Short Sleeves V Neck)
+  - first:
+      33: 3300210
+    second: Torso Female (Short Sleeves)
+  - first:
+      33: 3300212
+    second: Torso Female (Tanktop Gauntlet)
+  - first:
+      33: 3300214
+    second: Torso Female (Trench Coat)
+  - first:
+      33: 3300216
+    second: Torso Female (Vest Long Sleeve)
+  - first:
+      33: 3300218
+    second: Torso Female (Vest Tanktop)
+  - first:
+      43: 4300000
+    second: Head 1 Female Hair 1
+  - first:
+      43: 4300002
+    second: Legs Female (Shorts)
+  - first:
+      43: 4300004
+    second: Head 1 Female Hair 2
+  - first:
+      43: 4300006
+    second: Head 1 Female Hair 5
+  - first:
+      43: 4300008
+    second: Head 1 Female Hair 4
+  - first:
+      43: 4300010
+    second: Head 1 Female Hair 3
+  - first:
+      43: 4300012
+    second: Head 1 Female Hair 6
+  - first:
+      43: 4300014
+    second: Head 1 Female Hair 7
+  - first:
+      43: 4300016
+    second: Head 1 Female Hair 8
+  - first:
+      43: 4300018
+    second: Head 1 Female Hair 9
+  - first:
+      43: 4300020
+    second: Head 1 Female Hair 12
+  - first:
+      43: 4300022
+    second: Head 1 Female Hair 10
+  - first:
+      43: 4300024
+    second: Head 1 Female Hair 11
+  - first:
+      43: 4300026
+    second: Head 1 Female Hair 14
+  - first:
+      43: 4300028
+    second: Head 1 Female Hair 13
+  - first:
+      43: 4300030
+    second: Head 1 Female Hair 18
+  - first:
+      43: 4300032
+    second: Head 1 Female Hair 15
+  - first:
+      43: 4300034
+    second: Head 1 Female Hair 16
+  - first:
+      43: 4300036
+    second: Head 1 Female Hair 17
+  - first:
+      43: 4300038
+    second: Head 1 Female Hair 19
+  - first:
+      43: 4300040
+    second: Head 1 Female Hair 20
+  - first:
+      43: 4300042
+    second: Shoes Female (Ankle Socks)
+  - first:
+      43: 4300044
+    second: Shoes Female (Sandals)
+  - first:
+      43: 4300046
+    second: Legs Female (Capris)
+  - first:
+      43: 4300048
+    second: Shoes Female (Short Socks)
+  - first:
+      43: 4300050
+    second: Head 1 Female Hair 21
+  - first:
+      43: 4300052
+    second: Head 1 Female Hair 22
+  - first:
+      43: 4300054
+    second: Head 1 Female Hair 23
+  - first:
+      43: 4300056
+    second: Head 1 Female Hair 24
+  - first:
+      43: 4300058
+    second: Head 1 Female Hair 25
+  - first:
+      43: 4300060
+    second: Torso Female (Long Sleeves)
+  - first:
+      43: 4300062
+    second: Shoes Female (Boots)
+  - first:
+      43: 4300064
+    second: Head 1 Female Hair 26
+  - first:
+      43: 4300066
+    second: Legs Female (Skinny Jeans)
+  - first:
+      43: 4300068
+    second: Shoes Female (None)
+  - first:
+      43: 4300070
+    second: Head
+  - first:
+      43: 4300072
+    second: Head 1 Female.001
+  - first:
+      43: 4300074
+    second: Head 1 Female Hair 13.001
+  - first:
+      43: 4300076
+    second: Shoes Female (Tall Socks)
+  - first:
+      43: 4300078
+    second: Legs Female (Bootcut Jeans)
+  - first:
+      43: 4300080
+    second: Head Female (Bald)
+  - first:
+      43: 4300082
+    second: Head Female (Wavy Hair)
+  - first:
+      43: 4300084
+    second: Head Female (Pony Tail 1)
+  - first:
+      43: 4300086
+    second: Legs Female (Tracksuit)
+  - first:
+      43: 4300088
+    second: Torso Female (Tanktop)
+  - first:
+      43: 4300090
+    second: Head Female (Twists Many)
+  - first:
+      43: 4300092
+    second: Head Female (Long Ponytail)
+  - first:
+      43: 4300094
+    second: Head Female (Many Twists)
+  - first:
+      43: 4300096
+    second: Head Female (Short Ponytail)
+  - first:
+      43: 4300098
+    second: Head Female (Bun)
+  - first:
+      43: 4300100
+    second: Shoes Female (Tennis Shoes)
+  - first:
+      43: 4300102
+    second: Shoes Female (Low Top)
+  - first:
+      43: 4300104
+    second: Shoes Female (High Top)
+  - first:
+      43: 4300106
+    second: Shoes Female (Plain Shoes)
+  - first:
+      43: 4300108
+    second: Shoes Female (Slippers)
+  - first:
+      43: 4300110
+    second: Shoes Female (Slip-on)
+  - first:
+      43: 4300112
+    second: Shoes Female (Combat Boots)
+  - first:
+      43: 4300114
+    second: Shoes Female (Formal)
+  - first:
+      43: 4300116
+    second: Shoes Female (High Heels)
+  - first:
+      43: 4300118
+    second: Legs Female (Jeans Belt)
+  - first:
+      43: 4300120
+    second: Legs Female (Baggy Shorts)
+  - first:
+      43: 4300122
+    second: Legs Female (Skirt 1)
+  - first:
+      43: 4300124
+    second: Legs Female (Skinny Jeans).002
+  - first:
+      43: 4300126
+    second: Circle.001
+  - first:
+      43: 4300128
+    second: Legs Female (Ripped Jeans)
+  - first:
+      43: 4300130
+    second: Legs Female (Exercise Shorts)
+  - first:
+      43: 4300132
+    second: Torso Female (Short Sleeves)
+  - first:
+      43: 4300134
+    second: Torso Female (Short Sleeves V Neck)
+  - first:
+      43: 4300136
+    second: Torso Female (Long Sleeves V Neck)
+  - first:
+      43: 4300138
+    second: Torso Female (Long Sleeves U Neck)
+  - first:
+      43: 4300140
+    second: Torso Female (Tanktop Gauntlet)
+  - first:
+      43: 4300142
+    second: Torso Female (Jacket)
+  - first:
+      43: 4300144
+    second: Torso Female (Vest Tanktop)
+  - first:
+      43: 4300146
+    second: Torso Female (Vest Long Sleeve)
+  - first:
+      43: 4300148
+    second: Torso Female (Jacket Open)
+  - first:
+      43: 4300150
+    second: Legs Female (Short Capris)
+  - first:
+      43: 4300152
+    second: Shoes Female (Flip-flop)
+  - first:
+      43: 4300154
+    second: Legs Female (Parachute Pants)
+  - first:
+      43: 4300156
+    second: Legs Female Sweat Pants)
+  - first:
+      43: 4300158
+    second: Torso Female (Jumpsuit Top)
+  - first:
+      43: 4300160
+    second: Torso Female (Trench Coat)
+  - first:
+      43: 4300162
+    second: Torso Female (Shirt with Undershirt)
+  - first:
+      43: 4300164
+    second: Torso Female (Long Sleeves Knot)
+  - first:
+      43: 4300166
+    second: Legs Female (Trench Coat Skirt)
+  - first:
+      43: 4300168
+    second: Legs Female (Skirt 2)
+  - first:
+      43: 4300170
+    second: Torso Female (Button Down)
+  - first:
+      43: 4300172
+    second: Torso Female (Rolled Button Down)
+  - first:
+      43: 4300174
+    second: Torso Female (Rolled Sleeves Knot)
+  - first:
+      43: 4300176
+    second: Shoes Female (Cozy Boots)
+  - first:
+      43: 4300178
+    second: Head Female (Straight Fancy)
+  - first:
+      43: 4300180
+    second: Head Female (Messy Long 2)
+  - first:
+      43: 4300182
+    second: Head Female (Straight 1)
+  - first:
+      43: 4300184
+    second: Head Female (Messy Beanie)
+  - first:
+      43: 4300186
+    second: Head Female (Puffs)
+  - first:
+      43: 4300188
+    second: Head Female (Two Braids)
+  - first:
+      43: 4300190
+    second: Head Female (Pigtails)
+  - first:
+      43: 4300192
+    second: Head Female (Straight Long)
+  - first:
+      43: 4300194
+    second: Head Female (Big)
+  - first:
+      43: 4300196
+    second: Head Female (Short)
+  - first:
+      43: 4300198
+    second: Head Female (Curly 1)
+  - first:
+      43: 4300200
+    second: Head Female (Short Bangs)
+  - first:
+      43: 4300202
+    second: Head Female (Curly Bun)
+  - first:
+      43: 4300204
+    second: Head Female (Crimped Ends)
+  - first:
+      43: 4300206
+    second: Head Female (Short Curly)
+  - first:
+      43: 4300208
+    second: Head Female (Curly Hat)
+  - first:
+      43: 4300210
+    second: Head Female (Long)
+  - first:
+      43: 4300212
+    second: Head Female (Karen)
+  - first:
+      43: 4300214
+    second: Head Female (Braid)
+  - first:
+      43: 4300216
+    second: Head Female (Messy Long 1)
+  - first:
+      43: 4300218
+    second: Head Female (Messy Braid)
+  - first:
+      43: 4300220
+    second: Head Female (Dyed Curtains)
+  - first:
+      43: 4300222
+    second: Head Female (Braids)
+  - first:
+      43: 4300224
+    second: Head Female (Short Dyed Bangs)
+  - first:
+      43: 4300226
+    second: Head Female (Wavy Bangs)
+  - first:
+      43: 4300228
+    second: Torso Female (Short Sleeves Gloves)
+  - first:
+      43: 4300230
+    second: Head Female (Straight Highlights)
+  - first:
+      43: 4300232
+    second: Head Female (Wavy Highlights)
+  - first:
+      43: 4300234
+    second: Eyes
+  - first:
+      43: 4300236
+    second: Mouth
+  - first:
+      43: 4300238
+    second: Nose
+  - first:
+      43: 4300240
+    second: Nose 2
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Head 1 Female Hair 1
+  - first:
+      137: 13700002
+    second: Head 1 Female Hair 10
+  - first:
+      137: 13700004
+    second: Head 1 Female Hair 11
+  - first:
+      137: 13700006
+    second: Head 1 Female Hair 12
+  - first:
+      137: 13700008
+    second: Head 1 Female Hair 13
+  - first:
+      137: 13700010
+    second: Head 1 Female Hair 13.001
+  - first:
+      137: 13700012
+    second: Head 1 Female Hair 14
+  - first:
+      137: 13700014
+    second: Head 1 Female Hair 15
+  - first:
+      137: 13700016
+    second: Head 1 Female Hair 16
+  - first:
+      137: 13700018
+    second: Head 1 Female Hair 17
+  - first:
+      137: 13700020
+    second: Head 1 Female Hair 18
+  - first:
+      137: 13700022
+    second: Head 1 Female Hair 19
+  - first:
+      137: 13700024
+    second: Head 1 Female Hair 2
+  - first:
+      137: 13700026
+    second: Head 1 Female Hair 20
+  - first:
+      137: 13700028
+    second: Head 1 Female Hair 21
+  - first:
+      137: 13700030
+    second: Head 1 Female Hair 22
+  - first:
+      137: 13700032
+    second: Head 1 Female Hair 23
+  - first:
+      137: 13700034
+    second: Head 1 Female Hair 24
+  - first:
+      137: 13700036
+    second: Head 1 Female Hair 25
+  - first:
+      137: 13700038
+    second: Head 1 Female Hair 26
+  - first:
+      137: 13700040
+    second: Head 1 Female Hair 3
+  - first:
+      137: 13700042
+    second: Head 1 Female Hair 4
+  - first:
+      137: 13700044
+    second: Head 1 Female Hair 5
+  - first:
+      137: 13700046
+    second: Head 1 Female Hair 6
+  - first:
+      137: 13700048
+    second: Head 1 Female Hair 7
+  - first:
+      137: 13700050
+    second: Head 1 Female Hair 8
+  - first:
+      137: 13700052
+    second: Head 1 Female Hair 9
+  - first:
+      137: 13700054
+    second: Head 1 Female.001
+  - first:
+      137: 13700056
+    second: Legs Female (Bootcut Jeans)
+  - first:
+      137: 13700058
+    second: Legs Female (Capris)
+  - first:
+      137: 13700060
+    second: Legs Female (Shorts)
+  - first:
+      137: 13700062
+    second: Legs Female (Skinny Jeans)
+  - first:
+      137: 13700064
+    second: Shoes Female (Ankle Socks)
+  - first:
+      137: 13700066
+    second: Shoes Female (Boots)
+  - first:
+      137: 13700068
+    second: Shoes Female (None)
+  - first:
+      137: 13700070
+    second: Shoes Female (Sandals)
+  - first:
+      137: 13700072
+    second: Shoes Female (Short Socks)
+  - first:
+      137: 13700074
+    second: Shoes Female (Tall Socks)
+  - first:
+      137: 13700076
+    second: Torso Female (Long Sleeves)
+  - first:
+      137: 13700078
+    second: Head Female (Bald)
+  - first:
+      137: 13700080
+    second: Head Female (Pony Tail 1)
+  - first:
+      137: 13700082
+    second: Head Female (Wavy Hair)
+  - first:
+      137: 13700084
+    second: Legs Female (Tracksuit)
+  - first:
+      137: 13700086
+    second: Torso Female (Tanktop)
+  - first:
+      137: 13700088
+    second: Head Female (Twists Many)
+  - first:
+      137: 13700090
+    second: Head Female (Bun)
+  - first:
+      137: 13700092
+    second: Head Female (Long Ponytail)
+  - first:
+      137: 13700094
+    second: Head Female (Many Twists)
+  - first:
+      137: 13700096
+    second: Head Female (Short Ponytail)
+  - first:
+      137: 13700098
+    second: Shoes Female (Tennis Shoes)
+  - first:
+      137: 13700100
+    second: Shoes Female (High Top)
+  - first:
+      137: 13700102
+    second: Shoes Female (Low Top)
+  - first:
+      137: 13700104
+    second: Shoes Female (Plain Shoes)
+  - first:
+      137: 13700106
+    second: Shoes Female (Slip-on)
+  - first:
+      137: 13700108
+    second: Shoes Female (Slippers)
+  - first:
+      137: 13700110
+    second: Shoes Female (Combat Boots)
+  - first:
+      137: 13700112
+    second: Shoes Female (Formal)
+  - first:
+      137: 13700114
+    second: Shoes Female (High Heels)
+  - first:
+      137: 13700116
+    second: Legs Female (Baggy Shorts)
+  - first:
+      137: 13700118
+    second: Legs Female (Jeans Belt)
+  - first:
+      137: 13700120
+    second: Legs Female (Skinny Jeans).002
+  - first:
+      137: 13700122
+    second: Legs Female (Skirt 1)
+  - first:
+      137: 13700124
+    second: Legs Female (Exercise Shorts)
+  - first:
+      137: 13700126
+    second: Legs Female (Ripped Jeans)
+  - first:
+      137: 13700128
+    second: Torso Female (Jacket Open)
+  - first:
+      137: 13700130
+    second: Torso Female (Jacket)
+  - first:
+      137: 13700132
+    second: Torso Female (Long Sleeves U Neck)
+  - first:
+      137: 13700134
+    second: Torso Female (Long Sleeves V Neck)
+  - first:
+      137: 13700136
+    second: Torso Female (Short Sleeves V Neck)
+  - first:
+      137: 13700138
+    second: Torso Female (Short Sleeves)
+  - first:
+      137: 13700140
+    second: Torso Female (Tanktop Gauntlet)
+  - first:
+      137: 13700142
+    second: Torso Female (Vest Long Sleeve)
+  - first:
+      137: 13700144
+    second: Torso Female (Vest Tanktop)
+  - first:
+      137: 13700146
+    second: Legs Female (Parachute Pants)
+  - first:
+      137: 13700148
+    second: Legs Female (Short Capris)
+  - first:
+      137: 13700150
+    second: Legs Female Sweat Pants)
+  - first:
+      137: 13700152
+    second: Shoes Female (Flip-flop)
+  - first:
+      137: 13700154
+    second: Torso Female (Jumpsuit Top)
+  - first:
+      137: 13700156
+    second: Torso Female (Trench Coat)
+  - first:
+      137: 13700158
+    second: Torso Female (Long Sleeves Knot)
+  - first:
+      137: 13700160
+    second: Torso Female (Shirt with Undershirt)
+  - first:
+      137: 13700162
+    second: Legs Female (Skirt 2)
+  - first:
+      137: 13700164
+    second: Legs Female (Trench Coat Skirt)
+  - first:
+      137: 13700166
+    second: Torso Female (Button Down)
+  - first:
+      137: 13700168
+    second: Torso Female (Rolled Button Down)
+  - first:
+      137: 13700170
+    second: Torso Female (Rolled Sleeves Knot)
+  - first:
+      137: 13700172
+    second: Shoes Female (Cozy Boots)
+  - first:
+      137: 13700174
+    second: Head Female (Big)
+  - first:
+      137: 13700176
+    second: Head Female (Braid)
+  - first:
+      137: 13700178
+    second: Head Female (Crimped Ends)
+  - first:
+      137: 13700180
+    second: Head Female (Curly 1)
+  - first:
+      137: 13700182
+    second: Head Female (Curly Bun)
+  - first:
+      137: 13700184
+    second: Head Female (Curly Hat)
+  - first:
+      137: 13700186
+    second: Head Female (Dyed Curtains)
+  - first:
+      137: 13700188
+    second: Head Female (Karen)
+  - first:
+      137: 13700190
+    second: Head Female (Long)
+  - first:
+      137: 13700192
+    second: Head Female (Messy Beanie)
+  - first:
+      137: 13700194
+    second: Head Female (Messy Braid)
+  - first:
+      137: 13700196
+    second: Head Female (Messy Long 1)
+  - first:
+      137: 13700198
+    second: Head Female (Messy Long 2)
+  - first:
+      137: 13700200
+    second: Head Female (Pigtails)
+  - first:
+      137: 13700202
+    second: Head Female (Puffs)
+  - first:
+      137: 13700204
+    second: Head Female (Short Bangs)
+  - first:
+      137: 13700206
+    second: Head Female (Short Curly)
+  - first:
+      137: 13700208
+    second: Head Female (Short)
+  - first:
+      137: 13700210
+    second: Head Female (Straight 1)
+  - first:
+      137: 13700212
+    second: Head Female (Straight Fancy)
+  - first:
+      137: 13700214
+    second: Head Female (Straight Long)
+  - first:
+      137: 13700216
+    second: Head Female (Two Braids)
+  - first:
+      137: 13700218
+    second: Head Female (Braids)
+  - first:
+      137: 13700220
+    second: Head Female (Short Dyed Bangs)
+  - first:
+      137: 13700222
+    second: Head Female (Wavy Bangs)
+  - first:
+      137: 13700224
+    second: Torso Female (Short Sleeves Gloves)
+  - first:
+      137: 13700226
+    second: Head Female (Straight Highlights)
+  - first:
+      137: 13700228
+    second: Head Female (Wavy Highlights)
+  - first:
+      137: 13700230
+    second: Eyes
+  - first:
+      137: 13700232
+    second: Mouth
+  - first:
+      137: 13700234
+    second: Nose
+  - first:
+      137: 13700236
+    second: Nose 2
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boots.001
+    second: {fileID: 2100000, guid: 6b75266228de9b54cb2410e1e91ed2a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Denim
+    second: {fileID: 2100000, guid: e3c92db89668ebb439f67832a852a3b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Denim.001
+    second: {fileID: 2100000, guid: e3c92db89668ebb439f67832a852a3b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fabric 1
+    second: {fileID: 2100000, guid: e3c92db89668ebb439f67832a852a3b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face
+    second: {fileID: 2100000, guid: 0cb07277ecdcb6547ad06f13b33b4736, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face 2
+    second: {fileID: 2100000, guid: 0cb07277ecdcb6547ad06f13b33b4736, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair
+    second: {fileID: 2100000, guid: 5605e5920a541bf408757aac3099af95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair 1
+    second: {fileID: 2100000, guid: 5605e5920a541bf408757aac3099af95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair.001
+    second: {fileID: 2100000, guid: 5605e5920a541bf408757aac3099af95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair.002
+    second: {fileID: 2100000, guid: 5605e5920a541bf408757aac3099af95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair.003
+    second: {fileID: 2100000, guid: 5605e5920a541bf408757aac3099af95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: d52339ccc731514489dbe9ba622124aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: d52339ccc731514489dbe9ba622124aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mouth
+    second: {fileID: 2100000, guid: 5605e5920a541bf408757aac3099af95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt 1
+    second: {fileID: 2100000, guid: 95b4fabaf92645b47b01d508061fd389, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt 1.003
+    second: {fileID: 2100000, guid: 95b4fabaf92645b47b01d508061fd389, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt 1.004
+    second: {fileID: 2100000, guid: 95b4fabaf92645b47b01d508061fd389, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt 1.005
+    second: {fileID: 2100000, guid: 95b4fabaf92645b47b01d508061fd389, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin 1
+    second: {fileID: 2100000, guid: 0cb07277ecdcb6547ad06f13b33b4736, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin 1.001
+    second: {fileID: 2100000, guid: 0cb07277ecdcb6547ad06f13b33b4736, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin 1.002
+    second: {fileID: 2100000, guid: 0cb07277ecdcb6547ad06f13b33b4736, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin 1.007
+    second: {fileID: 2100000, guid: 0cb07277ecdcb6547ad06f13b33b4736, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin 2
+    second: {fileID: 2100000, guid: 0cb07277ecdcb6547ad06f13b33b4736, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin 3
+    second: {fileID: 2100000, guid: 0cb07277ecdcb6547ad06f13b33b4736, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: LowManHips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManSpine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManSpine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManNeck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManHead
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManSpine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Female (New)(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Female
+      parentName: Female (New)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: LowManHips
+      parentName: Female
+      position: {x: -0, y: 0.92160004, z: 0}
+      rotation: {x: 1.4210855e-14, y: -8.6527067e-23, z: 3.5843834e-29, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManLeftUpLeg
+      parentName: LowManHips
+      position: {x: -0.097267985, y: -0.057784345, z: 6.7739446e-11}
+      rotation: {x: 0.68991786, y: -0.05602366, z: -0.053704184, w: 0.7197156}
+      scale: {x: 1, y: 0.99999994, z: 1.0000021}
+    - name: LowManLeftLeg
+      parentName: LowManLeftUpLeg
+      position: {x: 0.012999854, y: 0.00080317433, z: 0.39270517}
+      rotation: {x: 0.06093678, y: 0.025125558, z: -0.007978719, w: 0.99779344}
+      scale: {x: 1.0000006, y: 0.99999994, z: 1.0000111}
+    - name: LowManLeftFoot
+      parentName: LowManLeftLeg
+      position: {x: -0.0140579045, y: 0.0015325441, z: 0.37614635}
+      rotation: {x: -0.529282, y: 0.003944563, z: 0.05329757, w: 0.84676117}
+      scale: {x: 0.99999946, y: 1.0000108, z: 0.99998784}
+    - name: LowManLeftToeBase
+      parentName: LowManLeftFoot
+      position: {x: 0.000000030994414, y: 0.000000008909394, z: 0.18345617}
+      rotation: {x: -0.26146138, y: 0.046164513, z: 0.012520723, w: 0.96402806}
+      scale: {x: 0.99999994, y: 0.99983424, z: 1.000182}
+    - name: LowManLeftToeBase_end
+      parentName: LowManLeftToeBase
+      position: {x: -0.000000020009756, y: 0.18345621, z: -0.000000004557662}
+      rotation: {x: 0.000000059604645, y: -0.000000007450581, z: -9.313226e-10, w: 1}
+      scale: {x: 0.9999995, y: 0.99999845, z: 0.99999374}
+    - name: LowManLeftToeBase_end_end
+      parentName: LowManLeftToeBase_end
+      position: {x: -0, y: 0.18345624, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightUpLeg
+      parentName: LowManHips
+      position: {x: 0.097267985, y: -0.057784345, z: 6.7739446e-11}
+      rotation: {x: 0.68991786, y: 0.05602366, z: 0.053704184, w: 0.7197156}
+      scale: {x: 1, y: 0.99999994, z: 1.0000021}
+    - name: LowManRightLeg
+      parentName: LowManRightUpLeg
+      position: {x: -0.012999854, y: 0.00080317433, z: 0.39270517}
+      rotation: {x: 0.06093678, y: -0.025125558, z: 0.007978719, w: 0.99779344}
+      scale: {x: 1.0000006, y: 0.99999994, z: 1.0000111}
+    - name: LowManRightFoot
+      parentName: LowManRightLeg
+      position: {x: 0.014057905, y: 0.0015325102, z: 0.37614632}
+      rotation: {x: -0.529282, y: -0.003944539, z: -0.053297583, w: 0.84676117}
+      scale: {x: 0.99999994, y: 1.0000131, z: 0.9999898}
+    - name: LowManRightToeBase
+      parentName: LowManRightFoot
+      position: {x: -0.000000054128467, y: 0.000000018268322, z: 0.18345623}
+      rotation: {x: -0.26146126, y: -0.046164542, z: -0.012520746, w: 0.96402806}
+      scale: {x: 1.0000004, y: 0.9998337, z: 1.00018}
+    - name: LowManRightToeBase_end
+      parentName: LowManRightToeBase
+      position: {x: -0.0000000012627265, y: 0.18345624, z: -0.0000000013229339}
+      rotation: {x: -0.000000029802322, y: -0.000000014901161, z: 0.000000010244548,
+        w: 1}
+      scale: {x: 0.99999875, y: 0.9999968, z: 0.99999267}
+    - name: LowManRightToeBase_end_end
+      parentName: LowManRightToeBase_end
+      position: {x: -0, y: 0.18345618, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManSpine
+      parentName: LowManHips
+      position: {x: -0, y: 0.06451187, z: 0}
+      rotation: {x: -0.7071068, y: -0, z: -1.018688e-31, w: 0.7071068}
+      scale: {x: 1.0000002, y: 0.9999997, z: 0.9999997}
+    - name: LowManSpine1
+      parentName: LowManSpine
+      position: {x: -1.6325743e-17, y: -1.1368683e-14, z: 0.1470491}
+      rotation: {x: -0, y: -5.877472e-39, z: 5.877472e-39, w: 1}
+      scale: {x: 1.0000002, y: 1.0000181, z: 1.0000182}
+    - name: LowManSpine2
+      parentName: LowManSpine1
+      position: {x: -0.0000000056538028, y: -0.000000019073472, z: 0.14704925}
+      rotation: {x: 0.000000059604638, y: -0.35293892, z: 0.000000014901159, w: 0.93564636}
+      scale: {x: 1.0000117, y: 1.0000274, z: 1.000025}
+    - name: LowManLeftShoulder
+      parentName: LowManSpine2
+      position: {x: -0.00000001907348, y: 0.000000009536738, z: 0.097678624}
+      rotation: {x: -0.4120305, y: 0.00000008056819, z: 0.91117, w: -0.000000042128192}
+      scale: {x: 0.99967176, y: 0.99998266, z: 1.0003096}
+    - name: LowManLeftArm
+      parentName: LowManLeftShoulder
+      position: {x: 0.00000003818975, y: -3.410605e-14, z: 0.11813465}
+      rotation: {x: 0.000000041831555, y: -0.0148641765, z: 0.000000042457494, w: -0.9998896}
+      scale: {x: 1.0000154, y: 1.000036, z: 1.0000615}
+    - name: LowManLeftForeArm
+      parentName: LowManLeftArm
+      position: {x: 0.00057816145, y: -0.000000008000761, z: 0.23231031}
+      rotation: {x: -0.015774356, y: -0.018468358, z: -0.00017747098, w: 0.999705}
+      scale: {x: 1.0000541, y: 1.0000054, z: 0.9999501}
+    - name: LowManLeftHand
+      parentName: LowManLeftForeArm
+      position: {x: 0.00000011299736, y: -0.000000071549294, z: 0.2602431}
+      rotation: {x: -0.36638096, y: 0.055759773, z: -0.019344093, w: 0.9285913}
+      scale: {x: 1.0000293, y: 0.999793, z: 1.0002732}
+    - name: LowManLeftHandThumb1
+      parentName: LowManLeftHand
+      position: {x: 0.0000008189678, y: -0.0000013504485, z: 0.07503379}
+      rotation: {x: -0.08649644, y: 0.75224596, z: 0.6514392, w: -0.047658768}
+      scale: {x: 0.99940765, y: 1.0015891, z: 0.99905765}
+    - name: LowManLeftHandThumb1_end
+      parentName: LowManLeftHandThumb1
+      position: {x: 0.000000014901161, y: 0.08623772, z: 0.000000009536743}
+      rotation: {x: 0.0000000509899, y: -0.00000018626447, z: 0.000000016763803, w: 1}
+      scale: {x: 1.0000012, y: 1.0000167, z: 0.9999992}
+    - name: LowManLeftHandThumb1_end_end
+      parentName: LowManLeftHandThumb1_end
+      position: {x: -0, y: 0.086237684, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManLeftHandIndex1
+      parentName: LowManLeftHand
+      position: {x: -0.024092454, y: -0.05516394, z: 0.08407628}
+      rotation: {x: -0.9115934, y: -0.1181507, z: 0.21402685, w: 0.3305004}
+      scale: {x: 0.9981535, y: 1.0032972, z: 0.9985954}
+    - name: LowManLeftHandIndex2
+      parentName: LowManLeftHandIndex1
+      position: {x: -0.019423706, y: 0.002351568, z: -0.030042514}
+      rotation: {x: -0.14915733, y: -0.4994609, z: 0.69119626, w: 0.50053835}
+      scale: {x: 1.0015296, y: 0.9937744, z: 1.0047537}
+    - name: LowManLeftHandIndex2_end
+      parentName: LowManLeftHandIndex2
+      position: {x: 0.00000016927719, y: 0.09924485, z: 0.00000004887581}
+      rotation: {x: -0.00000008940694, y: -0.000000029802312, z: 0.00000012665983,
+        w: 1}
+      scale: {x: 1.0000211, y: 1.0000068, z: 1.0000074}
+    - name: LowManLeftHandIndex2_end_end
+      parentName: LowManLeftHandIndex2_end
+      position: {x: -0, y: 0.09924485, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManLeftHandMiddle1
+      parentName: LowManLeftHand
+      position: {x: -0.022832762, y: -0.06642442, z: 0.07294323}
+      rotation: {x: -0.9115935, y: -0.1181505, z: 0.21402742, w: 0.33049983}
+      scale: {x: 0.99816436, y: 1.0033106, z: 0.9986125}
+    - name: LowManLeftHandMiddle2
+      parentName: LowManLeftHandMiddle1
+      position: {x: -0.019423792, y: 0.0023516214, z: -0.030042594}
+      rotation: {x: -0.14915724, y: -0.4994609, z: 0.69119596, w: 0.50053877}
+      scale: {x: 1.0015144, y: 0.9937774, z: 1.0047493}
+    - name: LowManLeftHandMiddle2_end
+      parentName: LowManLeftHandMiddle2
+      position: {x: -0.00000004649162, y: 0.099244915, z: -0.0000000011920929}
+      rotation: {x: 0.000000007450578, y: -0.000000014901156, z: -0.000000029802312,
+        w: 1}
+      scale: {x: 0.9999974, y: 0.9999999, z: 1.0000038}
+    - name: LowManLeftHandMiddle2_end_end
+      parentName: LowManLeftHandMiddle2_end
+      position: {x: -0, y: 0.09924485, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManLeftHandRing1
+      parentName: LowManLeftHand
+      position: {x: -0.021717533, y: -0.076387435, z: 0.06309316}
+      rotation: {x: -0.91159344, y: -0.11815051, z: 0.21402776, w: 0.3304997}
+      scale: {x: 0.9981581, y: 1.0033062, z: 0.99860567}
+    - name: LowManLeftHandRing2
+      parentName: LowManLeftHandRing1
+      position: {x: -0.019423839, y: 0.0023516298, z: -0.030042654}
+      rotation: {x: -0.14915717, y: -0.49946097, z: 0.6911958, w: 0.50053895}
+      scale: {x: 1.0015193, y: 0.9937754, z: 1.0047562}
+    - name: LowManLeftHandRing2_end
+      parentName: LowManLeftHandRing2
+      position: {x: -0.000000017881392, y: 0.09924488, z: 0.00000008195639}
+      rotation: {x: -0, y: 0.000000014901158, z: 0.000000096857526, w: 1}
+      scale: {x: 1.0000142, y: 0.9999978, z: 1.0000061}
+    - name: LowManLeftHandRing2_end_end
+      parentName: LowManLeftHandRing2_end
+      position: {x: -0, y: 0.09924485, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManLeftHandPinky1
+      parentName: LowManLeftHand
+      position: {x: -0.020338105, y: -0.08871378, z: 0.05090651}
+      rotation: {x: -0.91159326, y: -0.11815058, z: 0.21402785, w: 0.33049995}
+      scale: {x: 0.9981443, y: 1.0032811, z: 0.99857944}
+    - name: LowManLeftHandPinky2
+      parentName: LowManLeftHandPinky1
+      position: {x: -0.019423716, y: 0.0023516025, z: -0.030042423}
+      rotation: {x: -0.14915746, y: -0.4994608, z: 0.6911961, w: 0.5005388}
+      scale: {x: 1.0015206, y: 0.9937879, z: 1.0047519}
+    - name: LowManLeftHandPinky2_end
+      parentName: LowManLeftHandPinky2
+      position: {x: 0.00000004649162, y: 0.09924484, z: -0.00000007927417}
+      rotation: {x: -0.000000044703462, y: -0.00000019371501, z: -0.00000014156096,
+        w: 1}
+      scale: {x: 1.0000328, y: 1.0000175, z: 1.0000144}
+    - name: LowManLeftHandPinky2_end_end
+      parentName: LowManLeftHandPinky2_end
+      position: {x: -0, y: 0.09924485, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightShoulder
+      parentName: LowManSpine2
+      position: {x: 0.09687987, y: 0.0000000095367625, z: 0.012464366}
+      rotation: {x: -0.00000008737935, y: 0.91116476, z: -0.000000031646557, w: 0.4120423}
+      scale: {x: 0.99968845, y: 1.0000002, z: 1.0003278}
+    - name: LowManRightArm
+      parentName: LowManRightShoulder
+      position: {x: -0.00000004635411, y: -0.000000015121664, z: 0.11813499}
+      rotation: {x: -0.038551662, y: 0.014853178, z: -0.00057263154, w: 0.9991461}
+      scale: {x: 1.0000353, y: 1.000026, z: 1.0000103}
+    - name: LowManRightForeArm
+      parentName: LowManRightArm
+      position: {x: 0.0005990768, y: -0.017891375, z: 0.23161991}
+      rotation: {x: 0.05431132, y: -0.018443264, z: 0.0006107187, w: 0.99835354}
+      scale: {x: 1.0000213, y: 1.0001272, z: 0.9998755}
+    - name: LowManRightHand
+      parentName: LowManRightForeArm
+      position: {x: 0.00000011013952, y: 0.000000026040743, z: 0.26024294}
+      rotation: {x: 0.36638063, y: 0.05575978, z: 0.01934428, w: 0.9285913}
+      scale: {x: 1.0000911, y: 0.99984944, z: 1.0001289}
+    - name: LowManRightHandThumb1
+      parentName: LowManRightHand
+      position: {x: 0.00000033915043, y: 0.0000009626585, z: 0.07503305}
+      rotation: {x: 0.7463159, y: -0.09251612, z: -0.04742015, w: 0.65742284}
+      scale: {x: 0.9997336, y: 1.0006825, z: 0.9996136}
+    - name: LowManRightHandThumb1_end
+      parentName: LowManRightHandThumb1
+      position: {x: 0.00000003039837, y: 0.08623915, z: 0.000000085830685}
+      rotation: {x: 0.0000002980232, y: 0.000000031664964, z: -0.000000024214383,
+        w: 1}
+      scale: {x: 1.0000243, y: 1.0000141, z: 1.0000082}
+    - name: LowManRightHandThumb1_end_end
+      parentName: LowManRightHandThumb1_end
+      position: {x: -0, y: 0.086239174, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightHandIndex1
+      parentName: LowManRightHand
+      position: {x: -0.023979807, y: 0.05617517, z: 0.08307637}
+      rotation: {x: -0.4808991, y: 0.37188485, z: 0.77413386, w: -0.17650671}
+      scale: {x: 0.9996657, y: 1.0011039, z: 0.99930733}
+    - name: LowManRightHandIndex2
+      parentName: LowManRightHandIndex1
+      position: {x: -0.030084418, y: 0.0023515995, z: 0.019359097}
+      rotation: {x: 0.69119585, y: -0.50053865, z: 0.1491575, w: 0.49946123}
+      scale: {x: 1.002802, y: 0.99614525, z: 1.0011625}
+    - name: LowManRightHandIndex2_end
+      parentName: LowManRightHandIndex2
+      position: {x: 0.000000044107438, y: 0.09924488, z: -0.000000019073486}
+      rotation: {x: -0.000000089406925, y: -0.000000029802308, z: -0.000000089406925,
+        w: 1}
+      scale: {x: 1.0000122, y: 1.0000086, z: 1.0000237}
+    - name: LowManRightHandIndex2_end_end
+      parentName: LowManRightHandIndex2_end
+      position: {x: -0, y: 0.09924485, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightHandMiddle1
+      parentName: LowManRightHand
+      position: {x: -0.022615327, y: 0.06836645, z: 0.07102313}
+      rotation: {x: -0.48089913, y: 0.3718849, z: 0.77413374, w: -0.17650649}
+      scale: {x: 0.9996314, y: 1.0010855, z: 0.9992914}
+    - name: LowManRightHandMiddle2
+      parentName: LowManRightHandMiddle1
+      position: {x: -0.030084377, y: 0.0023516202, z: 0.019359084}
+      rotation: {x: 0.6911957, y: -0.50053865, z: 0.1491577, w: 0.4994611}
+      scale: {x: 1.0027794, y: 0.99610543, z: 1.0011114}
+    - name: LowManRightHandMiddle2_end
+      parentName: LowManRightHandMiddle2
+      position: {x: 0.000000038743018, y: 0.09924474, z: 0.0000000628829}
+      rotation: {x: -0.000000059604638, y: 0.0000001490116, z: -0.00000008940696,
+        w: 1}
+      scale: {x: 1.0000043, y: 0.9999925, z: 1.0000111}
+    - name: LowManRightHandMiddle2_end_end
+      parentName: LowManRightHandMiddle2_end
+      position: {x: -0, y: 0.09924485, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightHandRing1
+      parentName: LowManRightHand
+      position: {x: -0.021527812, y: 0.078083254, z: 0.061416473}
+      rotation: {x: -0.48089918, y: 0.3718848, z: 0.77413374, w: -0.17650658}
+      scale: {x: 0.99963945, y: 1.0010817, z: 0.99928427}
+    - name: LowManRightHandRing2
+      parentName: LowManRightHandRing1
+      position: {x: -0.03008439, y: 0.0023515848, z: 0.019359265}
+      rotation: {x: 0.6911958, y: -0.50053865, z: 0.14915767, w: 0.49946108}
+      scale: {x: 1.002769, y: 0.9960988, z: 1.0011153}
+    - name: LowManRightHandRing2_end
+      parentName: LowManRightHandRing2
+      position: {x: -0.00000018626451, y: 0.099244885, z: 0.000000026226044}
+      rotation: {x: 0.000000119209275, y: -0.000000059604638, z: 0.00000008940696,
+        w: 1}
+      scale: {x: 1.0000066, y: 1.000002, z: 1.0000191}
+    - name: LowManRightHandRing2_end_end
+      parentName: LowManRightHandRing2_end
+      position: {x: -0, y: 0.09924486, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightHandPinky1
+      parentName: LowManRightHand
+      position: {x: -0.020280978, y: 0.08922354, z: 0.050402455}
+      rotation: {x: -0.48089904, y: 0.37188518, z: 0.77413374, w: -0.17650656}
+      scale: {x: 0.99965745, y: 1.0011004, z: 0.9993018}
+    - name: LowManRightHandPinky2
+      parentName: LowManRightHandPinky1
+      position: {x: -0.030084329, y: 0.0023516177, z: 0.019359116}
+      rotation: {x: 0.69119555, y: -0.5005389, z: 0.14915764, w: 0.49946135}
+      scale: {x: 1.0028254, y: 0.99616784, z: 1.0011913}
+    - name: LowManRightHandPinky2_end
+      parentName: LowManRightHandPinky2
+      position: {x: 0.000000088214875, y: 0.09924486, z: -0.000000011920928}
+      rotation: {x: -0, y: 0.00000008940694, z: -0, w: 1}
+      scale: {x: 0.99999064, y: 0.9999847, z: 0.99997187}
+    - name: LowManRightHandPinky2_end_end
+      parentName: LowManRightHandPinky2_end
+      position: {x: -0, y: 0.09924485, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManNeck
+      parentName: LowManSpine2
+      position: {x: 0.09711892, y: 0.000000009536761, z: 0.11041464}
+      rotation: {x: -0.000000059604638, y: 0.35293895, z: -0.000000014901165, w: 0.93564636}
+      scale: {x: 1.000319, y: 0.9999823, z: 0.99967897}
+    - name: LowManHead
+      parentName: LowManNeck
+      position: {x: 0.0000000013670071, y: -0.008986282, z: 0.08045776}
+      rotation: {x: 0.7071068, y: 0.000000014901161, z: -0.000000034870745, w: 0.7071068}
+      scale: {x: 1.0000004, y: 1, z: 1.000009}
+    - name: LowManHead_end
+      parentName: LowManHead
+      position: {x: 9.194794e-15, y: 0.10339248, z: 2.289502e-14}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.999998, y: 0.9999995, z: 1}
+    - name: LowManHead_end_end
+      parentName: LowManHead_end
+      position: {x: -0, y: 0.10339248, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoes Female (Plain Shoes)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Bun)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Long Sleeves U Neck)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female (Skirt 2)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Short Bangs)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Shoes Female (Sandals)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Bald)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Jacket)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Button Down)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Curly Bun)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female (Short Capris)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Shoes Female (Slip-on)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Vest Tanktop)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Rolled Button Down)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Crimped Ends)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Shoes Female (Slippers)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Shoes Female (High Top)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Vest Long Sleeve)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Shoes Female (Cozy Boots)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Short Curly)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Shoes Female (Boots)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Shoes Female (Low Top)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Jacket Open)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Straight Fancy)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Curly Hat)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female (Skinny Jeans)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Shoes Female (Formal)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Tanktop Gauntlet)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Messy Long 2)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Long)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Shoes Female (None)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Shoes Female (High Heels)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female (Capris)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Straight 1)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Karen)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female (Bootcut Jeans)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female (Jeans Belt)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Shoes Female (Flip-flop)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Messy Beanie)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Braid)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Wavy Hair)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female (Baggy Shorts)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female (Parachute Pants)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Puffs)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Messy Long 1)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female (Shorts)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Long Ponytail)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female (Skirt 1)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female Sweat Pants)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Braids)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Dyed Curtains)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female (Tracksuit)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female (Ripped Jeans)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Jumpsuit Top)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Pigtails)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Short Dyed Bangs)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Tanktop)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female (Exercise Shorts)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Trench Coat)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Straight Long)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Wavy Bangs)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Long Sleeves)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Short Sleeves)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Shirt with Undershirt)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Big)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Short Sleeves Gloves)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Many Twists)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Short Sleeves V Neck)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Rolled Sleeves Knot)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Short)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Straight Highlights)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Short Ponytail)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Torso Female (Long Sleeves V Neck)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Legs Female (Trench Coat Skirt)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.1763901e-17, z: 9.582696e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Curly 1)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    - name: Head Female (Wavy Highlights)
+      parentName: Female (New)(Clone)
+      position: {x: -2.2738597e-15, y: -0.00000015113349, z: 5.28645e-10}
+      rotation: {x: 0.00000008146035, y: 1.17639005e-17, z: 9.582694e-25, w: 1}
+      scale: {x: 0.010000009, y: 0.010000009, z: 0.010000009}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

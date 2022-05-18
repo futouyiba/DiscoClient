@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c18464c970d50b4fb5adacd77a5f9d9, type: 3}
+  m_Name: Beard
+  m_EditorClassIdentifier: 
+  accessories:
+  - {fileID: 11400000, guid: 3c65acbb4d1fe9f44bb80e9a457f25ed, type: 2}
+  - {fileID: 11400000, guid: 73d77dd3252de3a4297acfacc1bfad4f, type: 2}
+  - {fileID: 11400000, guid: ae4ae6dc9824e2e4c83dd264c3939206, type: 2}
+  - {fileID: 11400000, guid: 34024db41ad991a4e8406079720278fd, type: 2}
+  - {fileID: 11400000, guid: 31e778ef44441354ea4e7d1f3bcabdea, type: 2}
+  - {fileID: 11400000, guid: d1162926be848bb48a8b9fadb535a04e, type: 2}

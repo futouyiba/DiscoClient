@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa2db96c55cb3b429361471eb3e57b2, type: 3}
+  m_Name: Male
+  m_EditorClassIdentifier: 
+  animationAvatar: {fileID: 9000000, guid: c4a8cff68f3a54d4d9bee82e3d1e356b, type: 3}
+  rootBoneName: Male
+  headMeshes:
+  - {fileID: 11400000, guid: 373d9cdc844ed454bbe51ef2c894ac57, type: 2}
+  - {fileID: 11400000, guid: 566073d356ec9d94b81f9564623a9a64, type: 2}
+  - {fileID: 11400000, guid: bd9fe8ff09e3d034cad2ef97da14d336, type: 2}
+  - {fileID: 11400000, guid: 5db2469041d6e6d4aa3b18b2663e8860, type: 2}
+  - {fileID: 11400000, guid: b00a8305745310842a2c2434dec09884, type: 2}
+  - {fileID: 11400000, guid: c779e485257ad9b4182d3c5b4339e11e, type: 2}
+  - {fileID: 11400000, guid: 8ad616c61c4012149ab0431579473f3b, type: 2}
+  - {fileID: 11400000, guid: 4f995825f69249e4db8d604f44e4c79a, type: 2}
+  - {fileID: 11400000, guid: dddec88818fd4af4b805aa94e2309692, type: 2}
+  - {fileID: 11400000, guid: 535448c5898d81e4a9b8a9485804d418, type: 2}
+  - {fileID: 11400000, guid: 2eccd0a67a6c0fe40ad703933dd277eb, type: 2}
+  - {fileID: 11400000, guid: e199d889c11f5404f94ed2eb3cbd48bf, type: 2}
+  - {fileID: 11400000, guid: 7372cbb640303bb4ea83ce90b598c4e9, type: 2}
+  - {fileID: 11400000, guid: 7329715175a7e554d8761d591611c130, type: 2}
+  - {fileID: 11400000, guid: 49bbbe256327eea48b44120fe30a2bd8, type: 2}
+  - {fileID: 11400000, guid: c73ed350147f86c40800b987cb4bd789, type: 2}
+  - {fileID: 11400000, guid: a026915812976a942b62f9b0bd93a97a, type: 2}
+  - {fileID: 11400000, guid: 11cbd7d127b8328429d34a95ab547ef5, type: 2}
+  - {fileID: 11400000, guid: 96b7efefded84344a9d33b7483c64782, type: 2}
+  - {fileID: 11400000, guid: 5095d375dc12bca46bc49a5910b24325, type: 2}
+  - {fileID: 11400000, guid: 9d342fbee67d05c44b77d0832fa3fe07, type: 2}
+  torsoMeshes:
+  - {fileID: 11400000, guid: 6d61bbfc83eeeed4fae190cc34d4b8de, type: 2}
+  - {fileID: 11400000, guid: 3e97e80f3b6f61144896b257e812ae97, type: 2}
+  - {fileID: 11400000, guid: b6e0e90e55f6a7949858762f4d4b5718, type: 2}
+  - {fileID: 11400000, guid: eab5eed4d15777d489b9eb5eefe0ff8e, type: 2}
+  - {fileID: 11400000, guid: 87a0d4191af6c6941a6a279c07af4ab1, type: 2}
+  - {fileID: 11400000, guid: d2684aec88485234fbca432ac3d917db, type: 2}
+  - {fileID: 11400000, guid: 159e6dddd80b26a449ea282798f239bc, type: 2}
+  - {fileID: 11400000, guid: d6cf2e744204af44082268e7d3824dcd, type: 2}
+  - {fileID: 11400000, guid: 012c23b468d33a94c9380151c5ab206e, type: 2}
+  - {fileID: 11400000, guid: 1221e79e2882f0f4b8ec57e51f69084f, type: 2}
+  - {fileID: 11400000, guid: aa1af0cb27d808d43833e69446dfa863, type: 2}
+  - {fileID: 11400000, guid: 7e9a72d1390728b4ba2f4d24380c4ec2, type: 2}
+  - {fileID: 11400000, guid: de20128b97e18574c88a19d13b10071d, type: 2}
+  - {fileID: 11400000, guid: c608f570ab315b645946ca9f063da4c7, type: 2}
+  - {fileID: 11400000, guid: 88f9e632caa963742b361740ca01c3c1, type: 2}
+  - {fileID: 11400000, guid: bac6eece587f50e448fe9346f2355f75, type: 2}
+  - {fileID: 11400000, guid: 8c725218c1fa60d4bb5e5e4e195c6889, type: 2}
+  - {fileID: 11400000, guid: fcf07540e52c6ec408723c8d4b1451f6, type: 2}
+  - {fileID: 11400000, guid: a67ac4a1a67943d44a4f550425d0faf4, type: 2}
+  - {fileID: 11400000, guid: e28198ceae1f37c4e88d697f2305bab0, type: 2}
+  - {fileID: 11400000, guid: 0fa25b44d6f0d5d449e2971dbeae9531, type: 2}
+  legsMeshes:
+  - {fileID: 11400000, guid: 66acbb9ce4d7a424eb2ff2f3590262d6, type: 2}
+  - {fileID: 11400000, guid: 91ca385efc86ea8448ae34fe0592cde5, type: 2}
+  - {fileID: 11400000, guid: f65c9d66306cea24b99f68a142d17643, type: 2}
+  - {fileID: 11400000, guid: 384de108f52c6454b8219ef00fbc1e5e, type: 2}
+  - {fileID: 11400000, guid: 0fb6f9add3901f84db67eb63d745ddb1, type: 2}
+  - {fileID: 11400000, guid: 456e8882a6678d8459dff055c3ec625f, type: 2}
+  - {fileID: 11400000, guid: c08a95d5e23860a468f48a3cccbd3a79, type: 2}
+  - {fileID: 11400000, guid: ef098d46b1464914f9c319f2138dd49d, type: 2}
+  - {fileID: 11400000, guid: b0c7bd03dd0b099408b4b105202ed885, type: 2}
+  - {fileID: 11400000, guid: ddbe06b286cbea24c97ce64cd112bd87, type: 2}
+  - {fileID: 11400000, guid: 855675cda4c1be841b20a6c6025e3b96, type: 2}
+  shoesMeshes:
+  - {fileID: 11400000, guid: 0b6ad5f10e5e42c489c350a595f549a1, type: 2}
+  - {fileID: 11400000, guid: 272a15cec77d2c346b6777ac3560af20, type: 2}
+  - {fileID: 11400000, guid: a467a1990f4026d48abc5662003b8661, type: 2}
+  - {fileID: 11400000, guid: c3c64859891bcfb4980760e7582f1b52, type: 2}
+  - {fileID: 11400000, guid: 2f3a66da96a9c8548b5ad44cc8e07906, type: 2}
+  - {fileID: 11400000, guid: b011128c4eb41954f8072a293e248f44, type: 2}
+  - {fileID: 11400000, guid: 9e359fd16514f574b89e6739c1aea181, type: 2}
+  - {fileID: 11400000, guid: 51712271b03aa7f408d2924596710379, type: 2}
+  - {fileID: 11400000, guid: 6bc2b127cf27de841b72aa1529fd5caf, type: 2}
+  - {fileID: 11400000, guid: f5265fef8c1512142b5caa7ca5f7b28a, type: 2}
+  - {fileID: 11400000, guid: e2b1939dcbd1ecc4a96a3b7a98862c05, type: 2}
+  - {fileID: 11400000, guid: d73cf399166205f4888384315b0bb9bc, type: 2}
+  - {fileID: 11400000, guid: aa73996edc80f4b4ea7fc9eaac98ae12, type: 2}
+  - {fileID: 11400000, guid: 8fedcec54202f5b43ab3187e7f8c6421, type: 2}
+  - {fileID: 11400000, guid: b6c822aafe4a3044389b26bf7eaff726, type: 2}
+  - {fileID: 11400000, guid: 517b444975a0e10449fd4bf4b613dde8, type: 2}

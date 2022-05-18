@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17a2540a847de34095e0fdce35d18bf, type: 3}
+  m_Name: Female 1
+  m_EditorClassIdentifier: 
+  gender: {fileID: 11400000, guid: 476f5838c33cea74fa5bab9b63265326, type: 2}
+  head: {fileID: 11400000, guid: 18078eab01665ff4ba6f27f0787523b5, type: 2}
+  torso: {fileID: 11400000, guid: 760872bd5b246a941936f2927d26d3ca, type: 2}
+  legs: {fileID: 11400000, guid: 6ed878bebd14a434896dcd67affc459b, type: 2}
+  shoes: {fileID: 11400000, guid: 7d9ea0fec9d78bf46b30e66fa5812259, type: 2}
+  skin: {r: 0.9433962, g: 0.72648615, b: 0.45834818, a: 1}
+  hair: {r: 0, g: 0, b: 0, a: 1}
+  primary: {r: 0.16862744, g: 0.4156862, b: 0.6039216, a: 1}
+  secondary: {r: 0.16470589, g: 0.3764706, b: 0.3647059, a: 1}
+  tertiary: {r: 0.25490198, g: 0.6, b: 0.6901961, a: 1}
+  additional: {r: 0.91764706, g: 0.5529412, b: 0.28235298, a: 1}

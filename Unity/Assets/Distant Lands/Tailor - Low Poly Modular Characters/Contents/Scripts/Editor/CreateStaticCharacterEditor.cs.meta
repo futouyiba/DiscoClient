@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a21af99a70d37714490eaf9fe3b12bcb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_PersistentViewDataDictionary: {instanceID: 0}
+  - Skin: {fileID: 2100000, guid: 0cb07277ecdcb6547ad06f13b33b4736, type: 2}
+  - Hair: {fileID: 2100000, guid: 5605e5920a541bf408757aac3099af95, type: 2}
+  - Primary: {fileID: 2100000, guid: 95b4fabaf92645b47b01d508061fd389, type: 2}
+  - Secondary: {fileID: 2100000, guid: e3c92db89668ebb439f67832a852a3b4, type: 2}
+  - Tertiary: {fileID: 2100000, guid: a33ed502185220a4d97ede3de7fd9163, type: 2}
+  - Additional: {fileID: 2100000, guid: a4837fa2db3044f4ebddda971ae619f6, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

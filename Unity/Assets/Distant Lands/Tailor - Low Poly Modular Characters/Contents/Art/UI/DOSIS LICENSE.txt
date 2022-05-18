@@ -1,0 +1,6 @@
+Tailor is governed by the Asset Store EULA; however, the following components are governed by the licenses indicated below:
+
+Dosis[wght].ttf: Copyright 2011 The Dosis Project Authors (impallari@gmail.com) - SIL Open Font License, 1.1.
+
+
+Thanks!

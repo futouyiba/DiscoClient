@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b87ff70a0931b644a1dc8f2c73c05f5, type: 3}
+  m_Name: Beard 3
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7490569043763050465, guid: 42502d303fee9b544803b11f470b6024, type: 3}
+  area: {fileID: 11400000, guid: 301b10076e17b4a41bfa97863fb2cc60, type: 2}
+  materials:
+  - colorType: 1
+    material: {fileID: 2100000, guid: 5605e5920a541bf408757aac3099af95, type: 2}
+    valueChange: 0
+    saturationChange: 0
+  positionOffset: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  stats: []
